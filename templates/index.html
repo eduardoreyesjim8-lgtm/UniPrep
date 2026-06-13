@@ -3,16 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>UniPrep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Bienvenido a UniPrep</h1>
-    <p>Prepárate para ingresar a la universidad.</p>
 
-    <nav>
-        <a href="/">Inicio</a> |
-        <a href="/examen">Examen</a> |
-        <a href="/universidades">Universidades</a> |
-        <a href="/consejos">Consejos</a>
-    </nav>
+<header>
+    <h1>UniPrep</h1>
+    <p>Tu camino hacia la universidad comienza aquí</p>
+</header>
+
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/examen">Examen</a>
+    <a href="/universidades">Universidades</a>
+    <a href="/consejos">Consejos</a>
+</nav>
+
+<main>
+    <div class="card">
+        <h2>Bienvenido a UniPrep</h2>
+        <p>
+            Prepárate para tu examen de admisión con simuladores,
+            información universitaria y consejos de estudio.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>¿Qué encontrarás?</h2>
+        <ul>
+            <li>Simulador de examen</li>
+            <li>Universidades de México</li>
+            <li>Consejos de estudio</li>
+        </ul>
+    </div>
+</main>
+
 </body>
 </html>
