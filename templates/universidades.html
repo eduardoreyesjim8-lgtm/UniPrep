@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Universidades - UniPrep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Universidades de México</h1>
 
-    <nav>
-        <a href="/">Inicio</a> |
-        <a href="/examen">Examen</a> |
-        <a href="/universidades">Universidades</a> |
-        <a href="/consejos">Consejos</a>
-    </nav>
+<header>
+    <h1>UniPrep</h1>
+    <p>Explora universidades de México</p>
+</header>
 
-    <h2>UNAM</h2>
-    <p>Una de las universidades más importantes de México.</p>
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/examen">Examen</a>
+    <a href="/universidades">Universidades</a>
+    <a href="/consejos">Consejos</a>
+</nav>
 
-    <h2>IPN</h2>
-    <p>Institución enfocada en ingeniería, ciencias y tecnología.</p>
+<main>
 
-    <h2>UAM</h2>
-    <p>Universidad reconocida por su calidad académica.</p>
+    <div class="card">
+        <h2>UNAM</h2>
+        <p>La Universidad Nacional Autónoma de México es una de las instituciones más reconocidas del país.</p>
+    </div>
 
-    <h2>Universidad de Sonora</h2>
-    <p>La principal universidad pública del estado de Sonora.</p>
+    <div class="card">
+        <h2>IPN</h2>
+        <p>Institución enfocada en ingeniería, tecnología y ciencias.</p>
+    </div>
+
+    <div class="card">
+        <h2>UAM</h2>
+        <p>Universidad destacada por su innovación y calidad educativa.</p>
+    </div>
+
+</main>
 
 </body>
 </html>
