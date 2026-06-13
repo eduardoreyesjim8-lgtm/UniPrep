@@ -3,28 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Consejos de Estudio - UniPrep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Consejos para Aprobar tu Examen de Admisión</h1>
 
-    <nav>
-        <a href="/">Inicio</a> |
-        <a href="/examen">Examen</a> |
-        <a href="/universidades">Universidades</a> |
-        <a href="/consejos">Consejos</a>
-    </nav>
+<header>
+    <h1>UniPrep</h1>
+    <p>Consejos para tu examen de admisión</p>
+</header>
 
-    <h2>Organiza tu tiempo</h2>
-    <p>Dedica al menos una hora diaria al estudio.</p>
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/examen">Examen</a>
+    <a href="/universidades">Universidades</a>
+    <a href="/consejos">Consejos</a>
+</nav>
 
-    <h2>Realiza simuladores</h2>
-    <p>Practica con exámenes similares al de admisión.</p>
+<main>
 
-    <h2>Descansa adecuadamente</h2>
-    <p>Dormir bien mejora la concentración y el aprendizaje.</p>
+    <div class="card">
+        <h2>Organiza tu tiempo</h2>
+        <p>Crea un horario de estudio y cúmplelo diariamente.</p>
+    </div>
 
-    <h2>Repasa tus errores</h2>
-    <p>Identifica los temas que más se te dificultan.</p>
+    <div class="card">
+        <h2>Practica constantemente</h2>
+        <p>Resuelve ejercicios y simuladores para mejorar tu desempeño.</p>
+    </div>
+
+    <div class="card">
+        <h2>Descansa bien</h2>
+        <p>Dormir adecuadamente ayuda a mejorar la concentración.</p>
+    </div>
+
+    <div class="card">
+        <h2>Repasa tus errores</h2>
+        <p>Analiza tus fallos para fortalecer los temas que más se te dificultan.</p>
+    </div>
+
+</main>
 
 </body>
 </html>
