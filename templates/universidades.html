@@ -9,7 +9,7 @@
 
 <header>
     <h1>UniPrep</h1>
-    <p>Explora universidades de México</p>
+    <p>Explora las principales universidades públicas de México</p>
 </header>
 
 <nav>
@@ -22,18 +22,48 @@
 <main>
 
     <div class="card">
+        <img src="{{ url_for('static', filename='unam.png') }}" alt="UNAM" width="120">
+
         <h2>UNAM</h2>
-        <p>La Universidad Nacional Autónoma de México es una de las instituciones más reconocidas del país.</p>
+
+        <p>
+            La Universidad Nacional Autónoma de México es una de las mejores universidades
+            de Latinoamérica y cuenta con una amplia oferta académica.
+        </p>
+
+        <p><strong>Carreras destacadas:</strong> Medicina, Derecho, Ingeniería, Arquitectura.</p>
+
+        <p><strong>Modalidad:</strong> Escolarizada y a distancia.</p>
     </div>
 
     <div class="card">
+        <img src="{{ url_for('static', filename='ipn.png') }}" alt="IPN" width="120">
+
         <h2>IPN</h2>
-        <p>Institución enfocada en ingeniería, tecnología y ciencias.</p>
+
+        <p>
+            El Instituto Politécnico Nacional es reconocido por su excelencia en áreas
+            científicas, tecnológicas e ingenierías.
+        </p>
+
+        <p><strong>Carreras destacadas:</strong> Ingeniería Mecánica, Sistemas, Aeronáutica.</p>
+
+        <p><strong>Modalidad:</strong> Escolarizada.</p>
     </div>
 
     <div class="card">
+        <img src="{{ url_for('static', filename='uam.png') }}" alt="UAM" width="120">
+
         <h2>UAM</h2>
-        <p>Universidad destacada por su innovación y calidad educativa.</p>
+
+        <p>
+            La Universidad Autónoma Metropolitana destaca por su modelo educativo
+            innovador y su sistema trimestral.
+        </p>
+
+        <p><strong>Carreras destacadas:</strong> Administración, Diseño, Biología.</p>
+
+        <p><strong>Modalidad:</strong> Escolarizada.</p>
     </div>
 
 </main>
