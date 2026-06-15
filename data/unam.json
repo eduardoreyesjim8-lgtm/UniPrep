@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es la pendiente de la recta cuya ecuación es 3x - 2y + 5 = 0?",
+    "opciones": ["3/2", "-3/2", "2/3", "-2/3"],
+    "respuesta_correcta": "3/2"
+  },
+  {
+    "id": 2,
+    "materia": "Física",
+    "pregunta": "De acuerdo con la Segunda Ley de Newton, si la fuerza aplicada a un objeto se duplica mientras su masa permanece constante, ¿qué pasa con la aceleración?",
+    "opciones": ["Se duplica", "Se reduce a la mitad", "Permanece igual", "Se cuadruplica"],
+    "respuesta_correcta": "Se duplica"
+  },
+  {
+    "id": 3,
+    "materia": "Química",
+    "pregunta": "¿Qué tipo de enlace químico se forma cuando dos átomos comparten electrones de manera equitativa?",
+    "opciones": ["Enlace covalente no polar", "Enlace covalente polar", "Enlace iónico", "Enlace metálico"],
+    "respuesta_correcta": "Enlace covalente no polar"
+  },
+  {
+    "id": 4,
+    "materia": "Biología",
+    "pregunta": "¿Cuál es el organelo celular encargado de la respiración celular y la producción de ATP?",
+    "opciones": ["Mitocondria", "Cloroplasto", "Aparato de Golgi", "Ribosoma"],
+    "respuesta_correcta": "Mitocondria"
+  },
+  {
+    "id": 5,
+    "materia": "Español",
+    "pregunta": "Identifica la oración que presenta una redacción correcta (sin ambigüedad ni errores ortográficos):",
+    "opciones": ["Hubo muchos problemas para resolver el caso.", "Hubieron muchos problemas para resolver el caso.", "Ayer habian demasiadas personas en la fila.", "Hicieron bastantes calores durante la tarde."],
+    "respuesta_correcta": "Hubo muchos problemas para resolver el caso."
+  },
+  {
+    "id": 6,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál es la característica principal del género literario lírico?",
+    "opciones": ["Expresa la subjetividad y las emociones del autor.", "Relata acontecimientos históricos de forma cronológica.", "Presenta un conflicto para ser representado en un escenario.", "Utiliza exclusivamente la prosa para argumentar una tesis."],
+    "respuesta_correcta": "Expresa la subjetividad y las emociones del autor."
+  },
+  {
+    "id": 7,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué acontecimiento histórico detonó el inicio de la Primera Guerra Mundial en 1914?",
+    "opciones": ["El asesinato del archiduque Francisco Fernando de Austria", "La invasión de Alemania a Polonia", "La caída del muro de Berlín", "La revolución bolchevique en Rusia"],
+    "respuesta_correcta": "El asesinato del archiduque Francisco Fernando de Austria"
+  },
+  {
+    "id": 8,
+    "materia": "Historia de México",
+    "pregunta": "Durante el gobierno de qué presidente de México se implementaron las Leyes de Reforma y se promulgó la Constitución de 1857:",
+    "opciones": ["Ignacio Comonfort / Benito Juárez", "Antonio López de Santa Anna", "Porfirio Díaz", "Agustín de Iturbide"],
+    "respuesta_correcta": "Ignacio Comonfort / Benito Juárez"
+  },
+  {
+    "id": 9,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la capa de la Tierra sobre la cual se desplazan las placas tectónicas?",
+    "opciones": ["Astenosfera", "Núcleo interno", "Litósfera", "Corteza continental"],
+    "respuesta_correcta": "Astenosfera"
+  }
+]
