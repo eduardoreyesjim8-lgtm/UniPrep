@@ -34,7 +34,22 @@
         <p><strong>Carreras destacadas:</strong> Medicina, Derecho, Ingeniería, Arquitectura.</p>
 
         <p><strong>Modalidad:</strong> Escolarizada y a distancia.</p>
-    </div>
+        
+        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee;">
+            <form action="/configurar_examen" method="POST">
+                <label for="cantidad" style="display: block; margin-bottom: 8px; font-weight: bold;">Preparar Simulacro:</label>
+                <select name="cantidad" id="cantidad" style="padding: 8px; width: 100%; margin-bottom: 12px; border-radius: 5px; border: 1px solid #ccc;">
+                    <option value="10">10 Preguntas (Prueba rápida)</option>
+                    <option value="30">30 Preguntas (Práctica intermedia)</option>
+                    <option value="60">60 Preguntas (Medio examen)</option>
+                    <option value="120">120 Preguntas (Simulacro Real)</option>
+                </select>
+                <button type="submit" style="background-color: #003366; color: white; border: none; padding: 10px 15px; width: 100%; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                    Iniciar Examen UNAM
+                </button>
+            </form>
+        </div>
+        </div>
 
     <div class="card">
         <img src="{{ url_for('static', filename='ipn.png') }}" alt="IPN" width="120">
