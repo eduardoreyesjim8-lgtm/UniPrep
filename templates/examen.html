@@ -20,19 +20,44 @@
 </nav>
 
 <main>
-    <div class="card">
-        <h2>Pregunta 1</h2>
-        <p>¿Cuánto es 5 + 7?</p>
-
-        <input type="radio" name="p1"> 10<br>
-        <input type="radio" name="p1"> 12<br>
-        <input type="radio" name="p1"> 15<br>
-        <input type="radio" name="p1"> 20<br>
-        <input type="radio" name="p1"> 60<br>
-        <input type="radio" name="p1"> 120<br><br>
-
-        <button>Enviar respuesta</button>
+    {% if not preguntas %}
+    <div class="card" style="text-align: center;">
+        <h2>¡Ups! Aún no has configurado tu examen</h2>
+        <p>Para comenzar un simulacro interactivo, ve a la sección de Universidades y elige el examen de tu preferencia.</p>
+        <a href="/universidades" style="display: inline-block; background-color: #003366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 10px;">Ir a Universidades</a>
     </div>
+    {% else %}
+    
+    <form action="/calificar_examen" method="POST">
+        
+        {% for pregunta in preguntas %}
+        <div class="card" style="margin-bottom: 25px;">
+            <span style="background-color: #e6f2ff; color: #003366; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; text-transform: uppercase;">
+                {{ pregunta.materia }}
+            </span>
+            
+            <h2 style="margin-top: 10px; font-size: 1.3em;">Pregunta {{ loop.index }}</h2>
+            <p style="font-size: 1.1em; margin-bottom: 15px;">{{ pregunta.pregunta }}</p>
+
+            {% for opcion in pregunta.opciones %}
+            <div style="margin-bottom: 8px;">
+                <label style="cursor: pointer;">
+                    <input type="radio" name="pregunta_{{ pregunta.id }}" value="{{ opcion }}" required style="margin-right: 8px;">
+                    {{ opcion }}
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <div style="text-align: center; margin-bottom: 50px;">
+            <button type="submit" style="background-color: #28a745; color: white; border: none; padding: 15px 40px; font-size: 1.2em; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                Terminar y Enviar Examen
+            </button>
+        </div>
+        
+    </form>
+    {% endif %}
 </main>
 
 </body>
