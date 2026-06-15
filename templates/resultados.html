@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados del Simulacro - UniPrep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>UniPrep</h1>
+    <p>Resultados de tu Evaluación</p>
+</header>
+
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/examen">Examen</a>
+    <a href="/universidades">Universidades</a>
+    <a href="/consejos">Consejos</a>
+</nav>
+
+<main style="max-width: 800px; margin: 0 auto; padding: 20px;">
+
+    <div class="card" style="text-align: center; border-left: 5px solid #003366;">
+        <h2>Tu Puntaje Final</h2>
+        <p style="font-size: 2em; margin: 10px 0; color: #003366;">
+            <strong>{{ aciertos }}</strong> / {{ total }} aciertos
+        </p>
+        <p style="font-size: 1.2em; color: #555;">Efectividad del <strong>{{ porcentaje }}%</strong></p>
+        
+        {% if porcentaje >= 80 %}
+            <p style="color: #28a745; font-weight: bold; font-size: 1.1em;">¡Excelente ritmo! Con este puntaje tienes altas probabilidades de quedarte.</p>
+        {% else %}
+            <p style="color: #dc3545; font-weight: bold; font-size: 1.1em;">¡Buen intento! Sigue repasando las materias con menor puntaje.</p>
+        {% endif %}
+        
+        <a href="/universidades" style="display: inline-block; background-color: #003366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 15px;">Intentar otro examen</a>
+    </div>
+
+    <h3 style="margin: 30px 0 15px 0; color: #333;">Revisión de preguntas:</h3>
+
+    {% for res in resultados %}
+    <div class="card" style="margin-bottom: 20px; border-left: 5px solid {% if res.es_correcta %}#28a745{% else %}#dc3545{% endif %}; padding: 20px;">
+        <span style="background-color: #eee; color: #333; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; text-transform: uppercase;">
+            {{ res.materia }}
+        </span>
+        
+        <p style="font-size: 1.1em; margin: 15px 0;"><strong>{{ loop.index }}.</strong> {{ res.pregunta }}</p>
+        
+        <p style="margin: 5px 0;">
+            ❌ <strong>Tu respuesta:</strong> 
+            <span style="color: {% if res.es_correcta %}#28a745{% else %}#dc3545{% endif %}; font-weight: bold;">
+                {{ res.respuesta_usuario }}
+            </span>
+        </p>
+        
+        {% if not res.es_correcta %}
+        <p style="margin: 5px 0; color: #28a745;">
+            ✅ <strong>Respuesta correcta:</strong> <span>{{ res.respuesta_correcta }}</span>
+        </p>
+        {% endif %}
+    </div>
+    {% endfor %}
+
+</main>
+
+</body>
+</html>
