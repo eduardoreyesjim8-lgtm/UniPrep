@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "materia": "Pensamiento Matemático",
+    "pregunta": "¿Cuál es el siguiente término de la sucesión: 2, 5, 10, 17, ...?",
+    "opciones": ["26", "25", "28", "30"],
+    "respuesta_correcta": "26"
+  }
+]
