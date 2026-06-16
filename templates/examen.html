@@ -140,4 +140,197 @@
             },
             'ipn-cmb': {
                 titulo: "IPN - Ciencias Médico-Biológicas",
-                tiempo: "3 Horas (180 minutos
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "140 reactivos",
+                materias: [
+                    { nombre: "Matemáticas", cant: 30 }, { nombre: "Biología", cant: 30 },
+                    { nombre: "Química", cant: 25 }, { nombre: "Física", cant: 10 },
+                    { nombre: "Competencia Escrita", cant: 20 },
+                    { nombre: "Competencia Lectora", cant: 25 }
+                ],
+                carreras: "Médico Cirujano y Partero, Enfermería, Nutrición, Odontología, Ingeniería Bioquímica, Ingeniería Biónica, Químico Bacteriólogo Parasitólogo."
+            },
+            'ipn-csa': {
+                titulo: "IPN - Ciencias Sociales y Administrativas",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "140 reactivos",
+                materias: [
+                    { nombre: "Matemáticas", cant: 35 }, { nombre: "Economía", cant: 20 },
+                    { nombre: "Administración", cant: 15 }, { nombre: "Competencia Escrita", cant: 25 },
+                    { nombre: "Competencia Lectora", cant: 25 }, { nombre: "Inglés", cant: 20 }
+                ],
+                carreras: "Contador Público, Licenciatura en Relaciones Comerciales (LRC), Negocios Internacionales, Administración y Desarrollo Empresarial, Economía."
+            },
+            'uam-cbi': {
+                titulo: "UAM - CBI: Ciencias Básicas e Ingeniería",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "80 reactivos",
+                materias: [
+                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
+                    { nombre: "Matemáticas Avanzadas", cant: 15 }, { nombre: "Física", cant: 15 },
+                    { nombre: "Química", cant: 10 }
+                ],
+                carreras: "Ingeniería en Computación, Ingeniería Química, Matemáticas, Física, Ingeniería Eléctrica, Ingeniería Biomédica."
+            },
+            'uam-cbs': {
+                titulo: "UAM - CBS: Ciencias Biológicas y de la Salud",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "80 reactivos",
+                materias: [
+                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
+                    { nombre: "Biología", cant: 15 }, { nombre: "Química", cant: 15 },
+                    { nombre: "Física", cant: 10 }
+                ],
+                carreras: "Medicina, Enfermería, Biología, Química Farmacéutica Biológica, Agronomía, Estomatología, Psicología Biomédica."
+            },
+            'uam-csh': {
+                titulo: "UAM - CSH: Ciencias Sociales y Humanidades",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "80 reactivos",
+                materias: [
+                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
+                    { nombre: "Historia Universal y México", cant: 15 }, { nombre: "Literatura y Filosofía", cant: 15 },
+                    { nombre: "Formación Ciudadana", cant: 10 }
+                ],
+                carreras: "Derecho, Psicología Social, Administración, Economía, Sociología, Ciencias de la Comunicación, Historia, Filosofía."
+            },
+            'uam-cad': {
+                titulo: "UAM - CAD: Ciencias y Artes para el Diseño",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "80 reactivos",
+                materias: [
+                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
+                    { nombre: "Historia del Arte y Arq.", cant: 15 }, { nombre: "Dibujo y Geometría Plana", cant: 15 },
+                    { nombre: "Física Básica", cant: 10 }
+                ],
+                carreras: "Arquitectura, Diseño Industrial, Diseño de la Comunicación Gráfica (Diseño Gráfico), Diseño de Asentamientos Humanos."
+            }
+        };
+
+        function cambiarUniversidad(tabId) {
+            const tabs = document.querySelectorAll('.contenido-universidad');
+            tabs.forEach(t => t.style.display = 'none');
+            
+            const botones = document.querySelectorAll('.btn-uni-tab');
+            botones.forEach(b => b.classList.remove('active'));
+
+            document.getElementById(tabId).style.display = 'block';
+            event.target.classList.add('active');
+
+            document.getElementById('detalle-area-card').style.display = 'none';
+        }
+
+        function mostrarDetalle(key) {
+            const data = infoEstructuras[key];
+            if (!data) return;
+
+            const botonesArea = document.querySelectorAll('.btn-area-tab');
+            botonesArea.forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+
+            let materiasHTML = '';
+            data.materias.forEach(mat => {
+                materiasHTML += `
+                    <div class="materia-item-card">
+                        <span class="materia-icono">📚</span>
+                        <div class="materia-info">
+                            <p class="materia-nombre">${mat.nombre}</p>
+                            <p class="materia-preguntas">${mat.cant} reactivos</p>
+                        </div>
+                    </div>
+                `;
+            });
+
+            const contenedor = document.getElementById('contenido-dinamico');
+            contenedor.innerHTML = `
+                <h3 class="detalle-card-titulo">${data.titulo}</h3>
+                
+                <div class="meta-datos-examen">
+                    <span class="meta-badge badge-tiempo">⏱️ ${data.tiempo}</span>
+                    <span class="meta-badge badge-total">📝 Total: ${data.preguntas}</span>
+                </div>
+
+                <h4 class="seccion-subtitulo">Distribución del Examen por Materias</h4>
+                <div class="materias-visual-grid">
+                    ${materiasHTML}
+                </div>
+
+                <h4 class="seccion-subtitulo">Oferta Académica de Enfoque</h4>
+                <p class="lista-carreras-texto">${data.carreras}</p>
+            `;
+
+            const tarjetaDetalle = document.getElementById('detalle-area-card');
+            tarjetaDetalle.style.display = 'block';
+            tarjetaDetalle.style.animation = 'none';
+            tarjetaDetalle.offsetHeight; 
+            tarjetaDetalle.style.animation = 'fadeIn 0.4s ease forwards';
+        }
+    </script>
+    
+    {% else %}
+    <form id="form-examen" action="/calificar_examen" method="POST">
+        
+        {% for pregunta in preguntas %}
+        <div class="card" style="margin-bottom: 25px; padding-top: 40px;">
+            <span style="position: absolute; top: 15px; left: 20px; background-color: #e6f2ff; color: #003366; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; text-transform: uppercase;">
+                {{ pregunta.materia }}
+            </span>
+            
+            <h2 style="margin-top: 10px; font-size: 1.3em;">Pregunta {{ loop.index }}</h2>
+            <p style="font-size: 1.1em; margin-bottom: 15px;">{{ pregunta.pregunta }}</p>
+
+            {% for opcion in pregunta.opciones %}
+            <div style="margin-bottom: 8px;">
+                <label style="cursor: pointer; display: inline-flex; align-items: center;">
+                    <input type="radio" name="pregunta_{{ pregunta.id }}" value="{{ opcion }}" style="margin-right: 8px;">
+                    {{ opcion }}
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <div style="text-align: center; margin-bottom: 50px;">
+            <button type="submit" style="background-color: #28a745; color: white; border: none; padding: 15px 40px; font-size: 1.2em; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                Terminar y Enviar Examen
+            </button>
+        </div>
+        
+    </form>
+
+    <script>
+        let minutosIniciales = {{ tiempo if tiempo else 10 }};
+        let tiempoRestante = minutosIniciales * 60; 
+        
+        const displayReloj = document.getElementById('tiempo-reloj');
+        const formulario = document.getElementById('form-examen');
+
+        const cuentaRegresiva = setInterval(function() {
+            let minutos = Math.floor(tiempoRestante / 60);
+            let segundos = tiempoRestante % 60;
+
+            let segundosTexto = segundos < 10 ? '0' + segundos : segundos;
+            let minutosTexto = minutos < 10 ? '0' + minutos : minutos;
+
+            displayReloj.textContent = `${minutosTexto}:${segundosTexto}`;
+
+            if (tiempoRestante <= 60) {
+                displayReloj.style.color = '#dc3545';
+            } else if (tiempoRestante <= 300) {
+                displayReloj.style.color = '#ffc107';
+            }
+
+            if (tiempoRestante <= 0) {
+                clearInterval(cuentaRegresiva);
+                alert("¡Se ha agotado el tiempo del examen! Tus respuestas se enviarán automáticamente.");
+                formulario.submit();
+            }
+
+            tiempoRestante--;
+        }, 1000);
+    </script>
+    {% endif %}
+</main>
+
+</body>
+</html>
