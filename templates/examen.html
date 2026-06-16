@@ -27,59 +27,261 @@
 
 <main>
     {% if not preguntas %}
-    <!-- VISTA INICIAL: CUANDO NO HAY UN EXAMEN CONFIGURADO -->
-    <div class="examen-container">
-        
-        <!-- Tarjeta de advertencia (Lado izquierdo) -->
-        <div class="card estado-examen-card">
-            <h2>¡Ups! Aún no has configurado tu examen</h2>
-            <p>Para comenzar un simulacro interactivo, ve a la sección de Universidades y elige el examen de tu preferencia.</p>
-            <a href="/universidades" class="btn-examen-primario">Ir a Universidades</a>
+    <div class="guia-examen-seccion">
+        <h2 class="titulo-guia">Explora la Estructura de tu Examen</h2>
+        <p class="subtitulo-guia">Selecciona una universidad y luego el área de tu carrera para conocer materias, reactivos y oferta académica.</p>
+
+        <div class="selector-universidad">
+            <button class="btn-uni-tab" onclick="cambiarUniversidad('tab-unam')">UNAM</button>
+            <button class="btn-uni-tab" onclick="cambiarUniversidad('tab-ipn')">IPN</button>
+            <button class="btn-uni-tab" onclick="cambiarUniversidad('tab-uam')">UAM</button>
         </div>
 
-        <!-- Tarjeta con la estructura informativa (Lado derecho) -->
-        <div class="card info-simuladores-card">
-            <h2 style="margin-top: 0;">Estructura de los Simuladores</h2>
-            <p class="subtitulo-info">Al activar tu examen, UniPrep configurará los parámetros reales de cada institución:</p>
+        <div id="tab-unam" class="contenido-universidad" style="display: none;">
+            <div class="selector-areas">
+                <button class="btn-area-tab" onclick="mostrarDetalle('unam-a1')">Área 1: Físico-Matemáticas</button>
+                <button class="btn-area-tab" onclick="mostrarDetalle('unam-a2')">Área 2: Biológicas y Salud</button>
+                <button class="btn-area-tab" onclick="mostrarDetalle('unam-a3')">Área 3: Ciencias Sociales</button>
+                <button class="btn-area-tab" onclick="mostrarDetalle('unam-a4')">Área 4: Humanidades y Artes</button>
+            </div>
+        </div>
+
+        <div id="tab-ipn" class="contenido-universidad" style="display: none;">
+            <div class="selector-areas">
+                <button class="btn-area-tab" onclick="mostrarDetalle('ipn-fmf')">Ingeniería y Físico-Matemáticas</button>
+                <button class="btn-area-tab" onclick="mostrarDetalle('ipn-cmb')">Ciencias Médico-Biológicas</button>
+                <button class="btn-area-tab" onclick="mostrarDetalle('ipn-csa')">Sociales y Administrativas</button>
+            </div>
+        </div>
+
+        <div id="tab-uam" class="contenido-universidad" style="display: none;">
+            <div class="selector-areas">
+                <button class="btn-area-tab" onclick="mostrarDetalle('uam-cbi')">CBI (Ingenierías)</button>
+                <button class="btn-area-tab" onclick="mostrarDetalle('uam-cbs')">CBS (Biológicas y Salud)</button>
+                <button class="btn-area-tab" onclick="mostrarDetalle('uam-csh')">CSH (Sociales y Humanidades)</button>
+                <button class="btn-area-tab" onclick="mostrarDetalle('uam-cad')">CAD (Diseño y Arquitectura)</button>
+            </div>
+        </div>
+
+        <div id="detalle-area-card" class="card detalle-card" style="display: none;">
+            <div id="contenido-dinamico">
+                </div>
+            <div style="text-align: center; margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 20px;">
+                <p style="margin: 0 0 15px 0; color: #64748b; font-size: 0.95rem;">¿Listo para poner a prueba tus conocimientos con esta estructura?</p>
+                <a href="/universidades" class="btn-examen-primario">Configurar este Examen en Simulador</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Base de datos de estructuras embebida en JS
+        const infoEstructuras = {
+            'unam-a1': {
+                titulo: "UNAM - Área 1: Ciencias Físico-Matemáticas y de las Ingenierías",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "120 reactivos",
+                materias: [
+                    { nombre: "Matemáticas", cant: 26 }, { nombre: "Física", cant: 16 },
+                    { nombre: "Español", cant: 18 }, { nombre: "Química", cant: 10 },
+                    { nombre: "Literatura", cant: 10 }, { nombre: "Historia Universal", cant: 10 },
+                    { nombre: "Historia de México", cant: 10 }, { nombre: "Geografía", cant: 10 }
+                ],
+                carreras: "Ingeniería en Computación, Ingeniería Civil, Mecatrónica, Arquitectura, Actuaría, Física, Ciencias de la Computación, Matemáticas."
+            },
+            'unam-a2': {
+                titulo: "UNAM - Área 2: Ciencias Biológicas, Químicas y de la Salud",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "120 reactivos",
+                materias: [
+                    { nombre: "Matemáticas", cant: 24 }, { nombre: "Química", cant: 14 },
+                    { nombre: "Biología", cant: 12 }, { nombre: "Física", cant: 12 },
+                    { nombre: "Español", cant: 18 }, { nombre: "Literatura", cant: 10 },
+                    { nombre: "Historia Universal", cant: 10 }, { nombre: "Historia de México", cant: 10 },
+                    { nombre: "Geografía", cant: 10 }
+                ],
+                carreras: "Médico Cirujano, Enfermería, Psicología, Odontología, Medicina Veterinaria (MVZ), Química Farmacéutico Biológica (QFB), Nutriología."
+            },
+            'unam-a3': {
+                titulo: "UNAM - Área 3: Ciencias Sociales",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "120 reactivos",
+                materias: [
+                    { nombre: "Matemáticas", cant: 24 }, { nombre: "Español", cant: 18 },
+                    { nombre: "Historia Universal", cant: 14 }, { nombre: "Historia de México", cant: 14 },
+                    { nombre: "Literatura", cant: 10 }, { nombre: "Geografía", cant: 10 },
+                    { nombre: "Física", cant: 10 }, { nombre: "Química", cant: 10 },
+                    { nombre: "Biología", cant: 10 }
+                ],
+                carreras: "Derecho, Administración, Contaduría, Relaciones Internacionales, Ciencias de la Comunicación, Economía, Sociología, Ciencias Políticas."
+            },
+            'unam-a4': {
+                titulo: "UNAM - Área 4: Humanidades y de las Artes",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "120 reactivos",
+                materias: [
+                    { nombre: "Matemáticas", cant: 22 }, { nombre: "Español", cant: 18 },
+                    { nombre: "Literatura", cant: 10 }, { nombre: "Filosofía", cant: 10 },
+                    { nombre: "Historia Universal", cant: 10 }, { nombre: "Historia de México", cant: 10 },
+                    { nombre: "Geografía", cant: 10 }, { nombre: "Física", cant: 10 },
+                    { nombre: "Química", cant: 10 }, { nombre: "Biología", cant: 10 }
+                ],
+                carreras: "Filosofía, Letras Hispánicas, Historia, Pedagogía, Artes Visuales, Diseño Gráfico, Música, Teatro, Lengua y Literaturas Modernas."
+            },
+            'ipn-fmf': {
+                titulo: "IPN - Ingeniería y Ciencias Físico-Matemáticas",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "140 reactivos",
+                materias: [
+                    { nombre: "Matemáticas (Álgebra, Cálculo, Geometría)", cant: 50 },
+                    { nombre: "Física", cant: 20 }, { nombre: "Química", cant: 15 },
+                    { nombre: "Competencia Escrita (Español)", cant: 20 },
+                    { nombre: "Competencia Lectora", cant: 20 }, { nombre: "Inglés", cant: 15 }
+                ],
+                carreras: "Ingeniería en Sistemas Computacionales (ISC), Inteligencia Artificial, Ingeniería Mecánica, Ingeniería Civil, Aeronáutica, Mecatrónica."
+            },
+            'ipn-cmb': {
+                titulo: "IPN - Ciencias Médico-Biológicas",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "140 reactivos",
+                materias: [
+                    { nombre: "Matemáticas", cant: 30 }, { nombre: "Biología", cant: 30 },
+                    { nombre: "Química", cant: 25 }, { nombre: "Física", cant: 10 },
+                    { nombre: "Competencia Escrita", cant: 20 },
+                    { nombre: "Competencia Lectora", cant: 25 }
+                ],
+                carreras: "Médico Cirujano y Partero, Enfermería, Nutrición, Odontología, Ingeniería Bioquímica, Ingeniería Biónica, Químico Bacteriólogo Parasitólogo."
+            },
+            'ipn-csa': {
+                titulo: "IPN - Ciencias Sociales y Administrativas",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "140 reactivos",
+                materias: [
+                    { nombre: "Matemáticas", cant: 35 }, { nombre: "Economía", cant: 20 },
+                    { nombre: "Administración", cant: 15 }, { nombre: "Competencia Escrita", cant: 25 },
+                    { nombre: "Competencia Lectora", cant: 25 }, { nombre: "Inglés", cant: 20 }
+                ],
+                carreras: "Contador Público, Licenciatura en Relaciones Comerciales (LRC), Negocios Internacionales, Administración y Desarrollo Empresarial, Economía."
+            },
+            'uam-cbi': {
+                titulo: "UAM - CBI: Ciencias Básicas e Ingeniería",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "80 reactivos",
+                materias: [
+                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
+                    { nombre: "Matemáticas Avanzadas", cant: 15 }, { nombre: "Física", cant: 15 },
+                    { nombre: "Química", cant: 10 }
+                ],
+                carreras: "Ingeniería en Computación, Ingeniería Química, Matemáticas, Física, Ingeniería Eléctrica, Ingeniería Biomédica."
+            },
+            'uam-cbs': {
+                titulo: "UAM - CBS: Ciencias Biológicas y de la Salud",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "80 reactivos",
+                materias: [
+                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
+                    { nombre: "Biología", cant: 15 }, { nombre: "Química", cant: 15 },
+                    { nombre: "Física", cant: 10 }
+                ],
+                carreras: "Medicina, Enfermería, Biología, Química Farmacéutica Biológica, Agronomía, Estomatología, Psicología Biomédica."
+            },
+            'uam-csh': {
+                titulo: "UAM - CSH: Ciencias Sociales y Humanidades",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "80 reactivos",
+                materias: [
+                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
+                    { nombre: "Historia Universal y de México", cant: 15 }, { nombre: "Literatura y Filosofía", cant: 15 },
+                    { nombre: "Formación Ciudadana / Política", cant: 10 }
+                ],
+                carreras: "Derecho, Psicología Social, Administración, Economía, Sociología, Ciencias de la Comunicación, Historia, Filosofía."
+            },
+            'uam-cad': {
+                titulo: "UAM - CAD: Ciencias y Artes para el Diseño",
+                tiempo: "3 Horas (180 minutos)",
+                preguntas: "80 reactivos",
+                materias: [
+                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
+                    { nombre: "Historia del Arte y Arquitectura", cant: 15 }, { nombre: "Dibujo y Geometría Plana", cant: 15 },
+                    { nombre: "Física (Estática y Óptica básica)", cant: 10 }
+                ],
+                carreras: "Arquitectura, Diseño Industrial, Diseño de la Comunicación Gráfica (Diseño Gráfico), Diseño de Asentamientos Humanos."
+            }
+        };
+
+        function cambiarUniversidad(tabId) {
+            // Ocultar todas las subcategorías de universidades
+            const tabs = document.querySelectorAll('.contenido-universidad');
+            tabs.forEach(t => t.style.display = 'none');
             
-            <div class="tabla-info-container">
-                <table class="tabla-info-examen">
+            // Desmarcar botones de universidades activos
+            const botones = document.querySelectorAll('.btn-uni-tab');
+            botones.forEach(b => b.classList.remove('active'));
+
+            // Mostrar la universidad seleccionada
+            document.getElementById(tabId).style.display = 'block';
+            event.target.classList.add('active');
+
+            // Ocultar tarjeta de detalle anterior si cambia de universidad
+            document.getElementById('detalle-area-card').style.display = 'none';
+        }
+
+        function mostrarDetalle(key) {
+            const data = infoEstructuras[key];
+            if (!data) return;
+
+            // Desmarcar botones de áreas activos
+            const botonesArea = document.querySelectorAll('.btn-area-tab');
+            botonesArea.forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Construir las filas de las materias dinámicamente
+            let materiasHTML = '';
+            data.materias.forEach(mat => {
+                materiasHTML += `
+                    <tr>
+                        <td><strong>${mat.nombre}</strong></td>
+                        <td>${mat.cant} preguntas</td>
+                    </tr>
+                `;
+            });
+
+            // Inyectar el HTML en la tarjeta
+            const contenedor = document.getElementById('contenido-dinamico');
+            contenedor.innerHTML = `
+                <h3 class="detalle-card-titulo">${data.titulo}</h3>
+                
+                <div class="meta-datos-examen">
+                    <span class="meta-badge">⏱️ Duración: ${data.tiempo}</span>
+                    <span class="meta-badge">📝 Total: ${data.preguntas}</span>
+                </div>
+
+                <h4 style="color: #0a2a66; margin: 20px 0 10px 0; border-bottom: 2px solid #f1f5f9; padding-bottom: 5px;">Distribución de Reactivos</h4>
+                <table class="tabla-detalle-materias">
                     <thead>
                         <tr>
-                            <th>Universidad</th>
-                            <th>Preguntas</th>
-                            <th>Tiempo Límite</th>
+                            <th>Asignatura / Sección</th>
+                            <th>Cantidad</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><strong>UNAM</strong></td>
-                            <td>120 reactivos</td>
-                            <td>3 Horas (180 min)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>IPN</strong></td>
-                            <td>140 reactivos</td>
-                            <td>3 Horas (180 min)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>UAM</strong></td>
-                            <td>80 reactivos</td>
-                            <td>3 Horas (180 min)</td>
-                        </tr>
+                        ${materiasHTML}
                     </tbody>
                 </table>
-            </div>
-            
-            <div class="nota-informativa">
-                <p>⚠️ <strong>Nota:</strong> Las preguntas se seleccionan de forma aleatoria y balanceada por materia cada vez que inicias un intento nuevo.</p>
-            </div>
-        </div>
 
-    </div>
+                <h4 style="color: #0a2a66; margin: 25px 0 10px 0;">Algunas Carreras en esta Área:</h4>
+                <p class="lista-carreras-texto">${data.carreras}</p>
+            `;
+
+            // Mostrar la tarjeta con la animación fadeIn
+            const tarjetaDetalle = document.getElementById('detalle-area-card');
+            tarjetaDetalle.style.display = 'block';
+            tarjetaDetalle.style.animation = 'none';
+            tarjetaDetalle.offsetHeight; // Reflow
+            tarjetaDetalle.style.animation = 'fadeIn 0.4s ease forwards';
+        }
+    </script>
     
     {% else %}
-    <!-- VISTA ACTIVA: FORMULARIO DEL SIMULADOR EN CURSO -->
     <form id="form-examen" action="/calificar_examen" method="POST">
         
         {% for pregunta in preguntas %}
@@ -122,7 +324,7 @@
             let segundos = tiempoRestante % 60;
 
             let segundosTexto = segundos < 10 ? '0' + segundos : segundos;
-            let minutosTexto = minutos < 10 ? '0' + minutes : minutos;
+            let minutosTexto = minutos < 10 ? '0' + minutos : minutos;
 
             displayReloj.textContent = `${minutosTexto}:${segundosTexto}`;
 
