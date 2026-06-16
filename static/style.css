@@ -55,7 +55,7 @@ h1, h2 {
 
 
 /* ==========================================================================
-   2. SISTEMA DE FILTRADO (BOTONES)
+   2. SISTEMA DE FILTRADO (CONSEJOS - BOTONES)
    ========================================================================== */
 .consejos-filtros {
     display: flex;
@@ -91,7 +91,7 @@ h1, h2 {
 
 
 /* ==========================================================================
-   3. CUADRÍCULA (GRID) Y TARJETAS (CARDS)
+   3. CUADRÍCULA (GRID) Y TARJETAS (CARDS) GENERALES
    ========================================================================== */
 .consejos-grid {
     display: grid;
@@ -104,7 +104,7 @@ h1, h2 {
 .card {
     background: white;
     padding: 20px;
-    margin: 0; /* Cambiado de 15px a 0 para que el diseño dependa correctamente del gap del grid */
+    margin: 0; /* Cambiado de 15px a 0 para que el diseño dependa correctamente del gap del grid o contenedor */
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.06);
     
@@ -138,7 +138,7 @@ h1, h2 {
 
 
 /* ==========================================================================
-   4. ETIQUETAS IDENTIFICADORAS (BADGES)
+   4. ETIQUETAS IDENTIFICADORAS (BADGES - CONSEJOS)
    ========================================================================== */
 .card-badge {
     position: absolute;
@@ -172,7 +172,102 @@ h1, h2 {
 
 
 /* ==========================================================================
-   5. ANIMACIONES (KEYFRAMES)
+   5. CONTENEDOR ESPECÍFICO DEL PANEL DE EXAMEN VACÍO
+   ========================================================================== */
+.examen-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Modificaciones estructurales para las tarjetas en modo panel de información */
+.estado-examen-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px !important;
+    margin: 0 !important;
+}
+
+.info-simuladores-card {
+    text-align: left;
+    padding: 30px !important;
+    margin: 0 !important;
+}
+
+.subtitulo-info {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+/* Botón estilizado con el azul oscuro de tu Header (#0a2a66) */
+.btn-examen-primario {
+    display: inline-block;
+    background-color: #0a2a66;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-examen-primario:hover {
+    background-color: #123d8b;
+    transform: translateY(-1px);
+}
+
+/* Estilos internos de la tabla comparativa */
+.tabla-info-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.tabla-info-examen {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.tabla-info-examen th {
+    background-color: #f1f5f9;
+    color: #0a2a66;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+.tabla-info-examen td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+/* Nota aclaratoria al pie de la tabla */
+.nota-informativa {
+    background-color: #fffbeb;
+    border-left: 4px solid #f59e0b;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.nota-informativa p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #78350f;
+    line-height: 1.4;
+}
+
+
+/* ==========================================================================
+   6. ANIMACIONES (KEYFRAMES)
    ========================================================================== */
 @keyframes fadeIn {
     from {
