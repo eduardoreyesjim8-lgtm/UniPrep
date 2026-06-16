@@ -25,11 +25,15 @@ def universidades():
 def consejos():
     return render_template("consejos.html")
 
-# Esta ruta recibe el formulario de universidades.html y arma el examen
+# Esta ruta recibe el formulario de universidades.html y arma el examen con su tiempo
 @app.route("/configurar_examen", methods=["POST"])
 def configurar_examen():
     # Cacha cuántas preguntas quiere el usuario (por defecto 10)
     cantidad = int(request.form.get("cantidad", 10))
+    
+    # Asignamos tiempo real: 1 minuto por pregunta
+    # Si eligen 10 preguntas -> 10 minutos. Si eligen 120 -> 120 minutos.
+    tiempo_minutos = cantidad 
     
     banco_completo = cargar_preguntas_unam()
     
@@ -39,8 +43,8 @@ def configurar_examen():
     # Selecciona preguntas al azar sin que se repitan
     preguntas_examen = random.sample(banco_completo, num_preguntas)
     
-    # Te manda a la página de examen pasándole la lista de preguntas aleatorias
-    return render_template("examen.html", preguntas=preguntas_examen)
+    # Te manda a la página de examen pasándole las preguntas y el tiempo calculado
+    return render_template("examen.html", preguntas=preguntas_examen, tiempo=tiempo_minutos)
 
 # Ruta que procesa las respuestas del alumno y calcula el puntaje
 @app.route("/calificar_examen", methods=["POST"])
