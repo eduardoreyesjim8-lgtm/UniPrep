@@ -1,0 +1,1053 @@
+[
+    {
+        "id": 1,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el sinónimo de la palabra en mayúsculas: El ambiente en la reunión era GÉLIDO.",
+        "opciones": ["Frívolo", "Congelado", "Indiferente", "Distante"],
+        "respuesta_correcta": "Congelado"
+    },
+    {
+        "id": 2,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el antónimo de la palabra en mayúsculas: Su discurso fue del todo SUBJETIVO.",
+        "opciones": ["Imparcial", "Personal", "Abstracto", "Egoísta"],
+        "respuesta_correcta": "Imparcial"
+    },
+    {
+        "id": 3,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Completa la analogía: ANTORCHA es a LIBERTAD como...",
+        "opciones": ["Balanza es a justicia", "Paloma es a paz", "Corazón es a amor", "Bandera es a patria"],
+        "respuesta_correcta": "Balanza es a justicia"
+    },
+    {
+        "id": 4,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Identifica el término que NO pertenece al mismo grupo semántico (intruso):",
+        "opciones": ["Mitigar", "Paliar", "Atenuar", "Exacerbar"],
+        "respuesta_correcta": "Exacerbar"
+    },
+    {
+        "id": 5,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Completa la oración: A pesar de que el testigo parecía ______, sus declaraciones resultaron ______.",
+        "opciones": ["falso - verídicas", "sincero - contradictorias", "asustado - tranquilas", "serio - formales"],
+        "respuesta_correcta": "sincero - contradictorias"
+    },
+    {
+        "id": 6,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el sinónimo de: EFÍMERO.",
+        "opciones": ["Eterno", "Pasajero", "Duradero", "Inmortal"],
+        "respuesta_correcta": "Pasajero"
+    },
+    {
+        "id": 7,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el antónimo de: PRÓLOGO.",
+        "opciones": ["Introducción", "Prefacio", "Epílogo", "Inicio"],
+        "respuesta_correcta": "Epílogo"
+    },
+    {
+        "id": 8,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Completa la analogía: MÉDICO es a ESCALPELO como...",
+        "opciones": ["Pintor es a caballete", "Escultor es a cincel", "Escritor es a libro", "Profesor es a tiza"],
+        "respuesta_correcta": "Escultor es a cincel"
+    },
+    {
+        "id": 9,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Identifica la palabra con la ortografía CORRECTA:",
+        "opciones": ["Exhorbitante", "Exorbitante", "Eshorbitante", "Exorvitante"],
+        "respuesta_correcta": "Exorbitante"
+    },
+    {
+        "id": 10,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Elija la opción que sustituye correctamente la palabra en mayúsculas: El juez decidió ABSOLVER al acusado.",
+        "opciones": ["Exonerar", "Condenar", "Aprehender", "Interrogar"],
+        "respuesta_correcta": "Exonerar"
+    },
+    {
+        "id": 11,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Comprensión lectora: Si un texto argumenta que 'la tecnología aísla a las personas en lugar de unirlas', la intención del autor es primordialmente:",
+        "opciones": ["Informar", "Persuadir", "Narrar", "Describir"],
+        "respuesta_correcta": "Persuadir"
+    },
+    {
+        "id": 12,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Elija la opción que guarde la misma relación: ORO es a METAL como...",
+        "opciones": ["Tigre es a mamífero", "Rosa es a espina", "Agua es a río", "Sol es a planeta"],
+        "respuesta_correcta": "Tigre es a mamífero"
+    },
+    {
+        "id": 13,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el antónimo de: INGENUO.",
+        "opciones": ["Inocente", "Astuto", "Cándido", "Simple"],
+        "respuesta_correcta": "Astuto"
+    },
+    {
+        "id": 14,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Completa el enunciado: El constante ruido ______ la concentración de los alumnos, por lo que el profesor ______ las ventanas.",
+        "opciones": ["ayudaba - abrió", "impedía - cerró", "mejoraba - limpió", "permitía - aseguró"],
+        "respuesta_correcta": "impedía - cerró"
+    },
+    {
+        "id": 15,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el término que NO pertenece al conjunto:",
+        "opciones": ["Poema", "Novela", "Ensayo", "Escultura"],
+        "respuesta_correcta": "Escultura"
+    },
+    {
+        "id": 16,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el sinónimo de: REACIO.",
+        "opciones": ["Rápido", "Renuente", "Aceptable", "Sumiso"],
+        "respuesta_correcta": "Renuente"
+    },
+    {
+        "id": 17,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Completa la analogía: PÁGINA es a LIBRO como...",
+        "opciones": ["Teclado es a computadora", "Tecla es a piano", "Pantalla es a cine", "Coche es a motor"],
+        "respuesta_correcta": "Tecla es a piano"
+    },
+    {
+        "id": 18,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Identifica el enunciado con la redacción más precisa y coherente:",
+        "opciones": ["Hubieron muchos problemas ayer.", "Hubo muchos problemas ayer.", "Habían demasiados problemas ayer.", "Hicieron muchos problemas ayer."],
+        "respuesta_correcta": "Hubo muchos problemas ayer."
+    },
+    {
+        "id": 19,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el antónimo de: OPACIDAD.",
+        "opciones": ["Oscuridad", "Claridad", "Sombra", "Niebla"],
+        "respuesta_correcta": "Claridad"
+    },
+    {
+        "id": 20,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "La investigación científica requiere un método ______, no se puede dejar nada al ______.",
+        "opciones": ["riguroso - azar", "flexible - descuido", "empírico - olvido", "rápido - tiempo"],
+        "respuesta_correcta": "riguroso - azar"
+    },
+    {
+        "id": 21,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Qué número sigue en la serie: 2, 5, 11, 23, ___?",
+        "opciones": ["45", "46", "47", "48"],
+        "respuesta_correcta": "47"
+    },
+    {
+        "id": 22,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Si 3 camisas cuestan $600, ¿cuánto costarán 7 camisas del mismo tipo?",
+        "opciones": ["$1200", "$1400", "$1500", "$1600"],
+        "respuesta_correcta": "$1400"
+    },
+    {
+        "id": 23,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Un padre tiene 42 años y su hijo 12. ¿Dentro de cuántos años la edad del padre será el triple de la del hijo?",
+        "opciones": ["3 años", "4 años", "5 años", "6 años"],
+        "respuesta_correcta": "3 años"
+    },
+    {
+        "id": 24,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "En un grupo de 50 alumnos, el 60% son mujeres. ¿Cuántos hombres hay?",
+        "opciones": ["20", "25", "30", "15"],
+        "respuesta_correcta": "20"
+    },
+    {
+        "id": 25,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Determina el valor de x en la ecuación: 3x - 7 = 2x + 5",
+        "opciones": ["12", "2", "-2", "6"],
+        "respuesta_correcta": "12"
+    },
+    {
+        "id": 26,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Cuál es el área de un triángulo cuya base mide 10 cm y su altura es de 6 cm?",
+        "opciones": ["60 cm²", "30 cm²", "15 cm²", "20 cm²"],
+        "respuesta_correcta": "30 cm²"
+    },
+    {
+        "id": 27,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Qué número falta en la siguiente secuencia? 1, 4, 9, 16, 25, ___",
+        "opciones": ["30", "35", "36", "49"],
+        "respuesta_correcta": "36"
+    },
+    {
+        "id": 28,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Si un auto viaja a una velocidad constante de 80 km/h, ¿cuánto tiempo tardará en recorrer 320 km?",
+        "opciones": ["3 horas", "4 horas", "5 horas", "4.5 horas"],
+        "respuesta_correcta": "4 horas"
+    },
+    {
+        "id": 29,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Si x + y = 10 y x - y = 4, ¿cuál es el valor de x?",
+        "opciones": ["7", "6", "5", "3"],
+        "respuesta_correcta": "7"
+    },
+    {
+        "id": 30,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "A una fiesta asisten 12 personas. Si todas se saludan estrechándose la mano una sola vez, ¿cuántos saludos se intercambian en total?",
+        "opciones": ["144", "72", "66", "12"],
+        "respuesta_correcta": "66"
+    },
+    {
+        "id": 31,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Cuál es la probabilidad de obtener un número par al lanzar un dado estándar de 6 caras?",
+        "opciones": ["1/6", "1/2", "1/3", "2/3"],
+        "respuesta_correcta": "1/2"
+    },
+    {
+        "id": 32,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Simplifica la expresión matemática: 4 + 3 * (5 - 2)",
+        "opciones": ["21", "13", "11", "15"],
+        "respuesta_correcta": "13"
+    },
+    {
+        "id": 33,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Un artículo que cuesta $1200 tiene un descuento del 15%. ¿Cuánto se paga finalmente?",
+        "opciones": ["$1020", "$1050", "$980", "$1100"],
+        "respuesta_correcta": "$1020"
+    },
+    {
+        "id": 34,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Cuál es la raíz cuadrada de la suma de 64 y 36?",
+        "opciones": ["14", "10", "100", "12"],
+        "respuesta_correcta": "10"
+    },
+    {
+        "id": 35,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Si el perímetro de un cuadrado es de 32 cm, ¿cuánto mide su área?",
+        "opciones": ["64 cm²", "32 cm²", "16 cm²", "256 cm²"],
+        "respuesta_correcta": "64 cm²"
+    },
+    {
+        "id": 36,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Encuentra el valor que falta: 3 es a 9 como 5 es a...",
+        "opciones": ["15", "25", "20", "30"],
+        "respuesta_correcta": "25"
+    },
+    {
+        "id": 37,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Un tanque de agua se llena en 4 horas con una llave. ¿Cuánto tardará en llenarse si se usan dos llaves iguales simultáneamente?",
+        "opciones": ["1 hora", "2 horas", "3 horas", "8 horas"],
+        "respuesta_correcta": "2 horas"
+    },
+    {
+        "id": 38,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Si un ángulo de un triángulo rectángulo mide 35°, ¿cuánto mide el otro ángulo agudo?",
+        "opciones": ["45°", "55°", "65°", "90°"],
+        "respuesta_correcta": "55°"
+    },
+    {
+        "id": 39,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Cuál es el promedio (media) de los números: 8, 12, 15, 17 y 23?",
+        "opciones": ["14", "15", "16", "17"],
+        "respuesta_correcta": "16"
+    },
+    {
+        "id": 40,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Un estudiante contesta 4 preguntas correctas por cada 1 incorrecta. Si el examen tiene 50 preguntas, ¿cuántas tuvo correctas?",
+        "opciones": ["35", "40", "45", "30"],
+        "respuesta_correcta": "40"
+    },
+    {
+        "id": 41,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Cuál es el organelo celular encargado de la producción de energía (ATP) mediante la respiración celular?",
+        "opciones": ["Cloroplasto", "Ribosoma", "Mitocondria", "Lisosoma"],
+        "respuesta_correcta": "Mitocondria"
+    },
+    {
+        "id": 42,
+        "materia": "Ciencias Naturales",
+        "pregunta": "De acuerdo con la tercera ley de Newton, a toda acción le corresponde una reacción de igual magnitud pero en...",
+        "opciones": ["La misma dirección", "Sentido opuesto", "Ángulo recto", "Magnitud variable"],
+        "respuesta_correcta": "Sentido opuesto"
+    },
+    {
+        "id": 43,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Cuál es el enlace químico que se forma por la transferencia completa de electrones de un átomo a otro?",
+        "opciones": ["Covalente", "Iónico", "Metálico", "Puente de Hidrógeno"],
+        "respuesta_correcta": "Iónico"
+    },
+    {
+        "id": 44,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Qué elemento de la tabla periódica posee el número atómico 1?",
+        "opciones": ["Helio", "Oxígeno", "Hidrógeno", "Carbono"],
+        "respuesta_correcta": "Hidrógeno"
+    },
+    {
+        "id": 45,
+        "materia": "Ciencias Naturales",
+        "pregunta": "Proceso biológico por el cual las plantas convierten la luz solar, agua y dióxido de carbono en glucosa y oxígeno:",
+        "opciones": ["Mitosis", "Fotosíntesis", "Glucólisis", "Fermentación"],
+        "respuesta_correcta": "Fotosíntesis"
+    },
+    {
+        "id": 46,
+        "materia": "Ciencias Naturales",
+        "pregunta": "La unidad fundamental de la herencia genética en los seres vivos es el:",
+        "opciones": ["Cromosoma", "Gen", "ADN", "Proteína"],
+        "respuesta_correcta": "Gen"
+    },
+    {
+        "id": 47,
+        "materia": "Ciencias Naturales",
+        "pregunta": "La aceleración de la gravedad en la superficie de la Tierra tiene un valor aproximado de:",
+        "opciones": ["9.8 m/s²", "3.14 m/s²", "1.6 m/s²", "10.5 m/s²"],
+        "respuesta_correcta": "9.8 m/s²"
+    },
+    {
+        "id": 48,
+        "materia": "Ciencias Naturales",
+        "pregunta": "Un compuesto con un pH balanceado en un valor de 2 se clasifica como un:",
+        "opciones": ["Base fuerte", "Base débil", "Ácido fuerte", "Sustancia neutra"],
+        "respuesta_correcta": "Ácido fuerte"
+    },
+    {
+        "id": 49,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Qué tipo de energía posee un objeto debido a su posición o altura con respecto al suelo?",
+        "opciones": ["Energía Cinética", "Energía Potencial", "Energía Térmica", "Energía Química"],
+        "respuesta_correcta": "Energía Potencial"
+    },
+    {
+        "id": 50,
+        "materia": "Ciencias Naturales",
+        "pregunta": "El gas más abundante en la atmósfera del planeta Tierra es el:",
+        "opciones": ["Oxígeno", "Dióxido de Carbono", "Nitrógeno", "Argón"],
+        "respuesta_correcta": "Nitrógeno"
+    },
+    {
+        "id": 51,
+        "materia": "Ciencias Exactas",
+        "pregunta": "¿Cuál es la derivada de la función matemática f(x) = x²?",
+        "opciones": ["x", "2x", "2", "x³"],
+        "respuesta_correcta": "2x"
+    },
+    {
+        "id": 52,
+        "materia": "Ciencias Exactas",
+        "pregunta": "Si un triángulo tiene lados de magnitudes fijas de 3, 4 y 5, se trata de un triángulo:",
+        "opciones": ["Equilátero", "Isósceles", "Rectángulo", "Obtusángulo"],
+        "respuesta_correcta": "Rectángulo"
+    },
+    {
+        "id": 53,
+        "materia": "Ciencias Exactas",
+        "pregunta": "¿A cuántos grados equivalen pi (π) radianes según el sistema sexagesimal?",
+        "opciones": ["90°", "180°", "270°", "360°"],
+        "respuesta_correcta": "180°"
+    },
+    {
+        "id": 54,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Cuál es el estado de la materia donde las partículas están muy separadas y tienen total libertad de movimiento?",
+        "opciones": ["Sólido", "Líquido", "Gaseoso", "Plasma"],
+        "respuesta_correcta": "Gaseoso"
+    },
+    {
+        "id": 55,
+        "materia": "Ciencias Naturales",
+        "pregunta": "La teoría de la evolución por selección natural fue propuesta formalmente por:",
+        "opciones": ["Gregor Mendel", "Louis Pasteur", "Charles Darwin", "Jean-Baptiste Lamarck"],
+        "respuesta_correcta": "Charles Darwin"
+    },
+    {
+        "id": 56,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Qué ley establece que la presión de un gas ideal es inversamente proporcional a su volumen si la temperatura es constante?",
+        "opciones": ["Ley de Charles", "Ley de Boyle", "Ley de Gay-Lussac", "Ley de Avogadro"],
+        "respuesta_correcta": "Ley de Boyle"
+    },
+    {
+        "id": 57,
+        "materia": "Ciencias Naturales",
+        "pregunta": "En una solución química de agua con sal, el agua actúa directamente como el:",
+        "opciones": ["Soluto", "Solvente", "Saturado", "Precipitado"],
+        "respuesta_correcta": "Solvente"
+    },
+    {
+        "id": 58,
+        "materia": "Ciencias Exactas",
+        "pregunta": "¿Cuál es el valor del logaritmo estándar en base 10 de 100?",
+        "opciones": ["1", "2", "10", "100"],
+        "respuesta_correcta": "2"
+    },
+    {
+        "id": 59,
+        "materia": "Ciencias Naturales",
+        "pregunta": "Los cromosomas sexuales de un individuo humano de sexo masculino biológico son:",
+        "opciones": ["XX", "YY", "XY", "XO"],
+        "respuesta_correcta": "XY"
+    },
+    {
+        "id": 60,
+        "materia": "Ciencias Naturales",
+        "pregunta": "El proceso mediante el cual un líquido pasa a estado sólido se denomina:",
+        "opciones": ["Fusión", "Solidificación", "Evaporación", "Sublimación"],
+        "respuesta_correcta": "Solidificación"
+    },
+    {
+        "id": 61,
+        "materia": "Ciencias Sociales",
+        "pregunta": "¿En qué año dio inicio la Revolución Mexicana encabezada por Francisco I. Madero?",
+        "opciones": ["1810", "1910", "1917", "1857"],
+        "respuesta_correcta": "1910"
+    },
+    {
+        "id": 62,
+        "materia": "Ciencias Sociales",
+        "pregunta": "Sistema económico basado en la propiedad privada de los medios de producción y el libre mercado:",
+        "opciones": ["Socialismo", "Feudalismo", "Capitalismo", "Comunismo"],
+        "respuesta_correcta": "Capitalismo"
+    },
+    {
+        "id": 63,
+        "materia": "Ciencias Sociales",
+        "pregunta": "¿Quién es considerado formalmente como el Padre de la Patria en México?",
+        "opciones": ["Benito Juárez", "Porfirio Díaz", "Miguel Hidalgo y Costilla", "José María Morelos"],
+        "respuesta_correcta": "Miguel Hidalgo y Costilla"
+    },
+    {
+        "id": 64,
+        "materia": "Humanidades",
+        "pregunta": "Filósofo griego clásico conocido por su método de enseñanza basado en preguntas llamado Mayéutica:",
+        "opciones": ["Platón", "Aristóteles", "Sócrates", "Epicuro"],
+        "respuesta_correcta": "Sócrates"
+    },
+    {
+        "id": 65,
+        "materia": "Ciencias Sociales",
+        "pregunta": "¿Qué evento histórico mundial ocurrió entre los años 1914 y 1918?",
+        "opciones": ["Segunda Guerra Mundial", "Primera Guerra Mundial", "Revolución Francesa", "Guerra Fría"],
+        "respuesta_correcta": "Primera Guerra Mundial"
+    },
+    {
+        "id": 66,
+        "materia": "Ciencias Sociales",
+        "pregunta": "La cultura prehispánica mesoamericana conocida como la 'Cultura Madre' fue la:",
+        "opciones": ["Maya", "Azteca", "Olmeca", "Zapoteca"],
+        "respuesta_correcta": "Olmeca"
+    },
+    {
+        "id": 67,
+        "materia": "Ciencias Sociales",
+        "pregunta": "El documento que rige actualmente las leyes orgánicas y políticas de México es la Constitución de:",
+        "opciones": ["1824", "1857", "1917", "1810"],
+        "respuesta_correcta": "1917"
+    },
+    {
+        "id": 68,
+        "materia": "Humanidades",
+        "pregunta": "¿Quién escribió la célebre novela de la literatura hispana 'Don Quijote de la Mancha'?",
+        "opciones": ["Gabriel García Márquez", "Miguel de Cervantes Saavedra", "Sor Juana Inés de la Cruz", "Federico García Lorca"],
+        "respuesta_correcta": "Miguel de Cervantes Saavedra"
+    },
+    {
+        "id": 69,
+        "materia": "Ciencias Sociales",
+        "pregunta": "La división de poderes en una república democrática se compone de Ejecutivo, Judicial y...",
+        "opciones": ["Federal", "Legislativo", "Electoral", "Municipal"],
+        "respuesta_correcta": "Legislativo"
+    },
+    {
+        "id": 70,
+        "materia": "Ciencias Sociales",
+        "pregunta": "¿Qué acontecimiento internacional del año 1789 marcó el fin de la Edad Moderna y el inicio de la Edad Contemporánea?",
+        "opciones": ["La Revolución Francesa", "La Independencia de EE.UU.", "La Caída del Imperio Romano", "La Revolución Industrial"],
+        "respuesta_correcta": "La Revolución Francesa"
+    },
+    {
+        "id": 71,
+        "materia": "Ciencias Sociales",
+        "pregunta": "¿Qué presidente mexicano nacionalizó la industria petrolera en el año 1938?",
+        "opciones": ["Plutarco Elías Calles", "Lázaro Cárdenas del Río", "Adolfo López Mateos", "Porfirio Díaz"],
+        "respuesta_correcta": "Lázaro Cárdenas del Río"
+    },
+    {
+        "id": 72,
+        "materia": "Humanidades",
+        "pregunta": "El Renacimiento fue un movimiento cultural y artístico que tuvo su origen principal en qué país europeo:",
+        "opciones": ["Francia", "España", "Italia", "Alemania"],
+        "respuesta_correcta": "Italia"
+    },
+    {
+        "id": 73,
+        "materia": "Ciencias Sociales",
+        "pregunta": "La institución internacional creada tras la Segunda Guerra Mundial para mantener la paz y seguridad en el mundo es la:",
+        "opciones": ["OEA", "ONU", "OTAN", "Unicef"],
+        "respuesta_correcta": "ONU"
+    },
+    {
+        "id": 74,
+        "materia": "Ciencias Sociales",
+        "pregunta": "¿Qué período histórico en México se caracterizó por una estabilidad económica bajo una dictadura de más de 30 años?",
+        "opciones": ["El Maximato", "El Porfiriato", "La Colonia", "La Reforma"],
+        "respuesta_correcta": "El Porfiriato"
+    },
+    {
+        "id": 75,
+        "materia": "Humanidades",
+        "pregunta": "Cuál de las siguientes es una disciplina filosófica que estudia el bien, el mal y la moral humana?",
+        "opciones": ["Estética", "Epistemología", "Ética", "Ontología"],
+        "respuesta_correcta": "Ética"
+    },
+    {
+        "id": 76,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el sinónimo de la palabra: EFICAZ.",
+        "opciones": ["Eficiente", "Inútil", "Perezoso", "Lento"],
+        "respuesta_correcta": "Eficiente"
+    },
+    {
+        "id": 77,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el antónimo de la palabra: ALTRUISMO.",
+        "opciones": ["Filantropía", "Egoísmo", "Solidaridad", "Piedad"],
+        "respuesta_correcta": "Egoísmo"
+    },
+    {
+        "id": 78,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Completa la analogía: ASTRÓNOMO es a TELESCOPIO como...",
+        "opciones": ["Biólogo es a microscopio", "Químico es a laboratorio", "Físico es a fórmula", "Médico es a paciente"],
+        "respuesta_correcta": "Biólogo es a microscopio"
+    },
+    {
+        "id": 79,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Identifica el término que NO pertenece al mismo grupo semántico:",
+        "opciones": ["Democracia", "Monarquía", "Dictadura", "Anarquía"],
+        "respuesta_correcta": "Anarquía"
+    },
+    {
+        "id": 80,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Completa la oración: El conferencista habló con tanta ______ que logró ______ a todo el auditorio.",
+        "opciones": ["elocuencia - conmover", "apatía - aburrir", "rapidez - confundir", "timidez - asustar"],
+        "respuesta_correcta": "elocuencia - conmover"
+    },
+    {
+        "id": 81,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el sinónimo de: PROLÍFICO.",
+        "opciones": ["Productivo", "Estéril", "Escaso", "Inactivo"],
+        "respuesta_correcta": "Productivo"
+    },
+    {
+        "id": 82,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el antónimo de: EFÍMERO.",
+        "opciones": ["Fugaz", "Eterno", "Pasajero", "Breve"],
+        "respuesta_correcta": "Eterno"
+    },
+    {
+        "id": 83,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Completa la analogía: TIMÓN es a BARCO como...",
+        "opciones": ["Volante es a automóvil", "Rueda es a bicicleta", "Ala es a avión", "Ancla es a mar"],
+        "respuesta_correcta": "Volante es a automóvil"
+    },
+    {
+        "id": 84,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Identifica la palabra con la ortografía CORRECTA:",
+        "opciones": ["Idiosincrasia", "Idiosincrazia", "Idiozincrasia", "Idiosincracía"],
+        "respuesta_correcta": "Idiosincrasia"
+    },
+    {
+        "id": 85,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Elija la opción que sustituye la palabra en mayúsculas: El científico logró PERFECCIONAR el método.",
+        "opciones": ["Optimizar", "Arruinar", "Iniciar", "Cambiar"],
+        "respuesta_correcta": "Optimizar"
+    },
+    {
+        "id": 86,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Comprensión lectora: Un texto que narra las peripecias de un héroe mitológico es de tipo:",
+        "opciones": ["Narrativo", "Argumentativo", "Expositivo", "Descriptivo"],
+        "respuesta_correcta": "Narrativo"
+    },
+    {
+        "id": 87,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Elija la opción que guarde la misma relación: PERRO es a JAURÍA como...",
+        "opciones": ["Pez es a cardumen", "Lobo es a bosque", "Oveja es a campo", "Pájaro es a nido"],
+        "respuesta_correcta": "Pez es a cardumen"
+    },
+    {
+        "id": 88,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el antónimo de: ERUDITO.",
+        "opciones": ["Sabio", "Ignorante", "Culto", "Inteligente"],
+        "respuesta_correcta": "Ignorante"
+    },
+    {
+        "id": 89,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Completa el enunciado: A pesar de las ______ del clima, los expedicionarios lograron ______ la cima.",
+        "opciones": ["adversidades - alcanzar", "facilidades - perder", "ventajas - ver", "condiciones - abandonar"],
+        "respuesta_correcta": "adversidades - alcanzar"
+    },
+    {
+        "id": 90,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el término que NO pertenece al conjunto:",
+        "opciones": ["Geometría", "Álgebra", "Cálculo", "Física"],
+        "respuesta_correcta": "Física"
+    },
+    {
+        "id": 91,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el sinónimo de: PERSpicaz.",
+        "opciones": ["Agudo", "Torpe", "Lento", "Distraído"],
+        "respuesta_correcta": "Agudo"
+    },
+    {
+        "id": 92,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Completa la analogía: PINCEL es a PINTOR como...",
+        "opciones": ["Pluma es a escritor", "Cincel es a madera", "Guitarra es a música", "Libro es a lector"],
+        "respuesta_correcta": "Pluma es a escritor"
+    },
+    {
+        "id": 93,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Identifica el enunciado con la redacción más precisa y coherente:",
+        "opciones": ["La gente piensa de que todo va a cambiar.", "La gente piensa que todo va a cambiar.", "La gente piensan que todo va a cambiar.", "La gente piensa en que todo va a cambiar."],
+        "respuesta_correcta": "La gente piensa que todo va a cambiar."
+    },
+    {
+        "id": 94,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "Selecciona el antónimo de: EFÍMERO.",
+        "opciones": ["Perdurable", "Momento", "Breve", "Fugaz"],
+        "respuesta_correcta": "Perdurable"
+    },
+    {
+        "id": 95,
+        "materia": "Razonamiento Verbal",
+        "pregunta": "La educación es un factor ______ para el desarrollo de un país, ya que estimula el ______ social.",
+        "opciones": ["clave - progreso", "secundario - retraso", "negativo - estancamiento", "aislado - cambio"],
+        "respuesta_correcta": "clave - progreso"
+    },
+    {
+        "id": 96,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Qué número sigue en la serie: 3, 6, 12, 24, ___?",
+        "opciones": ["48", "36", "30", "50"],
+        "respuesta_correcta": "48"
+    },
+    {
+        "id": 97,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Si 5 obreros construyen una barda en 10 días, ¿cuántos días tardarán 10 obreros en hacer el mismo trabajo?",
+        "opciones": ["5 días", "20 días", "15 días", "8 días"],
+        "respuesta_correcta": "5 días"
+    },
+    {
+        "id": 98,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Una madre tiene 40 años y sus hijos 10 y 12 años. ¿Cuánto sumarán las edades de los hijos dentro de 5 años?",
+        "opciones": ["32 años", "22 años", "27 años", "37 años"],
+        "respuesta_correcta": "32 años"
+    },
+    {
+        "id": 99,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "En un grupo de 60 alumnos, el 40% son hombres. ¿Cuántas mujeres hay?",
+        "opciones": ["36", "24", "30", "40"],
+        "respuesta_correcta": "36"
+    },
+    {
+        "id": 100,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Determina el valor de x en la ecuación: 5x - 10 = 3x + 4",
+        "opciones": ["7", "3", "2", "6"],
+        "respuesta_correcta": "7"
+    },
+    {
+        "id": 101,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Cuál es el área de un triángulo cuya base mide 12 cm y su altura es de 8 cm?",
+        "opciones": ["48 cm²", "96 cm²", "24 cm²", "40 cm²"],
+        "respuesta_correcta": "48 cm²"
+    },
+    {
+        "id": 102,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Qué número falta en la siguiente secuencia? 2, 4, 8, 16, ___",
+        "opciones": ["32", "24", "20", "64"],
+        "respuesta_correcta": "32"
+    },
+    {
+        "id": 103,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Si un auto viaja a 90 km/h, ¿cuánto tiempo tardará en recorrer 270 km?",
+        "opciones": ["3 horas", "4 horas", "2.5 horas", "3.5 horas"],
+        "respuesta_correcta": "3 horas"
+    },
+    {
+        "id": 104,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Si x + y = 12 y x - y = 6, ¿cuál es el valor de x?",
+        "opciones": ["9", "3", "6", "8"],
+        "respuesta_correcta": "9"
+    },
+    {
+        "id": 105,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "A una reunión asisten 10 personas. Si todas se saludan una sola vez, ¿cuántos saludos se intercambian en total?",
+        "opciones": ["45", "90", "100", "20"],
+        "respuesta_correcta": "45"
+    },
+    {
+        "id": 106,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Cuál es la probabilidad de obtener un número menor a 3 al lanzar un dado de 6 caras?",
+        "opciones": ["1/3", "1/2", "1/6", "2/3"],
+        "respuesta_correcta": "1/3"
+    },
+    {
+        "id": 107,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Simplifica la expresión matemática: 5 + 4 * (6 - 3)",
+        "opciones": ["17", "27", "23", "20"],
+        "respuesta_correcta": "17"
+    },
+    {
+        "id": 108,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Un artículo que cuesta $1500 tiene un descuento del 20%. ¿Cuánto se paga finalmente?",
+        "opciones": ["$1200", "$1300", "$1100", "$1250"],
+        "respuesta_correcta": "$1200"
+    },
+    {
+        "id": 109,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Cuál es la raíz cuadrada de la suma de 144 y 25?",
+        "opciones": ["13", "17", "12", "15"],
+        "respuesta_corrector": "13",
+        "respuesta_correcta": "13"
+    },
+    {
+        "id": 110,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Si el perímetro de un cuadrado es de 40 cm, ¿cuánto mide su área?",
+        "opciones": ["100 cm²", "40 cm²", "160 cm²", "80 cm²"],
+        "respuesta_correcta": "100 cm²"
+    },
+    {
+        "id": 111,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Encuentra el valor que falta: 4 es a 16 como 6 es a...",
+        "opciones": ["36", "24", "12", "30"],
+        "respuesta_correcta": "36"
+    },
+    {
+        "id": 112,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Un tanque de agua se llena en 6 horas con una llave. ¿Cuánto tardará si se usan tres llaves iguales?",
+        "opciones": ["2 horas", "3 horas", "4 horas", "1.5 horas"],
+        "respuesta_correcta": "2 horas"
+    },
+    {
+        "id": 113,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Si un ángulo de un triángulo rectángulo mide 40°, ¿cuánto mide el otro ángulo agudo?",
+        "opciones": ["50°", "40°", "60°", "45°"],
+        "respuesta_correcta": "50°"
+    },
+    {
+        "id": 114,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "¿Cuál es el promedio de los números: 10, 15, 20, 25 y 30?",
+        "opciones": ["20", "25", "15", "22"],
+        "respuesta_correcta": "20"
+    },
+    {
+        "id": 115,
+        "materia": "Razonamiento Matemático",
+        "pregunta": "Un estudiante contesta 3 preguntas correctas por cada 1 incorrecta. Si el examen tiene 40 preguntas, ¿cuántas tuvo correctas?",
+        "opciones": ["30", "25", "35", "20"],
+        "respuesta_correcta": "30"
+    },
+    {
+        "id": 116,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Cuál es el organelo celular encargado de la síntesis de proteínas?",
+        "opciones": ["Ribosoma", "Mitocondria", "Aparato de Golgi", "Lisosoma"],
+        "respuesta_correcta": "Ribosoma"
+    },
+    {
+        "id": 117,
+        "materia": "Ciencias Naturales",
+        "pregunta": "De acuerdo con la primera ley de Newton, un objeto en reposo permanecerá en reposo a menos que actúe una:",
+        "opciones": ["Fuerza externa", "Velocidad constante", "Aceleración interna", "Fuerza de fricción"],
+        "respuesta_correcta": "Fuerza externa"
+    },
+    {
+        "id": 118,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Cuál es el enlace químico que se forma por el compartimiento de electrones entre dos átomos?",
+        "opciones": ["Covalente", "Iónico", "Metálico", "Puente de Hidrógeno"],
+        "respuesta_correcta": "Covalente"
+    },
+    {
+        "id": 119,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Qué elemento de la tabla periódica posee el número atómico 6?",
+        "opciones": ["Carbono", "Oxígeno", "Nitrógeno", "Hidrógeno"],
+        "respuesta_correcta": "Carbono"
+    },
+    {
+        "id": 120,
+        "materia": "Ciencias Naturales",
+        "pregunta": "Proceso biológico por el cual las células se dividen para formar dos células hijas idénticas:",
+        "opciones": ["Mitosis", "Meiosis", "Fotosíntesis", "Fisión"],
+        "respuesta_correcta": "Mitosis"
+    },
+    {
+        "id": 121,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Cuál es la macromolécula encargada de almacenar la información genética?",
+        "opciones": ["ADN", "ARN", "Proteína", "Lípido"],
+        "respuesta_correcta": "ADN"
+    },
+    {
+        "id": 122,
+        "materia": "Ciencias Naturales",
+        "pregunta": "La ley de la conservación de la energía establece que la energía no se crea ni se destruye, solo se:",
+        "opciones": ["Transforma", "Disipa", "Acumula", "Destruye"],
+        "respuesta_correcta": "Transforma"
+    },
+    {
+        "id": 123,
+        "materia": "Ciencias Naturales",
+        "pregunta": "Un compuesto con un pH de 12 se clasifica como un/a:",
+        "opciones": ["Base fuerte", "Base débil", "Ácido fuerte", "Sustancia neutra"],
+        "respuesta_correcta": "Base fuerte"
+    },
+    {
+        "id": 124,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Qué tipo de energía posee un objeto en movimiento?",
+        "opciones": ["Energía Cinética", "Energía Potencial", "Energía Térmica", "Energía Química"],
+        "respuesta_correcta": "Energía Cinética"
+    },
+    {
+        "id": 125,
+        "materia": "Ciencias Naturales",
+        "pregunta": "El componente principal del gas natural es el:",
+        "opciones": ["Metano", "Propano", "Butano", "Etano"],
+        "respuesta_correcta": "Metano"
+    },
+    {
+        "id": 126,
+        "materia": "Ciencias Exactas",
+        "pregunta": "¿Cuál es la derivada de la función f(x) = 3x?",
+        "opciones": ["3", "3x", "x", "0"],
+        "respuesta_correcta": "3"
+    },
+    {
+        "id": 127,
+        "materia": "Ciencias Exactas",
+        "pregunta": "Si un triángulo tiene tres lados iguales, se trata de un triángulo:",
+        "opciones": ["Equilátero", "Isósceles", "Escaleno", "Rectángulo"],
+        "respuesta_correcta": "Equilátero"
+    },
+    {
+        "id": 128,
+        "materia": "Ciencias Exactas",
+        "pregunta": "¿A cuántos grados equivalen 2pi (2π) radianes?",
+        "opciones": ["360°", "180°", "90°", "270°"],
+        "respuesta_correcta": "360°"
+    },
+    {
+        "id": 129,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Cuál es el estado de la materia donde las partículas están fijas pero vibran en su lugar?",
+        "opciones": ["Sólido", "Líquido", "Gaseoso", "Plasma"],
+        "respuesta_correcta": "Sólido"
+    },
+    {
+        "id": 130,
+        "materia": "Ciencias Naturales",
+        "pregunta": "Las leyes de la herencia genética fueron propuestas inicialmente por:",
+        "opciones": ["Gregor Mendel", "Charles Darwin", "Louis Pasteur", "Jean-Baptiste Lamarck"],
+        "respuesta_correcta": "Gregor Mendel"
+    },
+    {
+        "id": 131,
+        "materia": "Ciencias Naturales",
+        "pregunta": "¿Qué ley establece que el volumen de un gas es directamente proporcional a su temperatura si la presión es constante?",
+        "opciones": ["Ley de Charles", "Ley de Boyle", "Ley de Gay-Lussac", "Ley de Avogadro"],
+        "respuesta_correcta": "Ley de Charles"
+    },
+    {
+        "id": 132,
+        "materia": "Ciencias Naturales",
+        "pregunta": "En una solución de agua con azúcar, el azúcar actúa como el:",
+        "opciones": ["Soluto", "Solvente", "Saturado", "Precipitado"],
+        "respuesta_correcta": "Soluto"
+    },
+    {
+        "id": 133,
+        "materia": "Ciencias Exactas",
+        "pregunta": "¿Cuál es el valor del logaritmo en base 2 de 8?",
+        "opciones": ["3", "2", "4", "8"],
+        "respuesta_correcta": "3"
+    },
+    {
+        "id": 134,
+        "materia": "Ciencias Naturales",
+        "pregunta": "Los cromosomas sexuales de un individuo humano de sexo femenino biológico son:",
+        "opciones": ["XX", "XY", "YY", "XO"],
+        "respuesta_correcta": "XX"
+    },
+    {
+        "id": 135,
+        "materia": "Ciencias Naturales",
+        "pregunta": "El proceso mediante el cual un sólido pasa directamente a estado gaseoso se denomina:",
+        "opciones": ["Sublimación", "Fusión", "Solidificación", "Evaporación"],
+        "respuesta_correcta": "Sublimación"
+    },
+    {
+        "id": 136,
+        "materia": "Ciencias Sociales",
+        "pregunta": "¿En qué año se conmemora la Independencia de México?",
+        "opciones": ["1810", "1910", "1821", "1857"],
+        "respuesta_correcta": "1810"
+    },
+    {
+        "id": 137,
+        "materia": "Ciencias Sociales",
+        "pregunta": "Sistema económico basado en la propiedad colectiva de los medios de producción y la planificación central:",
+        "opciones": ["Socialismo", "Capitalismo", "Feudalismo", "Liberalismo"],
+        "respuesta_correcta": "Socialismo"
+    },
+    {
+        "id": 138,
+        "materia": "Ciencias Sociales",
+        "pregunta": "¿Quién escribió las Leyes de Reforma en México?",
+        "opciones": ["Benito Juárez", "Porfirio Díaz", "Miguel Hidalgo", "Emiliano Zapata"],
+        "respuesta_correcta": "Benito Juárez"
+    },
+    {
+        "id": 139,
+        "materia": "Humanidades",
+        "pregunta": "Filósofo idealista que fue discípulo de Sócrates y escribió 'La República':",
+        "opciones": ["Platón", "Aristóteles", "Descartes", "Nietzsche"],
+        "respuesta_correcta": "Platón"
+    },
+    {
+        "id": 140,
+        "materia": "Ciencias Sociales",
+        "pregunta": "¿Qué evento histórico mundial ocurrió entre los años 1939 y 1945?",
+        "opciones": ["Segunda Guerra Mundial", "Primera Guerra Mundial", "Guerra Fría", "Guerra de Vietnam"],
+        "respuesta_correcta": "Segunda Guerra Mundial"
+    },
+    {
+        "id": 141,
+        "materia": "Ciencias Sociales",
+        "pregunta": "La gran cultura prehispánica que destacó en astronomía y matemáticas en el sureste mexicano fue la:",
+        "opciones": ["Maya", "Azteca", "Olmeca", "Tolteca"],
+        "respuesta_correcta": "Maya"
+    },
+    {
+        "id": 142,
+        "materia": "Ciencias Sociales",
+        "pregunta": "El primer presidente constitucional de México fue:",
+        "opciones": ["Guadalupe Victoria", "Benito Juárez", "Agustín de Iturbide", "Antonio López de Santa Anna"],
+        "respuesta_correcta": "Guadalupe Victoria"
+    },
+    {
+        "id": 143,
+        "materia": "Humanidades",
+        "pregunta": "¿Quién escribió la obra teatral 'Romeo y Julieta'?",
+        "opciones": ["William Shakespeare", "Miguel de Cervantes", "Molière", "Goethe"],
+        "respuesta_correcta": "William Shakespeare"
+    },
+    {
+        "id": 144,
+        "materia": "Ciencias Sociales",
+        "pregunta": "El órgano encargado de impartir justicia y vigilar la constitucionalidad en México es la:",
+        "opciones": ["Suprema Corte de Justicia", "Cámara de Diputados", "Presidencia de la República", "Fiscalía General"],
+        "respuesta_correcta": "Suprema Corte de Justicia"
+    },
+    {
+        "id": 145,
+        "materia": "Ciencias Sociales",
+        "pregunta": "¿Qué acontecimiento histórico comenzó en 1760 en Inglaterra transformando la producción artesanal en fabril?",
+        "opciones": ["La Revolución Industrial", "La Revolución Francesa", "La Ilustración", "La Comuna de París"],
+        "respuesta_correcta": "La Revolución Industrial"
+    },
+    {
+        "id": 146,
+        "materia": "Ciencias Sociales",
+        "pregunta": "El presidente de México que duró más de 30 años en el poder a finales del siglo XIX fue:",
+        "opciones": ["Porfirio Díaz", "Benito Juárez", "Antonio López de Santa Anna", "Lázaro Cárdenas"],
+        "respuesta_correcta": "Porfirio Díaz"
+    },
+    {
+        "id": 147,
+        "materia": "Humanidades",
+        "pregunta": "El movimiento cultural e intelectual europeo del siglo XVIII centrado en la razón se llamó:",
+        "opciones": ["La Ilustración", "El Barroco", "El Romanticismo", "El Escolasticismo"],
+        "respuesta_correcta": "La Ilustración"
+    },
+    {
+        "id": 148,
+        "materia": "Ciencias Sociales",
+        "pregunta": "El Tratado de Tlatelolco tuvo como objetivo principal la prohibición de armas:",
+        "opciones": ["Nucleares en América Latina", "Químicas en el mundo", "Biológicas", "De fuego convencionales"],
+        "respuesta_correcta": "Nucleares en América Latina"
+    },
+    {
+        "id": 149,
+        "materia": "Ciencias Sociales",
+        "pregunta": "La caída de qué monumento arquitectónico en 1989 simbolizó el fin de la Guerra Fría:",
+        "opciones": ["El Muro de Berlín", "La Cortina de Hierro", "El Palacio de Invierno", "El Capitolio"],
+        "respuesta_correcta": "El Muro de Berlín"
+    },
+    {
+        "id": 150,
+        "materia": "Humanidades",
+        "pregunta": "La disciplina filosófica que se encarga de estudiar la naturaleza del conocimiento científico es la:",
+        "opciones": ["Epistemología", "Estética", "Metafísica", "Ética"],
+        "respuesta_correcta": "Epistemología"
+    }
+]
