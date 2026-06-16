@@ -20,8 +20,8 @@
 </nav>
 
 {% if preguntas %}
-<div id="cronometro" style="position: fixed; top: 20px; right: 20px; background-color: #dc3545; color: white; padding: 12px 20px; font-size: 1.2em; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000;">
-    Tiempo restante: <span id="tiempo-reloj">--:--</span>
+<div id="cronometro" style="position: fixed; top: 20px; right: 20px; background-color: #111; color: #28a745; padding: 12px 20px; font-size: 1.3em; font-family: monospace; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; border: 2px solid #333;">
+    ⏱️ <span id="tiempo-reloj">--:--</span>
 </div>
 {% endif %}
 
@@ -65,27 +65,38 @@
     </form>
 
     <script>
-        // Traemos los minutos desde Flask (si no llega nada ponemos 10 por defecto)
+        // Traemos los minutos asignados desde Flask
         let minutosIniciales = {{ tiempo if tiempo else 10 }};
         let tiempoRestante = minutosIniciales * 60; // Convertido a segundos
+        
         const displayReloj = document.getElementById('tiempo-reloj');
+        const contenedorCronometro = document.getElementById('cronometro');
         const formulario = document.getElementById('form-examen');
 
         const cuentaRegresiva = setInterval(function() {
             let minutos = Math.floor(tiempoRestante / 60);
             let segundos = tiempoRestante % 60;
 
-            // Formato con ceros a la izquierda (ej: 09:05)
-            segundos = segundos < 10 ? '0' + segundos : segundos;
-            minutos = minutos < 10 ? '0' + minutes : minutos;
+            // Formato con ceros a la izquierda (corregido)
+            let segundosTexto = segundos < 10 ? '0' + segundos : segundos;
+            let minutosTexto = minutos < 10 ? '0' + minutos : minutos;
 
-            displayReloj.textContent = `${minutos}:${segundos}`;
+            displayReloj.textContent = `${minutosTexto}:${segundosTexto}`;
+
+            # Alertas visuales según el tiempo restante
+            if (tiempoRestante <= 60) {
+                // Último minuto: Rojo de advertencia
+                displayReloj.style.color = '#dc3545';
+            } else if (tiempoRestante <= 300) {
+                // Últimos 5 minutos: Amarillo
+                displayReloj.style.color = '#ffc107';
+            }
 
             // Si el tiempo llega a cero
             if (tiempoRestante <= 0) {
                 clearInterval(cuentaRegresiva);
                 alert("¡Se ha agotado el tiempo del examen! Tus respuestas se enviarán automáticamente.");
-                formulario.submit(); // Envía el examen a calificar a fuerza
+                formulario.submit(); // Fuerza el envío del examen
             }
 
             tiempoRestante--;
