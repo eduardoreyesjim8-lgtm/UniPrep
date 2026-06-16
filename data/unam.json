@@ -698,5 +698,990 @@
     "pregunta": "¿Qué presidente de México impulsó el Tratado de Libre Comercio de América del Norte (TLCAN) que entró en vigor en 1994?",
     "opciones": ["Carlos Salinas de Gortari", "Ernesto Zedillo", "Vicente Fox", "Miguel de la Madrid"],
     "respuesta_correcta": "Carlos Salinas de Gortari"
+  },
+  {
+    "id": 101,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es el país más extenso territorialmente en todo el mundo?",
+    "opciones": ["Rusia", "Canadá", "China", "Estados Unidos"],
+    "respuesta_correcta": "Rusia"
+  },
+  {
+    "id": 102,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el resultado de elevar cualquier número diferente de cero a la potencia cero (x⁰)?",
+    "opciones": ["1", "0", "x", "Infinito"],
+    "respuesta_correcta": "1"
+  },
+  {
+    "id": 103,
+    "materia": "Física",
+    "pregunta": "¿Qué tipo de energía posee un cuerpo en virtud de su posición o altura con respecto a un plano de referencia?",
+    "opciones": ["Energía potencial", "Energía cinética", "Energía térmica", "Energía eólica"],
+    "respuesta_correcta": "Energía potencial"
+  },
+  {
+    "id": 104,
+    "materia": "Química",
+    "pregunta": "¿Cuál es el elemento químico más abundante en toda la corteza terrestre?",
+    "opciones": ["Oxígeno", "Silicio", "Aluminio", "Hierro"],
+    "respuesta_correcta": "Oxígeno"
+  },
+  {
+    "id": 105,
+    "materia": "Biología",
+    "pregunta": "¿Cómo se le llama al proceso de división celular por el cual una célula madre se divide para formar dos células hijas idénticas diploides?",
+    "opciones": ["Mitosis", "Meiosis", "Gemación", "Fisión"],
+    "respuesta_correcta": "Mitosis"
+  },
+  {
+    "id": 106,
+    "materia": "Español",
+    "pregunta": "Identifica la opción que contiene una palabra esdrújula:",
+    "opciones": ["Sábado", "Cantar", "Difícil", "Reloj"],
+    "respuesta_correcta": "Sábado"
+  },
+  {
+    "id": 107,
+    "materia": "Literatura",
+    "pregunta": "¿Qué autor escribió el clásico poema épico 'La Divina Comedia'?",
+    "opciones": ["Dante Alighieri", "Francesco Petrarca", "Giovanni Boccaccio", "Garcilaso de la Vega"],
+    "respuesta_correcta": "Dante Alighieri"
+  },
+  {
+    "id": 108,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué imperio dominaba la región del Mediterráneo durante la época de Julio César y Augusto?",
+    "opciones": ["Imperio Romano", "Imperio Griego", "Imperio Persa", "Imperio Egipcio"],
+    "respuesta_correcta": "Imperio Romano"
+  },
+  {
+    "id": 109,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué documento proclamó Agustín de Iturbide en 1821 para declarar la Independencia de México bajo las tres garantías?",
+    "opciones": ["Plan de Iguala", "Tratados de Córdoba", "Plan de Casa Mata", "Constitución de Apatzingán"],
+    "respuesta_correcta": "Plan de Iguala"
+  },
+  {
+    "id": 110,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es el desierto más grande y caluroso del mundo, ubicado en el norte de África?",
+    "opciones": ["Desierto del Sahara", "Desierto de Gobi", "Desierto de Atacama", "Desierto de Kalahari"],
+    "respuesta_correcta": "Desierto del Sahara"
+  },
+  {
+    "id": 111,
+    "materia": "Matemáticas",
+    "pregunta": "¿A cuánto equivale el valor de la función trigonométrica coseno de cero grados (cos 0°)?",
+    "opciones": ["1", "0", "-1", "0.5"],
+    "respuesta_correcta": "1"
+  },
+  {
+    "id": 112,
+    "materia": "Física",
+    "pregunta": "La oposición natural que presenta un material al flujo de una corriente eléctrica se denomina:",
+    "opciones": ["Resistencia", "Voltaje", "Capacitancia", "Inductancia"],
+    "respuesta_correcta": "Resistencia"
+  },
+  {
+    "id": 113,
+    "materia": "Química",
+    "pregunta": "¿Cuál es la fórmula química del ácido clorhídrico?",
+    "opciones": ["HCl", "H2SO4", "HNO3", "NaOH"],
+    "respuesta_correcta": "HCl"
+  },
+  {
+    "id": 114,
+    "materia": "Biología",
+    "pregunta": "¿Qué tipo de azúcares o carbohidratos simples son la glucosa y la fructosa?",
+    "opciones": ["Monosacáridos", "Disacáridos", "Polisacáridos", "Lípidos"],
+    "respuesta_correcta": "Monosacáridos"
+  },
+  {
+    "id": 115,
+    "materia": "Español",
+    "pregunta": "Identifica el predicado en la oración: 'Los alumnos de UniPrep estudian mucho por las tardes'.",
+    "opciones": ["estudian mucho por las tardes", "Los alumnos de UniPrep", "Los alumnos", "por las tardes"],
+    "respuesta_correcta": "estudian mucho por las tardes"
+  },
+  {
+    "id": 116,
+    "materia": "Literatura",
+    "pregunta": "¿Qué movimiento vanguardista del siglo XX buscaba reflejar el funcionamiento del pensamiento puro, libre de control de la razón y plasmado en los sueños?",
+    "opciones": ["Surrealismo", "Futurismo", "Cubismo", "Dadaísmo"],
+    "respuesta_correcta": "Surrealismo"
+  },
+  {
+    "id": 117,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué país europeo lideró los viajes de exploración que llevaron al descubrimiento del continente americano en 1492?",
+    "opciones": ["España", "Portugal", "Inglaterra", "Francia"],
+    "respuesta_correcta": "España"
+  },
+  {
+    "id": 118,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué nombre recibió la guerra civil en México (1858-1861) entre liberales y conservadores motivada por las leyes de reforma?",
+    "opciones": ["Guerra de Reforma", "Guerra de los Pasteles", "Guerra de Independencia", "Revolución de Ayutla"],
+    "respuesta_correcta": "Guerra de Reforma"
+  },
+  {
+    "id": 119,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la línea imaginaria que divide a la Tierra en los hemisferios Norte y Sur?",
+    "opciones": ["Ecuador", "Meridiano de Greenwich", "Trópico de Cáncer", "Trópico de Capricornio"],
+    "respuesta_correcta": "Ecuador"
+  },
+  {
+    "id": 120,
+    "materia": "Matemáticas",
+    "pregunta": "¿Qué nombre recibe el sistema de coordenadas formado por dos rectas numéricas perpendiculares que se cruzan en un punto llamado origen?",
+    "opciones": ["Plano cartesiano", "Plano polar", "Recta numérica", "Matriz tridimensional"],
+    "respuesta_correcta": "Plano cartesiano"
+  },
+  {
+    "id": 121,
+    "materia": "Física",
+    "pregunta": "¿Qué ley de la física establece que a toda fuerza de acción le corresponde una fuerza de reacción de igual magnitud pero en sentido opuesto?",
+    "opciones": ["Tercera Ley de Newton", "Primera Ley de Newton", "Segunda Ley de Newton", "Ley de la Gravitación Universal"],
+    "respuesta_correcta": "Tercera Ley de Newton"
+  },
+  {
+    "id": 122,
+    "materia": "Química",
+    "pregunta": "¿Cuál es el valor neutro exacto en la escala de pH?",
+    "opciones": ["7", "0", "14", "1"],
+    "respuesta_correcta": "7"
+  },
+  {
+    "id": 123,
+    "materia": "Biología",
+    "pregunta": "¿Qué componente de la sangre tiene la función principal de transportar el oxígeno desde los pulmones a todo el cuerpo?",
+    "opciones": ["Glóbulos rojos (Eritrocitos)", "Glóbulos blancos (Leucocitos)", "Plaquetas", "Plasma"],
+    "respuesta_correcta": "Glóbulos rojos (Eritrocitos)"
+  },
+  {
+    "id": 124,
+    "materia": "Español",
+    "pregunta": "Selecciona la palabra que está escrita de manera incorrecta:",
+    "opciones": ["Idiosincrasia", "Viceversa", "Exuberante", "Escasez"],
+    "respuesta_correcta": "Idiosincrasia"
+  },
+  {
+    "id": 125,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál es el autor del famoso poema 'Nocturno a Rosario'?",
+    "opciones": ["Manuel Acuña", "Sor Juana Inés de la Cruz", "Amado Nervo", "Jaime Sabines"],
+    "respuesta_correcta": "Manuel Acuña"
+  },
+  {
+    "id": 126,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué alianza militar fue creada por los países del bloque occidental liderados por EE.UU. en 1949 durante la Guerra Fría?",
+    "opciones": ["OTAN", "Pacto de Varsovia", "Triple Entente", "Sociedad de Naciones"],
+    "respuesta_correcta": "OTAN"
+  },
+  {
+    "id": 127,
+    "materia": "Historia de México",
+    "pregunta": "¿Quién fue el último tlatoani mexica que defendió a Tenochtitlan de los conquistadores españoles?",
+    "opciones": ["Cuauhtémoc", "Moctezuma Xocoyotzin", "Cuitláhuac", "Itzcóatl"],
+    "respuesta_correcta": "Cuauhtémoc"
+  },
+  {
+    "id": 128,
+    "materia": "Geografía",
+    "pregunta": "¿Qué país comparte la frontera norte con los Estados Unidos de América?",
+    "opciones": ["Canadá", "México", "Rusia", "Groenlandia"],
+    "respuesta_correcta": "Canadá"
+  },
+  {
+    "id": 129,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el resultado de resolver la raíz cuadrada de 144?",
+    "opciones": ["12", "14", "16", "11"],
+    "respuesta_correcta": "12"
+  },
+  {
+    "id": 130,
+    "materia": "Física",
+    "pregunta": "La energía que se transmite de un cuerpo a otro debido exclusivamente a una diferencia de temperatura entre ellos se llama:",
+    "opciones": ["Calor", "Trabajo", "Presión", "Potencia"],
+    "respuesta_correcta": "Calor"
+  },
+  {
+    "id": 131,
+    "materia": "Química",
+    "pregunta": "¿Qué tipo de enlace se forma cuando hay una transferencia completa de electrones de un metal a un no metal?",
+    "opciones": ["Enlace iónico", "Enlace covalente", "Enlace metálico", "Puente de hidrógeno"],
+    "respuesta_correcta": "Enlace iónico"
+  },
+  {
+    "id": 132,
+    "materia": "Biología",
+    "pregunta": "¿Qué base nitrogenada es exclusiva del ARN y reemplaza a la timina del ADN?",
+    "opciones": ["Uracilo", "Adenina", "Guanina", "Citosina"],
+    "respuesta_correcta": "Uracilo"
+  },
+  {
+    "id": 133,
+    "materia": "Español",
+    "pregunta": "Selecciona el antónimo de la palabra 'Fútil':",
+    "opciones": ["Valioso", "Insignificante", "Trivial", "Inútil"],
+    "respuesta_correcta": "Valioso"
+  },
+  {
+    "id": 134,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál de las siguientes obras fue escrita por la escritora novohispana Sor Juana Inés de la Cruz?",
+    "opciones": ["Primero sueño", "El laberinto de la soledad", "Pedro Páramo", "Los de abajo"],
+    "respuesta_correcta": "Primero sueño"
+  },
+  {
+    "id": 135,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué país fue unificado bajo el liderazgo del canciller Otto von Bismarck en el siglo XIX?",
+    "opciones": ["Alemania", "Italia", "Francia", "Austria"],
+    "respuesta_correcta": "Alemania"
+  },
+  {
+    "id": 136,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué presidente de México gobernó durante el periodo conocido como el 'Milagro Mexicano' y consolidó la industrialización del país?",
+    "opciones": ["Miguel Alemán Valdés", "Lázaro Cárdenas", "Plutarco Elías Calles", "Venustiano Carranza"],
+    "respuesta_correcta": "Miguel Alemán Valdés"
+  },
+  {
+    "id": 137,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es el océano que se localiza entre los continentes de América, Europa y África?",
+    "opciones": ["Océano Atlántico", "Océano Pacífico", "Océano Índico", "Océano Ártico"],
+    "respuesta_correcta": "Océano Atlántico"
+  },
+  {
+    "id": 138,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el valor del discriminante (b² - 4ac) en una ecuación cuadrática si esta tiene una sola solución real?",
+    "opciones": ["Igual a cero", "Mayor que cero", "Menor que cero", "No existe"],
+    "respuesta_correcta": "Igual a cero"
+  },
+  {
+    "id": 139,
+    "materia": "Física",
+    "pregunta": "¿Quién es el científico que propuso la Teoría de la Relatividad Especial y General?",
+    "opciones": ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Max Planck"],
+    "respuesta_correcta": "Albert Einstein"
+  },
+  {
+    "id": 140,
+    "materia": "Química",
+    "pregunta": "¿Cómo se denominan las sustancias iniciales que sufren una transformación química en una reacción?",
+    "opciones": ["Reactivos", "Productos", "Catalizadores", "Precipitados"],
+    "respuesta_correcta": "Reactivos"
+  },
+  {
+    "id": 141,
+    "materia": "Biología",
+    "pregunta": "¿Qué tipo de bacterias u organismos carecen de un núcleo celular definido, por lo que su ADN está disperso en el citoplasma?",
+    "opciones": ["Procariotas", "Eucariotas", "Pluricelulares", "Protozoarios"],
+    "respuesta_correcta": "Procariotas"
+  },
+  {
+    "id": 142,
+    "materia": "Español",
+    "pregunta": "Identifica el nexo coordinante adversativo en la siguiente lista:",
+    "opciones": ["pero", "y", "o", "porque"],
+    "respuesta_correcta": "pero"
+  },
+  {
+    "id": 143,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál es la estructura mínima y rítmica en la que se divide un poema lírico tradicional?",
+    "opciones": ["El verso", "La estrofa", "El párrafo", "La prosa"],
+    "respuesta_correcta": "El verso"
+  },
+  {
+    "id": 144,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué potencia europea fue gobernada por el monarca absoluto Luis XIV, conocido como el 'Rey Sol'?",
+    "opciones": ["Francia", "España", "Inglaterra", "Rusia"],
+    "respuesta_correcta": "Francia"
+  },
+  {
+    "id": 145,
+    "materia": "Historia de México",
+    "pregunta": "¿En qué ciudad del estado de Querétaro fue fusilado el emperador Maximiliano de Habsburgo en 1867?",
+    "opciones": ["Cerro de las Campanas", "Santiago de Querétaro", "San Juan del Río", "Tequisquiapan"],
+    "respuesta_correcta": "Cerro de las Campanas"
+  },
+  {
+    "id": 146,
+    "materia": "Geografía",
+    "pregunta": "¿Qué volcán activo es el segundo más alto de México y se localiza en los límites de Puebla, Morelos y el Estado de México?",
+    "opciones": ["Popocatépetl", "Pico de Orizaba", "Iztaccíhuatl", "Nevado de Toluca"],
+    "respuesta_correcta": "Popocatépetl"
+  },
+  {
+    "id": 147,
+    "materia": "Matemáticas",
+    "pregunta": "Determina el valor de la pendiente de una recta que pasa por los puntos (1, 2) y (3, 6):",
+    "opciones": ["2", "4", "1", "0.5"],
+    "respuesta_correcta": "2"
+  },
+  {
+    "id": 148,
+    "materia": "Física",
+    "pregunta": "¿Cuál es el valor aproximado de la aceleración de la gravedad terrestre (g) a nivel del mar?",
+    "opciones": ["9.8 m/s²", "9.8 km/h", "32 m/s²", "1.6 m/s²"],
+    "respuesta_correcta": "9.8 m/s²"
+  },
+  {
+    "id": 149,
+    "materia": "Química",
+    "pregunta": "¿Cuál es el nombre del grupo de elementos de la Tabla Periódica que son gases monoatómicos extremadamente estables y no reactivos?",
+    "opciones": ["Gases nobles", "Halógenos", "Metales alcalinos", "Metales de transición"],
+    "respuesta_correcta": "Gases nobles"
+  },
+  {
+    "id": 150,
+    "materia": "Biología",
+    "pregunta": "¿Quién es considerado el padre de la genética gracias a sus experimentos cruzando plantas de chícharos?",
+    "opciones": ["Gregor Mendel", "Charles Darwin", "Louis Pasteur", "Alexander Fleming"],
+    "respuesta_correcta": "Gregor Mendel"
+  },
+  {
+    "id": 151,
+    "materia": "Español",
+    "pregunta": "Selecciona la palabra que posea un diptongo:",
+    "opciones": ["Fuego", "Poeta", "Canto", "Raíz"],
+    "respuesta_correcta": "Fuego"
+  },
+  {
+    "id": 152,
+    "materia": "Literatura",
+    "pregunta": "¿Qué autor colombiano escribió la icónica novela del realismo mágico 'Cien años de soledad'?",
+    "opciones": ["Gabriel García Márquez", "Mario Vargas Llosa", "Julio Cortázar", "Jorge Luis Borges"],
+    "respuesta_correcta": "Gabriel García Márquez"
+  },
+  {
+    "id": 153,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué país asiático sufrió la revolución socialista liderada por Mao Zedong, proclamando su República Popular en 1949?",
+    "opciones": ["China", "Japón", "Corea del Sur", "Vietnam"],
+    "respuesta_correcta": "China"
+  },
+  {
+    "id": 154,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué constitución actualmente vigente en México fue promulgada el 5 de febrero de 1917 por Venustiano Carranza?",
+    "opciones": ["Constitución de 1917", "Constitución de 1857", "Constitución de 1824", "Siete Leyes Centralistas"],
+    "respuesta_correcta": "Constitución de 1917"
+  },
+  {
+    "id": 155,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la capital del estado de Jalisco, conocida como la Perla Tapatía?",
+    "opciones": ["Guadalajara", "Zapopan", "Tlaquepaque", "Puerto Vallarta"],
+    "respuesta_correcta": "Guadalajara"
+  },
+  {
+    "id": 156,
+    "materia": "Matemáticas",
+    "pregunta": "¿Qué tipo de ángulo es aquel que mide exactamente 90 grados?",
+    "opciones": ["Ángulo recto", "Ángulo agudo", "Ángulo obtuso", "Ángulo llano"],
+    "respuesta_correcta": "Ángulo recto"
+  },
+  {
+    "id": 157,
+    "materia": "Física",
+    "pregunta": "¿A qué temperatura hierve el agua pura a nivel del mar en la escala Celsius?",
+    "opciones": ["100 °C", "0 °C", "37 °C", "212 °C"],
+    "respuesta_correcta": "100 °C"
+  },
+  {
+    "id": 158,
+    "materia": "Química",
+    "pregunta": "¿Qué tipo de mezcla es aquella en la cual sus componentes no se pueden distinguir a simple vista, como el agua con sal disuelta?",
+    "opciones": ["Mezcla homogénea", "Mezcla heterogénea", "Coloide", "Suspensión"],
+    "respuesta_correcta": "Mezcla homogénea"
+  },
+  {
+    "id": 159,
+    "materia": "Biología",
+    "pregunta": "¿Cuál es el principal pigmento encargado de absorber la luz solar en las hojas de las plantas durante la fotosíntesis?",
+    "opciones": ["Clorofila", "Caroteno", "Xantofila", "Hemoglobina"],
+    "respuesta_correcta": "Clorofila"
+  },
+  {
+    "id": 160,
+    "materia": "Español",
+    "pregunta": "Selecciona la palabra que tiene la ortografía correcta:",
+    "opciones": ["Idiosincrasia", "Idiosincrazia", "Idiosincracia", "Idiocincrasia"],
+    "respuesta_correcta": "Idiosincrasia"
+  },
+  {
+    "id": 161,
+    "materia": "Literatura",
+    "pregunta": "¿A qué género literario corresponde una obra teatral destinada a ser representada ante un público?",
+    "opciones": ["Género dramático", "Género lírico", "Género narrativo", "Género didáctico"],
+    "respuesta_correcta": "Género dramático"
+  },
+  {
+    "id": 162,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué documento de 1776 declaró la independencia de las Trece Colonias inglesas en Norteamérica?",
+    "opciones": ["Declaración de Independencia de EE.UU.", "Tratado de París", "Constitución de Filadelfia", "Carta Magna"],
+    "respuesta_correcta": "Declaración de Independencia de EE.UU."
+  },
+  {
+    "id": 163,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué plan proclamó Porfirio Díaz en 1876 bajo el lema 'No reelección' para derrocar al presidente Sebastián Lerdo de Tejada?",
+    "opciones": ["Plan de Tuxtepec", "Plan de La Noria", "Plan de San Luis", "Plan de Guadalupe"],
+    "respuesta_correcta": "Plan de Tuxtepec"
+  },
+  {
+    "id": 164,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es el estado de la República Mexicana con la mayor extensión territorial?",
+    "opciones": ["Chihuahua", "Sonora", "Coahuila", "Oaxaca"],
+    "respuesta_correcta": "Chihuahua"
+  },
+  {
+    "id": 165,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el valor del logaritmo de 1 en cualquier base (log_b 1)?",
+    "opciones": ["0", "1", "b", "No existe"],
+    "respuesta_correcta": "0"
+  },
+  {
+    "id": 166,
+    "materia": "Física",
+    "pregunta": "¿Qué dispositivo convierte la energía mecánica en energía eléctrica basándose en la inducción electromagnética?",
+    "opciones": ["Generador eléctrico", "Motor eléctrico", "Transformador", "Resistencia"],
+    "respuesta_correcta": "Generador eléctrico"
+  },
+  {
+    "id": 167,
+    "materia": "Química",
+    "pregunta": "¿Cómo se llama el enlace químico en el que los electrones se deslocalizan y forman una nube electrónica común que mantiene unidos a los átomos?",
+    "opciones": ["Enlace metálico", "Enlace iónico", "Enlace covalente", "Fuerza de Van der Waals"],
+    "respuesta_correcta": "Enlace metálico"
+  },
+  {
+    "id": 168,
+    "materia": "Biología",
+    "pregunta": "¿Qué reino biológico agrupa a los organismos eucariotas, heterótrofos por absorción, como los champiñones y las levaduras?",
+    "opciones": ["Reino Fungi", "Reino Plantae", "Reino Animalia", "Reino Protista"],
+    "respuesta_correcta": "Reino Fungi"
+  },
+  {
+    "id": 169,
+    "materia": "Español",
+    "pregunta": "Identifica la palabra que contenga un prefijo en su estructura:",
+    "opciones": ["Subterráneo", "Terreno", "Tierra", "Terrateniente"],
+    "respuesta_correcta": "Subterráneo"
+  },
+  {
+    "id": 170,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál de las siguientes es una de las principales novelas de la Revolución Mexicana, escrita por Mariano Azuela?",
+    "opciones": ["Los de abajo", "Pedro Páramo", "El luto humano", "La muerte de Artemio Cruz"],
+    "respuesta_correcta": "Los de abajo"
+  },
+  {
+    "id": 171,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué conflicto geopolítico e ideológico enfrentó indirectamente a los bloques capitalista (EE.UU.) y socialista (URSS) entre 1945 y 1991?",
+    "opciones": ["Guerra Fría", "Primera Guerra Mundial", "Segunda Guerra Mundial", "Guerra de los Balcanes"],
+    "respuesta_correcta": "Guerra Fría"
+  },
+  {
+    "id": 172,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué político e intelectual mexicano fundó el Partido Nacional Revolucionario (PNR) en 1929 y dio inicio a la etapa del Maximato?",
+    "opciones": ["Plutarco Elías Calles", "Alvaro Obregón", "Emilio Portes Gil", "Lázaro Cárdenas"],
+    "respuesta_correcta": "Plutarco Elías Calles"
+  },
+  {
+    "id": 173,
+    "materia": "Geografía",
+    "pregunta": "¿Qué fenómeno climatológico global se caracteriza por el calentamiento anómalo de las aguas superficiales del Océano Pacífico ecuatorial?",
+    "opciones": ["El Niño", "La Niña", "Monzón", "Efecto Invernadero"],
+    "respuesta_correcta": "El Niño"
+  },
+  {
+    "id": 174,
+    "materia": "Matemáticas",
+    "pregunta": "En un triángulo rectángulo, ¿cuál es la razón trigonométrica que relaciona el cateto opuesto entre la hipotenusa?",
+    "opciones": ["Seno", "Coseno", "Tangente", "Secante"],
+    "respuesta_correcta": "Seno"
+  },
+  {
+    "id": 175,
+    "materia": "Física",
+    "pregunta": "La magnitud física que mide la rapidez con la que se realiza un trabajo mecánico se conoce como:",
+    "opciones": ["Potencia", "Fuerza", "Energía", "Aceleración"],
+    "respuesta_correcta": "Potencia"
+  },
+  {
+    "id": 176,
+    "materia": "Química",
+    "pregunta": "¿Cuál de las siguientes partículas subatómicas no posee carga eléctrica y se ubica en el núcleo del átomo?",
+    "opciones": ["Neutrón", "Protón", "Electrón", "Fotón"],
+    "respuesta_correcta": "Neutrón"
+  },
+  {
+    "id": 177,
+    "materia": "Biología",
+    "pregunta": "¿Qué tipo de ácidos grasos estructurales componen principalmente las membranas celulares animales formando una doble capa?",
+    "opciones": ["Fosfolípidos", "Triglicéridos", "Esteroides", "Glúcidos"],
+    "respuesta_correcta": "Fosfolípidos"
+  },
+  {
+    "id": 178,
+    "materia": "Español",
+    "pregunta": "Identifica la opción donde se use correctamente el punto y coma:",
+    "opciones": ["Ella estudió mucho; sin embargo, no aprobó.", "Ella; estudió mucho sin embargo no aprobó.", "Ella estudió mucho sin embargo; no aprobó.", "Ella estudió; mucho sin embargo no aprobó."],
+    "respuesta_correcta": "Ella estudió mucho; sin embargo, no aprobó."
+  },
+  {
+    "id": 179,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál es la principal epopeya de la antigua Grecia atribuida a Homero que narra la Guerra de Troya?",
+    "opciones": ["La Ilíada", "La Odisea", "La Eneida", "La Metamorfosis"],
+    "respuesta_correcta": "La Ilíada"
+  },
+  {
+    "id": 180,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué clase social emergió y se consolidó económicamente durante la Revolución Industrial como dueña de los medios de producción?",
+    "opciones": ["Burguesía", "Proletariado", "Nobleza", "Feudales"],
+    "respuesta_correcta": "Burguesía"
+  },
+  {
+    "id": 181,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué cultura prehispánica de Mesoamérica desarrolló un avanzado sistema de escritura jeroglífica, matemáticas con uso del cero y precisos calendarios?",
+    "opciones": ["Maya", "Olmeca", "Tolteca", "Totonaca"],
+    "respuesta_correcta": "Maya"
+  },
+  {
+    "id": 182,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es el principal gas de la atmósfera terrestre que representa aproximadamente el 78% de su volumen?",
+    "opciones": ["Nitrógeno", "Oxígeno", "Argón", "Dióxido de carbono"],
+    "respuesta_correcta": "Nitrógeno"
+  },
+  {
+    "id": 183,
+    "materia": "Matemáticas",
+    "pregunta": "Si un triángulo tiene tres lados iguales, ¿cómo se clasifica según sus propiedades geométricas?",
+    "opciones": ["Triángulo equilátero", "Triángulo isósceles", "Triángulo escaleno", "Triángulo rectángulo"],
+    "respuesta_correcta": "Triángulo equilátero"
+  },
+  {
+    "id": 184,
+    "materia": "Física",
+    "pregunta": "¿Qué rama de la física clásica se encarga del estudio del movimiento de los cuerpos sin atender las causas que lo producen?",
+    "opciones": ["Cinemática", "Dinámica", "Estática", "Termodinámica"],
+    "respuesta_correcta": "Cinemática"
+  },
+  {
+    "id": 185,
+    "materia": "Química",
+    "pregunta": "¿Cuál es el compuesto químico conocido comúnmente como sal de mesa?",
+    "opciones": ["Cloruro de sodio (NaCl)", "Bicarbonato de sodio", "Hidróxido de sodio", "Sulfato de calcio"],
+    "respuesta_correcta": "Cloruro de sodio (NaCl)"
+  },
+  {
+    "id": 186,
+    "materia": "Biología",
+    "pregunta": "¿En qué parte de las células eucariotas se localiza el material genético de manera organizada en cromosomas?",
+    "opciones": ["Núcleo", "Citoplasma", "Membrana celular", "Lisosoma"],
+    "respuesta_correcta": "Núcleo"
+  },
+  {
+    "id": 187,
+    "materia": "Español",
+    "pregunta": "Selecciona la palabra homófona que complete correctamente el enunciado: 'Espero que el consejo te ____ servido de ayuda'.",
+    "opciones": ["haya", "halla", "allá", "aya"],
+    "respuesta_correcta": "haya"
+  },
+  {
+    "id": 188,
+    "materia": "Literatura",
+    "pregunta": "¿Quién es el autor de las famosas Rimas y Leyendas del romanticismo español?",
+    "opciones": ["Gustavo Adolfo Bécquer", "José de Espronceda", "Mariano José de Larra", "José Zorrilla"],
+    "respuesta_correcta": "Gustavo Adolfo Bécquer"
+  },
+  {
+    "id": 189,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué radical facción política liderada por Robespierre tomó el control de la Revolución Francesa durante el periodo conocido como 'El Terror'?",
+    "opciones": ["Jacobinos", "Girondinos", "Monárquicos", "Constitucionales"],
+    "respuesta_correcta": "Jacobinos"
+  },
+  {
+    "id": 190,
+    "materia": "Historia de México",
+    "pregunta": "¿En qué fecha inició el levantamiento en armas comandado por el cura Miguel Hidalgo que dio origen a la Independencia de México?",
+    "opciones": ["16 de septiembre de 1810", "20 de noviembre de 1910", "5 de mayo de 1862", "24 de febrero de 1821"],
+    "respuesta_correcta": "16 de septiembre de 1810"
+  },
+  {
+    "id": 191,
+    "materia": "Geografía",
+    "pregunta": "¿Qué océano limita al oeste con las costas del continente americano?",
+    "opciones": ["Océano Pacífico", "Océano Atlántico", "Océano Índico", "Océano Glacial Antártico"],
+    "respuesta_correcta": "Océano Pacífico"
+  },
+  {
+    "id": 192,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuánto mide la suma interna de los tres ángulos de cualquier triángulo geométrico?",
+    "opciones": ["180 grados", "360 grados", "90 grados", "270 grados"],
+    "respuesta_correcta": "180 grados"
+  },
+  {
+    "id": 193,
+    "materia": "Física",
+    "pregunta": "¿Qué ley de la física enuncia que la fuerza de atracción entre dos masas es directamente proporcional al producto de estas e inversamente proporcional al cuadrado de la distancia que las separa?",
+    "opciones": ["Ley de la Gravitación Universal", "Leyes de Kepler", "Segunda Ley de Newton", "Ley de Coulomb"],
+    "respuesta_correcta": "Ley de la Gravitación Universal"
+  },
+  {
+    "id": 194,
+    "materia": "Química",
+    "pregunta": "¿Cómo se denominan las columnas verticales de elementos químicos presentes en la Tabla Periódica?",
+    "opciones": ["Grupos o Familias", "Periodos", "Bloques", "Series"],
+    "respuesta_correcta": "Grupos o Familias"
+  },
+  {
+    "id": 195,
+    "materia": "Biología",
+    "pregunta": "¿Qué proceso metabólico anaeróbico realizan las levaduras para transformar los azúcares en alcohol y dióxido de carbono?",
+    "opciones": ["Fermentación alcohólica", "Respiración aeróbica", "Ciclo de Krebs", "Fotólisis"],
+    "respuesta_correcta": "Fermentación alcohólica"
+  },
+  {
+    "id": 196,
+    "materia": "Español",
+    "pregunta": "Elige la opción que presente el uso correcto de las letras c, s, z:",
+    "opciones": ["Es una situación de suma importancia para la nación.", "Es una cituación de suma importancia para la nazión.", "Es una situación de zuma importansia para la nación.", "Es una cituación de zuma importancia para la nasión."],
+    "respuesta_correcta": "Es una situación de suma importancia para la nación."
+  },
+  {
+    "id": 197,
+    "materia": "Literatura",
+    "pregunta": "¿A qué movimiento cultural y artístico de los siglos XVI y XVII pertenecen autores que abusaban de figuras retóricas complejas, como Luis de Góngora y Francisco de Quevedo?",
+    "opciones": ["Barroco", "Renacimiento", "Ilustración", "Clasicismo"],
+    "respuesta_correcta": "Barroco"
+  },
+  {
+    "id": 198,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué bloque económico y de cooperación política de Europa se consolidó mediante la firma del Tratado de Maastricht en 1992?",
+    "opciones": ["Unión Europea", "Mercosur", "OTAN", "Comunidad de Estados Independientes"],
+    "respuesta_correcta": "Unión Europea"
+  },
+  {
+    "id": 199,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué presidente de México de origen liberal combatió la intervención francesa y restauró la República Federal en 1867?",
+    "opciones": ["Benito Juárez García", "Sebastián Lerdo de Tejada", "Melchor Ocampo", "Ignacio Comonfort"],
+    "respuesta_correcta": "Benito Juárez García"
+  },
+  {
+    "id": 200,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es el lago o cuerpo de agua interior navegable más alto del mundo, ubicado en la frontera entre Perú y Bolivia?",
+    "opciones": ["Lago Titicaca", "Lago de Maracaibo", "Lago Chapala", "Lago Victoria"],
+    "respuesta_correcta": "Lago Titicaca"
+  },
+  {
+    "id": 201,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el resultado de resolver el binomio al cuadrado (x + 3)²?",
+    "opciones": ["x² + 6x + 9", "x² + 9", "x² + 3x + 9", "x² + 6x + 6"],
+    "respuesta_correcta": "x² + 6x + 9"
+  },
+  {
+    "id": 202,
+    "materia": "Física",
+    "pregunta": "La magnitud vectorial que mide el cambio de velocidad de un cuerpo con respecto al tiempo transcurrido se denomina:",
+    "opciones": ["Aceleración", "Rapidez", "Fuerza", "Distancia"],
+    "respuesta_correcta": "Aceleración"
+  },
+  {
+    "id": 203,
+    "materia": "Química",
+    "pregunta": "¿Cuál es la partícula elemental con carga eléctrica positiva que se encuentra confinada en el núcleo atómico?",
+    "opciones": ["Protón", "Neutrón", "Electrón", "Quark"],
+    "respuesta_correcta": "Protón"
+  },
+  {
+    "id": 204,
+    "materia": "Biología",
+    "pregunta": "¿Qué tipo de relación ecológica simbiótica beneficia a ambas especies involucradas, como las abejas polinizando las flores?",
+    "opciones": ["Mutualismo", "Parasitismo", "Comensalismo", "Competencia"],
+    "respuesta_correcta": "Mutualismo"
+  },
+  {
+    "id": 205,
+    "materia": "Español",
+    "pregunta": "Identifica la opción que no tenga errores de concordancia de género o número:",
+    "opciones": ["Las águilas majestuosas vuelan alto.", "El agua fría calma la sed.", "Los problemas sociales son complejo.", "Mucha gente acudieron al evento."],
+    "respuesta_correcta": "El agua fría calma la sed."
+  },
+  {
+    "id": 206,
+    "materia": "Literatura",
+    "pregunta": "¿Quién escribió el célebre ensayo analítico sobre la identidad del mexicano titulado 'El laberinto de la soledad'?",
+    "opciones": ["Octavio Paz", "Carlos Fuentes", "Alfonso Reyes", "Juan Rulfo"],
+    "respuesta_correcta": "Octavio Paz"
+  },
+  {
+    "id": 207,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué imperio dominaba gran parte de Europa Central y del Este antes de desintegrarse tras su derrota en la Primera Guerra Mundial en 1918?",
+    "opciones": ["Imperio Austrohúngaro", "Imperio Otomano", "Imperio Británico", "Imperio Ruso"],
+    "respuesta_correcta": "Imperio Austrohúngaro"
+  },
+  {
+    "id": 208,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué presidente de México instauró el sistema de gobierno centralista conocido como las 'Siete Leyes' y enfrentó la separación de Texas?",
+    "opciones": ["Antonio López de Santa Anna", "Anastasio Bustamante", "Vicente Guerrero", "Guadalupe Victoria"],
+    "respuesta_correcta": "Antonio López de Santa Anna"
+  },
+  {
+    "id": 209,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la capa gaseosa que envuelve a la Tierra y absorbe la mayor parte de la radiación ultravioleta dañina procedente del Sol?",
+    "opciones": ["Capa de ozono (Estratosfera)", "Troposfera", "Mesosfera", "Ionosfera"],
+  },
+  "id": 209,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la capa gaseosa que envuelve a la Tierra y absorbe la mayor parte de la radiación ultravioleta dañina procedente del Sol?",
+    "opciones": ["Capa de ozono (Estratosfera)", "Troposfera", "Mesosfera", "Ionosfera"],
+    "respuesta_correcta": "Capa de ozono (Estratosfera)"
+  },
+  {
+    "id": 210,
+    "materia": "Matemáticas",
+    "pregunta": "Si un ángulo mide 45 grados, ¿cuál es su valor equivalente convertido al sistema de radianes?",
+    "opciones": ["π/4 rad", "π/2 rad", "π/3 rad", "2π rad"],
+    "respuesta_correcta": "π/4 rad"
+  },
+  {
+    "id": 211,
+    "materia": "Física",
+    "pregunta": "¿Qué científico italiano sentó las bases de la física moderna al utilizar el telescopio y defender el modelo heliocéntrico del Sistema Solar?",
+    "opciones": ["Galileo Galilei", "Nicolás Copérnico", "Johannes Kepler", "Giordano Bruno"],
+    "respuesta_correcta": "Galileo Galilei"
+  },
+  {
+    "id": 212,
+    "materia": "Química",
+    "pregunta": "¿Qué tipo de enlace químico une a los átomos de hidrógeno y oxígeno dentro de una molécula de agua compartiendo electrones de manera desigual?",
+    "opciones": ["Enlace covalente polar", "Enlace covalente no polar", "Enlace iónico", "Enlace metálico"],
+    "respuesta_correcta": "Enlace covalente polar"
+  },
+  {
+    "id": 213,
+    "materia": "Biología",
+    "pregunta": "¿Qué molécula almacena la información hereditaria de los seres vivos y presenta una estructura de doble hélice desentrañada por Watson y Crick?",
+    "opciones": ["Ácido Desoxirribonucleico (ADN)", "Ácido Ribonucleico (ARN)", "Proteína", "Glucógeno"],
+    "respuesta_correcta": "Ácido Desoxirribonucleico (ADN)"
+  },
+  {
+    "id": 214,
+    "materia": "Español",
+    "pregunta": "Identifica la palabra que contenga un sufijo diminutivo formal:",
+    "opciones": ["Arbolito", "Pequeño", "Breve", "Chico"],
+    "respuesta_correcta": "Arbolito"
+  },
+  {
+    "id": 215,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál de las siguientes obras de teatro pertenece al dramaturgo clásico español Pedro Calderón de la Barca?",
+    "opciones": ["La vida es sueño", "Fuenteovejuna", "El burlador de Sevilla", "La Celestina"],
+    "respuesta_correcta": "La vida es sueño"
+  },
+  {
+    "id": 216,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué gran potencia asiática lideró las operaciones militares del eje en el océano Pacífico atacando Pearl Harbor en 1941?",
+    "opciones": ["Japón", "China", "Tailandia", "Mongolia"],
+    "respuesta_correcta": "Japón"
+  },
+  {
+    "id": 217,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué revolucionario apodado el 'Centauro del Norte' comandó la División del Norte y asaltó el pueblo estadounidense de Columbus en 1916?",
+    "opciones": ["Francisco Villa", "Emiliano Zapata", "Venustiano Carranza", "Álvaro Obregón"],
+    "respuesta_correcta": "Francisco Villa"
+  },
+  {
+    "id": 218,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la capital oficial de los Estados Unidos de América?",
+    "opciones": ["Washington D.C.", "Nueva York", "Los Ángeles", "Chicago"],
+    "respuesta_correcta": "Washington D.C."
+  },
+  {
+    "id": 219,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el valor del perímetro de un cuadrado si uno de sus lados mide 5 unidades?",
+    "opciones": ["20 unidades", "25 unidades", "15 unidades", "10 unidades"],
+    "respuesta_correcta": "20 unidades"
+  },
+  {
+    "id": 220,
+    "materia": "Física",
+    "pregunta": "El cambio de posición que experimenta un objeto a lo largo del tiempo con respecto a un punto de referencia fijo se define como:",
+    "opciones": ["Movimiento", "Fuerza", "Trabajo", "Inercia"],
+    "respuesta_correcta": "Movimiento"
+  },
+  {
+    "id": 221,
+    "materia": "Química",
+    "pregunta": "¿Cómo se denominan las sustancias finales que resultan de una reorganización atómica tras ocurrir una reacción química?",
+    "opciones": ["Productos", "Reactivos", "Catalizadores", "Solutos"],
+    "respuesta_correcta": "Productos"
+  },
+  {
+    "id": 222,
+    "materia": "Biología",
+    "pregunta": "¿Qué organelos celulares digieren los materiales de desecho y las partículas extrañas gracias a sus enzimas hidrolíticas?",
+    "opciones": ["Lisosomas", "Ribosomas", "Mitocondrias", "Vacuolas"],
+    "respuesta_correcta": "Lisosomas"
+  },
+  {
+    "id": 223,
+    "materia": "Español",
+    "pregunta": "Selecciona el término que complete correctamente el enunciado: 'Me sorprendió que el alumno no ____ venido a la clase'.",
+    "opciones": ["hubiera", "hubieramos", "hubieran", "hubiereis"],
+    "respuesta_correcta": "hubiera"
+  },
+  {
+    "id": 224,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál es la novela de caballería de la antigua Europa considerada la primera obra literaria moderna del mundo occidental?",
+    "opciones": ["Don Quijote de la Mancha", "Amadís de Gaula", "El cantar de mio Cid", "La Celestina"],
+    "respuesta_correcta": "Don Quijote de la Mancha"
+  },
+  {
+    "id": 225,
+    "materia": "Historia Universal",
+    "pregunta": "¿En qué siglo se desarrolló el movimiento renacentista europeo que rescató el arte, la filosofía y la ciencia de la antigüedad clásica?",
+    "opciones": ["Siglo XV - XVI", "Siglo XII - XIII", "Siglo XVIII - XIX", "Siglo X - XI"],
+    "respuesta_correcta": "Siglo XV - XVI"
+  },
+  {
+    "id": 226,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué presidente de México decretó la nacionalización de la banca en su último informe de gobierno en septiembre de 1982?",
+    "opciones": ["José López Portillo", "Luis Echeverría Álvarez", "Gustavo Díaz Ordaz", "Miguel de la Madrid"],
+    "respuesta_correcta": "José López Portillo"
+  },
+  {
+    "id": 227,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es el continente más pequeño y menos poblado del planeta exceptuando a la Antártida?",
+    "opciones": ["Oceanía", "Europa", "África", "América"],
+    "respuesta_correcta": "Oceanía"
+  },
+  {
+    "id": 228,
+    "materia": "Matemáticas",
+    "pregunta": "¿Qué nombre recibe un polígono regular que tiene exactamente ocho lados iguales?",
+    "opciones": ["Octágono", "Heptágono", "Hexágono", "Decágono"],
+    "respuesta_correcta": "Octágono"
+  },
+  {
+    "id": 229,
+    "materia": "Física",
+    "pregunta": "¿Qué tipo de circuito eléctrico tiene conectados sus componentes uno a continuación de otro, compartiendo el mismo flujo de corriente?",
+    "opciones": ["Circuito en serie", "Circuito en paralelo", "Circuito mixto", "Circuito abierto"],
+    "respuesta_correcta": "Circuito en serie"
+  },
+  {
+    "id": 230,
+    "materia": "Química",
+    "pregunta": "¿Cuál es la masa molar aproximada del Dióxido de Carbono (CO2), sabiendo que C = 12 g/mol y O = 16 g/mol?",
+    "opciones": ["44 g/mol", "28 g/mol", "32 g/mol", "16 g/mol"],
+    "respuesta_correcta": "44 g/mol"
+  },
+  {
+    "id": 231,
+    "materia": "Biología",
+    "pregunta": "¿Qué teoría médica y científica sostiene que las enfermedades infecciosas son causadas por microorganismos, desarrollada por Robert Koch y Louis Pasteur?",
+    "opciones": ["Teoría germinal de las enfermedades", "Teoría de la generación espontánea", "Teoría miasmática", "Teoría evolutiva"],
+    "respuesta_correcta": "Teoría germinal de las enfermedades"
+  },
+  {
+    "id": 232,
+    "materia": "Español",
+    "pregunta": "Identifica la palabra que contiene un error de ortografía ortotipográfica:",
+    "opciones": ["Exhibición", "Prohibido", "Exhuberante", "Inhibir"],
+    "respuesta_correcta": "Exhuberante"
+  },
+  {
+    "id": 233,
+    "materia": "Literatura",
+    "pregunta": "¿Qué género literario tiene como objetivo principal expresar un punto de vista argumentado, crítico y reflexivo sobre un tema científico o humanístico en prosa?",
+    "opciones": ["Ensayo", "Novela", "Poesía", "Cuento"],
+    "respuesta_correcta": "Ensayo"
+  },
+  {
+    "id": 234,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué país europeo invadió Polonia el 1 de septiembre de 1939, detonando de forma oficial el inicio de la Segunda Guerra Mundial?",
+    "opciones": ["Alemania Nazi", "Unión Soviética", "Italia Fascista", "Francia"],
+    "respuesta_correcta": "Alemania Nazi"
+  },
+  {
+    "id": 235,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué plan proclamó Francisco I. Madero en Texas para convocar al pueblo mexicano a levantarse en armas el 20 de noviembre de 1910?",
+    "opciones": ["Plan de San Luis", "Plan de Ayala", "Plan de Guadalupe", "Plan de la Noria"],
+    "respuesta_correcta": "Plan de San Luis"
+  },
+  {
+    "id": 236,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la cordillera más alta de la Tierra, donde se localiza la emblemática montaña del Monte Everest?",
+    "opciones": ["Himalaya", "Andes", "Alpes", "Montañas Rocosas"],
+    "respuesta_correcta": "Himalaya"
+  },
+  {
+    "id": 237,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el valor absoluto de -15 (|-15|)?",
+    "opciones": ["15", "-15", "0", "1"],
+    "respuesta_correcta": "15"
+  },
+  {
+    "id": 238,
+    "materia": "Física",
+    "pregunta": "La propiedad por la cual un cuerpo tiende a conservar su estado de reposo o de movimiento rectilíneo uniforme a menos que una fuerza externa lo altere se denomina:",
+    "opciones": ["Inercia", "Fricción", "Gravedad", "Masa"],
+    "respuesta_correcta": "Inercia"
+  },
+  {
+    "id": 239,
+    "materia": "Química",
+    "pregunta": "¿Qué tipo de propiedad de la materia es la densidad, el punto de fusión y la solubilidad ya que no dependen de la cantidad de masa?",
+    "opciones": ["Propiedades intensivas", "Propiedades extensivas", "Propiedades químicas", "Propiedades nucleares"],
+    "respuesta_correcta": "Propiedades intensivas"
+  },
+  {
+    "id": 240,
+    "materia": "Biología",
+    "pregunta": "¿Qué nombre recibe el conjunto de poblaciones de diferentes especies que interactúan y coexisten dentro de un mismo espacio físico o ecosistema?",
+    "opciones": ["Comunidad (Biocenosis)", "Especie", "Población", "Bioma"],
+    "respuesta_correcta": "Comunidad (Biocenosis)"
   }
 ]
