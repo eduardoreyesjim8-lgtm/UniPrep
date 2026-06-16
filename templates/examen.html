@@ -27,18 +27,64 @@
 
 <main>
     {% if not preguntas %}
-    <div class="card" style="text-align: center;">
-        <h2>¡Ups! Aún no has configurado tu examen</h2>
-        <p>Para comenzar un simulacro interactivo, ve a la sección de Universidades y elige el examen de tu preferencia.</p>
-        <a href="/universidades" style="display: inline-block; background-color: #003366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 10px;">Ir a Universidades</a>
+    <!-- VISTA INICIAL: CUANDO NO HAY UN EXAMEN CONFIGURADO -->
+    <div class="examen-container">
+        
+        <!-- Tarjeta de advertencia (Lado izquierdo) -->
+        <div class="card estado-examen-card">
+            <h2>¡Ups! Aún no has configurado tu examen</h2>
+            <p>Para comenzar un simulacro interactivo, ve a la sección de Universidades y elige el examen de tu preferencia.</p>
+            <a href="/universidades" class="btn-examen-primario">Ir a Universidades</a>
+        </div>
+
+        <!-- Tarjeta con la estructura informativa (Lado derecho) -->
+        <div class="card info-simuladores-card">
+            <h2 style="margin-top: 0;">Estructura de los Simuladores</h2>
+            <p class="subtitulo-info">Al activar tu examen, UniPrep configurará los parámetros reales de cada institución:</p>
+            
+            <div class="tabla-info-container">
+                <table class="tabla-info-examen">
+                    <thead>
+                        <tr>
+                            <th>Universidad</th>
+                            <th>Preguntas</th>
+                            <th>Tiempo Límite</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>UNAM</strong></td>
+                            <td>120 reactivos</td>
+                            <td>3 Horas (180 min)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IPN</strong></td>
+                            <td>140 reactivos</td>
+                            <td>3 Horas (180 min)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UAM</strong></td>
+                            <td>80 reactivos</td>
+                            <td>3 Horas (180 min)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="nota-informativa">
+                <p>⚠️ <strong>Nota:</strong> Las preguntas se seleccionan de forma aleatoria y balanceada por materia cada vez que inicias un intento nuevo.</p>
+            </div>
+        </div>
+
     </div>
-    {% else %}
     
+    {% else %}
+    <!-- VISTA ACTIVA: FORMULARIO DEL SIMULADOR EN CURSO -->
     <form id="form-examen" action="/calificar_examen" method="POST">
         
         {% for pregunta in preguntas %}
-        <div class="card" style="margin-bottom: 25px;">
-            <span style="background-color: #e6f2ff; color: #003366; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; text-transform: uppercase;">
+        <div class="card" style="margin-bottom: 25px; padding-top: 40px;">
+            <span style="position: absolute; top: 15px; left: 20px; background-color: #e6f2ff; color: #003366; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; text-transform: uppercase;">
                 {{ pregunta.materia }}
             </span>
             
@@ -47,7 +93,7 @@
 
             {% for opcion in pregunta.opciones %}
             <div style="margin-bottom: 8px;">
-                <label style="cursor: pointer;">
+                <label style="cursor: pointer; display: inline-flex; align-items: center;">
                     <input type="radio" name="pregunta_{{ pregunta.id }}" value="{{ opcion }}" style="margin-right: 8px;">
                     {{ opcion }}
                 </label>
@@ -76,7 +122,7 @@
             let segundos = tiempoRestante % 60;
 
             let segundosTexto = segundos < 10 ? '0' + segundos : segundos;
-            let minutosTexto = minutos < 10 ? '0' + minutos : minutos;
+            let minutosTexto = minutos < 10 ? '0' + minutes : minutos;
 
             displayReloj.textContent = `${minutosTexto}:${segundosTexto}`;
 
