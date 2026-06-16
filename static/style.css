@@ -1,3 +1,4 @@
+/* --- ESTILOS BASE EXISTENTES --- */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f6f9;
@@ -10,6 +11,17 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+header h1 {
+    color: white !important; /* Asegura que el h1 del header sea blanco */
+    margin: 0 0 5px 0;
+}
+
+header p {
+    margin: 0;
+    color: #d9e6ff;
+    font-size: 1rem;
 }
 
 nav {
@@ -31,16 +43,106 @@ nav a:hover {
 
 main {
     padding: 20px;
+    max-width: 1200px; /* Evita que el contenido se estire de más en pantallas grandes */
+    margin: 0 auto;
 }
 
 h1, h2 {
     color: #0a2a66;
 }
 
+
+/* --- MODIFICACIÓN DE TU .CARD BASE --- */
 .card {
     background: white;
     padding: 20px;
     margin: 15px;
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    
+    /* Propiedades añadidas para soportar las etiquetas (badges) en la esquina */
+    position: relative;
+    padding-top: 40px; /* Da espacio superior para que la etiqueta no encime el título */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+/* Efecto visual sutil cuando el usuario pasa el cursor por una tarjeta */
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: #4a5568;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* --- NUEVOS ESTILOS: SISTEMA DE FILTRADO Y GRID --- */
+
+/* Contenedor de botones de filtro */
+.consejos-filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 15px 30px 15px;
+    flex-wrap: wrap; /* Permite colapsar los botones de forma ordenada en celulares */
+}
+
+/* Estilo base de los botones de filtro */
+.btn-filtro {
+    padding: 10px 22px;
+    border: 2px solid #cbd5e1;
+    background-color: white;
+    color: #334155;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.btn-filtro:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+/* Botón activo (Combina con el azul de tu Navbar #123d8b) */
+.btn-filtro.active {
+    background-color: #123d8b;
+    color: white;
+    border-color: #123d8b;
+}
+
+/* Grid dinámico que acomoda las tarjetas de forma responsiva */
+.consejos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px; /* Ajusta la separación interna de las tarjetas en la cuadrícula */
+}
+
+/* Estilos de las pequeñas Etiquetas (Badges) */
+.card-badge {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Colores personalizados para las etiquetas de cada sección */
+.badge-general { background-color: #e2e8f0; color: #475569; }
+.badge-unam { background-color: #fef3c7; color: #b45309; }    /* Tono Dorado */
+.badge-ipn { background-color: #fce7f3; color: #9d174d; }     /* Tono Guinda */
+.badge-uam { background-color: #e0f2fe; color: #0369a1; }     /* Tono Azul claro */
