@@ -37,8 +37,10 @@
         
         <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee;">
             <form action="/configurar_examen" method="POST">
-                <label for="cantidad" style="display: block; margin-bottom: 8px; font-weight: bold;">Preparar Simulacro:</label>
-                <select name="cantidad" id="cantidad" style="padding: 8px; width: 100%; margin-bottom: 12px; border-radius: 5px; border: 1px solid #ccc;">
+                <input type="hidden" name="universidad" value="unam">
+                
+                <label for="cantidad_unam" style="display: block; margin-bottom: 8px; font-weight: bold;">Preparar Simulacro:</label>
+                <select name="cantidad" id="cantidad_unam" style="padding: 8px; width: 100%; margin-bottom: 12px; border-radius: 5px; border: 1px solid #ccc;">
                     <option value="10">10 Preguntas (Prueba rápida)</option>
                     <option value="30">30 Preguntas (Práctica intermedia)</option>
                     <option value="60">60 Preguntas (Medio examen)</option>
@@ -49,7 +51,7 @@
                 </button>
             </form>
         </div>
-        </div>
+    </div>
 
     <div class="card">
         <img src="{{ url_for('static', filename='ipn.png') }}" alt="IPN" width="120">
@@ -64,6 +66,23 @@
         <p><strong>Carreras destacadas:</strong> Ingeniería Mecánica, Sistemas, Aeronáutica.</p>
 
         <p><strong>Modalidad:</strong> Escolarizada.</p>
+
+        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee;">
+            <form action="/configurar_examen" method="POST">
+                <input type="hidden" name="universidad" value="ipn">
+                
+                <label for="cantidad_ipn" style="display: block; margin-bottom: 8px; font-weight: bold;">Preparar Simulacro:</label>
+                <select name="cantidad" id="cantidad_ipn" style="padding: 8px; width: 100%; margin-bottom: 12px; border-radius: 5px; border: 1px solid #ccc;">
+                    <option value="10">10 Preguntas (Prueba rápida)</option>
+                    <option value="50">50 Preguntas (Práctica intermedia)</option>
+                    <option value="100">100 Preguntas (Medio examen)</option>
+                    <option value="200">200 Preguntas (Simulacro Real)</option>
+                </select>
+                <button type="submit" style="background-color: #800020; color: white; border: none; padding: 10px 15px; width: 100%; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                    Iniciar Examen IPN
+                </button>
+            </form>
+        </div>
     </div>
 
     <div class="card">
