@@ -1462,13 +1462,6 @@
     "opciones": ["Capa de ozono (Estratosfera)", "Troposfera", "Mesosfera", "Ionosfera"],
   },
   {
-  "id": 209,
-    "materia": "Geografía",
-    "pregunta": "¿Cuál es la capa gaseosa que envuelve a la Tierra y absorbe la mayor parte de la radiación ultravioleta dañina procedente del Sol?",
-    "opciones": ["Capa de ozono (Estratosfera)", "Troposfera", "Mesosfera", "Ionosfera"],
-    "respuesta_correcta": "Capa de ozono (Estratosfera)"
-  },
-  {
     "id": 210,
     "materia": "Matemáticas",
     "pregunta": "Si un ángulo mide 45 grados, ¿cuál es su valor equivalente convertido al sistema de radianes?",
