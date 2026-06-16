@@ -65,38 +65,31 @@
     </form>
 
     <script>
-        // Traemos los minutos asignados desde Flask
         let minutosIniciales = {{ tiempo if tiempo else 10 }};
-        let tiempoRestante = minutosIniciales * 60; // Convertido a segundos
+        let tiempoRestante = minutosIniciales * 60; 
         
         const displayReloj = document.getElementById('tiempo-reloj');
-        const contenedorCronometro = document.getElementById('cronometro');
         const formulario = document.getElementById('form-examen');
 
         const cuentaRegresiva = setInterval(function() {
             let minutos = Math.floor(tiempoRestante / 60);
             let segundos = tiempoRestante % 60;
 
-            // Formato con ceros a la izquierda (corregido)
             let segundosTexto = segundos < 10 ? '0' + segundos : segundos;
             let minutosTexto = minutos < 10 ? '0' + minutos : minutos;
 
             displayReloj.textContent = `${minutosTexto}:${segundosTexto}`;
 
-            # Alertas visuales según el tiempo restante
             if (tiempoRestante <= 60) {
-                // Último minuto: Rojo de advertencia
                 displayReloj.style.color = '#dc3545';
             } else if (tiempoRestante <= 300) {
-                // Últimos 5 minutos: Amarillo
                 displayReloj.style.color = '#ffc107';
             }
 
-            // Si el tiempo llega a cero
             if (tiempoRestante <= 0) {
                 clearInterval(cuentaRegresiva);
                 alert("¡Se ha agotado el tiempo del examen! Tus respuestas se enviarán automáticamente.");
-                formulario.submit(); // Fuerza el envío del examen
+                formulario.submit();
             }
 
             tiempoRestante--;
