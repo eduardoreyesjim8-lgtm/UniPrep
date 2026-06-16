@@ -61,5 +61,82 @@
     "pregunta": "¿Cuál es la capa de la Tierra sobre la cual se desplazan las placas tectónicas?",
     "opciones": ["Astenosfera", "Núcleo interno", "Litósfera", "Corteza continental"],
     "respuesta_correcta": "Astenosfera"
+  },
+  {
+    "id": 10,
+    "materia": "Matemáticas",
+    "pregunta": "Simplifica la siguiente expresión algebraica: (x² - 9) / (x - 3)",
+    "opciones": ["x + 3", "x - 3", "x + 9", "x² + 3"],
+    "respuesta_correcta": "x + 3"
+  },
+  {
+    "id": 11,
+    "materia": "Física",
+    "pregunta": "¿Cuál es la escala termométrica que marca el cero absoluto, punto en el cual cesa el movimiento molecular?",
+    "opciones": ["Kelvin", "Celsius", "Fahrenheit", "Rankine"],
+    "respuesta_correcta": "Kelvin"
+  },
+  {
+    "id": 12,
+    "materia": "Química",
+    "pregunta": "De acuerdo con la escala de pH, si una sustancia tiene un pH igual a 3, se clasifica como:",
+    "opciones": ["Ácido fuerte", "Base fuerte", "Sustancia neutra", "Base débil"],
+    "respuesta_correcta": "Ácido fuerte"
+  },
+  {
+    "id": 13,
+    "materia": "Biología",
+    "pregunta": "¿Cuál es el proceso metabólico celular mediante el cual las plantas convierten el CO2 y el agua en glucosa y oxígeno utilizando la luz solar?",
+    "opciones": ["Fotosíntesis", "Glucólisis", "Ciclo de Krebs", "Fermentación láctica"],
+    "respuesta_correcta": "Fotosíntesis"
+  },
+  {
+    "id": 14,
+    "materia": "Español",
+    "pregunta": "Selecciona la palabra que tiene un error ortográfico de acentuación:",
+    "opciones": ["Examen", "Árbol", "Canción", "Sutilmente"],
+    "respuesta_correcta": "Examen"
+  },
+  {
+    "id": 15,
+    "materia": "Literatura",
+    "pregunta": "¿Quién es el autor de la célebre novela mexicana 'Pedro Páramo'?",
+    "opciones": ["Juan Rulfo", "Carlos Fuentes", "Octavio Paz", "Mariano Azuela"],
+    "respuesta_correcta": "Juan Rulfo"
+  },
+  {
+    "id": 16,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué sistema político-económico y periodo histórico se caracterizó por la división de la sociedad en señores feudales y siervos en la Europa Medieval?",
+    "opciones": ["Feudalismo", "Capitalismo", "Mercantilismo", "Socialismo utópico"],
+    "respuesta_correcta": "Feudalismo"
+  },
+  {
+    "id": 17,
+    "materia": "Historia de México",
+    "pregunta": "¿Cuál fue el principal plan proclamado por Francisco I. Madero en 1910 para levantarse en armas contra el porfiriato bajo el lema 'Sufragio efectivo, no reelección'?",
+    "opciones": ["Plan de San Luis", "Plan de Ayala", "Plan de Guadalupe", "Plan de Iguala"],
+    "respuesta_correcta": "Plan de San Luis"
+  },
+  {
+    "id": 18,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es el océano más grande del planeta Tierra?",
+    "opciones": ["Océano Pacífico", "Océano Atlántico", "Océano Índico", "Océano Glacial Ártico"],
+    "respuesta_correcta": "Océano Pacífico"
+  },
+  {
+    "id": 19,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el valor de logaritmo base 10 de 1000 (log 1000)?",
+    "opciones": ["3", "10", "100", "2"],
+    "respuesta_correcta": "3"
+  },
+  {
+    "id": 20,
+    "materia": "Química",
+    "pregunta": "¿Cómo se le llama a las filas horizontales en la Tabla Periódica de los elementos?",
+    "opciones": ["Periodos", "Grupos", "Familias", "Bloques"],
+    "respuesta_correcta": "Periodos"
   }
 ]
