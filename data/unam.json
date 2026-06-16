@@ -138,5 +138,145 @@
     "pregunta": "¿Cómo se le llama a las filas horizontales en la Tabla Periódica de los elementos?",
     "opciones": ["Periodos", "Grupos", "Familias", "Bloques"],
     "respuesta_correcta": "Periodos"
+  },
+  {
+    "id": 21,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el valor de 'x' que satisface la ecuación de primer grado: 5x - 7 = 3x + 9?",
+    "opciones": ["x = 8", "x = 4", "x = 2", "x = -8"],
+    "respuesta_correcta": "x = 8"
+  },
+  {
+    "id": 22,
+    "materia": "Física",
+    "pregunta": "El movimiento que describe un cuerpo al caer libremente desde una altura 'h' despreciando la resistencia del aire se clasifica como:",
+    "opciones": ["Movimiento Rectilíneo Uniformemente Acelerado (MRUA)", "Movimiento Rectilíneo Uniforme (MRU)", "Movimiento Circular Uniforme (MCU)", "Movimiento Parabólico"],
+    "respuesta_correcta": "Movimiento Rectilíneo Uniformemente Acelerado (MRUA)"
+  },
+  {
+    "id": 23,
+    "materia": "Química",
+    "pregunta": "¿Qué partículas subatómicas tienen carga eléctrica negativa y se encuentran girando en orbitales alrededor del núcleo?",
+    "opciones": ["Electrones", "Protones", "Neutrones", "Positrones"],
+    "respuesta_correcta": "Electrones"
+  },
+  {
+    "id": 24,
+    "materia": "Biología",
+    "pregunta": "De acuerdo con la teoría celular, ¿cuál es la unidad estructural, funcional y de origen de todos los seres vivos?",
+    "opciones": ["La célula", "El tejido", "El órgano", "El átomo"],
+    "respuesta_correcta": "La célula"
+  },
+  {
+    "id": 25,
+    "materia": "Español",
+    "pregunta": "Identifica el sujeto en la siguiente oración: 'A altas horas de la noche, el viejo camión de carga llegó al pueblo'.",
+    "opciones": ["el viejo camión de carga", "A altas horas de la noche", "llegó al pueblo", "el pueblo"],
+    "respuesta_correcta": "el viejo camión de carga"
+  },
+  {
+    "id": 26,
+    "materia": "Literatura",
+    "pregunta": "¿A qué movimiento literario del siglo XIX pertenece la búsqueda de la libertad de expresión, el predominio del sentimiento sobre la razón y la idealización de la naturaleza?",
+    "opciones": ["Romanticismo", "Realismo", "Modernismo", "Barroco"],
+    "respuesta_correcta": "Romanticismo"
+  },
+  {
+    "id": 27,
+    "materia": "Historia Universal",
+    "pregunta": "La caída de qué importante ciudad en el año 1453 a manos de los turcos otomanos marca el fin de la Edad Media y el inicio de la Edad Moderna:",
+    "opciones": ["Constantinopla", "Roma", "Atenas", "Alejandría"],
+    "respuesta_correcta": "Constantinopla"
+  },
+  {
+    "id": 28,
+    "materia": "Historia de México",
+    "pregunta": "Ordena cronológicamente los siguientes periodos de la historia de México: 1. Porfiriato, 2. Colonia (Virreinato), 3. México Prehispánico, 4. Revolución Mexicana.",
+    "opciones": ["3, 2, 1, 4", "2, 3, 1, 4", "3, 1, 2, 4", "1, 2, 3, 4"],
+    "respuesta_correcta": "3, 2, 1, 4"
+  },
+  {
+    "id": 29,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la principal consecuencia del movimiento de rotación de la Tierra sobre su propio eje?",
+    "opciones": ["La sucesión del día y la noche", "Las cuatro estaciones del año", "Los eclipses solares", "Las fases de la Luna"],
+    "respuesta_correcta": "La sucesión del día y la noche"
+  },
+  {
+    "id": 30,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el resultado de resolver el sistema de ecuaciones: x + y = 7 y x - y = 1?",
+    "opciones": ["x = 4, y = 3", "x = 5, y = 2", "x = 3, y = 4", "x = 6, y = 1"],
+    "respuesta_correcta": "x = 4, y = 3"
+  },
+  {
+    "id": 31,
+    "materia": "Física",
+    "pregunta": "¿Cuál es la unidad de medida de la potencia eléctrica en el Sistema Internacional de Unidades?",
+    "opciones": ["Watt (W)", "Volt (V)", "Ampere (A)", "Ohm (Ω)"],
+    "respuesta_correcta": "Watt (W)"
+  },
+  {
+    "id": 32,
+    "materia": "Química",
+    "pregunta": "A la suma de las masas de los protones y neutrones en el núcleo de un átomo se le conoce como:",
+    "opciones": ["Número de masa (A)", "Número atómico (Z)", "Masa molecular", "Isótopo"],
+    "respuesta_correcta": "Número de masa (A)"
+  },
+  {
+    "id": 33,
+    "materia": "Biología",
+    "pregunta": "Las biomoléculas encargadas de almacenar y transmitir la información genética de los organismos son:",
+    "opciones": ["Ácidos nucleicos", "Proteínas", "Lípidos", "Carbohidratos"],
+    "respuesta_correcta": "Ácidos nucleicos"
+  },
+  {
+    "id": 34,
+    "materia": "Español",
+    "pregunta": "Selecciona el sinónimo correcto de la palabra 'Efímero':",
+    "opciones": ["Pasajero", "Duradero", "Eterno", "Fuerte"],
+    "respuesta_correcta": "Pasajero"
+  },
+  {
+    "id": 35,
+    "materia": "Literatura",
+    "pregunta": "Identifica la figura retórica utilizada en la frase: 'Tus ojos son dos luceros que iluminan mi andar'.",
+    "opciones": ["Metáfora", "Hipérbole", "Comparación (Símil)", "Aliteración"],
+    "respuesta_correcta": "Metáfora"
+  },
+  {
+    "id": 36,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué movimiento intelectual, filosófico y cultural del siglo XVIII europeo basaba el progreso humano en el uso de la razón y el conocimiento científico?",
+    "opciones": ["La Ilustración", "El Renacimiento", "El Humanismo", "El Absolutismo"],
+    "respuesta_correcta": "La Ilustración"
+  },
+  {
+    "id": 37,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué personaje histórico de la Independencia de México es conocido como el 'Siervo de la Nación' y redactó el documento 'Sentimientos de la Nación'?",
+    "opciones": ["José María Morelos y Pavón", "Miguel Hidalgo y Costilla", "Vicente Guerrero", "Ignacio Allende"],
+    "respuesta_correcta": "José María Morelos y Pavón"
+  },
+  {
+    "id": 38,
+    "materia": "Geografía",
+    "pregunta": "Las coordenadas geográficas que miden la distancia angular de cualquier punto de la Tierra con respecto al Ecuador y al Meridiano de Greenwich se llaman respectivamente:",
+    "opciones": ["Latitud y Longitud", "Altitud y Latitud", "Longitud y Altitud", "Paralelos y Meridianos"],
+    "respuesta_correcta": "Latitud y Longitud"
+  },
+  {
+    "id": 39,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el valor del seno de un ángulo de 90 grados (sin 90°)?",
+    "opciones": ["1", "0", "0.5", "-1"],
+    "respuesta_correcta": "1"
+  },
+  {
+    "id": 40,
+    "materia": "Física",
+    "pregunta": "¿Cómo se le conoce al fenómeno óptico en el cual la luz cambia de dirección y velocidad al pasar de un medio material a otro diferente (como del aire al agua)?",
+    "opciones": ["Refracción", "Reflexión", "Difracción", "Polarización"],
+    "respuesta_correcta": "Refracción"
   }
 ]
