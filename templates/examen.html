@@ -19,6 +19,12 @@
     <a href="/consejos">Consejos</a>
 </nav>
 
+{% if preguntas %}
+<div id="cronometro" style="position: fixed; top: 20px; right: 20px; background-color: #dc3545; color: white; padding: 12px 20px; font-size: 1.2em; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000;">
+    Tiempo restante: <span id="tiempo-reloj">--:--</span>
+</div>
+{% endif %}
+
 <main>
     {% if not preguntas %}
     <div class="card" style="text-align: center;">
@@ -28,7 +34,7 @@
     </div>
     {% else %}
     
-    <form action="/calificar_examen" method="POST">
+    <form id="form-examen" action="/calificar_examen" method="POST">
         
         {% for pregunta in preguntas %}
         <div class="card" style="margin-bottom: 25px;">
@@ -42,7 +48,7 @@
             {% for opcion in pregunta.opciones %}
             <div style="margin-bottom: 8px;">
                 <label style="cursor: pointer;">
-                    <input type="radio" name="pregunta_{{ pregunta.id }}" value="{{ opcion }}" required style="margin-right: 8px;">
+                    <input type="radio" name="pregunta_{{ pregunta.id }}" value="{{ opcion }}" style="margin-right: 8px;">
                     {{ opcion }}
                 </label>
             </div>
@@ -57,6 +63,34 @@
         </div>
         
     </form>
+
+    <script>
+        // Traemos los minutos desde Flask (si no llega nada ponemos 10 por defecto)
+        let minutosIniciales = {{ tiempo if tiempo else 10 }};
+        let tiempoRestante = minutosIniciales * 60; // Convertido a segundos
+        const displayReloj = document.getElementById('tiempo-reloj');
+        const formulario = document.getElementById('form-examen');
+
+        const cuentaRegresiva = setInterval(function() {
+            let minutos = Math.floor(tiempoRestante / 60);
+            let segundos = tiempoRestante % 60;
+
+            // Formato con ceros a la izquierda (ej: 09:05)
+            segundos = segundos < 10 ? '0' + segundos : segundos;
+            minutos = minutos < 10 ? '0' + minutes : minutos;
+
+            displayReloj.textContent = `${minutos}:${segundos}`;
+
+            // Si el tiempo llega a cero
+            if (tiempoRestante <= 0) {
+                clearInterval(cuentaRegresiva);
+                alert("¡Se ha agotado el tiempo del examen! Tus respuestas se enviarán automáticamente.");
+                formulario.submit(); // Envía el examen a calificar a fuerza
+            }
+
+            tiempoRestante--;
+        }, 1000);
+    </script>
     {% endif %}
 </main>
 
