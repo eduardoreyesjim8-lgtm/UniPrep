@@ -278,5 +278,425 @@
     "pregunta": "¿Cómo se le conoce al fenómeno óptico en el cual la luz cambia de dirección y velocidad al pasar de un medio material a otro diferente (como del aire al agua)?",
     "opciones": ["Refracción", "Reflexión", "Difracción", "Polarización"],
     "respuesta_correcta": "Refracción"
+  },
+  {
+    "id": 41,
+    "materia": "Química",
+    "pregunta": "¿Cuál es la masa molar del agua (H2O), considerando que la masa del H = 1 g/mol y del O = 16 g/mol?",
+    "opciones": ["18 g/mol", "17 g/mol", "10 g/mol", "32 g/mol"],
+    "respuesta_correcta": "18 g/mol"
+  },
+  {
+    "id": 42,
+    "materia": "Biología",
+    "pregunta": "¿Qué tipo de reproducción celular da como resultado cuatro células hijas haploides (con la mitad de la información genética) y es exclusiva de los gametos?",
+    "opciones": ["Meiosis", "Mitosis", "Bipartición", "Esporulación"],
+    "respuesta_correcta": "Meiosis"
+  },
+  {
+    "id": 43,
+    "materia": "Español",
+    "pregunta": "Selecciona la opción que contenga el antónimo de la palabra 'Prendado':",
+    "opciones": ["Desamorado", "Enamorado", "Agradecido", "Cautivado"],
+    "respuesta_correcta": "Desamorado"
+  },
+  {
+    "id": 44,
+    "materia": "Literatura",
+    "pregunta": "¿A qué género literario pertenecen las obras escritas en prosa que narran una historia de ficción extensa y compleja con múltiples personajes?",
+    "opciones": ["Novela", "Cuento", "Ensayo", "Poema épico"],
+    "respuesta_correcta": "Novela"
+  },
+  {
+    "id": 45,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué tratado internacional puso fin formalmente a la Primera Guerra Mundial en 1919, imponiendo duras sanciones económicas y territoriales a Alemania?",
+    "opciones": ["Tratado de Versalles", "Tratado de Tordesillas", "Pacto de Varsovia", "Tratado de Brest-Litovsk"],
+    "respuesta_correcta": "Tratado de Versalles"
+  },
+  {
+    "id": 46,
+    "materia": "Historia de México",
+    "pregunta": "La expropiación petrolera en México, decretada el 18 de marzo de 1938, ocurrió durante el periodo presidencial de:",
+    "opciones": ["Lázaro Cárdenas del Río", "Plutarco Elías Calles", "Álvaro Obregón", "Adolfo López Mateos"],
+    "respuesta_correcta": "Lázaro Cárdenas del Río"
+  },
+  {
+    "id": 47,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la cordillera más larga del mundo, ubicada en el continente americano?",
+    "opciones": ["La cordillera de los Andes", "Los Alpes", "El Himalaya", "Las Montañas Rocosas"],
+    "respuesta_correcta": "La cordillera de los Andes"
+  },
+  {
+    "id": 48,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el valor de la derivada de una función constante (por ejemplo, f(x) = 5)?",
+    "opciones": ["0", "5", "1", "x"],
+    "respuesta_correcta": "0"
+  },
+  {
+    "id": 49,
+    "materia": "Física",
+    "pregunta": "De acuerdo con el principio de conservación de la energía, en un sistema aislado la energía mecánica total:",
+    "opciones": ["Permanece constante", "Aumenta constantemente", "Disminuye hasta cero", "Se duplica con el tiempo"],
+    "respuesta_correcta": "Permanece constante"
+  },
+  {
+    "id": 50,
+    "materia": "Química",
+    "pregunta": "¿Qué científico propuso el primer modelo atómico basado en bases científicas, imaginando el átomo como una esfera sólida e indivisible?",
+    "opciones": ["John Dalton", "J.J. Thomson", "Ernest Rutherford", "Niels Bohr"],
+    "respuesta_correcta": "John Dalton"
+  },
+  {
+    "id": 51,
+    "materia": "Biología",
+    "pregunta": "¿Cómo se llaman los organismos que producen su propio alimento a partir de sustancias inorgánicas utilizando luz o energía química?",
+    "opciones": ["Autótrofos", "Heterótrofos", "Descomponedores", "Parásitos"],
+    "respuesta_correcta": "Autótrofos"
+  },
+  {
+    "id": 52,
+    "materia": "Español",
+    "pregunta": "Elige la opción que presente un error en el uso de las grafías b / v:",
+    "opciones": ["Esa decisión fue completamente fribola.", "La biblioteca abre temprano los lunes.", "Ellos anduvieron buscando alojamiento.", "Debes concebir una nueva estrategia."],
+    "respuesta_correcta": "Esa decisión fue completamente fribola."
+  },
+  {
+    "id": 53,
+    "materia": "Literatura",
+    "pregunta": "¿Qué corriente artística y literaria surgida en Latinoamérica a finales del siglo XIX tiene a Rubén Darío como su máximo exponente?",
+    "opciones": ["Modernismo", "Vanguardismo", "Surrealismo", "Neoclasicismo"],
+    "respuesta_correcta": "Modernismo"
+  },
+  {
+    "id": 54,
+    "materia": "Historia Universal",
+    "pregunta": "¿En qué año se produjo la emblemática Caída del Muro de Berlín, evento que simbolizó el colapso del bloque socialista europeo?",
+    "opciones": ["1989", "1991", "1985", "1993"],
+    "respuesta_correcta": "1989"
+  },
+  {
+    "id": 55,
+    "materia": "Historia de México",
+    "pregunta": "¿Quién fue el emperador austríaco impuesto en México por la intervención francesa entre los años 1864 y 1867?",
+    "opciones": ["Maximiliano de Habsburgo", "Agustín de Iturbide", "Felipe de Anjou", "Carlos V"],
+    "respuesta_correcta": "Maximiliano de Habsburgo"
+  },
+  {
+    "id": 56,
+    "materia": "Geografía",
+    "pregunta": "¿Qué tipo de actividades económicas comprenden la agricultura, la ganadería, la pesca y la explotación forestal?",
+    "opciones": ["Actividades primarias", "Actividades secundarias", "Actividades terciarias", "Actividades cuaternarias"],
+    "respuesta_correcta": "Actividades primarias"
+  },
+  {
+    "id": 57,
+    "materia": "Matemáticas",
+    "pregunta": "Determina las raíces (soluciones) de la siguiente ecuación de segundo grado: x² - 5x + 6 = 0",
+    "opciones": ["x = 2, x = 3", "x = -2, x = -3", "x = 1, x = 6", "x = -1, x = -6"],
+    "respuesta_correcta": "x = 2, x = 3"
+  },
+  {
+    "id": 58,
+    "materia": "Física",
+    "pregunta": "La resistencia eléctrica que presenta un conductor es inversamente proporcional a la intensidad de corriente que lo atraviesa. Este enunciado pertenece a:",
+    "opciones": ["La Ley de Ohm", "La Ley de Ampere", "La Ley de Joule", "La Ley de Coulomb"],
+    "respuesta_correcta": "La Ley de Ohm"
+  },
+  {
+    "id": 59,
+    "materia": "Química",
+    "pregunta": "De acuerdo con la teoría de Arrhenius, una sustancia que libera iones de hidrógeno (H+) cuando se disuelve en agua se define como:",
+    "opciones": ["Ácido", "Base", "Sal", "Óxido"],
+    "respuesta_correcta": "Ácido"
+  },
+  {
+    "id": 60,
+    "materia": "Biología",
+    "pregunta": "¿Qué postulado de la teoría celular afirma que 'toda célula proviene de otra célula preexistente'?",
+    "opciones": ["Postulado de origen", "Postulado anatómico", "Postulado fisiológico", "Postulado genético"],
+    "respuesta_correcta": "Postulado de origen"
+  },
+  {
+    "id": 61,
+    "materia": "Español",
+    "pregunta": "Elige la palabra que requiera el uso obligatorio de la grafía 'h':",
+    "opciones": ["__orfanato", "__orilla", "__océano", "__urgencia"],
+    "respuesta_correcta": "__orfanato"
+  },
+  {
+    "id": 62,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál es la función lingüística que predomina en los textos poéticos y literarios donde el emisor busca embellecer el mensaje?",
+    "opciones": ["Función poética o estética", "Función referencial", "Función apelativa", "Función metalingüística"],
+    "respuesta_correcta": "Función poética o estética"
+  },
+  {
+    "id": 63,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué revolución social e ideológica iniciada en 1789 derrocó al absolutismo monárquico y proclamó la Declaración de los Derechos del Hombre y del Ciudadano?",
+    "opciones": ["Revolución Francesa", "Revolución Industrial", "Revolución Rusa", "Revolución Gloriosa"],
+    "respuesta_correcta": "Revolución Francesa"
+  },
+  {
+    "id": 64,
+    "materia": "Historia de México",
+    "pregunta": "¿Cuál fue el periodo histórico de 30 años en el que el general Porfirio Díaz gobernó a México de manera autoritaria y centralizada?",
+    "opciones": ["Porfiriato", "Milagro Mexicano", "Maximato", "La Reforma"],
+    "respuesta_correcta": "Porfiriato"
+  },
+  {
+    "id": 65,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es el río más largo y caudaloso del mundo, que atraviesa gran parte de Sudamérica?",
+    "opciones": ["Río Amazonas", "Río Nilo", "Río Misisipi", "Río Danubio"],
+    "respuesta_correcta": "Río Amazonas"
+  },
+  {
+    "id": 66,
+    "materia": "Matemáticas",
+    "pregunta": "Calcula el área de un círculo cuyo radio mide 4 unidades (considera π en el resultado):",
+    "opciones": ["16π", "8π", "4π", "32π"],
+    "respuesta_correcta": "16π"
+  },
+  {
+    "id": 67,
+    "materia": "Física",
+    "pregunta": "¿A qué velocidad viaja la luz en el vacío aproximadamente?",
+    "opciones": ["300,000 km/s", "300,000 m/s", "150,000 km/s", "340 m/s"],
+    "respuesta_correcta": "300,000 km/s"
+  },
+  {
+    "id": 68,
+    "materia": "Química",
+    "pregunta": "¿Cómo se llaman los átomos de un mismo elemento químico que poseen el mismo número atómico pero diferente número de masa debido a la cantidad de neutrones?",
+    "opciones": ["Isótopos", "Isóbaros", "Alótropos", "Iones"],
+    "respuesta_correcta": "Isótopos"
+  },
+  {
+    "id": 69,
+    "materia": "Biología",
+    "pregunta": "¿Qué molécula de alta energía es considerada la principal 'moneda energética' de la célula para realizar sus funciones metabólicas?",
+    "opciones": ["Adenosín Trifosfato (ATP)", "Glucosa", "Ácido pirúvico", "NADH"],
+    "respuesta_correcta": "Adenosín Trifosfato (ATP)"
+  },
+  {
+    "id": 70,
+    "materia": "Español",
+    "pregunta": "Identifica la opción donde todas las palabras sean agudas:",
+    "opciones": ["Compás, sillón, café", "Árbol, lápiz, túnel", "Música, pájaro, cáscara", "Mesa, silla, cuaderno"],
+    "respuesta_correcta": "Compás, sillón, café"
+  },
+  {
+    "id": 71,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál de las siguientes obras clásicas pertenece al dramaturgo William Shakespeare?",
+    "opciones": ["Romeo y Julieta", "Don Quijote de la Mancha", "La Divina Comedia", "Fausto"],
+    "respuesta_correcta": "Romeo y Julieta"
+  },
+  {
+    "id": 72,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué civilización agrícola de la antigüedad nos legó la escritura cuneiforme y el Código de Hammurabi?",
+    "opciones": ["Mesopotamia", "Egipto", "India", "China"],
+    "respuesta_correcta": "Mesopotamia"
+  },
+  {
+    "id": 73,
+    "materia": "Historia de México",
+    "pregunta": "¿En qué fecha se conmemora la Consumación de la Independencia de México con la entrada del Ejército Trigarante a la Ciudad de México?",
+    "opciones": ["27 de septiembre de 1821", "16 de septiembre de 1810", "20 de noviembre de 1910", "5 de mayo de 1862"],
+    "respuesta_correcta": "27 de septiembre de 1821"
+  },
+  {
+    "id": 74,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la capital del estado mexicano de Chihuahua?",
+    "opciones": ["Chihuahua", "Ciudad Juárez", "Delicias", "Parral"],
+    "respuesta_correcta": "Chihuahua"
+  },
+  {
+    "id": 75,
+    "materia": "Matemáticas",
+    "pregunta": "¿A cuántos radianes equivale un ángulo completo de 180 grados?",
+    "opciones": ["π rad", "2π rad", "π/2 rad", "3π/2 rad"],
+    "respuesta_correcta": "π rad"
+  },
+  {
+    "id": 76,
+    "materia": "Física",
+    "pregunta": "¿Qué tipo de onda requiere obligatoriamente de un medio material (sólido, líquido o gas) para poder propagarse, como el sonido?",
+    "opciones": ["Onda mecánica", "Onda electromagnética", "Onda gravitacional", "Onda de radio"],
+    "respuesta_correcta": "Onda mecánica"
+  },
+  {
+    "id": 77,
+    "materia": "Química",
+    "pregunta": "¿Cuál es el gas noble más ligero y abundante en el universo después del hidrógeno?",
+    "opciones": ["Helio", "Neón", "Argón", "Radón"],
+    "respuesta_correcta": "Helio"
+  },
+  {
+    "id": 78,
+    "materia": "Biología",
+    "pregunta": "¿Qué estructura de la planta absorbe el agua y las sales minerales directamente del suelo?",
+    "opciones": ["Raíz", "Tallo", "Hoja", "Flor"],
+    "respuesta_correcta": "Raíz"
+  },
+  {
+    "id": 79,
+    "materia": "Español",
+    "pregunta": "Identifica la opción que presenta una metáfora:",
+    "opciones": ["Las perlas de tu boca.", "Frío como el hielo.", "Lloraba a mares.", "El viento ruge fuerte."],
+    "respuesta_correcta": "Las perlas de tu boca."
+  },
+  {
+    "id": 80,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál es el autor de la célebre tragedia 'Edipo Rey'?",
+    "opciones": ["Sófocles", "Eurípides", "Esquilo", "Homero"],
+    "respuesta_correcta": "Sófocles"
+  },
+  {
+    "id": 81,
+    "materia": "Historia Universal",
+    "pregunta": "¿En qué país comenzó la Revolución Industrial a finales del siglo XVIII debido a la máquina de vapor?",
+    "opciones": ["Inglaterra", "Francia", "Alemania", "Estados Unidos"],
+    "respuesta_correcta": "Inglaterra"
+  },
+  {
+    "id": 82,
+    "materia": "Historia de México",
+    "pregunta": "¿Quién fue el principal líder del Ejército Libertador del Sur durante la Revolución Mexicana que exigía el reparto agrario con el lema 'Tierra y Libertad'?",
+    "opciones": ["Emiliano Zapata", "Francisco Villa", "Venustiano Carranza", "Álvaro Obregón"],
+    "respuesta_correcta": "Emiliano Zapata"
+  },
+  {
+    "id": 83,
+    "materia": "Geografía",
+    "pregunta": "¿Cuál es la principal fuente de energía calórica y lumínica de nuestro Sistema Solar?",
+    "opciones": ["El Sol", "Júpiter", "La Luna", "El núcleo terrestre"],
+    "respuesta_correcta": "El Sol"
+  },
+  {
+    "id": 84,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuál es el valor del término independiente en la expresión algebraica 4x³ - 2x + 7?",
+    "opciones": ["7", "4", "-2", "0"],
+    "respuesta_correcta": "7"
+  },
+  {
+    "id": 85,
+    "materia": "Física",
+    "pregunta": "La cantidad de materia que posee un cuerpo se define físicamente como:",
+    "opciones": ["Masa", "Peso", "Volumen", "Densidad"],
+    "respuesta_correcta": "Masa"
+  },
+  {
+    "id": 86,
+    "materia": "Química",
+    "pregunta": "¿Cuál es el símbolo químico del elemento Oro en la Tabla Periódica?",
+    "opciones": ["Au", "Ag", "Fe", "O"],
+    "respuesta_correcta": "Au"
+  },
+  {
+    "id": 87,
+    "materia": "Biología",
+    "pregunta": "¿Qué organelo es exclusivo de las células vegetales y contiene la clorofila para capturar la luz?",
+    "opciones": ["Cloroplasto", "Vacuola", "Pared celular", "Lisosoma"],
+    "respuesta_correcta": "Cloroplasto"
+  },
+  {
+    "id": 88,
+    "materia": "Español",
+    "pregunta": "Elige el antónimo directo de la palabra 'Generoso':",
+    "opciones": ["Avaro", "Amable", "Altruista", "Bondadoso"],
+    "respuesta_correcta": "Avaro"
+  },
+  {
+    "id": 89,
+    "materia": "Literatura",
+    "pregunta": "¿Cuál es el subgénero narrativo breve, de pocos personajes y que siempre concluye con una enseñanza moral llamada moraleja?",
+    "opciones": ["Fábula", "Mito", "Leyenda", "Cuento"],
+    "respuesta_correcta": "Fábula"
+  },
+  {
+    "id": 90,
+    "materia": "Historia Universal",
+    "pregunta": "¿Qué país sufrió el primer ataque con una bomba atómica en la historia humana, específicamente en la ciudad de Hiroshima en 1945?",
+    "opciones": ["Japón", "Alemania", "Rusia", "Italia"],
+    "respuesta_correcta": "Japón"
+  },
+  {
+    "id": 91,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué civilización mesoamericana construyó la majestuosa ciudad de Tenochtitlan en el Valle de México?",
+    "opciones": ["Mexica (Azteca)", "Maya", "Zapoteca", "Olmeca"],
+    "respuesta_correcta": "Mexica (Azteca)"
+  },
+  {
+    "id": 92,
+    "materia": "Geografía",
+    "pregunta": "¿Qué continente se encuentra ubicado en su totalidad en el hemisferio sur y está rodeado por los océanos Índico y Pacífico?",
+    "opciones": ["Oceanía", "Europa", "Asia", "África"],
+    "respuesta_correcta": "Oceanía"
+  },
+  {
+    "id": 93,
+    "materia": "Matemáticas",
+    "pregunta": "¿Cuánto vale la pendiente de una recta completamente horizontal?",
+    "opciones": ["0", "Infinito", "1", "-1"],
+    "respuesta_correcta": "0"
+  },
+  {
+    "id": 94,
+    "materia": "Física",
+    "pregunta": "¿Qué unidad del Sistema Internacional mide la resistencia eléctrica?",
+    "opciones": ["Ohm (Ω)", "Ampere (A)", "Volt (V)", "Joule (J)"],
+    "respuesta_correcta": "Ohm (Ω)"
+  },
+  {
+    "id": 95,
+    "materia": "Química",
+    "pregunta": "En una disolución acuosa, el componente que se encuentra en menor cantidad y se disuelve se denomina:",
+    "opciones": ["Soluto", "Solvente", "Mezcla", "Amalgama"],
+    "respuesta_correcta": "Soluto"
+  },
+  {
+    "id": 96,
+    "materia": "Biología",
+    "pregunta": "¿Qué científico propuso la teoría de la evolución basada en la selección natural en su obra 'El origen de las especies'?",
+    "opciones": ["Charles Darwin", "Jean-Baptiste Lamarck", "Gregor Mendel", "Louis Pasteur"],
+    "respuesta_correcta": "Charles Darwin"
+  },
+  {
+    "id": 97,
+    "materia": "Español",
+    "pregunta": "Identifica la opción redactada sin faltas de ortografía:",
+    "opciones": ["A veces es necesario tomar una decisión rápida.", "Ah veces es nesesario tomar una desición rápida.", "A veses es necesario tomar una desición rápida.", "A veces es nesesario tomar una decisión rápida."],
+    "respuesta_correcta": "A veces es necesario tomar una decisión rápida."
+  },
+  {
+    "id": 98,
+    "materia": "Literatura",
+    "pregunta": "¿Quién escribió el clásico de la literatura española 'Don Quijote de la Mancha'?",
+    "opciones": ["Miguel de Cervantes Saavedra", "Lope de Vega", "Federico García Lorca", "Francisco de Quevedo"],
+    "respuesta_correcta": "Miguel de Cervantes Saavedra"
+  },
+  {
+    "id": 99,
+    "materia": "Historia Universal",
+    "pregunta": "¿Cuál fue la cultura madre de Mesoamérica conocida por esculpir colosales cabezas de piedra?",
+    "opciones": ["Olmeca", "Tolteca", "Maya", "Mixteca"],
+    "respuesta_correcta": "Olmeca"
+  },
+  {
+    "id": 100,
+    "materia": "Historia de México",
+    "pregunta": "¿Qué presidente de México impulsó el Tratado de Libre Comercio de América del Norte (TLCAN) que entró en vigor en 1994?",
+    "opciones": ["Carlos Salinas de Gortari", "Ernesto Zedillo", "Vicente Fox", "Miguel de la Madrid"],
+    "respuesta_correcta": "Carlos Salinas de Gortari"
   }
 ]
