@@ -9,7 +9,7 @@
 
 <header>
     <h1>UniPrep</h1>
-    <p>Consejos para tu examen de admisión</p>
+    <p>Consejos y estrategias para tu examen de admisión</p>
 </header>
 
 <nav>
@@ -20,28 +20,117 @@
 </nav>
 
 <main>
-
-    <div class="card">
-        <h2>Organiza tu tiempo</h2>
-        <p>Crea un horario de estudio y cúmplelo diariamente.</p>
+    <div class="consejos-filtros">
+        <button class="btn-filtro active" onclick="filtrarConsejos('todos')">Todos</button>
+        <button class="btn-filtro" onclick="filtrarConsejos('general')">Generales</button>
+        <button class="btn-filtro" onclick="filtrarConsejos('unam')">UNAM</button>
+        <button class="btn-filtro" onclick="filtrarConsejos('ipn')">IPN</button>
+        <button class="btn-filtro" onclick="filtrarConsejos('uam')">UAM</button>
     </div>
 
-    <div class="card">
-        <h2>Practica constantemente</h2>
-        <p>Resuelve ejercicios y simuladores para mejorar tu desempeño.</p>
-    </div>
+    <div class="consejos-grid">
+        
+        <div class="card general">
+            <div class="card-badge badge-general">General</div>
+            <h2>Organiza tu tiempo</h2>
+            <p>Crea un horario de estudio estructurado y cúmplelo diariamente para generar un hábito sólido.</p>
+        </div>
 
-    <div class="card">
-        <h2>Descansa bien</h2>
-        <p>Dormir adecuadamente ayuda a mejorar la concentración.</p>
-    </div>
+        <div class="card general">
+            <div class="card-badge badge-general">General</div>
+            <h2>Practica constantemente</h2>
+            <p>Resuelve ejercicios complejos y simuladores cronometrados para mejorar tu desempeño bajo presión.</p>
+        </div>
 
-    <div class="card">
-        <h2>Repasa tus errores</h2>
-        <p>Analiza tus fallos para fortalecer los temas que más se te dificultan.</p>
-    </div>
+        <div class="card general">
+            <div class="card-badge badge-general">General</div>
+            <h2>Descansa bien</h2>
+            <p>Dormir adecuadamente (entre 7 y 8 horas) ayuda a consolidar la memoria y a mejorar tu concentración.</p>
+        </div>
 
+        <div class="card general">
+            <div class="card-badge badge-general">General</div>
+            <h2>Repasa tus errores</h2>
+            <p>Analiza detalladamente tus fallos en los simuladores de UniPrep para fortalecer los temas que más se te dificultan.</p>
+        </div>
+
+        <div class="card general">
+            <div class="card-badge badge-general">General</div>
+            <h2>La Regla de los 90 Segundos</h2>
+            <p>Si una pregunta te toma más de un minuto y medio, no te atores. Márcala, sáltala y regresa a ella al final del examen. Todos los reactivos valen los mismos puntos.</p>
+        </div>
+
+        <div class="card general">
+            <div class="card-badge badge-general">General</div>
+            <h2>Técnica de Descarte Activo</h2>
+            <p>Antes de buscar la respuesta que crees correcta, identifica y elimina las dos opciones que sean evidentemente absurdas. Así aumentas tu probabilidad de acertar del 25% al 50% instantáneamente.</p>
+        </div>
+
+        <div class="card unam">
+            <div class="card-badge badge-unam">UNAM</div>
+            <h2>Enfoque por Área de Conocimiento</h2>
+            <p>El examen de la UNAM cambia según el área de tu carrera. El Área 1 y 2 cargan más matemáticas y ciencias, mientras que el Área 3 y 4 priorizan historia, geografía y literatura.</p>
+        </div>
+
+        <div class="card unam">
+            <div class="card-badge badge-unam">UNAM</div>
+            <h2>Comprensión Lectora Eficiente</h2>
+            <p>En las secciones de Español, la UNAM suele incluir textos largos. **Tip pro:** Lee primero las preguntas y las opciones, y después ve al texto a buscar la información para ahorrar valiosos minutos.</p>
+        </div>
+
+        <div class="card ipn">
+            <div class="card-badge badge-ipn">IPN</div>
+            <h2>Domina el Razonamiento Matemático</h2>
+            <p>El "Poli" es sumamente exigente en ciencias exactas. Practica al máximo la velocidad mental en álgebra, física, cálculo y sucesiones numéricas geométricas.</p>
+        </div>
+
+        <div class="card ipn">
+            <div class="card-badge badge-ipn">IPN</div>
+            <h2>Asegura tus Fortalezas</h2>
+            <p>El examen del IPN viene muy bien dividido por bloques de materia. Una excelente estrategia es comenzar contestando los temas que mejor domines para ganar confianza y asegurar esos puntos rápido.</p>
+        </div>
+
+        <div class="card uam">
+            <div class="card-badge badge-uam">UAM</div>
+            <h2>El Peso Crítico de las Aptitudes</h2>
+            <p>A diferencia de otras universidades, la UAM le da un peso masivo al Razonamiento Verbal y Matemático. Si no logras un buen puntaje en estas secciones de lógica, tus conocimientos específicos no bastarán para ser seleccionado.</p>
+        </div>
+
+        <div class="card uam">
+            <div class="card-badge badge-uam">UAM</div>
+            <h2>Examen por División Académica</h2>
+            <p>Estudia estrictamente según tu división (CBI, CBS, CSH o CAD). El examen evalúa fuertemente el perfil de la carrera a la que vas, así que enfoca tus repasos en la guía de tu respectiva división.</p>
+        </div>
+
+    </div>
+</section>
 </main>
+
+<script>
+function filtrarConsejos(categoria) {
+    // 1. Cambiar la clase activa entre los botones de filtro
+    const botones = document.querySelectorAll('.btn-filtro');
+    botones.forEach(btn => btn.classList.remove('active'));
+    
+    // Añade la clase activa al botón que recibió el click
+    event.target.classList.add('active');
+
+    // 2. Filtrar las tarjetas (.card)
+    const tarjetas = document.querySelectorAll('.card');
+    
+    tarjetas.forEach(tarjeta => {
+        if (categoria === 'todos') {
+            tarjeta.style.display = 'block';
+        } else {
+            if (tarjeta.classList.contains(categoria)) {
+                tarjeta.style.display = 'block';
+            } else {
+                tarjeta.style.display = 'none';
+            }
+        }
+    });
+}
+</script>
 
 </body>
 </html>
