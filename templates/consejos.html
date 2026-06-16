@@ -102,8 +102,11 @@
             <p>Estudia estrictamente según tu división (CBI, CBS, CSH o CAD). El examen evalúa fuertemente el perfil de la carrera a la que vas, así que enfoca tus repasos en la guía de tu respectiva división.</p>
         </div>
 
+        <div id="sin-consejos" style="display: none; text-align: center; grid-column: 1 / -1; padding: 40px; color: #64748b;">
+            <p style="font-size: 1.2rem; font-weight: bold; margin: 0;">Próximamente más consejos para esta sección.</p>
+        </div>
+
     </div>
-</section>
 </main>
 
 <script>
@@ -112,23 +115,45 @@ function filtrarConsejos(categoria) {
     const botones = document.querySelectorAll('.btn-filtro');
     botones.forEach(btn => btn.classList.remove('active'));
     
-    // Añade la clase activa al botón que recibió el click
-    event.target.classList.add('active');
+    // Captura el botón que disparó el evento para ponerlo como activo
+    if (event && event.target) {
+        event.target.classList.add('active');
+    }
 
-    // 2. Filtrar las tarjetas (.card)
+    // 2. Filtrar las tarjetas (.card) con animación de entrada
     const tarjetas = document.querySelectorAll('.card');
     
     tarjetas.forEach(tarjeta => {
+        // Removemos cualquier animación previa para poder reiniciarla
+        tarjeta.style.animation = 'none';
+        // Truco de reflujo (reflow) para que el navegador reinicie la animación de forma efectiva
+        tarjeta.offsetHeight; 
+        
         if (categoria === 'todos') {
             tarjeta.style.display = 'block';
+            tarjeta.style.animation = 'fadeIn 0.4s ease forwards';
         } else {
             if (tarjeta.classList.contains(categoria)) {
                 tarjeta.style.display = 'block';
+                tarjeta.style.animation = 'fadeIn 0.4s ease forwards';
             } else {
                 tarjeta.style.display = 'none';
             }
         }
     });
+
+    // 3. Validar si quedó alguna tarjeta visible (Empty State)
+    const tarjetasVisibles = Array.from(tarjetas).filter(tarjeta => tarjeta.style.display === 'block');
+    const mensajeSinConsejos = document.getElementById('sin-consejos');
+    
+    if (mensajeSinConsejos) {
+        if (tarjetasVisibles.length === 0) {
+            mensajeSinConsejos.style.display = 'block';
+            mensajeSinConsejos.style.animation = 'fadeIn 0.4s ease forwards';
+        } else {
+            mensajeSinConsejos.style.display = 'none';
+        }
+    }
 }
 </script>
 
