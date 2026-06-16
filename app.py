@@ -13,6 +13,14 @@ def cargar_preguntas_unam():
             return json.load(f)
     return []
 
+# Función para cargar las preguntas del IPN desde la carpeta data de Render
+def cargar_preguntas_ipn():
+    ruta = "/opt/render/project/src/data/ipn.json"
+    if os.path.exists(ruta):
+        with open(ruta, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return []
+
 @app.route("/")
 def inicio():
     return render_template("index.html")
@@ -25,37 +33,50 @@ def universidades():
 def consejos():
     return render_template("consejos.html")
 
-# Esta ruta recibe el formulario de universidades.html y arma el examen con su tiempo
+# Esta ruta recibe el formulario de universidades.html y arma el examen del IPN
+@app.route("/configurar_examen_ipn", methods=["POST"])
+def configurar_examen_ipn():
+    # 1. Cargamos el banco completo del IPN
+    banco_completo = cargar_preguntas_ipn()
+    
+    # 2. Obtenemos el tipo de examen que seleccionó el usuario en el formulario
+    tipo_examen = request.form.get("tipo_examen") # 'simulacro' o por materia
+    
+    if tipo_examen == "simulacro":
+        limite_preguntas = 140 if len(banco_completo) >= 140 else len(banco_completo)
+        preguntas_seleccionadas = random.sample(banco_completo, limite_preguntas)
+    else:
+        materia_seleccionada = request.form.get("materia")
+        preguntas_filtradas = [p for p in banco_completo if p["materia"] == materia_seleccionada]
+        
+        limite = 20 if len(preguntas_filtradas) >= 20 else len(preguntas_filtradas)
+        preguntas_seleccionadas = random.sample(preguntas_filtradas, limite)
+        
+    return render_template("examen.html", preguntas=preguntas_seleccionadas)
+
+# Esta ruta recibe el formulario de universidades.html y arma el examen de la UNAM
 @app.route("/configurar_examen", methods=["POST"])
 def configurar_examen():
-    # Cacha cuántas preguntas quiere el usuario (por defecto 10)
     cantidad = int(request.form.get("cantidad", 10))
-    
-    # Asignamos tiempo real: 1 minuto por pregunta
-    # Si eligen 10 preguntas -> 10 minutos. Si eligen 120 -> 120 minutos.
     tiempo_minutos = cantidad 
     
     banco_completo = cargar_preguntas_unam()
-    
-    # Si piden más preguntas de las que hay en el JSON, toma el tope disponible
     num_preguntas = min(cantidad, len(banco_completo))
-    
-    # Selecciona preguntas al azar sin que se repitan
     preguntas_examen = random.sample(banco_completo, num_preguntas)
     
-    # Te manda a la página de examen pasándole las preguntas y el tiempo calculado
     return render_template("examen.html", preguntas=preguntas_examen, tiempo=tiempo_minutos)
 
-# Ruta que procesa las respuestas del alumno y calcula el puntaje
+# Ruta que procesa las respuestas del alumno y calcula el puntaje (Soporta UNAM e IPN)
 @app.route("/calificar_examen", methods=["POST"])
 def calificar_examen():
-    banco_completo = cargar_preguntas_unam()
+    # Unimos ambos bancos de preguntas para que pueda calificar cualquier examen sin importar la universidad
+    banco_completo = cargar_preguntas_unam() + cargar_preguntas_ipn()
     
     aciertos = 0
     total_preguntas = 0
     resultados = []
     
-    # Revisamos cada pregunta del banco para ver si el usuario la contestó
+    # Revisamos cada pregunta para ver si el usuario la contestó
     for pregunta in banco_completo:
         campo_name = f"pregunta_{pregunta['id']}"
         
@@ -87,12 +108,10 @@ def calificar_examen():
                            porcentaje=porcentaje, 
                            resultados=resultados)
 
-# Dejamos la ruta vieja por si entran directo, pero ahora vacía por defecto
 @app.route("/examen")
 def examen():
     return render_template("examen.html", preguntas=[])
 
 if __name__ == "__main__":
-    # Permite a Render asignar el puerto automáticamente en internet
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
