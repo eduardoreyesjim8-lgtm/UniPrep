@@ -302,24 +302,31 @@
         // 1. Detectamos la cantidad de preguntas real generada en la lista
         let cantidadPreguntas = parseInt("{{ preguntas|length }}") || 10;
         
-        // Mapeo seguro de la universidad de la primera pregunta para evitar errores
-        let universidad = "unam"; 
+        // Capturamos los parámetros de la URL para ver qué universidad se solicitó en el frontend
+        let urlParams = new URLSearchParams(window.location.search);
+        let uniUrl = urlParams.get('universidad') || '';
+        
+        // Mapeo de respaldo desde el objeto de la primera pregunta
+        let uniPregunta = "unam"; 
         {% if preguntas and preguntas[0].universidad %}
-            universidad = "{{ preguntas[0].universidad }}".toLowerCase();
+            uniPregunta = "{{ preguntas[0].universidad }}".toLowerCase();
         {% endif %}
 
-        let minutosIniciales = 10; // Tiempo por defecto ante fallas
+        // Cruzamos ambas variables para asegurar una detección infalible de la institución
+        let universidad = (uniUrl + " " + uniPregunta).toLowerCase();
 
-        // 2. REGLAS ESTRICTAS DE TIEMPO ACORDADAS
-        if (universidad.includes('unam')) {
-            if (cantidadPreguntas >= 120) {
-                minutosIniciales = 180; // Simulacro Completo UNAM = 3 Horas
-            } else if (cantidadPreguntas === 60) {
-                minutosIniciales = 90;  // Medio examen = 1h 30m
-            } else if (cantidadPreguntas === 30) {
-                minutosIniciales = 45;  // 30 preguntas
+        let minutosIniciales = 15; // Tiempo por defecto ante fallos estructurales
+
+        // 2. REGLAS ESTRICTAS DE ASIGNACIÓN DE TIEMPO
+        if (universidad.includes('uam')) {
+            if (cantidadPreguntas >= 80) {
+                minutosIniciales = 120; // Simulacro Completo UAM = 2 Horas exactas
+            } else if (cantidadPreguntas === 50) {
+                minutosIniciales = 75;  
+            } else if (cantidadPreguntas === 25) {
+                minutosIniciales = 40;  
             } else {
-                minutosIniciales = 15;  // 10 preguntas
+                minutosIniciales = 15;  
             }
         } 
         else if (universidad.includes('ipn') || universidad.includes('poli')) {
@@ -333,13 +340,14 @@
                 minutosIniciales = 15;  
             }
         } 
-        else if (universidad.includes('uam')) {
-            if (cantidadPreguntas >= 80) {
-                minutosIniciales = 120; // Simulacro Completo UAM = 2 Horas exactas
-            } else if (cantidadPreguntas === 50) {
-                minutosIniciales = 75;  
-            } else if (cantidadPreguntas === 25) {
-                minutosIniciales = 40;  
+        // Si no cumple las anteriores, se procesa bajo la estructura de la UNAM
+        else {
+            if (cantidadPreguntas >= 120) {
+                minutosIniciales = 180; // Simulacro Completo UNAM = 3 Horas
+            } else if (cantidadPreguntas === 60) {
+                minutosIniciales = 90;  // Medio examen = 1h 30m
+            } else if (cantidadPreguntas === 30) {
+                minutosIniciales = 45;  
             } else {
                 minutosIniciales = 15;  
             }
@@ -352,11 +360,11 @@
 
         function actualizarReloj() {
             let horas = Math.floor(tiempoRestante / 3600);
-            let minutos = Math.floor((tiempoRestante % 3600) / 60);
+            let minutosVal = Math.floor((tiempoRestante % 3600) / 60);
             let segundos = tiempoRestante % 60;
 
             let segundosTexto = segundos < 10 ? '0' + segundos : segundos;
-            let minutosTexto = minutesTexto = minutos < 10 ? '0' + minutos : minutos;
+            let minutosTexto = minutosVal < 10 ? '0' + minutosVal : minutosVal;
             let horasTexto = horas < 10 ? '0' + horas : horas;
 
             // Formatear visualmente el reloj en pantalla
