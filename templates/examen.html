@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Examen - UniPrep</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -21,12 +22,12 @@
 </nav>
 
 {% if preguntas %}
-<div id="cronometro" style="position: fixed; top: 20px; right: 20px; background-color: #111; color: #28a745; padding: 12px 20px; font-size: 1.3em; font-family: monospace; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; border: 2px solid #333;">
+<div id="cronometro" class="cronometro-flotante">
     ⏱️ <span id="tiempo-reloj">--:--</span>
 </div>
 {% endif %}
 
-<main>
+<main class="contenedor-principal">
     {% if not preguntas %}
     <div class="guia-examen-seccion">
         <h2 class="titulo-guia">Explora la Estructura de tu Examen</h2>
@@ -66,8 +67,8 @@
 
         <div id="detalle-area-card" class="card detalle-card" style="display: none;">
             <div id="contenido-dinamico"></div>
-            <div style="text-align: center; margin-top: 30px; border-top: 1px solid #f1f5f9; padding-top: 25px;">
-                <p style="margin: 0 0 15px 0; color: #64748b; font-size: 0.95rem;">¿Quieres poner a prueba tus conocimientos con esta estructura real?</p>
+            <div class="footer-card-accion">
+                <p>¿Quieres poner a prueba tus conocimientos con esta estructura real?</p>
                 <a href="/universidades" class="btn-examen-primario">Configurar este Examen en Simulador</a>
             </div>
         </div>
@@ -75,136 +76,17 @@
 
     <script>
         const infoEstructuras = {
-            'unam-a1': {
-                titulo: "UNAM - Área 1: Ciencias Físico-Matemáticas y de las Ingenierías",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "120 reactivos",
-                materias: [
-                    { nombre: "Matemáticas", cant: 26 }, { nombre: "Física", cant: 16 },
-                    { nombre: "Español", cant: 18 }, { nombre: "Química", cant: 10 },
-                    { nombre: "Literatura", cant: 10 }, { nombre: "Historia Universal", cant: 10 },
-                    { nombre: "Historia de México", cant: 10 }, { nombre: "Geografía", cant: 10 }
-                ],
-                carreras: "Ingeniería en Computación, Ingeniería Civil, Mecatrónica, Arquitectura, Actuaría, Física, Ciencias de la Computación, Matemáticas."
-            },
-            'unam-a2': {
-                titulo: "UNAM - Área 2: Ciencias Biológicas, Químicas y de la Salud",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "120 reactivos",
-                materias: [
-                    { nombre: "Matemáticas", cant: 24 }, { nombre: "Química", cant: 14 },
-                    { nombre: "Biología", cant: 12 }, { nombre: "Física", cant: 12 },
-                    { nombre: "Español", cant: 18 }, { nombre: "Literatura", cant: 10 },
-                    { nombre: "Historia Universal", cant: 10 }, { nombre: "Historia de México", cant: 10 },
-                    { nombre: "Geografía", cant: 10 }
-                ],
-                carreras: "Médico Cirujano, Enfermería, Psicología, Odontología, Medicina Veterinaria (MVZ), Química Farmacéutico Biológica (QFB), Nutriología."
-            },
-            'unam-a3': {
-                titulo: "UNAM - Área 3: Ciencias Sociales",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "120 reactivos",
-                materias: [
-                    { nombre: "Matemáticas", cant: 24 }, { nombre: "Español", cant: 18 },
-                    { nombre: "Historia Universal", cant: 14 }, { nombre: "Historia de México", cant: 14 },
-                    { nombre: "Literatura", cant: 10 }, { nombre: "Geografía", cant: 10 },
-                    { nombre: "Física", cant: 10 }, { nombre: "Química", cant: 10 },
-                    { nombre: "Biología", cant: 10 }
-                ],
-                carreras: "Derecho, Administración, Contaduría, Relaciones Internacionales, Ciencias de la Comunicación, Economía, Sociología, Ciencias Políticas."
-            },
-            'unam-a4': {
-                titulo: "UNAM - Área 4: Humanidades y de las Artes",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "120 reactivos",
-                materias: [
-                    { nombre: "Matemáticas", cant: 22 }, { nombre: "Español", cant: 18 },
-                    { nombre: "Literatura", cant: 10 }, { nombre: "Filosofía", cant: 10 },
-                    { nombre: "Historia Universal", cant: 10 }, { nombre: "Historia de México", cant: 10 },
-                    { nombre: "Geografía", cant: 10 }, { nombre: "Física", cant: 10 },
-                    { nombre: "Química", cant: 10 }, { nombre: "Biología", cant: 10 }
-                ],
-                carreras: "Filosofía, Letras Hispánicas, Historia, Pedagogía, Artes Visuales, Diseño Gráfico, Música, Teatro, Lengua y Literaturas Modernas."
-            },
-            'ipn-fmf': {
-                titulo: "IPN - Ingeniería y Ciencias Físico-Matemáticas",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "140 reactivos",
-                materias: [
-                    { nombre: "Matemáticas (Álgebra, Cálculo)", cant: 50 },
-                    { nombre: "Física", cant: 20 }, { nombre: "Química", cant: 15 },
-                    { nombre: "Competencia Escrita", cant: 20 },
-                    { nombre: "Competencia Lectora", cant: 20 }, { nombre: "Inglés", cant: 15 }
-                ],
-                carreras: "Ingeniería en Sistemas Computacionales (ISC), Inteligencia Artificial, Ingeniería Mecánica, Ingeniería Civil, Aeronáutica, Mecatrónica."
-            },
-            'ipn-cmb': {
-                titulo: "IPN - Ciencias Médico-Biológicas",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "140 reactivos",
-                materias: [
-                    { nombre: "Matemáticas", cant: 30 }, { nombre: "Biología", cant: 30 },
-                    { nombre: "Química", cant: 25 }, { nombre: "Física", cant: 10 },
-                    { nombre: "Competencia Escrita", cant: 20 },
-                    { nombre: "Competencia Lectora", cant: 25 }
-                ],
-                carreras: "Médico Cirujano y Partero, Enfermería, Nutrición, Odontología, Ingeniería Bioquímica, Ingeniería Biónica, Químico Bacteriólogo Parasitólogo."
-            },
-            'ipn-csa': {
-                titulo: "IPN - Ciencias Sociales y Administrativas",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "140 reactivos",
-                materias: [
-                    { nombre: "Matemáticas", cant: 35 }, { nombre: "Economía", cant: 20 },
-                    { nombre: "Administración", cant: 15 }, { nombre: "Competencia Escrita", cant: 25 },
-                    { nombre: "Competencia Lectora", cant: 25 }, { nombre: "Inglés", cant: 20 }
-                ],
-                carreras: "Contador Público, Licenciatura en Relaciones Comerciales (LRC), Negocios Internacionales, Administración y Desarrollo Empresarial, Economía."
-            },
-            'uam-cbi': {
-                titulo: "UAM - CBI: Ciencias Básicas e Ingeniería",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "80 reactivos",
-                materias: [
-                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
-                    { nombre: "Matemáticas Avanzadas", cant: 15 }, { nombre: "Física", cant: 15 },
-                    { nombre: "Química", cant: 10 }
-                ],
-                carreras: "Ingeniería en Computación, Ingeniería Química, Matemáticas, Física, Ingeniería Eléctrica, Ingeniería Biomédica."
-            },
-            'uam-cbs': {
-                titulo: "UAM - CBS: Ciencias Biológicas y de la Salud",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "80 reactivos",
-                materias: [
-                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
-                    { nombre: "Biología", cant: 15 }, { nombre: "Química", cant: 15 },
-                    { nombre: "Física", cant: 10 }
-                ],
-                carreras: "Medicina, Enfermería, Biología, Química Farmacéutica Biológica, Agronomía, Estomatología, Psicología Biomédica."
-            },
-            'uam-csh': {
-                titulo: "UAM - CSH: Ciencias Sociales y Humanidades",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "80 reactivos",
-                materias: [
-                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
-                    { nombre: "Historia Universal y México", cant: 15 }, { nombre: "Literatura y Filosofía", cant: 15 },
-                    { nombre: "Formación Ciudadana", cant: 10 }
-                ],
-                carreras: "Derecho, Psicología Social, Administración, Economía, Sociología, Ciencias de la Comunicación, Historia, Filosofía."
-            },
-            'uam-cad': {
-                titulo: "UAM - CAD: Ciencias y Artes para el Diseño",
-                tiempo: "3 Horas (180 minutos)",
-                preguntas: "80 reactivos",
-                materias: [
-                    { nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 },
-                    { nombre: "Historia del Arte y Arq.", cant: 15 }, { nombre: "Dibujo y Geometría Plana", cant: 15 },
-                    { nombre: "Física Básica", cant: 10 }
-                ],
-                carreras: "Arquitectura, Diseño Industrial, Diseño de la Communication Gráfica (Diseño Gráfico), Diseño de Asentamientos Humanos."
-            }
+            'unam-a1': { titulo: "UNAM - Área 1: Ciencias Físico-Matemáticas y de las Ingenierías", tiempo: "3 Horas (180 minutos)", preguntas: "120 reactivos", materias: [{ nombre: "Matemáticas", cant: 26 }, { nombre: "Física", cant: 16 }, { nombre: "Español", cant: 18 }, { nombre: "Química", cant: 10 }, { nombre: "Literatura", cant: 10 }, { nombre: "Historia Universal", cant: 10 }, { nombre: "Historia de México", cant: 10 }, { nombre: "Geografía", cant: 10 }], carreras: "Ingeniería en Computación, Ingeniería Civil, Mecatrónica, Arquitectura, Actuaría, Física, Ciencias de la Computación, Matemáticas." },
+            'unam-a2': { titulo: "UNAM - Área 2: Ciencias Biológicas, Químicas y de la Salud", tiempo: "3 Horas (180 minutos)", preguntas: "120 reactivos", materias: [{ nombre: "Matemáticas", cant: 24 }, { nombre: "Química", cant: 14 }, { nombre: "Biología", cant: 12 }, { nombre: "Física", cant: 12 }, { nombre: "Español", cant: 18 }, { nombre: "Literatura", cant: 10 }, { nombre: "Historia Universal", cant: 10 }, { nombre: "Historia de México", cant: 10 }, { nombre: "Geografía", cant: 10 }], carreras: "Médico Cirujano, Enfermería, Psicología, Odontología, Medicina Veterinaria (MVZ), Química Farmacéutico Biológica (QFB), Nutriología." },
+            'unam-a3': { titulo: "UNAM - Área 3: Ciencias Sociales", tiempo: "3 Horas (180 minutos)", preguntas: "120 reactivos", materias: [{ nombre: "Matemáticas", cant: 24 }, { nombre: "Español", cant: 18 }, { nombre: "Historia Universal", cant: 14 }, { nombre: "Historia de México", cant: 14 }, { nombre: "Literatura", cant: 10 }, { nombre: "Geografía", cant: 10 }, { nombre: "Física", cant: 10 }, { nombre: "Química", cant: 10 }, { nombre: "Biología", cant: 10 }], carreras: "Derecho, Administración, Contaduría, Relaciones Internacionales, Ciencias de la Comunicación, Economía, Sociología, Ciencias Políticas." },
+            'unam-a4': { titulo: "UNAM - Área 4: Humanidades y de las Artes", tiempo: "3 Horas (180 minutos)", preguntas: "120 reactivos", materias: [{ nombre: "Matemáticas", cant: 22 }, { nombre: "Español", cant: 18 }, { nombre: "Literatura", cant: 10 }, { nombre: "Filosofía", cant: 10 }, { nombre: "Historia Universal", cant: 10 }, { nombre: "Historia de México", cant: 10 }, { nombre: "Geografía", cant: 10 }, { nombre: "Física", cant: 10 }, { nombre: "Química", cant: 10 }, { nombre: "Biología", cant: 10 }], carreras: "Filosofía, Letras Hispánicas, Historia, Pedagogía, Artes Visuales, Diseño Gráfico, Música, Teatro, Lengua y Literaturas Modernas." },
+            'ipn-fmf': { titulo: "IPN - Ingeniería y Ciencias Físico-Matemáticas", tiempo: "3 Horas (180 minutos)", preguntas: "140 reactivos", materias: [{ nombre: "Matemáticas (Álgebra, Cálculo)", cant: 50 }, { nombre: "Física", cant: 20 }, { nombre: "Química", cant: 15 }, { nombre: "Competencia Escrita", cant: 20 }, { nombre: "Competencia Lectora", cant: 20 }, { nombre: "Inglés", cant: 15 }], carreras: "Ingeniería en Sistemas Computacionales (ISC), Inteligencia Artificial, Ingeniería Mecánica, Ingeniería Civil, Aeronáutica, Mecatrónica." },
+            'ipn-cmb': { titulo: "IPN - Ciencias Médico-Biológicas", tiempo: "3 Horas (180 minutos)", preguntas: "140 reactivos", materias: [{ nombre: "Matemáticas", cant: 30 }, { nombre: "Biología", cant: 30 }, { nombre: "Química", cant: 25 }, { nombre: "Física", cant: 10 }, { nombre: "Competencia Escrita", cant: 20 }, { nombre: "Competencia Lectora", cant: 25 }], carreras: "Médico Cirujano y Partero, Enfermería, Nutrición, Odontología, Ingeniería Bioquímica, Ingeniería Biónica, Químico Bacteriólogo Parasitólogo." },
+            'ipn-csa': { titulo: "IPN - Ciencias Sociales y Administrativas", tiempo: "3 Horas (180 minutos)", preguntas: "140 reactivos", materias: [{ nombre: "Matemáticas", cant: 35 }, { nombre: "Economía", cant: 20 }, { nombre: "Administración", cant: 15 }, { nombre: "Competencia Escrita", cant: 25 }, { nombre: "Competencia Lectora", cant: 25 }, { nombre: "Inglés", cant: 20 }], carreras: "Contador Público, Licenciatura en Relaciones Comerciales (LRC), Negocios Internacionales, Administración y Desarrollo Empresarial, Economía." },
+            'uam-cbi': { titulo: "UAM - CBI: Ciencias Básicas e Ingeniería", tiempo: "3 Horas (180 minutos)", preguntas: "80 reactivos", materias: [{ nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 }, { nombre: "Matemáticas Avanzadas", cant: 15 }, { nombre: "Física", cant: 15 }, { nombre: "Química", cant: 10 }], carreras: "Ingeniería en Computación, Ingeniería Química, Matemáticas, Física, Ingeniería Eléctrica, Ingeniería Biomédica." },
+            'uam-cbs': { titulo: "UAM - CBS: Ciencias Biológicas y de la Salud", tiempo: "3 Horas (180 minutos)", preguntas: "80 reactivos", materias: [{ nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 }, { nombre: "Biología", cant: 15 }, { nombre: "Química", cant: 15 }, { nombre: "Física", cant: 10 }], carreras: "Medicina, Enfermería, Biología, Química Farmacéutica Biológica, Agronomía, Estomatología, Psicología Biomédica." },
+            'uam-csh': { titulo: "UAM - CSH: Ciencias Sociales y Humanidades", tiempo: "3 Horas (180 minutos)", preguntas: "80 reactivos", materias: [{ nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 }, { nombre: "Historia Universal y México", cant: 15 }, { nombre: "Literatura y Filosofía", cant: 15 }, { nombre: "Formación Ciudadana", cant: 10 }], carreras: "Derecho, Psicología Social, Administración, Economía, Sociología, Ciencias de la Comunicación, Historia, Filosofía." },
+            'uam-cad': { titulo: "UAM - CAD: Ciencias y Artes para el Diseño", tiempo: "3 Horas (180 minutos)", preguntas: "80 reactivos", materias: [{ nombre: "Razonamiento Verbal", cant: 20 }, { nombre: "Razonamiento Matemático", cant: 20 }, { nombre: "Historia del Arte y Arq.", cant: 15 }, { nombre: "Dibujo y Geometría Plana", cant: 15 }, { nombre: "Física Básica", cant: 10 }], carreras: "Arquitectura, Diseño Industrial, Diseño de la Communication Gráfica (Diseño Gráfico), Diseño de Asentamientos Humanos." }
         };
 
         function cambiarUniversidad(tabId) {
@@ -271,27 +153,27 @@
     <form id="form-examen" action="/calificar_examen" method="POST">
         
         {% for pregunta in preguntas %}
-        <div class="card" style="margin-bottom: 25px; padding-top: 40px;">
-            <span style="position: absolute; top: 15px; left: 20px; background-color: #e6f2ff; color: #003366; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; text-transform: uppercase;">
+        <div class="card tarjeta-pregunta">
+            <span class="tag-materia">
                 {{ pregunta.materia }}
             </span>
             
-            <h2 style="margin-top: 10px; font-size: 1.3em;">Pregunta {{ loop.index }}</h2>
-            <p style="font-size: 1.1em; margin-bottom: 15px;">{{ pregunta.pregunta }}</p>
+            <h2 class="numero-pregunta">Pregunta {{ loop.index }}</h2>
+            <p class="texto-pregunta">{{ pregunta.pregunta }}</p>
 
             {% for opcion in pregunta.opciones %}
-            <div style="margin-bottom: 8px;">
-                <label style="cursor: pointer; display: inline-flex; align-items: center;">
-                    <input type="radio" name="pregunta_{{ pregunta.id }}" value="{{ opcion }}" style="margin-right: 8px;">
-                    {{ opcion }}
+            <div class="contenedor-opcion">
+                <label class="label-opcion">
+                    <input type="radio" name="pregunta_{{ pregunta.id }}" value="{{ opcion }}" class="input-radio">
+                    <span class="texto-opcion">{{ opcion }}</span>
                 </label>
             </div>
             {% endfor %}
         </div>
         {% endfor %}
 
-        <div style="text-align: center; margin-bottom: 50px;">
-            <button type="submit" style="background-color: #28a745; color: white; border: none; padding: 15px 40px; font-size: 1.2em; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div class="contenedor-boton-enviar">
+            <button type="submit" class="btn-enviar-examen">
                 Terminar y Enviar Examen
             </button>
         </div>
