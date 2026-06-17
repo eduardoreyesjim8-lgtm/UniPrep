@@ -17,6 +17,7 @@
     <a href="/examen">Examen</a>
     <a href="/universidades">Universidades</a>
     <a href="/consejos">Consejos</a>
+    <a href="/study_center">Study Center</a> <!-- Menú actualizado aquí -->
 </nav>
 
 <main style="max-width: 800px; margin: 0 auto; padding: 20px;">
@@ -48,9 +49,9 @@
         <p style="font-size: 1.1em; margin: 15px 0;"><strong>{{ loop.index }}.</strong> {{ res.pregunta }}</p>
         
         <p style="margin: 5px 0;">
-            ❌ <strong>Tu respuesta:</strong> 
+            {% if res.es_correcta %}✅{% else %}❌{% endif %} <strong>Tu respuesta:</strong> 
             <span style="color: {% if res.es_correcta %}#28a745{% else %}#dc3545{% endif %}; font-weight: bold;">
-                {{ res.respuesta_usuario }}
+                {{ res.respuesta_usuario if res.respuesta_usuario else "No respondida" }}
             </span>
         </p>
         
