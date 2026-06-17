@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Universidades - UniPrep</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -17,13 +19,11 @@
     <a href="/examen">Examen</a>
     <a href="/universidades">Universidades</a>
     <a href="/consejos">Consejos</a>
-    <a href="/study_center">Study Center</a> <!-- Menú actualizado aquí -->
+    <a href="/study_center">Study Center</a>
 </nav>
 
-<main>
-
-    <div class="card">
-        <img src="{{ url_for('static', filename='unam.png') }}" alt="UNAM" width="120">
+<main class="consejos-grid"> <div class="card">
+        <img src="{{ url_for('static', filename='unam.png') }}" alt="UNAM" width="120" style="display: block; margin: 0 auto 15px auto;">
 
         <h2>UNAM</h2>
 
@@ -32,11 +32,10 @@
             de Latinoamérica y cuenta con una amplia oferta académica.
         </p>
 
-        <p><strong>Carreras destacadas:</strong> Medicina, Derecho, Ingeniería, Arquitectura.</p>
-
+        <p style="margin-top: 10px;"><strong>Carreras destacadas:</strong> Medicina, Derecho, Ingeniería, Arquitectura.</p>
         <p><strong>Modalidad:</strong> Escolarizada y a distancia.</p>
         
-        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee;">
+        <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid #eee;">
             <form action="/configurar_examen" method="POST">
                 <input type="hidden" name="universidad" value="unam">
                 
@@ -55,7 +54,7 @@
     </div>
 
     <div class="card">
-        <img src="{{ url_for('static', filename='ipn.png') }}" alt="IPN" width="120">
+        <img src="{{ url_for('static', filename='ipn.png') }}" alt="IPN" width="120" style="display: block; margin: 0 auto 15px auto;">
 
         <h2>IPN</h2>
 
@@ -64,11 +63,10 @@
             científicas, tecnológicas e ingenierías.
         </p>
 
-        <p><strong>Carreras destacadas:</strong> Ingeniería Mecánica, Sistemas, Aeronáutica.</p>
-
+        <p style="margin-top: 10px;"><strong>Carreras destacadas:</strong> Ingeniería Mecánica, Sistemas, Aeronáutica.</p>
         <p><strong>Modalidad:</strong> Escolarizada.</p>
 
-        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee;">
+        <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid #eee;">
             <form action="/configurar_examen" method="POST">
                 <input type="hidden" name="universidad" value="ipn">
                 
@@ -87,7 +85,7 @@
     </div>
 
     <div class="card">
-        <img src="{{ url_for('static', filename='uam.png') }}" alt="UAM" width="120">
+        <img src="{{ url_for('static', filename='uam.png') }}" alt="UAM" width="120" style="display: block; margin: 0 auto 15px auto;">
 
         <h2>UAM</h2>
 
@@ -96,11 +94,10 @@
             innovador y su sistema trimestral.
         </p>
 
-        <p><strong>Carreras destacadas:</strong> Administración, Diseño, Biología.</p>
-
+        <p style="margin-top: 10px;"><strong>Carreras destacadas:</strong> Administración, Diseño, Biología.</p>
         <p><strong>Modalidad:</strong> Escolarizada.</p>
 
-        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee;">
+        <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid #eee;">
             <form action="/configurar_examen" method="POST">
                 <input type="hidden" name="universidad" value="uam">
                 
