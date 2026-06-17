@@ -33,6 +33,14 @@ def cargar_preguntas_uam():
             return json.load(f)
     return []
 
+# Función para cargar los temarios desglosados de todas las universidades
+def cargar_temarios():
+    ruta = os.path.join('data', 'temarios.json')
+    if os.path.exists(ruta):
+        with open(ruta, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {"unam": [], "ipn": [], "uam": []}
+
 @app.route("/")
 def inicio():
     return render_template("index.html")
@@ -47,7 +55,10 @@ def consejos():
 
 @app.route("/study_center")
 def study_center():
-    return render_template("study_center.html")
+    # Cargamos el JSON con los temas de las tres universidades
+    temarios = cargar_temarios()
+    # Enviamos los datos estructurados a la plantilla study_center.html
+    return render_template("study_center.html", temarios=temarios)
 
 # Ruta unificada que recibe los formularios de universidades.html (UNAM, IPN y UAM)
 @app.route("/configurar_examen", methods=["POST"])
@@ -91,8 +102,8 @@ def calificar_examen():
         # Si esta pregunta venía en el examen que se le renderizó al alumno
         if campo_name in request.form:
             total_preguntas += 1
-            respuesta_usuario = request.form.get(campo_name)
-            es_correcta = (respuesta_usuario == pregunta['respuesta_correcta'])
+            request_usuario = request.form.get(campo_name)
+            es_correcta = (request_usuario == pregunta['respuesta_correcta'])
             
             if es_correcta:
                 aciertos += 1
@@ -101,7 +112,7 @@ def calificar_examen():
             resultados.append({
                 "materia": pregunta["materia"],
                 "pregunta": pregunta["pregunta"],
-                "respuesta_usuario": respuesta_usuario,
+                "respuesta_usuario": request_usuario,
                 "respuesta_correcta": pregunta["respuesta_correcta"],
                 "es_correcta": es_correcta
             })
