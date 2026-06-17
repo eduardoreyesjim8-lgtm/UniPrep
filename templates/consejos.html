@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consejos de Estudio - UniPrep</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -17,7 +18,7 @@
     <a href="/examen">Examen</a>
     <a href="/universidades">Universidades</a>
     <a href="/consejos">Consejos</a>
-    <a href="/study_center">Study Center</a> <!-- Menú actualizado aquí -->
+    <a href="/study_center">Study Center</a>
 </nav>
 
 <main>
@@ -103,8 +104,8 @@
             <p>Estudia estrictamente según tu división (CBI, CBS, CSH o CAD). El examen evalúa fuertemente el perfil de la carrera a la que vas, así que enfoca tus repasos en la guía de tu respectiva división.</p>
         </div>
 
-        <div id="sin-consejos" style="display: none; text-align: center; grid-column: 1 / -1; padding: 40px; color: #64748b;">
-            <p style="font-size: 1.2rem; font-weight: bold; margin: 0;">Próximamente más consejos para esta sección.</p>
+        <div id="sin-consejos" class="sin-consejos-container">
+            <p class="sin-consejos-texto">Próximamente más consejos para esta sección.</p>
         </div>
 
     </div>
