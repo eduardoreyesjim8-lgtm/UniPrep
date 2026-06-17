@@ -515,7 +515,6 @@
     "materia": "Física",
     "pregunta": "El principio de la hidrostática que establece que todo cuerpo sumergido en un fluido experimenta un empuje vertical hacia arriba igual al peso del fluido desalojado es el:",
     "opciones": ["Principio de Arquímedes", "Principio de Pascal", "Teorema de Bernoulli", "Ley de Torricelli"],
-    "Scalar_answer": "Principio de Arquímedes",
     "respuesta_correcta": "Principio de Arquímedes"
   },
   {
