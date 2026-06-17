@@ -147,6 +147,21 @@ h1, h2 {
     margin: 0;
 }
 
+/* Estado vacío dinámico (Sección Consejos) */
+.sin-consejos-container {
+    display: none;
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 40px;
+    color: #64748b;
+}
+
+.sin-consejos-texto {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
 
 /* ==========================================================================
    4. ETIQUETAS IDENTIFICADORAS (BADGES - CONSEJOS / GLOBAL)
@@ -631,14 +646,108 @@ h1, h2 {
 
 
 /* ==========================================================================
-   8. ANIMACIONES Y ELEMENTOS FLOTANTES (CRONÓMETRO MÓVIL)
+   8. NUEVO: VISTA DE RESULTADOS RESPONSIVA (`resultados.html`)
+   ========================================================================== */
+.resultados-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+
+.tarjeta-puntaje {
+    text-align: center;
+    border-left: 5px solid #003366;
+    padding: 30px 20px;
+}
+
+.puntaje-numeros {
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Escalado fluido según pantalla */
+    margin: 10px 0;
+    color: #003366;
+}
+
+.puntaje-porcentaje {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.mensaje-resultado {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 15px 0;
+}
+
+.msg-aprobado { color: #28a745; }
+.msg-repaso { color: #dc3545; }
+
+.btn-reintentar-examen {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.2s ease;
+    width: 100%; /* Botón completo en móvil */
+}
+
+.btn-reintentar-examen:hover {
+    background-color: #002244;
+}
+
+.titulo-revision {
+    margin: 30px 0 15px 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.tarjeta-revision {
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.tarjeta-revision.correcta { border-left: 5px solid #28a745; }
+.tarjeta-revision.incorrecta { border-left: 5px solid #dc3545; }
+
+.tag-revision-materia {
+    background-color: #eee;
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.texto-revision-pregunta {
+    font-size: 1.05rem;
+    margin: 15px 0 10px 0;
+    line-height: 1.5;
+}
+
+.estado-respuesta {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.correcta .respuesta-usuario-texto { color: #28a745; font-weight: bold; }
+.incorrecta .respuesta-usuario-texto { color: #dc3545; font-weight: bold; }
+.respuesta-valida-container { color: #28a745; }
+
+
+/* ==========================================================================
+   9. ANIMACIONES Y ELEMENTOS FLOTANTES (CRONÓMETRO MÓVIL)
    ========================================================================== */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* El cronómetro en móvil se queda fijo de manera compacta arriba para no estorbar */
 #cronometro {
     position: sticky !important;
     top: 10px;
@@ -653,7 +762,7 @@ h1, h2 {
 
 
 /* ==========================================================================
-   9. MEDIA QUERIES (PANTALLAS MEDIANAS Y GRANDES - COMPUTADORA)
+   10. MEDIA QUERIES (PANTALLAS MEDIANAS Y GRANDES - COMPUTADORA)
    ========================================================================== */
 @media (min-width: 768px) {
     body {
@@ -741,5 +850,13 @@ h1, h2 {
 
     .hero-contenido h2 {
         font-size: 2.2rem;
+    }
+
+    /* Reajustes de diseño en resultados para escritorio */
+    .resultados-main {
+        padding: 20px;
+    }
+    .btn-reintentar-examen {
+        width: auto; /* Ancho natural del botón en PC */
     }
 }
