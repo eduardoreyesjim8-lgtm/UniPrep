@@ -22,7 +22,7 @@
 
 <main>
     <h2 class="titulo-guia" style="margin-top: 20px;">Centro de Estudios Interactivo</h2>
-    <p class="subtitulo-guia">Selecciona una guía universitaria, navega por sus materias y repasa los conceptos clave con reactivos de prueba rápidos.</p>
+    <p class="subtitulo-guia">Selecciona una guía universitaria, navega por sus materias oficiales y repasa los conceptos clave con reactivos de prueba rápidos.</p>
 
     <div class="study-center-layout">
         
@@ -51,21 +51,52 @@
 </main>
 
 <script>
-    // Base de datos de estudio estructurada por Universidad -> Materias -> Temas
+    // Estructura completa y exhaustiva de las guías oficiales
     const ESTRUCTURA_TEMAS = {
         'unam': [
             {
+                materia: "📐 Matemáticas",
+                temas: [
+                    { id: 'unam_mat_algebra', nombre: "1. Álgebra y Ecuaciones" },
+                    { id: 'unam_mat_geometria', nombre: "2. Geometría Analítica" },
+                    { id: 'unam_mat_calculo', nombre: "3. Cálculo Diferencial e Integral" }
+                ]
+            },
+            {
                 materia: "🧬 Biología",
                 temas: [
-                    { id: 'unam_bio_celula', nombre: "La Célula y su estructura" },
-                    { id: 'unam_bio_genetica', nombre: "Genética y Herencia" }
+                    { id: 'unam_bio_celula', nombre: "1. La Célula y Estructura" },
+                    { id: 'unam_bio_genetica', nombre: "2. Genética y Herencia" },
+                    { id: 'unam_bio_ecologia', nombre: "3. Ecología y Evolución" }
                 ]
             },
             {
                 materia: "🧪 Química",
                 temas: [
-                    { id: 'unam_qui_atomo', nombre: "Estructura del Átomo" },
-                    { id: 'unam_qui_tabla', nombre: "Tabla Periódica y Enlaces" }
+                    { id: 'unam_qui_atomo', nombre: "1. Estructura del Átomo" },
+                    { id: 'unam_qui_tabla', nombre: "2. Tabla Periódica y Enlaces" },
+                    { id: 'unam_qui_organica', nombre: "3. Introducción a la Química Orgánica" }
+                ]
+            },
+            {
+                materia: "⚡ Física",
+                temas: [
+                    { id: 'unam_fis_cinematica', nombre: "1. Cinemática y Mecánica" },
+                    { id: 'unam_fis_termo', nombre: "2. Termodinámica y Ondas" }
+                ]
+            },
+            {
+                materia: "⏳ Historia",
+                temas: [
+                    { id: 'unam_his_universal', nombre: "1. Historia Universal" },
+                    { id: 'unam_his_mexico', nombre: "2. Historia de México" }
+                ]
+            },
+            {
+                materia: "📚 Español y Literatura",
+                temas: [
+                    { id: 'unam_esp_gramatica', nombre: "1. Gramática y Funciones de la Lengua" },
+                    { id: 'unam_esp_literatura', nombre: "2. Corrientes y Géneros Literarios" }
                 ]
             }
         ],
@@ -73,131 +104,311 @@
             {
                 materia: "🧮 Matemáticas Avanzadas",
                 temas: [
-                    { id: 'ipn_mat_algebra', nombre: "Álgebra e Inecuaciones" },
-                    { id: 'ipn_mat_calculo', nombre: "Límites y Derivadas" }
+                    { id: 'ipn_mat_algebra', nombre: "1. Álgebra e Inecuaciones Complejas" },
+                    { id: 'ipn_mat_trigo', nombre: "2. Geometría y Trigonometría" },
+                    { id: 'ipn_mat_calculo', nombre: "3. Límites, Derivadas e Integrales" },
+                    { id: 'ipn_mat_probabilidad', nombre: "4. Probabilidad y Estadística" }
                 ]
             },
             {
-                materia: "⚡ Física",
+                materia: "⚡ Física Teórica y Experimental",
                 temas: [
-                    { id: 'ipn_fis_mecanica', nombre: "Mecánica y Dinámica" }
+                    { id: 'ipn_fis_mecanica', nombre: "1. Mecánica Clásica y Vectores" },
+                    { id: 'ipn_fis_electro', nombre: "2. Electricidad y Magnetismo" },
+                    { id: 'ipn_fis_fluidos', nombre: "3. Hidráulica y Fluidos" }
+                ]
+            },
+            {
+                materia: "🧪 Química e Ingeniería",
+                temas: [
+                    { id: 'ipn_qui_general', nombre: "1. Estequiometría y Balanceo" },
+                    { id: 'ipn_qui_organica', nombre: "2. Hidrocarburos y Grupos Funcionales" }
+                ]
+            },
+            {
+                materia: "📝 Competencia Escrita y Textual",
+                temas: [
+                    { id: 'ipn_esp_produccion', nombre: "1. Producción Escrita y Cohesión" },
+                    { id: 'ipn_esp_comprension', nombre: "2. Comprensión de Textos Científicos" }
                 ]
             }
         ],
         'uam': [
             {
-                materia: "📐 Razonamiento Matemático",
+                materia: "🧩 Razonamiento Matemático",
                 temas: [
-                    { id: 'uam_raz_series', nombre: "Sucesiones y Series" }
+                    { id: 'uam_raz_series', nombre: "1. Sucesiones Lógicas y Series" },
+                    { id: 'uam_raz_problemas', nombre: "2. Planteamiento Algebraico de Problemas" },
+                    { id: 'uam_raz_espacial', nombre: "3. Percepción Espacial y Geometría Plana" }
                 ]
             },
             {
                 materia: "🗣️ Razonamiento Verbal",
                 temas: [
-                    { id: 'uam_ver_analogias', nombre: "Analogías y Lógica" }
+                    { id: 'uam_ver_analogias', nombre: "1. Analogías y Sinónimos en Contexto" },
+                    { id: 'uam_ver_comprension', nombre: "2. Análisis Crítico de Textos Largos" }
+                ]
+            },
+            {
+                materia: "🏗️ Ciencias Básicas e Ingeniería (CBI)",
+                temas: [
+                    { id: 'uam_cbi_fisica', nombre: "1. Estática, Dinámica y Fluidos Avanzados" },
+                    { id: 'uam_cbi_quimica', nombre: "2. Estructura de la Materia y Soluciones" }
+                ]
+            },
+            {
+                materia: "🌿 Ciencias Biológicas y de la Salud (CBS)",
+                temas: [
+                    { id: 'uam_cbs_procesos', nombre: "1. Procesos Celulares, Bioquímica y Salud" }
+                ]
+            },
+            {
+                materia: "🎨 Ciencias Sociales y Humanidades / CAD",
+                temas: [
+                    { id: 'uam_csh_historia', nombre: "1. Historia Contemporánea de México y el Mundo" },
+                    { id: 'uam_cad_grafica', nombre: "2. Fundamentos de Expresión Plástica y Gráfica" }
                 ]
             }
         ]
     };
 
     const DB_ESTUDIO = {
-        // --- UNAM ---
+        // ==================== UNAM ====================
+        'unam_mat_algebra': {
+            materia: "MATEMÁTICAS - UNAM", tema: "Álgebra y Sistemas de Ecuaciones",
+            teoria: "El examen de la UNAM evalúa fuertemente la simplificación de leyes de exponentes, productos notables y factorización (diferencia de cuadrados, trinomios). Para sistemas de ecuaciones de $2x2$, domina los métodos de sustitución o reducción.",
+            pregunta: "¿Cuál es la factorización correcta de la expresión $x^2 - 9$?",
+            opciones: ["(x - 3)(x - 3)", "(x + 3)(x - 3)", "(x + 9)(x - 1)", "No es factorizable"], correcta: "(x + 3)(x - 3)"
+        },
+        'unam_mat_geometria': {
+            materia: "MATEMÁTICAS - UNAM", tema: "Geometría Analítica y Cónicas",
+            teoria: "Estudia la distancia entre dos puntos, la ecuación de la recta ($y = mx + b$) y las ecuaciones ordinarias y generales de la circunferencia, parábola, elipse e hipérbola.",
+            pregunta: "Si el centro de una circunferencia está en el origen $(0,0)$ y su radio es $5$, ¿cuál es su ecuación?",
+            opciones: ["x + y = 5", "x² + y² = 5", "x² + y² = 25", "x² - y² = 25"], correcta: "x² + y² = 25"
+        },
+        'unam_mat_calculo': {
+            materia: "MATEMÁTICAS - UNAM", tema: "Cálculo Diferencial e Integral",
+            teoria: "Aprende el concepto de límite, la derivada como la pendiente de la recta tangente y fórmulas algebraicas básicas, así como la integral como el área bajo la curva.",
+            pregunta: "¿Cuál es la derivada de $f(x) = x^3$?",
+            opciones: ["3x", "3x²", "x²/3", "2x³"], correcta: "3x²"
+        },
         'unam_bio_celula': {
-            materia: "BIOLOGÍA - UNAM",
-            tema: "La Célula: Unidad Funcional de los Seres Vivos",
-            teoria: "La célula es la unidad anatómica, fisiológica y de origen de todo ser vivo. Se dividen en dos grandes grupos: <strong>Procariontes</strong> (sin núcleo definido, material genético disperso, ej. bacterias) y <strong>Eucariontes</strong> (con núcleo verdadero delimitado por una membrana, ej. células animales y vegetales). Los organelos clave que debes memorizar para el examen de la UNAM son las <em>Mitocondrias</em> (respiración celular y energía ATP) y los <em>Cloroplastos</em> (fotosíntesis).",
-            pregunta: "¿Qué organelo celular es el encargado de la respiración celular y la producción de energía ATP?",
-            opciones: ["Ribosoma", "Aparato de Golgi", "Mitocondria", "Lisosoma"],
-            correcta: "Mitocondria"
+            materia: "BIOLOGÍA - UNAM", tema: "La Célula y Estructura",
+            teoria: "La célula es la unidad mínima anatómica y funcional. Las procariontes carecen de núcleo delimitado; las eucariontes lo poseen. Memoriza: Mitocondria (ATP) y Cloroplasto (Fotosíntesis).",
+            pregunta: "¿Qué organelo es el encargado de la respiración celular?",
+            opciones: ["Ribosoma", "Mitocondria", "Aparato de Golgi", "Lisosoma"], correcta: "Mitocondria"
         },
         'unam_bio_genetica': {
-            materia: "BIOLOGÍA - UNAM",
-            tema: "Genética y Herencia Mendeliana",
-            teoria: "Gregor Mendel determinó las leyes de la herencia mediante el estudio de chícharos. El **Fenotipo** representa las características físicas y observables de un individuo (color, altura), mientras que el **Genotipo** es la configuración del mapa genético interno (AA, Aa, aa). Recuerda que un alelo *Dominante* siempre enmascara la expresión de un alelo *Recesivo*.",
-            pregunta: "¿Cómo se le conoce a la expresión física y observable de los genes en un individuo?",
-            opciones: ["Genotipo", "Fenotipo", "Cromosoma", "Mutación"],
-            correcta: "Fenotipo"
+            materia: "BIOLOGÍA - UNAM", tema: "Genética y Herencia",
+            teoria: "Mendel definió las leyes hereditarias. El fenotipo es lo físico observable; el genotipo es la información interna codificada por alelos dominantes y recesivos.",
+            pregunta: "¿Cómo se llama la carga o mapa genético interno que no se ve a simple vista?",
+            opciones: ["Fenotipo", "Genotipo", "Cromosoma", "ARN"], correcta: "Genotipo"
+        },
+        'unam_bio_ecologia': {
+            materia: "BIOLOGÍA - UNAM", tema: "Ecología y Evolución",
+            teoria: "Estudia las teorías de Darwin (selección natural) y Lamarck (uso y desuso de órganos). En ecología, repasa los niveles de organización: población, comunidad y ecosistema.",
+            pregunta: "¿Qué teoría postula que los organismos mejor adaptados sobreviven y heredan sus rasgos?",
+            opciones: ["Fijismo", "Mutacionismo", "Selección Natural", "Generación Espontánea"], correcta: "Selección Natural"
         },
         'unam_qui_atomo': {
-            materia: "QUÍMICA - UNAM",
-            tema: "El Átomo y los Modelos Atómicos",
-            teoria: "El átomo está constituido por un núcleo central con <strong>protones</strong> (carga positiva) y <strong>neutrones</strong> (carga neutra), rodeado por una corteza donde orbitan los <strong>electrones</strong> (carga negativa). Recuerda repasar los postulados clásicos: Thomson (pudín de pasas), Rutherford (descubridor del núcleo denso) y Bohr (órbitas circulares cuantizadas de energía).",
-            pregunta: "¿Qué partícula subatómica posee carga eléctrica negativa y orbita alrededor del núcleo?",
-            opciones: ["Protón", "Neutrón", "Electrón", "Positrón"],
-            correcta: "Electrón"
+            materia: "QUÍMICA - UNAM", tema: "Estructura del Átomo",
+            teoria: "El átomo posee protones ($+$) y neutrones en el núcleo, y electrones ($-$) orbitando. Repasa los modelos de Thomson, Rutherford y Bohr.",
+            pregunta: "¿Qué modelo atómico comparaba la estructura del átomo con un budín de pasas?",
+            opciones: ["Modelo de Dalton", "Modelo de Thomson", "Modelo de Bohr", "Modelo de Rutherford"], correcta: "Modelo de Thomson"
         },
         'unam_qui_tabla': {
-            materia: "QUÍMICA - UNAM",
-            tema: "Tabla Periódica y Enlaces Químicos",
-            teoria: "Los elementos están ordenados por su número atómico ($Z$). La *Electronegatividad* aumenta hacia la derecha y hacia arriba en la tabla periódica. El **enlace iónico** ocurre por transferencia de electrones entre un metal y un no metal (ej. $NaCl$). El **enlace covalente** se da por compartición de electrones entre elementos no metálicos (ej. $H_2O$).",
-            pregunta: "¿Qué tipo de enlace se forma cuando dos elementos comparten electrones de forma equitativa o polar?",
-            opciones: ["Enlace Iónico", "Enlace Metálico", "Enlace Covalente", "Puente de Hidrógeno"],
-            correcta: "Enlace Covalente"
+            materia: "QUÍMICA - UNAM", tema: "Tabla Periódica y Enlaces",
+            teoria: "Los enlaces iónicos transfieren electrones (metal + no metal). Los enlaces covalentes comparten electrones (no metal + no metal).",
+            pregunta: "¿Qué enlace químico encontramos en la molécula del agua ($H_2O$)?",
+            opciones: ["Iónico", "Covalente", "Metálico", "Fuerzas de Van der Waals"], correcta: "Covalente"
+        },
+        'unam_qui_organica': {
+            materia: "QUÍMICA - UNAM", tema: "Química Orgánica",
+            teoria: "La química orgánica estudia los compuestos basados en cadenas de Carbono. Los alcanos tienen enlaces sencillos, los alquenos dobles y los alquinos triples.",
+            pregunta: "¿Qué tipo de enlace caracteriza a los hidrocarburos llamados Alquinos?",
+            opciones: ["Enlace Sencillo", "Enlace Doble", "Enlace Triple", "Enlace Cuádruple"], correcta: "Enlace Triple"
+        },
+        'unam_fis_cinematica': {
+            materia: "FÍSICA - UNAM", tema: "Cinemática y Mecánica",
+            teoria: "Repasa el MRU ($v = d/t$), el MRUA (aceleración constante) y las 3 Leyes de Newton (Inercia, Fuerza: $F=ma$, Acción-Reacción).",
+            pregunta: "¿Qué fuerza se requiere para acelerar un cuerpo de $10\\text{ kg}$ a $2\\text{ m/s}^2$?",
+            opciones: ["5 N", "12 N", "20 N", "100 N"], correcta: "20 N"
+        },
+        'unam_fis_termo': {
+            materia: "FÍSICA - UNAM", tema: "Termodinámica y Ondas",
+            teoria: "El calor es transferencia de energía térmica. Las ondas longitudinales viajan en la misma dirección que la perturbación (sonido) y las transversales de forma perpendicular (luz).",
+            pregunta: "¿Qué tipo de onda es el sonido?",
+            opciones: ["Onda Transversal", "Onda Mecánica Longitudinal", "Onda Electromagnética", "Onda Gravitacional"], correcta: "Onda Mecánica Longitudinal"
+        },
+        'unam_his_universal': {
+            materia: "HISTORIA - UNAM", tema: "Historia Universal",
+            teoria: "Temas clave: La Ilustración, la Revolución Francesa, la Primera y Segunda Guerra Mundial, y la Guerra Fría (bloques Capitalista vs. Socialista).",
+            pregunta: "¿Qué movimiento intelectual del siglo XVIII fundamentó el uso de la razón frente al absolutismo?",
+            opciones: ["El Renacimiento", "La Ilustración", "El Feudalismo", "El Modernismo"], correcta: "La Ilustración"
+        },
+        'unam_his_mexico': {
+            materia: "HISTORIA - UNAM", tema: "Historia de México",
+            teoria: "Estudia la Independencia, las Leyes de Reforma de Juárez, el Porfiriato, la Revolución Mexicana de 1910 y el Milagro Mexicano.",
+            pregunta: "¿En qué año dio inicio el movimiento armado de la Revolución Mexicana?",
+            opciones: ["1810", "1857", "1910", "1938"], correcta: "1910"
+        },
+        'unam_esp_gramatica': {
+            materia: "ESPAÑOL - UNAM", tema: "Gramática y Funciones de la Lengua",
+            teoria: "Identifica las funciones referencial (datos objetivos), apelativa (persuadir) y poética. Repasa la ortografía y el sujeto/predicado.",
+            pregunta: "La oración '¡Compren el producto ahora mismo!' cumple con la función de la lengua llamada:",
+            opciones: ["Referencial", "Metalingüística", "Apelativa", "Sintomática"], correcta: "Apelativa"
+        },
+        'unam_esp_literatura': {
+            materia: "LITERATURA - UNAM", tema: "Corrientes y Géneros Literarios",
+            teoria: "Distingue el género Épico/Narrativo, Lírico (poesía) y Dramático (teatro). Corrientes clave: Realismo y Romanticismo.",
+            pregunta: "Género literario destinado fundamentalmente a ser representado en un escenario ante espectadores:",
+            opciones: ["Épico", "Lírico", "Dramático", "Ensayo"], correcta: "Dramático"
         },
 
-        // --- IPN ---
+        // ==================== IPN ====================
         'ipn_mat_algebra': {
-            materia: "MATEMÁTICAS AVANZADAS - IPN",
-            tema: "Álgebra Lineal e Inecuaciones",
-            teoria: "El IPN exige resolver inecuaciones rápidamente. Al multiplicar o dividir ambos miembros de una desigualdad por un número negativo, **el sentido de la desigualdad se invierte**. Recuerda usar correctamente los intervalos abiertos $()$ para desigualdades estrictas ($<$ o $>$) e intervalos cerrados $[]$ para desigualdades inclusivas ($\le$ o $\ge$).",
-            pregunta: "Si resolvemos la inecuación $-2x < 6$, ¿cuál es el intervalo correcto para la solución?",
-            opciones: ["x < -3", "x > -3", "x < 3", "x > 3"],
-            correcta: "x > -3"
+            materia: "MATEMÁTICAS - IPN", tema: "Álgebra e Inecuaciones Complejas",
+            teoria: "El IPN evalúa desigualdades complejas de segundo grado y con valor absoluto. Recuerda invertir el signo si multiplicas por negativos.",
+            pregunta: "Si resolvemos $-3x > 9$, el sentido cambia. ¿Cuál es el resultado?",
+            opciones: ["x > -3", "x < -3", "x > 3", "x < 3"], correcta: "x < -3"
+        },
+        'ipn_mat_trigo': {
+            materia: "MATEMÁTICAS - IPN", tema: "Geometría y Trigonometría",
+            teoria: "Dominar funciones trigonométricas ($\operatorname{sen}, \cos, \tan$), identidades fundamentales y leyes de senos y cosenos para triángulos oblicuángulos.",
+            pregunta: "¿A qué es igual de forma idéntica $\\operatorname{sen}^2(\\theta) + \\cos^2(\\theta)$?",
+            opciones: ["0", "1", "-1", "tan²(θ)"], correcta: "1"
         },
         'ipn_mat_calculo': {
-            materia: "MATEMÁTICAS AVANZADAS - IPN",
-            tema: "Límites y Reglas de Derivación",
-            teoria: "Para resolver límites indeterminados de la forma $\\frac{0}{0}$, puedes factorizar o aplicar la **Regla de L'Hôpital** derivando el numerador y el denominador de manera independiente. Recuerda las derivadas básicas: $\\frac{d}{dx}(x^n) = n \cdot x^{n-1}$ y $\\frac{d}{dx}(\\ln(x)) = \\frac{1}{x}$.",
-            pregunta: "¿Cuál es la derivada de la función $f(x) = 3x^2 + 5x$ respecto a $x$?",
-            opciones: ["6x + 5", "3x + 5", "6x^2 + 5", "6x"],
-            correcta: "6x + 5"
+            materia: "MATEMÁTICAS - IPN", tema: "Cálculo Diferencial e Integral",
+            teoria: "Aplica límites indeterminados factorizando o mediante L'Hôpital. Domina derivadas por regla de la cadena y teoremas de integración.",
+            pregunta: "¿Cuál es la derivada de $f(x) = \\ln(x)$?",
+            opciones: ["e^x", "1/x", "x", "1"], correcta: "1/x"
+        },
+        'ipn_mat_probabilidad': {
+            materia: "MATEMÁTICAS - IPN", tema: "Probabilidad y Estadística",
+            teoria: "Estudia permutaciones, combinaciones, probabilidad condicional y medidas de tendencia central (media, mediana y moda).",
+            pregunta: "En una bolsa con 3 bolas rojas y 2 azules, ¿cuál es la probabilidad de sacar una bola azul?",
+            opciones: ["1/2", "3/5", "2/5", "2/3"], correcta: "2/5"
         },
         'ipn_fis_mecanica': {
-            materia: "FÍSICA - IPN",
-            tema: "Leyes de Newton y Cinemática",
-            teoria: "La mecánica clásica se rige por las tres Leyes de Newton. 1ª Ley: Inercia. 2ª Ley: Relación fundamental de la fuerza ($F = m \cdot a$). 3ª Ley: Acción y reacción. En los reactivos del IPN es sumamente común que debas descomponer fuerzas vectoriales usando funciones trigonométricas: $F_x = F \cdot \\cos(\\theta)$ y $F_y = F \cdot \\operatorname{sen}(\\theta)$.",
-            pregunta: "¿Qué aceleración experimenta un cuerpo de 5 kg si se le aplica una fuerza neta de 20 N?",
-            opciones: ["100 m/s²", "4 m/s²", "15 m/s²", "0.25 m/s²"],
-            correcta: "4 m/s²"
+            materia: "FÍSICA - IPN", tema: "Mecánica Clásica y Vectores",
+            teoria: "Suma de vectores por componentes rectangulares ($F_x = F \\cdot \\cos \\theta$). Leyes de Newton aplicadas a planos inclinados con fricción.",
+            pregunta: "Componente en el eje X de una fuerza de $10\\text{ N}$ a un ángulo de $60^{\\circ}$ (sabiendo que $\\cos 60^{\\circ} = 0.5$):",
+            opciones: ["5 N", "8.66 N", "10 N", "0.5 N"], correcta: "5 N"
+        },
+        'ipn_fis_electro': {
+            materia: "FÍSICA - IPN", tema: "Electricidad y Magnetismo",
+            teoria: "Repasa la Ley de Coulomb para fuerzas electrostáticas y la Ley de Ohm ($V = I \\cdot R$) para circuitos en serie y paralelo.",
+            pregunta: "Si un circuito tiene una resistencia de $5\\ \\Omega$ y una corriente de $2\\text{ A}$, ¿cuál es el voltaje?",
+            opciones: ["2.5 V", "7 V", "10 V", "0.4 V"], correcta: "10 V"
+        },
+        'ipn_fis_fluidos': {
+            materia: "FÍSICA - IPN", tema: "Hidráulica y Fluidos",
+            teoria: "Estudia el Principio de Pascal (prensas hidráulicas) y el Principio de Arquímedes (empuje hidráulico hidrostático).",
+            pregunta: "El principio que explica por qué los barcos flotan debido al empuje hacia arriba es el de:",
+            opciones: ["Pascal", "Arquímedes", "Bernoulli", "Newton"], correcta: "Arquímedes"
+        },
+        'ipn_qui_general': {
+            materia: "QUÍMICA - IPN", tema: "Estequiometría y Balanceo",
+            teoria: "Cálculo de masa molar, mol, reactivo limitante y balanceo de ecuaciones por tanteo u óxido-reducción (redox).",
+            pregunta: "¿Qué proceso químico se define como la pérdida neta de electrones por un átomo?",
+            opciones: ["Reducción", "Oxidación", "Neutralización", "Precipitación"], correcta: "Oxidación"
+        },
+        'ipn_qui_organica': {
+            materia: "QUÍMICA - IPN", tema: "Hidrocarburos y Grupos Funcionales",
+            teoria: "Nomenclatura IUPAC de alcoholes ($-OH$), aldehídos ($-CHO$), cetonas ($-CO-$) y ácidos carboxílicos ($-COOH$).",
+            pregunta: "¿Qué grupo funcional caracteriza de forma única a los Alcoholes?",
+            opciones: ["-COOH", "-CHO", "-OH", "-O-"], correcta: "-OH"
+        },
+        'ipn_esp_produccion': {
+            materia: "ESPAÑOL - IPN", tema: "Producción Escrita",
+            teoria: "Evalúa la estructura sintáctica correcta, concordancia entre sujeto y verbo, marcadores textuales y conectores lógicos.",
+            pregunta: "Elige el conector que indica contradicción u oposición: 'Estudió mucho, ______ no aprobó.'",
+            opciones: ["por lo tanto", "sin embargo", "además", "porque"], correcta: "sin embargo"
+        },
+        'ipn_esp_comprension': {
+            materia: "ESPAÑOL - IPN", tema: "Comprensión de Textos Científicos",
+            teoria: "Lecturas técnicas o de divulgación. Debes identificar la idea principal, ideas secundarias y premisas del autor.",
+            pregunta: "La idea que resume el contenido central y da sentido a todo un párrafo o texto se llama:",
+            opciones: ["Idea secundaria", "Idea principal", "Inferencia", "Paráfrasis"], correcta: "Idea principal"
         },
 
-        // --- UAM ---
+        // ==================== UAM ====================
         'uam_raz_series': {
-            materia: "RAZONAMIENTO MATEMÁTICO - UAM",
-            tema: "Sucesiones y Series numéricas",
-            teoria: "Las series en la UAM evalúan patrones lógicos de incremento. Pueden ser **aritméticas** (suman o restan una constante constante) o **geométricas** (multiplican por un factor fijo). También pon especial atención a las series alternadas, donde una posición salta a otra operando de forma paralela.",
-            pregunta: "¿Qué número continúa de forma lógica la siguiente serie numérica: 3, 6, 12, 24, ...?",
-            opciones: ["30", "36", "48", "50"],
-            correcta: "48"
+            materia: "RAZONAMIENTO - UAM", tema: "Sucesiones Lógicas y Series",
+            teoria: "Examen general para las 4 divisiones. Identifica patrones aritméticos, geométricos o alternados de forma lógica.",
+            pregunta: "¿Qué número sigue en la secuencia: 2, 5, 11, 23, ...? (Patrón: multiplicar por 2 y sumar 1)",
+            opciones: ["35", "46", "47", "48"], correcta: "47"
+        },
+        'uam_raz_problemas': {
+            materia: "RAZONAMIENTO - UAM", tema: "Planteamiento Algebraico de Problemas",
+            teoria: "Traducir lenguaje común a expresiones matemáticas (ej. 'La edad de Juan es el doble que la de Pedro menos 3 años').",
+            pregunta: "El triple de un número disminuido en 5 unidades se expresa algebraicamente como:",
+            opciones: ["3(x - 5)", "3x - 5", "x³ - 5", "5 - 3x"], correcta: "3x - 5"
+        },
+        'uam_raz_espacial': {
+            materia: "RAZONAMIENTO - UAM", tema: "Percepción Espacial",
+            teoria: "Visualización tridimensional, conteo de cubos en figuras complejas y desarrollo plano de cuerpos geométricos.",
+            pregunta: "Si un dado convencional se despliega en plano, ¿cuántas caras cuadradas independientes tiene?",
+            opciones: ["4", "5", "6", "8"], correcta: "6"
         },
         'uam_ver_analogias': {
-            materia: "RAZONAMIENTO VERBAL - UAM",
-            tema: "Analogías y Relaciones Semánticas",
-            teoria: "Una analogía establece una relación de equivalencia entre dos parejas de palabras. El secreto para resolver la sección verbal de la UAM es definir una oración lógica idéntica con el primer par: 'A es a B como X es a Y'. Identifica relaciones comunes como: causa-efecto, parte-todo, o sinónimos.",
-            pregunta: "Completa la analogía de forma correcta: VOLANTE es a AUTOBÚS como...",
-            opciones: ["Rueda es a Asfalto", "Timón es a Barco", "Proa es a Marinero", "Cielo es a Avión"],
-            correcta: "Timón es a Barco"
+            materia: "RAZONAMIENTO VERBAL - UAM", tema: "Analogías y Sinónimos",
+            teoria: "Establece la relación lógica del primer par ordenado de conceptos y transpórtala de forma simétrica a las opciones.",
+            pregunta: "PÁJARO es a NIDO como OSO es a:",
+            opciones: ["Selva", "Cueva", "Jaula", "Río"], correcta: "Cueva"
+        },
+        'uam_ver_comprension': {
+            materia: "RAZONAMIENTO VERBAL - UAM", tema: "Análisis Crítico de Textos",
+            teoria: "La UAM incluye lecturas filosóficas e históricas complejas. Busca interpretar el sentido global e inferir posturas.",
+            pregunta: "Cuando deducimos una conclusión que no viene explícita pero se entiende implícitamente del texto, hacemos una:",
+            opciones: ["Cita textual", "Inferencia", "Analogía", "Metáfora"], correcta: "Inferencia"
+        },
+        'uam_cbi_fisica': {
+            materia: "CBI - UAM", tema: "Estática, Dinámica y Fluidos",
+            teoria: "Para Ingeniería. Primera condición de equilibrio (suma de fuerzas = 0) y cinemática en dos dimensiones.",
+            pregunta: "Si un objeto está en reposo absoluto, la suma de todas las fuerzas vectoriales que actúan sobre él es:",
+            opciones: ["Mayor a cero", "Menor a cero", "Exactamente cero", "Infinita"], correcta: "Exactamente cero"
+        },
+        'uam_cbi_quimica': {
+            materia: "CBI - UAM", tema: "Estructura de la Materia",
+            teoria: "Leyes de los gases ideales ($P \\cdot V = n \\cdot R \\cdot T$) y cálculo de concentraciones físicas y químicas (Molaridad).",
+            pregunta: "¿Qué pasa con el volumen de un gas ideal si duplicamos su presión a temperatura constante? (Ley de Boyle)",
+            opciones: ["Se duplica", "Se reduce a la mitad", "Se cuadruplica", "No cambia"], correcta: "Se reduce a la mitad"
+        },
+        'uam_cbs_procesos': {
+            materia: "CBS - UAM", tema: "Procesos Celulares y Bioquímica",
+            teoria: "Para Medicina, Biología y Agronomía. Estudia el ciclo celular (Mitosis/Meiosis) y el metabolismo (Ciclo de Krebs, Glucólisis).",
+            pregunta: "¿En qué parte específica de la célula eucariota se lleva a cabo el Ciclo de Krebs?",
+            opciones: ["Citoplasma", "Ribosoma", "Mitocondria", "Núcleo"], correcta: "Mitocondria"
+        },
+        'uam_csh_historia': {
+            materia: "CSH - UAM", tema: "Historia Contemporánea",
+            teoria: "Para Derecho, Psicología, Administración, etc. Procesos sociales del siglo XX, Revolución Rusa, institucionalización de México.",
+            pregunta: "¿Qué acontecimiento internacional derivó en la caída del Bloque Socialista a finales de 1989?",
+            opciones: ["La Segunda Guerra Mundial", "La Caída del Muro de Berlín", "La Revolución Cubana", "El Tratado de Versalles"], correcta: "La Caída del Muro de Berlín"
+        },
+        'uam_cad_grafica': {
+            materia: "CAD - UAM", tema: "Expresión Plástica y Gráfica",
+            teoria: "Para Arquitectura y Diseño. Teoría del color (primarios, secundarios, complementarios), perspectiva, proporción y geometría plana.",
+            pregunta: "¿Cuál de los siguientes es un color primario en el modelo de pigmentación tradicional (RYB)?",
+            opciones: ["Verde", "Naranja", "Azul", "Morado"], correcta: "Azul"
         }
     };
 
-    // Función que redibuja por completo el árbol de la izquierda según la Universidad
     function cambiarFiltroEstudio(uni) {
-        // 1. Quitar clase active a todos los botones y ponérsela al seleccionado
         document.querySelectorAll('.tab-study-btn').forEach(btn => btn.classList.remove('active'));
         document.getElementById(`btn-${uni}`).classList.add('active');
 
-        // 2. Limpiar el contenedor del árbol
         const contenedor = document.getElementById('contenedor-arbol-dinamico');
         contenedor.innerHTML = '';
 
-        // 3. Obtener las materias asignadas a esta universidad
         const listaMaterias = ESTRUCTURA_TEMAS[uni] || [];
 
-        // 4. Crear los elementos HTML dinámicamente
         listaMaterias.forEach((item, index) => {
             const detalles = document.createElement('details');
             detalles.className = "tree-materia";
-            if (index === 0) detalles.open = true; // Abre la primera materia automáticamente
+            if (index === 0) detalles.open = true;
 
             const summary = document.createElement('summary');
             summary.innerText = item.materia;
@@ -209,7 +420,6 @@
                 const a = document.createElement('a');
                 a.href = "#";
                 a.innerText = t.nombre;
-                // Al hacer clic, ejecuta la carga del tema correspondiente
                 a.onclick = function(e) {
                     e.preventDefault();
                     cargarTema(t.id);
@@ -269,11 +479,10 @@
             feedback.innerHTML = "🎉 <strong>¡Correcto!</strong> Excelente comprensión del resumen teórico del tema.";
         } else {
             feedback.className = "feedback-box error-feedback";
-            feedback.innerHTML = `❌ <strong>Respuesta Incorrecta.</strong> Revisa el bloque teórico de arriba. La respuesta correcta es: <strong>${correcta}</strong>.`;
+            feedback.innerHTML = `❌ <strong>Respuesta Incorrecta.</strong> La respuesta correcta es: <strong>${correcta}</strong>.`;
         }
     }
 
-    // Inicializar cargando la UNAM por defecto al entrar
     document.addEventListener("DOMContentLoaded", () => {
         cambiarFiltroEstudio('unam');
     });
