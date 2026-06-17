@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Study Center - UniPrep</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -34,7 +36,7 @@
             </div>
 
             <div class="tree-container" id="contenedor-arbol-dinamico">
-                </div>
+            </div>
         </div>
 
         <div class="study-content-panel">
@@ -146,7 +148,7 @@
                 materia: "🗣️ Razonamiento Verbal",
                 temas: [
                     { id: 'uam_ver_analogias', nombre: "1. Analogías y Sinónimos en Contexto" },
-                    { id: 'uam_ver_comprension', nombre: "2. Análisis Crítico de Textos Largos" }
+                    { id: 'uam_ver_comprension', nombre: "2. Análisis Crítico de Textos Lanzados" }
                 ]
             },
             {
@@ -200,9 +202,9 @@
         },
         'unam_bio_genetica': {
             materia: "BIOLOGÍA - UNAM", tema: "Genética y Herencia",
-            teoria: "Mendel definió las leyes hereditarias. El fenotipo es lo físico observable; el genotipo es la información interna codificada por alelos dominantes y recesivos.",
+            teoria: "Mendel deﬁnió las leyes hereditarias. El fenotipo es lo físico observable; el genotipo es la información interna codificada por alelos dominantes y recesivos.",
             pregunta: "¿Cómo se llama la carga o mapa genético interno que no se ve a simple vista?",
-            opciones: ["Fenotipo", "Genotipo", "Cromosoma", "ARN"], correcta: "Genotipo"
+            options: ["Fenotipo", "Genotipo", "Cromosoma", "ARN"], correcta: "Genotipo"
         },
         'unam_bio_ecologia': {
             materia: "BIOLOGÍA - UNAM", tema: "Ecología y Evolución",
@@ -385,7 +387,7 @@
         'uam_csh_historia': {
             materia: "CSH - UAM", tema: "Historia Contemporánea",
             teoria: "Para Derecho, Psicología, Administración, etc. Procesos sociales del siglo XX, Revolución Rusa, institucionalización de México.",
-            pregunta: "¿Qué acontecimiento internacional derivó en la caída del Bloque Socialista a finales de 1989?",
+            pregunta: "Cuándo deducimos un acontecimiento internacional que derivó en la caída del Bloque Socialista a finales de 1989?",
             opciones: ["La Segunda Guerra Mundial", "La Caída del Muro de Berlín", "La Revolución Cubana", "El Tratado de Versalles"], correcta: "La Caída del Muro de Berlín"
         },
         'uam_cad_grafica': {
