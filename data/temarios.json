@@ -1,0 +1,88 @@
+{
+  "unam": [
+    {
+      "materia": "Biología",
+      "icono": "🧬",
+      "temas": ["La Célula y su estructura", "Genética y Herencia", "Evolución", "Ecología"]
+    },
+    {
+      "materia": "Química",
+      "icono": "🧪",
+      "temas": ["Estructura Atómica", "Tabla Periódica", "Enlaces Químicos", "Reacciones y Estequiometría"]
+    },
+    {
+      "materia": "Matemáticas",
+      "icono": "📐",
+      "temas": ["Álgebra", "Funciones y Geometría Analítica", "Trigonometría", "Cálculo Diferencial e Integral"]
+    },
+    {
+      "materia": "Física",
+      "icono": "⚡",
+      "temas": ["Cinemática y Dinámica", "Termodinámica", "Electromagnetismo", "Óptica y Ondas"]
+    },
+    {
+      "materia": "Español y Literatura",
+      "icono": "📚",
+      "temas": ["Funciones de la Lengua", "Comprensión Lectora", "Gramática y Redacción", "Géneros Literarios"]
+    },
+    {
+      "materia": "Historia",
+      "icono": "⏳",
+      "temas": ["Historia Universal", "Historia de México"]
+    }
+  ],
+  "ipn": [
+    {
+      "materia": "Matemáticas (Nivel Exigente)",
+      "icono": "📐",
+      "temas": ["Razonamiento Matemático", "Álgebra Lineal", "Geometría y Trigonometría", "Cálculo Diferencial", "Cálculo Integral", "Probabilidad y Estadística"]
+    },
+    {
+      "materia": "Física",
+      "icono": "⚡",
+      "temas": ["Mecánica Clásica", "Termodinámica", "Electricidad y Magnetismo", "Fluidos y Acústica"]
+    },
+    {
+      "materia": "Química",
+      "icono": "🧪",
+      "temas": ["Química General", "Química Orgánica", "Nomenclatura y Compuestos"]
+    },
+    {
+      "materia": "Biología",
+      "icono": "🧬",
+      "temas": ["Biología Celular", "Anatomía y Fisiología Humana", "Biodiversidad"]
+    },
+    {
+      "materia": "Comprensión de Textos",
+      "icono": "📝",
+      "temas": ["Producción Escrita", "Estructura de la Lengua", "Comprensión Lectora"]
+    }
+  ],
+  "uam": [
+    {
+      "materia": "Razonamiento Verbal",
+      "icono": "🗣️",
+      "temas": ["Sinónimos y Antónimos", "Analogías", "Comprensión de Textos Largos", "Lógica Argumentativa"]
+    },
+    {
+      "materia": "Razonamiento Matemático",
+      "icono": "🧩",
+      "temas": ["Sucesiones Numéricas", "Planteamiento de Problemas", "Geometría Plana y Lógica Espacial"]
+    },
+    {
+      "materia": "Conocimientos Específicos (CBI)",
+      "icono": "🏗️",
+      "temas": ["Física Avanzada", "Química Avanzada", "Matemáticas de Perfil Técnico"]
+    },
+    {
+      "materia": "Conocimientos Específicos (CBS)",
+      "icono": "🌿",
+      "temas": ["Procesos Biológicos", "Química Orgánica y de la Salud"]
+    },
+    {
+      "materia": "Conocimientos Específicos (CSH y CAD)",
+      "icono": "🎨",
+      "temas": ["Historia Universal y de México Contemporánea", "Literatura", "Expresión Gráfica y Visual"]
+    }
+  ]
+}
