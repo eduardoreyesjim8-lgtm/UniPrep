@@ -28,60 +28,13 @@
         
         <div class="study-sidebar">
             <div class="study-tabs">
-                <button class="tab-study-btn active" onclick="cambiarFiltroEstudio('unam')">UNAM</button>
-                <button class="tab-study-btn" onclick="cambiarFiltroEstudio('ipn')">IPN</button>
-                <button class="tab-study-btn" onclick="cambiarFiltroEstudio('uam')">UAM</button>
+                <button id="btn-unam" class="tab-study-btn active" onclick="cambiarFiltroEstudio('unam')">UNAM</button>
+                <button id="btn-ipn" class="tab-study-btn" onclick="cambiarFiltroEstudio('ipn')">IPN</button>
+                <button id="btn-uam" class="tab-study-btn" onclick="cambiarFiltroEstudio('uam')">UAM</button>
             </div>
 
-            <div class="tree-container">
-                <div id="tree-unam" class="tree-universidad-block">
-                    <details open class="tree-materia">
-                        <summary>🧬 Biología</summary>
-                        <ul>
-                            <li><a href="#" onclick="cargarTema('unam_bio_celula')">La Célula y su estructura</a></li>
-                            <li><a href="#" onclick="cargarTema('unam_bio_genetica')">Genética y Herencia</a></li>
-                        </ul>
-                    </details>
-                    <details class="tree-materia">
-                        <summary>🧪 Química</summary>
-                        <ul>
-                            <li><a href="#" onclick="cargarTema('unam_qui_atomo')">Estructura del Átomo</a></li>
-                            <li><a href="#" onclick="cargarTema('unam_qui_tabla')">Tabla Periódica y Enlaces</a></li>
-                        </ul>
-                    </details>
+            <div class="tree-container" id="contenedor-arbol-dinamico">
                 </div>
-
-                <div id="tree-ipn" class="tree-universidad-block" style="display:none;">
-                    <details open class="tree-materia">
-                        <summary>🧮 Matemáticas Avanzadas</summary>
-                        <ul>
-                            <li><a href="#" onclick="cargarTema('ipn_mat_algebra')">Álgebra e Inecuaciones</a></li>
-                            <li><a href="#" onclick="cargarTema('ipn_mat_calculo')">Límites y Derivadas</a></li>
-                        </ul>
-                    </details>
-                    <details class="tree-materia">
-                        <summary>⚡ Física</summary>
-                        <ul>
-                            <li><a href="#" onclick="cargarTema('ipn_fis_mecanica')">Mecánica y Dinámica</a></li>
-                        </ul>
-                    </details>
-                </div>
-
-                <div id="tree-uam" class="tree-universidad-block" style="display:none;">
-                    <details open class="tree-materia">
-                        <summary>📐 Razonamiento Matemático</summary>
-                        <ul>
-                            <li><a href="#" onclick="cargarTema('uam_raz_series')">Sucesiones y Series</a></li>
-                        </ul>
-                    </details>
-                    <details class="tree-materia">
-                        <summary>🗣️ Razonamiento Verbal</summary>
-                        <ul>
-                            <li><a href="#" onclick="cargarTema('uam_ver_analogias')">Analogías y Lógica</a></li>
-                        </ul>
-                    </details>
-                </div>
-            </div>
         </div>
 
         <div class="study-content-panel">
@@ -98,6 +51,55 @@
 </main>
 
 <script>
+    // Base de datos de estudio estructurada por Universidad -> Materias -> Temas
+    const ESTRUCTURA_TEMAS = {
+        'unam': [
+            {
+                materia: "🧬 Biología",
+                temas: [
+                    { id: 'unam_bio_celula', nombre: "La Célula y su estructura" },
+                    { id: 'unam_bio_genetica', nombre: "Genética y Herencia" }
+                ]
+            },
+            {
+                materia: "🧪 Química",
+                temas: [
+                    { id: 'unam_qui_atomo', nombre: "Estructura del Átomo" },
+                    { id: 'unam_qui_tabla', nombre: "Tabla Periódica y Enlaces" }
+                ]
+            }
+        ],
+        'ipn': [
+            {
+                materia: "🧮 Matemáticas Avanzadas",
+                temas: [
+                    { id: 'ipn_mat_algebra', nombre: "Álgebra e Inecuaciones" },
+                    { id: 'ipn_mat_calculo', nombre: "Límites y Derivadas" }
+                ]
+            },
+            {
+                materia: "⚡ Física",
+                temas: [
+                    { id: 'ipn_fis_mecanica', nombre: "Mecánica y Dinámica" }
+                ]
+            }
+        ],
+        'uam': [
+            {
+                materia: "📐 Razonamiento Matemático",
+                temas: [
+                    { id: 'uam_raz_series', nombre: "Sucesiones y Series" }
+                ]
+            },
+            {
+                materia: "🗣️ Razonamiento Verbal",
+                temas: [
+                    { id: 'uam_ver_analogias', nombre: "Analogías y Lógica" }
+                ]
+            }
+        ]
+    };
+
     const DB_ESTUDIO = {
         // --- UNAM ---
         'unam_bio_celula': {
@@ -178,21 +180,53 @@
         }
     };
 
+    // Función que redibuja por completo el árbol de la izquierda según la Universidad
     function cambiarFiltroEstudio(uni) {
+        // 1. Quitar clase active a todos los botones y ponérsela al seleccionado
         document.querySelectorAll('.tab-study-btn').forEach(btn => btn.classList.remove('active'));
-        if (event && event.target) {
-            event.target.classList.add('active');
-        }
-        document.querySelectorAll('.tree-universidad-block').forEach(b => b.style.display = 'none');
-        document.getElementById(`tree-${uni}`).style.display = 'block';
+        document.getElementById(`btn-${uni}`).classList.add('active');
+
+        // 2. Limpiar el contenedor del árbol
+        const contenedor = document.getElementById('contenedor-arbol-dinamico');
+        contenedor.innerHTML = '';
+
+        // 3. Obtener las materias asignadas a esta universidad
+        const listaMaterias = ESTRUCTURA_TEMAS[uni] || [];
+
+        // 4. Crear los elementos HTML dinámicamente
+        listaMaterias.forEach((item, index) => {
+            const detalles = document.createElement('details');
+            detalles.className = "tree-materia";
+            if (index === 0) detalles.open = true; // Abre la primera materia automáticamente
+
+            const summary = document.createElement('summary');
+            summary.innerText = item.materia;
+            detalles.appendChild(summary);
+
+            const ul = document.createElement('ul');
+            item.temas.forEach(t => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = "#";
+                a.innerText = t.nombre;
+                // Al hacer clic, ejecuta la carga del tema correspondiente
+                a.onclick = function(e) {
+                    e.preventDefault();
+                    cargarTema(t.id);
+                };
+                li.appendChild(a);
+                ul.appendChild(li);
+            });
+
+            detalles.appendChild(ul);
+            contenedor.appendChild(detalles);
+        });
     }
 
     function cargarTema(idTema) {
-        if(event) event.preventDefault();
-        
         const data = DB_ESTUDIO[idTema];
         if(!data) {
-            alert("Teoría demo: Estamos redactando el contenido de este bloque de estudio.");
+            alert("Contenido en desarrollo para este bloque de estudio.");
             return;
         }
         
@@ -238,6 +272,11 @@
             feedback.innerHTML = `❌ <strong>Respuesta Incorrecta.</strong> Revisa el bloque teórico de arriba. La respuesta correcta es: <strong>${correcta}</strong>.`;
         }
     }
+
+    // Inicializar cargando la UNAM por defecto al entrar
+    document.addEventListener("DOMContentLoaded", () => {
+        cambiarFiltroEstudio('unam');
+    });
 </script>
 </body>
 </html>
