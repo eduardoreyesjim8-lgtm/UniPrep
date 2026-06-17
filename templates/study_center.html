@@ -26,7 +26,6 @@
 
     <div class="study-center-layout">
         
-        <!-- PANEL IZQUIERDO: ÁRBOL DE TEMAS -->
         <div class="study-sidebar">
             <div class="study-tabs">
                 <button class="tab-study-btn active" onclick="cambiarFiltroEstudio('unam')">UNAM</button>
@@ -35,7 +34,6 @@
             </div>
 
             <div class="tree-container">
-                <!-- Temario UNAM -->
                 <div id="tree-unam" class="tree-universidad-block">
                     <details open class="tree-materia">
                         <summary>🧬 Biología</summary>
@@ -53,30 +51,39 @@
                     </details>
                 </div>
 
-                <!-- Temario IPN -->
                 <div id="tree-ipn" class="tree-universidad-block" style="display:none;">
-                    <details class="tree-materia">
+                    <details open class="tree-materia">
                         <summary>🧮 Matemáticas Avanzadas</summary>
                         <ul>
                             <li><a href="#" onclick="cargarTema('ipn_mat_algebra')">Álgebra e Inecuaciones</a></li>
                             <li><a href="#" onclick="cargarTema('ipn_mat_calculo')">Límites y Derivadas</a></li>
                         </ul>
                     </details>
+                    <details class="tree-materia">
+                        <summary>⚡ Física</summary>
+                        <ul>
+                            <li><a href="#" onclick="cargarTema('ipn_fis_mecanica')">Mecánica y Dinámica</a></li>
+                        </ul>
+                    </details>
                 </div>
 
-                <!-- Temario UAM -->
                 <div id="tree-uam" class="tree-universidad-block" style="display:none;">
-                    <details class="tree-materia">
+                    <details open class="tree-materia">
                         <summary>📐 Razonamiento Matemático</summary>
                         <ul>
                             <li><a href="#" onclick="cargarTema('uam_raz_series')">Sucesiones y Series</a></li>
+                        </ul>
+                    </details>
+                    <details class="tree-materia">
+                        <summary>🗣️ Razonamiento Verbal</summary>
+                        <ul>
+                            <li><a href="#" onclick="cargarTema('uam_ver_analogias')">Analogías y Lógica</a></li>
                         </ul>
                     </details>
                 </div>
             </div>
         </div>
 
-        <!-- PANEL DERECHO: VISUALIZADOR DE TEORÍA -->
         <div class="study-content-panel">
             <div id="placeholder-estudio" class="content-placeholder">
                 <span style="font-size: 3.5rem;">📖</span>
@@ -92,38 +99,103 @@
 
 <script>
     const DB_ESTUDIO = {
+        // --- UNAM ---
         'unam_bio_celula': {
             materia: "BIOLOGÍA - UNAM",
             tema: "La Célula: Unidad Funcional de los Seres Vivos",
-            teoria: "La célula es la unidad anatómica, fisiológica y de origen de todo ser vivo. Se dividen principalmente en dos grandes grupos: <strong>Procariontes</strong> (sin núcleo definido, material genético disperso, ej. bacterias) y <strong>Eucariontes</strong> (con núcleo verdadero delimitado por una membrana membranal, ej. células animales y vegetales). Los organelos clave que debes memorizar para el examen de la UNAM son las <em>Mitocondrias</em> (respiración celular y energía ATP) y los <em>Cloroplastos</em> (fotosíntesis).",
+            teoria: "La célula es la unidad anatómica, fisiológica y de origen de todo ser vivo. Se dividen en dos grandes grupos: <strong>Procariontes</strong> (sin núcleo definido, material genético disperso, ej. bacterias) y <strong>Eucariontes</strong> (con núcleo verdadero delimitado por una membrana, ej. células animales y vegetales). Los organelos clave que debes memorizar para el examen de la UNAM son las <em>Mitocondrias</em> (respiración celular y energía ATP) y los <em>Cloroplastos</em> (fotosíntesis).",
             pregunta: "¿Qué organelo celular es el encargado de la respiración celular y la producción de energía ATP?",
             opciones: ["Ribosoma", "Aparato de Golgi", "Mitocondria", "Lisosoma"],
             correcta: "Mitocondria"
         },
+        'unam_bio_genetica': {
+            materia: "BIOLOGÍA - UNAM",
+            tema: "Genética y Herencia Mendeliana",
+            teoria: "Gregor Mendel determinó las leyes de la herencia mediante el estudio de chícharos. El **Fenotipo** representa las características físicas y observables de un individuo (color, altura), mientras que el **Genotipo** es la configuración del mapa genético interno (AA, Aa, aa). Recuerda que un alelo *Dominante* siempre enmascara la expresión de un alelo *Recesivo*.",
+            pregunta: "¿Cómo se le conoce a la expresión física y observable de los genes en un individuo?",
+            opciones: ["Genotipo", "Fenotipo", "Cromosoma", "Mutación"],
+            correcta: "Fenotipo"
+        },
         'unam_qui_atomo': {
             materia: "QUÍMICA - UNAM",
             tema: "El Átomo y los Modelos Atómicos",
-            teoria: "El átomo es la partícula más pequeña de un elemento que conserva sus propiedades químicas. Está constituido por un núcleo central con <strong>protones</strong> (carga positiva) y <strong>neutrones</strong> (carga neutra), rodeado por una corteza donde giran los <strong>electrones</strong> (carga negativa). Recuerda repasar los postulados de Dalton, Thomson (modelo pudín de pasas), Rutherford (descubridor del núcleo celular-atómico) y Bohr (órbitas de energía cuantizadas).",
+            teoria: "El átomo está constituido por un núcleo central con <strong>protones</strong> (carga positiva) y <strong>neutrones</strong> (carga neutra), rodeado por una corteza donde orbitan los <strong>electrones</strong> (carga negativa). Recuerda repasar los postulados clásicos: Thomson (pudín de pasas), Rutherford (descubridor del núcleo denso) y Bohr (órbitas circulares cuantizadas de energía).",
             pregunta: "¿Qué partícula subatómica posee carga eléctrica negativa y orbita alrededor del núcleo?",
             opciones: ["Protón", "Neutrón", "Electrón", "Positrón"],
             correcta: "Electrón"
+        },
+        'unam_qui_tabla': {
+            materia: "QUÍMICA - UNAM",
+            tema: "Tabla Periódica y Enlaces Químicos",
+            teoria: "Los elementos están ordenados por su número atómico ($Z$). La *Electronegatividad* aumenta hacia la derecha y hacia arriba en la tabla periódica. El **enlace iónico** ocurre por transferencia de electrones entre un metal y un no metal (ej. $NaCl$). El **enlace covalente** se da por compartición de electrones entre elementos no metálicos (ej. $H_2O$).",
+            pregunta: "¿Qué tipo de enlace se forma cuando dos elementos comparten electrones de forma equitativa o polar?",
+            opciones: ["Enlace Iónico", "Enlace Metálico", "Enlace Covalente", "Puente de Hidrógeno"],
+            correcta: "Enlace Covalente"
+        },
+
+        // --- IPN ---
+        'ipn_mat_algebra': {
+            materia: "MATEMÁTICAS AVANZADAS - IPN",
+            tema: "Álgebra Lineal e Inecuaciones",
+            teoria: "El IPN exige resolver inecuaciones rápidamente. Al multiplicar o dividir ambos miembros de una desigualdad por un número negativo, **el sentido de la desigualdad se invierte**. Recuerda usar correctamente los intervalos abiertos $()$ para desigualdades estrictas ($<$ o $>$) e intervalos cerrados $[]$ para desigualdades inclusivas ($\le$ o $\ge$).",
+            pregunta: "Si resolvemos la inecuación $-2x < 6$, ¿cuál es el intervalo correcto para la solución?",
+            opciones: ["x < -3", "x > -3", "x < 3", "x > 3"],
+            correcta: "x > -3"
+        },
+        'ipn_mat_calculo': {
+            materia: "MATEMÁTICAS AVANZADAS - IPN",
+            tema: "Límites y Reglas de Derivación",
+            teoria: "Para resolver límites indeterminados de la forma $\\frac{0}{0}$, puedes factorizar o aplicar la **Regla de L'Hôpital** derivando el numerador y el denominador de manera independiente. Recuerda las derivadas básicas: $\\frac{d}{dx}(x^n) = n \cdot x^{n-1}$ y $\\frac{d}{dx}(\\ln(x)) = \\frac{1}{x}$.",
+            pregunta: "¿Cuál es la derivada de la función $f(x) = 3x^2 + 5x$ respecto a $x$?",
+            opciones: ["6x + 5", "3x + 5", "6x^2 + 5", "6x"],
+            correcta: "6x + 5"
+        },
+        'ipn_fis_mecanica': {
+            materia: "FÍSICA - IPN",
+            tema: "Leyes de Newton y Cinemática",
+            teoria: "La mecánica clásica se rige por las tres Leyes de Newton. 1ª Ley: Inercia. 2ª Ley: Relación fundamental de la fuerza ($F = m \cdot a$). 3ª Ley: Acción y reacción. En los reactivos del IPN es sumamente común que debas descomponer fuerzas vectoriales usando funciones trigonométricas: $F_x = F \cdot \\cos(\\theta)$ y $F_y = F \cdot \\operatorname{sen}(\\theta)$.",
+            pregunta: "¿Qué aceleración experimenta un cuerpo de 5 kg si se le aplica una fuerza neta de 20 N?",
+            opciones: ["100 m/s²", "4 m/s²", "15 m/s²", "0.25 m/s²"],
+            correcta: "4 m/s²"
+        },
+
+        // --- UAM ---
+        'uam_raz_series': {
+            materia: "RAZONAMIENTO MATEMÁTICO - UAM",
+            tema: "Sucesiones y Series numéricas",
+            teoria: "Las series en la UAM evalúan patrones lógicos de incremento. Pueden ser **aritméticas** (suman o restan una constante constante) o **geométricas** (multiplican por un factor fijo). También pon especial atención a las series alternadas, donde una posición salta a otra operando de forma paralela.",
+            pregunta: "¿Qué número continúa de forma lógica la siguiente serie numérica: 3, 6, 12, 24, ...?",
+            opciones: ["30", "36", "48", "50"],
+            correcta: "48"
+        },
+        'uam_ver_analogias': {
+            materia: "RAZONAMIENTO VERBAL - UAM",
+            tema: "Analogías y Relaciones Semánticas",
+            teoria: "Una analogía establece una relación de equivalencia entre dos parejas de palabras. El secreto para resolver la sección verbal de la UAM es definir una oración lógica idéntica con el primer par: 'A es a B como X es a Y'. Identifica relaciones comunes como: causa-efecto, parte-todo, o sinónimos.",
+            pregunta: "Completa la analogía de forma correcta: VOLANTE es a AUTOBÚS como...",
+            opciones: ["Rueda es a Asfalto", "Timón es a Barco", "Proa es a Marinero", "Cielo es a Avión"],
+            correcta: "Timón es a Barco"
         }
     };
 
     function cambiarFiltroEstudio(uni) {
         document.querySelectorAll('.tab-study-btn').forEach(btn => btn.classList.remove('active'));
-        event.target.classList.add('active');
+        if (event && event.target) {
+            event.target.classList.add('active');
+        }
         document.querySelectorAll('.tree-universidad-block').forEach(b => b.style.display = 'none');
         document.getElementById(`tree-${uni}`).style.display = 'block';
     }
 
     function cargarTema(idTema) {
-        event.preventDefault();
+        if(event) event.preventDefault();
+        
         const data = DB_ESTUDIO[idTema];
         if(!data) {
             alert("Teoría demo: Estamos redactando el contenido de este bloque de estudio.");
             return;
         }
+        
         document.getElementById('placeholder-estudio').style.display = 'none';
         const visor = document.getElementById('visor-teoria-card');
         visor.style.display = 'block';
@@ -160,10 +232,10 @@
         feedback.style.display = 'block';
         if (seleccionada === correcta) {
             feedback.className = "feedback-box success-feedback";
-            feedback.innerHTML = "🎉 <strong>¡Correcto!</strong> Excelente comprensión lectora del resumen del tema.";
+            feedback.innerHTML = "🎉 <strong>¡Correcto!</strong> Excelente comprensión del resumen teórico del tema.";
         } else {
             feedback.className = "feedback-box error-feedback";
-            feedback.innerHTML = `❌ <strong>Respuesta Incorrecta.</strong> Revisa nuevamente el bloque teórico de arriba. La respuesta correcta es: <strong>${correcta}</strong>.`;
+            feedback.innerHTML = `❌ <strong>Respuesta Incorrecta.</strong> Revisa el bloque teórico de arriba. La respuesta correcta es: <strong>${correcta}</strong>.`;
         }
     }
 </script>
