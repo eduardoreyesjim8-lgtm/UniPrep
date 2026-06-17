@@ -134,7 +134,7 @@ h1, h2 {
 
 
 /* ==========================================================================
-   4. ETIQUETAS IDENTIFICADORAS (BADGES - CONSEJOS)
+   4. ETIQUETAS IDENTIFICADORAS (BADGES - CONSEJOS / GLOBAL)
    ========================================================================== */
 .card-badge {
     position: absolute;
@@ -150,7 +150,7 @@ h1, h2 {
 
 .badge-general { background-color: #e2e8f0; color: #475569; }
 .badge-unam { background-color: #fef3c7; color: #b45309; }    
-.badge-ipn { background-color: #fce7f3; color: #9d174d; }     
+.badge-ipn { background-color: #fce7f3; color: #9d174d; }      
 .badge-uam { background-color: #e0f2fe; color: #0369a1; }    
 
 
@@ -370,6 +370,293 @@ h1, h2 {
 
 
 /* ==========================================================================
+   6. INTERFAZ DINÁMICA: STUDY CENTER (CENTRO DE ESTUDIOS)
+   ========================================================================== */
+.study-center-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    margin-top: 25px;
+    align-items: start;
+}
+
+/* Barra Lateral Izquierda */
+.study-sidebar {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.study-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    background-color: #f1f5f9;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.tab-study-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px 5px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.tab-study-btn:hover {
+    color: #0a2a66;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tab-study-btn.active {
+    background-color: #ffffff;
+    color: #0a2a66;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tree-container {
+    max-height: 650px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Acordeones Dinámicos de Materias */
+.tree-materia {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.tree-materia[open] {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    border-color: #cbd5e1;
+}
+
+.tree-materia summary {
+    padding: 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1e293b;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tree-materia summary::-webkit-details-marker {
+    display: none; /* Oculta flecha por defecto en Safari/Chrome */
+}
+
+.tree-materia summary::after {
+    content: "📁";
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.tree-materia[open] summary::after {
+    content: "📂";
+}
+
+.tree-materia summary:hover {
+    background-color: #f1f5f9;
+}
+
+/* Enlaces de Temas Internos */
+.tree-materia ul {
+    list-style: none;
+    padding: 0 0 10px 0;
+    margin: 0;
+    border-top: 1px solid #f1f5f9;
+}
+
+.tree-materia li a {
+    display: block;
+    padding: 10px 15px 10px 35px;
+    color: #475569;
+    text-decoration: none;
+    font-size: 0.92rem;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.tree-materia li a::before {
+    content: "•";
+    position: absolute;
+    left: 20px;
+    color: #94a3b8;
+    font-size: 1.2rem;
+    top: 6px;
+}
+
+.tree-materia li a:hover {
+    background-color: #edf2f7;
+    color: #0a2a66;
+    font-weight: 500;
+    padding-left: 40px;
+}
+
+/* Panel de Contenidos Derecho */
+.study-content-panel {
+    min-height: 500px;
+}
+
+.content-placeholder {
+    background-color: #ffffff;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 60px 30px;
+    text-align: center;
+    color: #64748b;
+}
+
+.content-placeholder h3 {
+    color: #1e293b;
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+
+/* Tarjeta de Contenido Activo */
+.card-teoria-dinamica {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    animation: fadeIn 0.4s ease;
+}
+
+.visor-header {
+    background: linear-gradient(135deg, #0a2a66 0%, #123d8b 100%);
+    color: #ffffff;
+    padding: 25px;
+}
+
+.materia-tag-badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.visor-header h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.visor-cuerpo {
+    padding: 30px;
+}
+
+.visor-cuerpo h4 {
+    color: #0a2a66;
+    font-size: 1.15rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.teoria-texto-bloque {
+    color: #334155;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.teoria-texto-bloque strong {
+    color: #000000;
+}
+
+/* Preguntas y Reactivos de Opción Múltiple */
+.pregunta-estudio-texto {
+    font-size: 1.1rem;
+    color: #1e293b;
+    background-color: #f8fafc;
+    padding: 15px;
+    border-left: 4px solid #0a2a66;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 20px;
+}
+
+.quiz-estudio-opciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.opcion-estudio-label {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #ffffff;
+}
+
+.opcion-estudio-label:hover {
+    background-color: #f8fafc;
+    border-color: #0a2a66;
+    transform: translateX(4px);
+}
+
+.opcion-estudio-label input[type="radio"] {
+    margin-right: 15px;
+    accent-color: #0a2a66;
+    transform: scale(1.15);
+}
+
+.opcion-estudio-label span {
+    color: #334155;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Cajas de Feedback */
+.feedback-box {
+    margin-top: 25px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    animation: fadeIn 0.3s ease;
+}
+
+.success-feedback {
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+}
+
+.error-feedback {
+    background-color: #fef2f2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+}
+
+
+/* ==========================================================================
    7. ESTILOS EXCLUSIVOS PARA LA PÁGINA DE INICIO (HOME)
    ========================================================================== */
 .hero-seccion {
@@ -506,7 +793,7 @@ h1, h2 {
 
 
 /* ==========================================================================
-   8. ANIMACIONES (KEYFRAMES)
+   8. ANIMACIONES Y RESPONSIVO
    ========================================================================== */
 @keyframes fadeIn {
     from {
@@ -516,5 +803,11 @@ h1, h2 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .study-center-layout {
+        grid-template-columns: 1fr;
     }
 }
