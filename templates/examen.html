@@ -17,7 +17,8 @@
     <a href="/examen">Examen</a>
     <a href="/universidades">Universidades</a>
     <a href="/consejos">Consejos</a>
-    <a href="/study_center">Study Center</a> </nav>
+    <a href="/study_center">Study Center</a> 
+</nav>
 
 {% if preguntas %}
 <div id="cronometro" style="position: fixed; top: 20px; right: 20px; background-color: #111; color: #28a745; padding: 12px 20px; font-size: 1.3em; font-family: monospace; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; border: 2px solid #333;">
@@ -220,7 +221,7 @@
         }
 
         function mostrarDetalle(key) {
-            const data = infoEstructures[key] || infoEstructuras[key];
+            const data = infoEstructuras[key];
             if (!data) return;
 
             const botonesArea = document.querySelectorAll('.btn-area-tab');
@@ -298,35 +299,52 @@
     </form>
 
     <script>
-        let minutosIniciales = {{ tiempo if tiempo else 10 }};
+        // Captura de forma segura la variable 'tiempo' que envía tu Backend en Flask
+        let minutosIniciales = parseInt("{{ tiempo }}") || 10;
         let tiempoRestante = minutosIniciales * 60; 
         
         const displayReloj = document.getElementById('tiempo-reloj');
         const formulario = document.getElementById('form-examen');
 
-        const cuentaRegresiva = setInterval(function() {
-            let minutos = Math.floor(tiempoRestante / 60);
+        function actualizarReloj() {
+            // Cálculo inteligente de Horas, Minutos y Segundos
+            let horas = Math.floor(tiempoRestante / 3600);
+            let minutos = Math.floor((tiempoRestante % 3600) / 60);
             let segundos = tiempoRestante % 60;
 
             let segundosTexto = segundos < 10 ? '0' + segundos : segundos;
-            let minutosTexto = minutes < 10 ? '0' + minutos : minutos;
+            let minutosTexto = minutos < 10 ? '0' + minutos : minutos;
+            let horasTexto = horas < 10 ? '0' + horas : horas;
 
-            displayReloj.textContent = `${minutosTexto}:${segundosTexto}`;
+            // Si el examen asignado pasa de una hora, mostramos formato completo HH:MM:SS
+            if (horas > 0) {
+                displayReloj.textContent = `${horasTexto}:${minutosTexto}:${segundosTexto}`;
+            } else {
+                displayReloj.textContent = `${minutosTexto}:${segundosTexto}`;
+            }
 
+            // Cambios de color dinámicos según el peligro del tiempo
             if (tiempoRestante <= 60) {
-                displayReloj.style.color = '#dc3545';
+                displayReloj.style.color = '#dc3545'; // Rojo (Último minuto)
             } else if (tiempoRestante <= 300) {
-                displayReloj.style.color = '#ffc107';
+                displayReloj.style.color = '#ffc107'; // Amarillo (Últimos 5 minutos)
+            } else {
+                displayReloj.style.color = '#28a745'; // Verde (Tiempo seguro)
             }
 
             if (tiempoRestante <= 0) {
                 clearInterval(cuentaRegresiva);
                 alert("¡Se ha agotado el tiempo del examen! Tus respuestas se enviarán automáticamente.");
                 formulario.submit();
+                return;
             }
 
             tiempoRestante--;
-        }, 1000);
+        }
+
+        // Ejecución inmediata y actualización cada segundo
+        actualizarReloj();
+        const cuentaRegresiva = setInterval(actualizarReloj, 1000);
     </script>
     {% endif %}
 </main>
