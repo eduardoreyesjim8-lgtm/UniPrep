@@ -299,37 +299,80 @@
     </form>
 
     <script>
-        // Captura de forma segura la variable 'tiempo' que envía tu Backend en Flask
-        let minutosIniciales = parseInt("{{ tiempo }}") || 10;
-        let tiempoRestante = minutosIniciales * 60; 
+        // 1. Detectamos la cantidad de preguntas real generada en la lista
+        let cantidadPreguntas = parseInt("{{ preguntas|length }}") || 10;
         
+        // Mapeo seguro de la universidad de la primera pregunta para evitar errores
+        let universidad = "unam"; 
+        {% if preguntas and preguntas[0].universidad %}
+            universidad = "{{ preguntas[0].universidad }}".toLowerCase();
+        {% endif %}
+
+        let minutosIniciales = 10; // Tiempo por defecto ante fallas
+
+        // 2. REGLAS ESTRICTAS DE TIEMPO ACORDADAS
+        if (universidad.includes('unam')) {
+            if (cantidadPreguntas >= 120) {
+                minutosIniciales = 180; // Simulacro Completo UNAM = 3 Horas
+            } else if (cantidadPreguntas === 60) {
+                minutosIniciales = 90;  // Medio examen = 1h 30m
+            } else if (cantidadPreguntas === 30) {
+                minutosIniciales = 45;  // 30 preguntas
+            } else {
+                minutosIniciales = 15;  // 10 preguntas
+            }
+        } 
+        else if (universidad.includes('ipn') || universidad.includes('poli')) {
+            if (cantidadPreguntas >= 140) {
+                minutosIniciales = 180; // Simulacro Completo IPN = 3 Horas
+            } else if (cantidadPreguntas === 100) {
+                minutosIniciales = 130; 
+            } else if (cantidadPreguntas === 50) {
+                minutosIniciales = 65;  
+            } else {
+                minutosIniciales = 15;  
+            }
+        } 
+        else if (universidad.includes('uam')) {
+            if (cantidadPreguntas >= 80) {
+                minutosIniciales = 120; // Simulacro Completo UAM = 2 Horas exactas
+            } else if (cantidadPreguntas === 50) {
+                minutosIniciales = 75;  
+            } else if (cantidadPreguntas === 25) {
+                minutosIniciales = 40;  
+            } else {
+                minutosIniciales = 15;  
+            }
+        }
+
+        // 3. CONTROL DEL CRONÓMETRO
+        let tiempoRestante = minutosIniciales * 60; 
         const displayReloj = document.getElementById('tiempo-reloj');
         const formulario = document.getElementById('form-examen');
 
         function actualizarReloj() {
-            // Cálculo inteligente de Horas, Minutos y Segundos
             let horas = Math.floor(tiempoRestante / 3600);
             let minutos = Math.floor((tiempoRestante % 3600) / 60);
             let segundos = tiempoRestante % 60;
 
             let segundosTexto = segundos < 10 ? '0' + segundos : segundos;
-            let minutosTexto = minutos < 10 ? '0' + minutos : minutos;
+            let minutosTexto = minutesTexto = minutos < 10 ? '0' + minutos : minutos;
             let horasTexto = horas < 10 ? '0' + horas : horas;
 
-            // Si el examen asignado pasa de una hora, mostramos formato completo HH:MM:SS
+            // Formatear visualmente el reloj en pantalla
             if (horas > 0) {
                 displayReloj.textContent = `${horasTexto}:${minutosTexto}:${segundosTexto}`;
             } else {
                 displayReloj.textContent = `${minutosTexto}:${segundosTexto}`;
             }
 
-            // Cambios de color dinámicos según el peligro del tiempo
+            // Alertas de color para avisar peligro de tiempo al alumno
             if (tiempoRestante <= 60) {
                 displayReloj.style.color = '#dc3545'; // Rojo (Último minuto)
             } else if (tiempoRestante <= 300) {
                 displayReloj.style.color = '#ffc107'; // Amarillo (Últimos 5 minutos)
             } else {
-                displayReloj.style.color = '#28a745'; // Verde (Tiempo seguro)
+                displayReloj.style.color = '#28a745'; // Verde (Tiempo cómodo)
             }
 
             if (tiempoRestante <= 0) {
@@ -342,7 +385,7 @@
             tiempoRestante--;
         }
 
-        // Ejecución inmediata y actualización cada segundo
+        // Ejecución inmediata al cargar la vista
         actualizarReloj();
         const cuentaRegresiva = setInterval(actualizarReloj, 1000);
     </script>
