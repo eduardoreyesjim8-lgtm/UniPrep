@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Center - UniPrep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>UniPrep</h1>
+    <p>Centro de Estudios Interactivo</p>
+</header>
+
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/examen">Examen</a>
+    <a href="/universidades">Universidades</a>
+    <a href="/consejos">Consejos</a>
+    <a href="/study_center">Study Center</a>
+</nav>
+
+<main>
+    <h2 class="titulo-guia" style="margin-top: 20px;">Centro de Estudios Interactivo</h2>
+    <p class="subtitulo-guia">Selecciona una guía universitaria, navega por sus materias y repasa los conceptos clave con reactivos de prueba rápidos.</p>
+
+    <div class="study-center-layout">
+        
+        <!-- PANEL IZQUIERDO: ÁRBOL DE TEMAS -->
+        <div class="study-sidebar">
+            <div class="study-tabs">
+                <button class="tab-study-btn active" onclick="cambiarFiltroEstudio('unam')">UNAM</button>
+                <button class="tab-study-btn" onclick="cambiarFiltroEstudio('ipn')">IPN</button>
+                <button class="tab-study-btn" onclick="cambiarFiltroEstudio('uam')">UAM</button>
+            </div>
+
+            <div class="tree-container">
+                <!-- Temario UNAM -->
+                <div id="tree-unam" class="tree-universidad-block">
+                    <details open class="tree-materia">
+                        <summary>🧬 Biología</summary>
+                        <ul>
+                            <li><a href="#" onclick="cargarTema('unam_bio_celula')">La Célula y su estructura</a></li>
+                            <li><a href="#" onclick="cargarTema('unam_bio_genetica')">Genética y Herencia</a></li>
+                        </ul>
+                    </details>
+                    <details class="tree-materia">
+                        <summary>🧪 Química</summary>
+                        <ul>
+                            <li><a href="#" onclick="cargarTema('unam_qui_atomo')">Estructura del Átomo</a></li>
+                            <li><a href="#" onclick="cargarTema('unam_qui_tabla')">Tabla Periódica y Enlaces</a></li>
+                        </ul>
+                    </details>
+                </div>
+
+                <!-- Temario IPN -->
+                <div id="tree-ipn" class="tree-universidad-block" style="display:none;">
+                    <details class="tree-materia">
+                        <summary>🧮 Matemáticas Avanzadas</summary>
+                        <ul>
+                            <li><a href="#" onclick="cargarTema('ipn_mat_algebra')">Álgebra e Inecuaciones</a></li>
+                            <li><a href="#" onclick="cargarTema('ipn_mat_calculo')">Límites y Derivadas</a></li>
+                        </ul>
+                    </details>
+                </div>
+
+                <!-- Temario UAM -->
+                <div id="tree-uam" class="tree-universidad-block" style="display:none;">
+                    <details class="tree-materia">
+                        <summary>📐 Razonamiento Matemático</summary>
+                        <ul>
+                            <li><a href="#" onclick="cargarTema('uam_raz_series')">Sucesiones y Series</a></li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANEL DERECHO: VISUALIZADOR DE TEORÍA -->
+        <div class="study-content-panel">
+            <div id="placeholder-estudio" class="content-placeholder">
+                <span style="font-size: 3.5rem;">📖</span>
+                <h3>¡Todo listo para repasar!</h3>
+                <p>Selecciona cualquier tema del árbol de la izquierda para desplegar las tarjetas de estudio teórico y tus reactivos de práctica.</p>
+            </div>
+
+            <div id="visor-teoria-card" class="card-teoria-dinamica" style="display: none;"></div>
+        </div>
+
+    </div>
+</main>
+
+<script>
+    const DB_ESTUDIO = {
+        'unam_bio_celula': {
+            materia: "BIOLOGÍA - UNAM",
+            tema: "La Célula: Unidad Funcional de los Seres Vivos",
+            teoria: "La célula es la unidad anatómica, fisiológica y de origen de todo ser vivo. Se dividen principalmente en dos grandes grupos: <strong>Procariontes</strong> (sin núcleo definido, material genético disperso, ej. bacterias) y <strong>Eucariontes</strong> (con núcleo verdadero delimitado por una membrana membranal, ej. células animales y vegetales). Los organelos clave que debes memorizar para el examen de la UNAM son las <em>Mitocondrias</em> (respiración celular y energía ATP) y los <em>Cloroplastos</em> (fotosíntesis).",
+            pregunta: "¿Qué organelo celular es el encargado de la respiración celular y la producción de energía ATP?",
+            opciones: ["Ribosoma", "Aparato de Golgi", "Mitocondria", "Lisosoma"],
+            correcta: "Mitocondria"
+        },
+        'unam_qui_atomo': {
+            materia: "QUÍMICA - UNAM",
+            tema: "El Átomo y los Modelos Atómicos",
+            teoria: "El átomo es la partícula más pequeña de un elemento que conserva sus propiedades químicas. Está constituido por un núcleo central con <strong>protones</strong> (carga positiva) y <strong>neutrones</strong> (carga neutra), rodeado por una corteza donde giran los <strong>electrones</strong> (carga negativa). Recuerda repasar los postulados de Dalton, Thomson (modelo pudín de pasas), Rutherford (descubridor del núcleo celular-atómico) y Bohr (órbitas de energía cuantizadas).",
+            pregunta: "¿Qué partícula subatómica posee carga eléctrica negativa y orbita alrededor del núcleo?",
+            opciones: ["Protón", "Neutrón", "Electrón", "Positrón"],
+            correcta: "Electrón"
+        }
+    };
+
+    function cambiarFiltroEstudio(uni) {
+        document.querySelectorAll('.tab-study-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        document.querySelectorAll('.tree-universidad-block').forEach(b => b.style.display = 'none');
+        document.getElementById(`tree-${uni}`).style.display = 'block';
+    }
+
+    function cargarTema(idTema) {
+        event.preventDefault();
+        const data = DB_ESTUDIO[idTema];
+        if(!data) {
+            alert("Teoría demo: Estamos redactando el contenido de este bloque de estudio.");
+            return;
+        }
+        document.getElementById('placeholder-estudio').style.display = 'none';
+        const visor = document.getElementById('visor-teoria-card');
+        visor.style.display = 'block';
+        
+        let opcionesHTML = '';
+        data.opciones.forEach((opc) => {
+            opcionesHTML += `
+                <label class="opcion-estudio-label">
+                    <input type="radio" name="quiz_estudio" value="${opc}" onclick="verificarRespuestaEstudio('${opc}', '${data.correcta}')">
+                    <span>${opc}</span>
+                </label>
+            `;
+        });
+
+        visor.innerHTML = `
+            <div class="visor-header">
+                <span class="materia-tag-badge">${data.materia}</span>
+                <h3>${data.tema}</h3>
+            </div>
+            <div class="visor-cuerpo">
+                <h4>📚 Resumen Teórico de Estudio</h4>
+                <p class="teoria-texto-bloque">${data.teoria}</p>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 25px 0;">
+                <h4>⚡ Reactivo Rápido de Evaluación</h4>
+                <p class="pregunta-estudio-texto"><strong>Pregunta:</strong> ${data.pregunta}</p>
+                <div class="quiz-estudio-opciones">${opcionesHTML}</div>
+                <div id="resultado-feedback-estudio" class="feedback-box" style="display:none;"></div>
+            </div>
+        `;
+    }
+
+    function verificarRespuestaEstudio(seleccionada, correcta) {
+        const feedback = document.getElementById('resultado-feedback-estudio');
+        feedback.style.display = 'block';
+        if (seleccionada === correcta) {
+            feedback.className = "feedback-box success-feedback";
+            feedback.innerHTML = "🎉 <strong>¡Correcto!</strong> Excelente comprensión lectora del resumen del tema.";
+        } else {
+            feedback.className = "feedback-box error-feedback";
+            feedback.innerHTML = `❌ <strong>Respuesta Incorrecta.</strong> Revisa nuevamente el bloque teórico de arriba. La respuesta correcta es: <strong>${correcta}</strong>.`;
+        }
+    }
+</script>
+</body>
+</html>
