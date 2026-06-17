@@ -17,7 +17,7 @@
     <a href="/examen">Examen</a>
     <a href="/universidades">Universidades</a>
     <a href="/consejos">Consejos</a>
-</nav>
+    <a href="/study_center">Study Center</a> </nav>
 
 {% if preguntas %}
 <div id="cronometro" style="position: fixed; top: 20px; right: 20px; background-color: #111; color: #28a745; padding: 12px 20px; font-size: 1.3em; font-family: monospace; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; border: 2px solid #333;">
@@ -64,8 +64,7 @@
         </div>
 
         <div id="detalle-area-card" class="card detalle-card" style="display: none;">
-            <div id="contenido-dinamico">
-                </div>
+            <div id="contenido-dinamico"></div>
             <div style="text-align: center; margin-top: 30px; border-top: 1px solid #f1f5f9; padding-top: 25px;">
                 <p style="margin: 0 0 15px 0; color: #64748b; font-size: 0.95rem;">¿Quieres poner a prueba tus conocimientos con esta estructura real?</p>
                 <a href="/universidades" class="btn-examen-primario">Configurar este Examen en Simulador</a>
@@ -203,7 +202,7 @@
                     { nombre: "Historia del Arte y Arq.", cant: 15 }, { nombre: "Dibujo y Geometría Plana", cant: 15 },
                     { nombre: "Física Básica", cant: 10 }
                 ],
-                carreras: "Arquitectura, Diseño Industrial, Diseño de la Comunicación Gráfica (Diseño Gráfico), Diseño de Asentamientos Humanos."
+                carreras: "Arquitectura, Diseño Industrial, Diseño de la Communication Gráfica (Diseño Gráfico), Diseño de Asentamientos Humanos."
             }
         };
 
@@ -221,7 +220,7 @@
         }
 
         function mostrarDetalle(key) {
-            const data = infoEstructuras[key];
+            const data = infoEstructures[key] || infoEstructuras[key];
             if (!data) return;
 
             const botonesArea = document.querySelectorAll('.btn-area-tab');
@@ -310,7 +309,7 @@
             let segundos = tiempoRestante % 60;
 
             let segundosTexto = segundos < 10 ? '0' + segundos : segundos;
-            let minutosTexto = minutos < 10 ? '0' + minutos : minutos;
+            let minutosTexto = minutes < 10 ? '0' + minutos : minutos;
 
             displayReloj.textContent = `${minutosTexto}:${segundosTexto}`;
 
