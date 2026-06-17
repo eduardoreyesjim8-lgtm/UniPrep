@@ -1,73 +1,53 @@
 import os
 import json
 import random
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Función para cargar las preguntas de la UNAM desde la carpeta data
-def cargar_preguntas_unam():
-    ruta = os.path.join('data', 'unam.json')
+# Función centralizada y robusta para cargar archivos JSON
+def cargar_datos(nombre_archivo):
+    # Esto asegura que busque en la carpeta 'data' sin importar dónde se ejecute el script
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    ruta = os.path.join(base_dir, 'data', nombre_archivo)
+    
     if os.path.exists(ruta):
-        with open(ruta, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        try:
+            with open(ruta, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except json.JSONDecodeError as e:
+            print(f"Error de sintaxis en {nombre_archivo}: {e}")
+            return []
     return []
 
-# Función para cargar las preguntas del IPN desde la carpeta data de Render
-def cargar_preguntas_ipn():
-    ruta = "/opt/render/project/src/data/ipn.json"
-    if not os.path.exists(ruta):
-        # Respaldo local por si pruebas en tu computadora
-        ruta = os.path.join('data', 'ipn.json')
-        
-    if os.path.exists(ruta):
-        with open(ruta, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return []
+# Funciones específicas para cada banco
+def cargar_preguntas_unam(): return cargar_datos('unam.json')
+def cargar_preguntas_ipn(): return cargar_datos('ipn.json')
+def cargar_preguntas_uam(): return cargar_datos('uam.json')
 
-# Función para cargar las preguntas de la UAM desde la carpeta data
-def cargar_preguntas_uam():
-    ruta = os.path.join('data', 'uam.json')
-    if os.path.exists(ruta):
-        with open(ruta, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return []
-
-# Función para cargar los temarios desglosados de todas las universidades
 def cargar_temarios():
-    ruta = os.path.join('data', 'temarios.json')
-    if os.path.exists(ruta):
-        with open(ruta, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {"unam": [], "ipn": [], "uam": []}
+    return cargar_datos('temarios.json')
 
 @app.route("/")
-def inicio():
-    return render_template("index.html")
+def inicio(): return render_template("index.html")
 
 @app.route("/universidades")
-def universidades():
-    return render_template("universidades.html")
+def universidades(): return render_template("universidades.html")
 
 @app.route("/consejos")
-def consejos():
-    return render_template("consejos.html")
+def consejos(): return render_template("consejos.html")
 
 @app.route("/study_center")
 def study_center():
-    # Cargamos el JSON con los temas de las tres universidades
-    temarios = cargar_temarios()
-    # Enviamos los datos estructurados a la plantilla study_center.html
-    return render_template("study_center.html", temarios=temarios)
+    return render_template("study_center.html", temarios=cargar_temarios())
 
-# Ruta unificada que recibe los formularios de universidades.html (UNAM, IPN y UAM)
 @app.route("/configurar_examen", methods=["POST"])
 def configurar_examen():
     universidad = request.form.get("universidad", "unam")
     cantidad = int(request.form.get("cantidad", 10))
-    tiempo_minutos = cantidad # 1 minuto por pregunta de manera predeterminada
+    tiempo_minutos = cantidad 
     
-    # Seleccionamos el banco correspondiente según la universidad del formulario
+    # Seleccionar banco
     if universidad == "ipn":
         banco_completo = cargar_preguntas_ipn()
     elif universidad == "uam":
@@ -75,40 +55,28 @@ def configurar_examen():
     else:
         banco_completo = cargar_preguntas_unam()
         
-    # Validamos que no pidamos más preguntas de las que existen en el JSON
     num_preguntas = min(cantidad, len(banco_completo))
-    
-    if num_preguntas > 0:
-        preguntas_examen = random.sample(banco_completo, num_preguntas)
-    else:
-        preguntas_examen = []
+    preguntas_examen = random.sample(banco_completo, num_preguntas) if num_preguntas > 0 else []
         
     return render_template("examen.html", preguntas=preguntas_examen, tiempo=tiempo_minutos)
 
-# Ruta que procesa las respuestas del alumno y calcula el puntaje (Soporta UNAM, IPN y UAM)
 @app.route("/calificar_examen", methods=["POST"])
 def calificar_examen():
-    # Unimos los tres bancos de preguntas para calificar globalmente buscando por ID de pregunta
+    # Unir bancos para calificar
     banco_completo = cargar_preguntas_unam() + cargar_preguntas_ipn() + cargar_preguntas_uam()
     
     aciertos = 0
     total_preguntas = 0
     resultados = []
     
-    # Revisamos cada pregunta para ver si el usuario la contestó en su examen actual
     for pregunta in banco_completo:
         campo_name = f"pregunta_{pregunta['id']}"
-        
-        # Si esta pregunta venía en el examen que se le renderizó al alumno
         if campo_name in request.form:
             total_preguntas += 1
             request_usuario = request.form.get(campo_name)
             es_correcta = (request_usuario == pregunta['respuesta_correcta'])
-            
-            if es_correcta:
-                aciertos += 1
+            if es_correcta: aciertos += 1
                 
-            # Guardamos el resultado detallado
             resultados.append({
                 "materia": pregunta["materia"],
                 "pregunta": pregunta["pregunta"],
@@ -117,19 +85,12 @@ def calificar_examen():
                 "es_correcta": es_correcta
             })
             
-    # Calculamos el porcentaje de éxito
     porcentaje = int((aciertos / total_preguntas) * 100) if total_preguntas > 0 else 0
-    
-    # Enviamos los datos procesados a la plantilla de resultados
-    return render_template("resultados.html", 
-                           aciertos=aciertos, 
-                           total=total_preguntas, 
-                           porcentaje=porcentaje, 
-                           resultados=resultados)
+    return render_template("resultados.html", aciertos=aciertos, total=total_preguntas, 
+                           porcentaje=porcentaje, resultados=resultados)
 
 @app.route("/examen")
-def examen():
-    return render_template("examen.html", preguntas=[])
+def examen(): return render_template("examen.html", preguntas=[])
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
