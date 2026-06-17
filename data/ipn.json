@@ -1,1257 +1,142 @@
 [
-  {
-    "id": 1001,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Determina el término número 8 de la siguiente sucesión aritmética: 5, 11, 17, 23, ...",
-    "opciones": ["47", "41", "53", "49"],
-    "respuesta_correcta": "47"
-  },
-  {
-    "id": 1002,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Simplifica por completo la siguiente expresión algebraica: (2x² - 8) / (x - 2)",
-    "opciones": ["2(x + 2)", "2x + 2", "x + 2", "2(x - 2)"],
-    "respuesta_correcta": "2(x + 2)"
-  },
-  {
-    "id": 1003,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Encuentra el valor exacto del límite cuando x tiende a 3 de la función: (x² - 9) / (x - 3)",
-    "opciones": ["6", "0", "3", "No existe"],
-    "respuesta_correcta": "6"
-  },
-  {
-    "id": 1004,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Calcula la primera derivada de la función: f(x) = 4x³ - 5x² + 7x - 12",
-    "opciones": ["12x² - 10x + 7", "4x² - 5x + 7", "12x³ - 10x² + 7", "12x² - 10x"],
-    "respuesta_correcta": "12x² - 10x + 7"
-  },
-  {
-    "id": 1005,
-    "materia": "Competencia Lectora",
-    "pregunta": "Identifica la intención comunicativa principal de un texto argumentativo de carácter académico:",
-    "opciones": [
-      "Persuadir al lector sobre una postura mediante razonamientos fundamentados.",
-      "Narrar una sucesión cronológica de eventos históricos o ficticios.",
-      "Describir detalladamente las características físicas de un objeto o fenómeno.",
-      "Explicar instrucciones paso a paso para ejecutar un proceso técnico."
-    ],
-    "respuesta_correcta": "Persuadir al lector sobre una postura mediante razonamientos fundamentados."
-  },
-  {
-    "id": 1006,
-    "materia": "Competencia Escrita",
-    "pregunta": "Selecciona la opción que presenta una ortografía impecable conforme a las normas de la RAE:",
-    "opciones": [
-      "El análisis sintáctico reveló una paradoja en la interpretación de la hipótesis.",
-      "El analisis sintactico reveló una paradoja en la interpretación de la hipotesis.",
-      "El análisis sintáctico revelo una paradoja en la interpretación de la hipotesis.",
-      "El análisis sintáctico reveló una paradoha en la interpretacion de la hipótesis."
-    ],
-    "respuesta_correcta": "El análisis sintáctico reveló una paradoja en la interpretación de la hipótesis."
-  },
-  {
-    "id": 1007,
-    "materia": "Competencia Escrita",
-    "pregunta": "Determina el sujeto de la siguiente oración compleja: 'A través de un microscopio electrónico, el equipo de biólogos de la institución identificó la estructura viral'.",
-    "opciones": [
-      "el equipo de biólogos de la institución",
-      "la estructura viral",
-      "A través de un microscopio electrónico",
-      "los biólogos"
-    ],
-    "respuesta_correcta": "el equipo de biólogos de la institución"
-  },
-  {
-    "id": 1008,
-    "materia": "Física",
-    "pregunta": "Un prototipo experimental se desplaza a velocidad constante de 25 m/s en línea recta durante un intervalo de 12 s. Calcula la distancia total recorrida.",
-    "opciones": ["300 metros", "375 metros", "2.08 metros", "150 metros"],
-    "respuesta_correcta": "300 metros"
-  },
-  {
-    "id": 1009,
-    "materia": "Física",
-    "pregunta": "¿Qué principio fundamental de la termodinámica introduce rigurosamente el concepto operativo de entropía y prohíbe el flujo espontáneo de calor de cuerpos fríos a calientes?",
-    "opciones": ["Segunda Ley de la Termodinámica", "Primera Ley de la Termodinámica", "Ley Cero de la Termodinámica", "Tercera Ley de la Termodinámica"],
-    "respuesta_correcta": "Segunda Ley de la Termodinámica"
-  },
-  {
-    "id": 1010,
-    "materia": "Física",
-    "pregunta": "Un componente electrónico resistivo disipa energía conectado a una diferencia de potencial de 24 V registrando una corriente de 3 A. Determina el valor de la resistencia óhmica.",
-    "opciones": ["8 Ohmios", "72 Ohmios", "0.125 Ohmios", "12 Ohmios"],
-    "respuesta_correcta": "8 Ohmios"
-  },
-  {
-    "id": 1011,
-    "materia": "Física",
-    "pregunta": "Identifica el fenómeno físico que explica el aparente cambio de dirección de un haz de luz al cambiar su densidad de propagación del aire al agua.",
-    "opciones": ["Refracción", "Reflexión", "Difracción", "Polarización"],
-    "respuesta_correcta": "Refracción"
-  },
-  {
-    "id": 1012,
-    "materia": "Química",
-    "pregunta": "¿Qué clase de enlace electroquímico se constituye mediante el compartimento equitativo o desigual de electrones de valencia entre especies de alta electronegatividad?",
-    "opciones": ["Enlace covalente", "Enlace iónico", "Enlace metálico", "Puente de hidrógeno"],
-    "respuesta_correcta": "Enlace covalente"
-  },
-  {
-    "id": 1013,
-    "materia": "Química",
-    "pregunta": "De acuerdo con el marco conceptual clásico de Arrhenius, ¿cómo se clasifica genéricamente una sustancia que incrementa la concentración de protones H+ en disolución acuosa?",
-    "opciones": ["Ácido", "Base", "Sal neutral", "Anfótero"],
-    "respuesta_correcta": "Ácido"
-  },
-  {
-    "id": 1014,
-    "materia": "Química",
-    "pregunta": "Determina analíticamente el estado de oxidación del elemento azufre (S) en la molécula neutra del ácido sulfúrico (H₂SO₄).",
-    "opciones": ["+6", "+4", "-2", "+2"],
-    "respuesta_correcta": "+6"
-  },
-  {
-    "id": 1015,
-    "materia": "Química",
-    "pregunta": "¿Cuál es la nomenclatura correcta para referirse a hidrocarburos alifáticos que contienen enlaces triples de carbono-carbono?",
-    "opciones": ["Alquinos", "Alcanos", "Alquenos", "Aromáticos"],
-    "respuesta_correcta": "Alquinos"
-  },
-  {
-    "id": 1016,
-    "materia": "Biología",
-    "pregunta": "¿Qué organelo citoplasmático especializado aloja las enzimas responsables del ciclo de Krebs y la síntesis masiva de ATP por fosforilación oxidativa?",
-    "opciones": ["Mitocondria", "Cloroplasto", "Lisosoma", "Aparato de Golgi"],
-    "respuesta_correcta": "Mitocondria"
-  },
-  {
-    "id": 1017,
-    "materia": "Biología",
-    "pregunta": "¿Qué tipo de biomolécula orgánica está constituida de polímeros lineales de aminoácidos ordenados por enlaces peptídicos estructurales?",
-    "opciones": ["Proteínas", "Carbohidratos", "Lípidos", "Ácidos nucleicos"],
-    "respuesta_correcta": "Proteínas"
-  },
-  {
-    "id": 1018,
-    "materia": "Biología",
-    "pregunta": "De acuerdo con los postulados fundamentales de la síntesis evolutiva de Charles Darwin, ¿cuál es el motor que determina la supervivencia y reproducción diferencial adaptativa?",
-    "opciones": ["Selección natural", "Uso y desuso de órganos", "Mutación inducida artificial", "Generación espontánea"],
-    "respuesta_correcta": "Selección natural"
-  },
-  {
-    "id": 1019,
-    "materia": "Biología",
-    "pregunta": "Identifica la fase mitótica donde los cromosomas condensados se alinean en un plano simétrico respecto a la región ecuatorial del huso acromático.",
-    "opciones": ["Metafase", "Profase", "Anafase", "Telofase"],
-    "respuesta_correcta": "Metafase"
-  },
-  {
-    "id": 1020,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Calcula el área de un triángulo rectángulo si su hipotenusa mide 10 cm y su base mide 8 cm.",
-    "opciones": ["24 cm²", "40 cm²", "48 cm²", "30 cm²"],
-    "respuesta_correcta": "24 cm²"
-  },
-  {
-    "id": 1021,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "¿Cuál es la solución del sistema de ecuaciones lineales formado por: 2x + y = 7 y x - y = 2?",
-    "opciones": ["x = 3, y = 1", "x = 2, y = 3", "x = 4, y = -1", "x = 1, y = 5"],
-    "respuesta_correcta": "x = 3, y = 1"
-  },
-  {
-    "id": 1022,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Calcula el valor del ángulo complementario de un ángulo que mide 35°.",
-    "opciones": ["55°", "145°", "65°", "45°"],
-    "respuesta_correcta": "55°"
-  },
-  {
-    "id": 1023,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Identifica la ecuación general de la circunferencia con centro en el origen y radio r = 5.",
-    "opciones": ["x² + y² - 25 = 0", "x² - y² = 25", "x² + y² - 5 = 0", "x + y = 5"],
-    "respuesta_correcta": "x² + y² - 25 = 0"
-  },
-  {
-    "id": 1024,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "¿Cuál es la probabilidad de obtener un número par al lanzar un dado estándar de 6 caras?",
-    "opciones": ["1/2", "1/3", "2/3", "1/6"],
-    "respuesta_correcta": "1/2"
-  },
-  {
-    "id": 1025,
-    "materia": "Competencia Lectora",
-    "pregunta": "En un texto argumentativo, el enunciado breve que expresa la postura o punto de vista del autor se denomina:",
-    "opciones": ["Tesis", "Premisa", "Conclusión", "Introducción"],
-    "respuesta_correcta": "Tesis"
-  },
-  {
-    "id": 1026,
-    "materia": "Competencia Escrita",
-    "pregunta": "Elige la palabra que presenta un diptongo ortográfico en su estructura:",
-    "opciones": ["Canción", "Poeta", "Teatro", "Río"],
-    "respuesta_correcta": "Canción"
-  },
-  {
-    "id": 1027,
-    "materia": "Competencia Escrita",
-    "pregunta": "Identifica la opción en donde se haga un uso correcto de las grafías 'b' y 'v':",
-    "opciones": [
-      "El joven exhibía una actitud benevolente ante el público.",
-      "El joven exivía una actitud benevolente ante el público.",
-      "El joven exhibía una actitud benevolente ante el pùblico.",
-      "El joven exhibía una actitud benevolente ante el público."
-    ],
-    "respuesta_correcta": "El joven exhibía una actitud benevolente ante el público."
-  },
-  {
-    "id": 1028,
-    "materia": "Física",
-    "pregunta": "De acuerdo con la Segunda Ley de Newton, si la fuerza neta aplicada sobre un objeto se duplica manteniendo su masa constante, la aceleración:",
-    "opciones": ["Se duplica", "Se reduce a la mitad", "Permanece igual", "Se cuadruplica"],
-    "respuesta_correcta": "Se duplica"
-  },
-  {
-    "id": 1029,
-    "materia": "Física",
-    "pregunta": "¿Cuál es el valor de la presión hidrostática que experimenta un buzo a 20 metros de profundidad en agua dulce? (Considera g = 10 m/s² y densidad = 1000 kg/m³)",
-    "opciones": ["200,000 Pa", "20,000 Pa", "2,000 Pa", "2,000,000 Pa"],
-    "respuesta_correcta": "200,000 Pa"
-  },
-  {
-    "id": 1030,
-    "materia": "Física",
-    "pregunta": "¿Qué tipo de onda requiere de un medio material (sólido, líquido o gaseoso) para propagarse de manera mecánica?",
-    "opciones": ["Onda sonora", "Onda de luz", "Rayos X", "Onda de radio"],
-    "respuesta_correcta": "Onda sonora"
-  },
-  {
-    "id": 1031,
-    "materia": "Física",
-    "pregunta": "La cantidad de calor necesaria para elevar un grado Celsius la temperatura de un gramo de una sustancia pura se define como:",
-    "opciones": ["Calor específico", "Calor latente", "Capacidad térmica", "Calor de fusión"],
-    "respuesta_correcta": "Calor específico"
-  },
-  {
-    "id": 1032,
-    "materia": "Química",
-    "pregunta": "¿Qué modelo atómico propuso la existencia de órbitas circulares cuantizadas donde los electrones giran sin emitir energía radiante?",
-    "opciones": ["Modelo de Bohr", "Modelo de Thomson", "Modelo de Rutherford", "Modelo de Dalton"],
-    "respuesta_correcta": "Modelo de Bohr"
-  },
-  {
-    "id": 1033,
-    "materia": "Química",
-    "pregunta": "Determina cuántos protones, neutrones y electrones posee un átomo neutro de Sodio con número atómico Z = 11 y número de masa A = 23.",
-    "opciones": [
-      "11 protones, 12 neutrones, 11 electrones",
-      "11 protones, 23 neutrones, 11 electrones",
-      "12 protones, 11 neutrones, 12 electrones",
-      "11 protones, 11 neutrones, 12 electrones"
-    ],
-    "respuesta_correcta": "11 protones, 12 neutrones, 11 electrones"
-  },
-  {
-    "id": 1034,
-    "materia": "Química",
-    "pregunta": "¿Qué tipo de reacción química ocurre cuando dos o más sustancias se combinan para formar un único producto más complejo?",
-    "opciones": ["Reacción de síntesis o adición", "Reacción de descomposición", "Reacción de sustitución simple", "Reacción de doble sustitución"],
-    "respuesta_correcta": "Reacción de síntesis o adición"
-  },
-  {
-    "id": 1035,
-    "materia": "Química",
-    "pregunta": "De acuerdo con la escala de pH, una disolución acuosa que registra un valor exacto de 3 se clasifica como una sustancia:",
-    "opciones": ["Ácida fuerte", "Ácida débil", "Básica fuerte", "Neutra"],
-    "respuesta_correcta": "Ácida fuerte"
-  },
-  {
-    "id": 1036,
-    "materia": "Biología",
-    "pregunta": "¿Qué tipo de células se caracterizan por carecer de una membrana nuclear definida, manteniendo su material genético disperso en el citoplasma?",
-    "opciones": ["Células procariotas", "Células eucariotas", "Células animales", "Células vegetales"],
-    "respuesta_correcta": "Células procariotas"
-  },
-  {
-    "id": 1037,
-    "materia": "Biología",
-    "pregunta": "¿Cuál es el principal compuesto energético o 'moneda de intercambio energético' que producen las células durante el metabolismo celular?",
-    "opciones": ["ATP", "ADN", "ARN", "NADH"],
-    "respuesta_correcta": "ATP"
-  },
-  {
-    "id": 1038,
-    "materia": "Biología",
-    "pregunta": "¿Cómo se les conoce a las estructuras celulares que contienen el material genético altamente condensado durante los procesos de división celular?",
-    "opciones": ["Cromosomas", "Ribosomas", "Nucléolos", "Plásmidos"],
-    "respuesta_correcta": "Cromosomas"
-  },
-  {
-    "id": 1039,
-    "materia": "Biología",
-    "pregunta": "El proceso biológico mediante el cual los organismos autótrofos convierten agua y dióxido de carbono en glucosa utilizando energía lumínica es la:",
-    "opciones": ["Fotosíntesis", "Glucólisis", "Respiración celular", "Fermentación"],
-    "respuesta_correcta": "Fotosíntesis"
-  },
-  {
-    "id": 1040,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Resuelve la siguiente ecuación de primer grado: 3(x - 4) = 2x + 5",
-    "opciones": ["x = 17", "x = 9", "x = -7", "x = 1"],
-    "respuesta_correcta": "x = 17"
-  },
-  {
-    "id": 1041,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "¿Cuál es la pendiente de la recta que pasa por los puntos A(2, 3) y B(5, 9)?",
-    "opciones": ["2", "3", "1/2", "6"],
-    "respuesta_correcta": "2"
-  },
-  {
-    "id": 1042,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Convierte un ángulo de 180 grados a radianes.",
-    "opciones": ["π rad", "2π rad", "π/2 rad", "3π/2 rad"],
-    "respuesta_correcta": "π rad"
-  },
-  {
-    "id": 1043,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "En un triángulo rectángulo, ¿cuál es el valor de la función trigonométrica seno para un ángulo si el cateto opuesto mide 3 y la hipotenusa mide 5?",
-    "opciones": ["3/5", "4/5", "5/3", "4/3"],
-    "respuesta_correcta": "3/5"
-  },
-  {
-    "id": 1044,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Determina las raíces o soluciones de la ecuación cuadrática: x² - 5x + 6 = 0",
-    "opciones": ["x = 2, x = 3", "x = -2, x = -3", "x = 1, x = 6", "x = -1, x = -6"],
-    "respuesta_correcta": "x = 2, x = 3"
-  },
-  {
-    "id": 1045,
-    "materia": "Competencia Lectora",
-    "pregunta": "Identifica el sinónimo más adecuado para la palabra 'efímero' dentro de un contexto literario:",
-    "opciones": ["Pasajero", "Duradero", "Eterno", "Inmortal"],
-    "respuesta_correcta": "Pasajero"
-  },
-  {
-    "id": 1046,
-    "materia": "Competencia Escrita",
-    "pregunta": "Selecciona la oración que presenta un uso correcto de los signos de puntuación:",
-    "opciones": [
-      "Aunque estudió mucho para el examen, estaba muy nervioso.",
-      "Aunque estudió mucho para el examen estaba muy nervioso.",
-      "Aunque estudió mucho, para el examen, estaba muy nervioso.",
-      "Aunque estudió mucho para el examen; estaba muy nervioso."
-    ],
-    "respuesta_correcta": "Aunque estudió mucho para el examen, estaba muy nervioso."
-  },
-  {
-    "id": 1047,
-    "materia": "Competencia Escrita",
-    "pregunta": "Identifica el modificador directo en el siguiente sujeto: 'La brillante estudiante del IPN ganó la competencia'.",
-    "opciones": ["brillante", "del IPN", "estudiante", "ganó"],
-    "respuesta_correcta": "brillante"
-  },
-  {
-    "id": 1048,
-    "materia": "Física",
-    "pregunta": "¿Qué tipo de energía posee un cuerpo en movimiento en función directa de su velocidad y de su masa?",
-    "opciones": ["Energía cinética", "Energía potencial", "Energía térmica", "Energía química"],
-    "respuesta_correcta": "Energía cinética"
-  },
-  {
-    "id": 1049,
-    "materia": "Física",
-    "pregunta": "La ley de la física que establece que la corriente eléctrica que fluye por un conductor es directamente proporcional al voltaje aplicado e inversamente proporcional a la resistencia es la:",
-    "opciones": ["Ley de Ohm", "Ley de Ampere", "Ley de Coulomb", "Ley de Faraday"],
-    "respuesta_correcta": "Ley de Ohm"
-  },
-  {
-    "id": 1050,
-    "materia": "Física",
-    "pregunta": "Un bloque de hierro requiere absorber una cantidad específica de calor para cambiar de estado sólido a líquido sin variar su temperatura. A este calor se le conoce como:",
-    "opciones": ["Calor latente de fusión", "Calor específico", "Calor sensible", "Capacidad térmica"],
-    "respuesta_correcta": "Calor latente de fusión"
-  },
-  {
-    "id": 1051,
-    "materia": "Física",
-    "pregunta": "Determina el valor de la fuerza de atracción gravitacional entre dos objetos si la distancia que los separa se duplica geométricamente.",
-    "opciones": ["Se reduce a la cuarta parte", "Se duplica", "Permanece igual", "Se reduce a la mitad"],
-    "respuesta_correcta": "Se reduce a la cuarta parte"
-  },
-  {
-    "id": 1052,
-    "materia": "Química",
-    "pregunta": "En la tabla periódica de los elementos, a las columnas verticales que agrupan elementos con propiedades químicas similares se les conoce como:",
-    "opciones": ["Grupos o familias", "Periodos", "Bloques", "Series"],
-    "respuesta_correcta": "Grupos o familias"
-  },
-  {
-    "id": 1053,
-    "materia": "Química",
-    "pregunta": "Calcula la masa molar del agua (H₂O) considerando las masas atómicas aproximadas: H = 1 g/mol, O = 16 g/mol.",
-    "opciones": ["18 g/mol", "17 g/mol", "33 g/mol", "16 g/mol"],
-    "respuesta_correcta": "18 g/mol"
-  },
-  {
-    "id": 1054,
-    "materia": "Química",
-    "pregunta": "¿Qué tipo de enlace químico se forma debido a la atracción electrostática entre un metal que cede electrones y un no metal que los acepta?",
-    "opciones": ["Enlace iónico", "Enlace covalente", "Enlace metálico", "Fuerza de Van der Waals"],
-    "respuesta_correcta": "Enlace iónico"
-  },
-  {
-    "id": 1055,
-    "materia": "Química",
-    "pregunta": "De acuerdo con el principio de Le Chatelier, si aumentamos la presión en un sistema gaseoso en equilibrio, este se desplazará hacia donde:",
-    "opciones": [
-      "Haya un menor número de moles de gas.",
-      "Haya un mayor número de moles de gas.",
-      "La temperatura disminuya de forma drástica.",
-      "No ocurra ningún tipo de cambio estructural."
-    ],
-    "respuesta_correcta": "Haya un menor número de moles de gas."
-  },
-  {
-    "id": 1056,
-    "materia": "Biología",
-    "pregunta": "¿Cuál es la función principal de los ribosomas dentro de la maquinaria celular de los seres vivos?",
-    "opciones": ["Síntesis de proteínas", "Producción de lípidos", "Digestión intracelular", "Almacenamiento de agua"],
-    "respuesta_correcta": "Síntesis de proteínas"
-  },
-  {
-    "id": 1057,
-    "materia": "Biología",
-    "pregunta": "¿Qué molécula de ácido nucleico se encarga de transportar la información genética desde el núcleo celular hacia los ribosomas para la traducción?",
-    "opciones": ["ARN mensajero", "ARN de transferencia", "ARN ribosomal", "ADN polimerasa"],
-    "respuesta_correcta": "ARN mensajero"
-  },
-  {
-    "id": 1058,
-    "materia": "Biología",
-    "pregunta": "La teoría celular afirma de manera categórica que la célula es la unidad anatómica, fisiológica y de ________ de todos los seres vivos.",
-    "opciones": ["Origen", "Evolución", "Crecimiento", "Nutrición"],
-    "respuesta_correcta": "Origen"
-  },
-  {
-    "id": 1059,
-    "materia": "Biología",
-    "pregunta": "¿Qué tipo de reproducción biológica no involucra la fusión de gametos y genera descendientes genéticamente idénticos al progenitor?",
-    "opciones": ["Reproducción asexual", "Reproducción sexual", "Fecundación cruzada", "Partenogénesis"],
-    "respuesta_correcta": "Reproducción asexual"
-  },
-  {
-    "id": 1060,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Calcula el valor numérico del logaritmo en base 10 de 1000 (log₁₀ 1000).",
-    "opciones": ["3", "2", "10", "100"],
-    "respuesta_correcta": "3"
-  },
-  {
-    "id": 1061,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Determina el perímetro de una circunferencia cuyo radio mide exactos 5 cm. (Utiliza π como constante)",
-    "opciones": ["10π cm", "5π cm", "25π cm", "20π cm"],
-    "respuesta_correcta": "10π cm"
-  },
-  {
-    "id": 1062,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Encuentra el valor de la distancia entre los puntos P₁(1, 2) y P₂(4, 6) en el plano cartesiano.",
-    "opciones": ["5", "7", "25", "3"],
-    "respuesta_correcta": "5"
-  },
-  {
-    "id": 1063,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Si f(x) = x³ - 2x + 5, obtén el valor de la función evaluada en f(2).",
-    "opciones": ["9", "11", "13", "7"],
-    "respuesta_correcta": "9"
-  },
-  {
-    "id": 1064,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "¿Cuál es la factorización correcta del trinomio cuadrado perfecto: x² + 6x + 9?",
-    "opciones": ["(x + 3)¹", "(x + 3)²", "(x - 3)²", "(x + 9)(x + 1)"],
-    "respuesta_correcta": "(x + 3)²"
-  },
-  {
-    "id": 1065,
-    "materia": "Competencia Lectora",
-    "pregunta": "El antónimo directo de la palabra 'altruista' dentro de un contexto social es:",
-    "opciones": ["Egoísta", "Generoso", "Solidario", "Filántropo"],
-    "respuesta_correcta": "Egoísta"
-  },
-  {
-    "id": 1066,
-    "materia": "Competencia Escrita",
-    "pregunta": "Identifica la palabra homófona que completa correctamente la oración: 'Es necesario que él ______ las herramientas al laboratorio'.",
-    "opciones": ["vaya", "valla", "baya", "balla"],
-    "respuesta_correcta": "vaya"
-  },
-  {
-    "id": 1067,
-    "materia": "Competencia Escrita",
-    "pregunta": "Determina qué tipo de conector lógico es la palabra 'por lo tanto' en un texto argumentativo:",
-    "opciones": ["Conector conclusivo", "Conector adversativo", "Conector causal", "Conector disyuntivo"],
-    "respuesta_correcta": "Conector conclusivo"
-  },
-  {
-    "id": 1068,
-    "materia": "Física",
-    "pregunta": "Un automóvil disminuye su velocidad uniformemente de 20 m/s a 10 m/s en un lapso de 5 segundos. Calcula el valor de su aceleración.",
-    "opciones": ["-2 m/s²", "2 m/s²", "-5 m/s²", "4 m/s²"],
-    "respuesta_correcta": "-2 m/s²"
-  },
-  {
-    "id": 1069,
-    "materia": "Física",
-    "pregunta": "El principio de la hidrostática que establece que todo cuerpo sumergido en un fluido experimenta un empuje vertical hacia arriba igual al peso del fluido desalojado es el:",
-    "opciones": ["Principio de Arquímedes", "Principio de Pascal", "Teorema de Bernoulli", "Ley de Torricelli"],
-    "respuesta_correcta": "Principio de Arquímedes"
-  },
-  {
-    "id": 1070,
-    "materia": "Física",
-    "pregunta": "¿Qué propiedad física de los materiales describe la oposición al paso o flujo de electrones a través de un circuito eléctrico cerrado?",
-    "opciones": ["Resistencia", "Voltaje", "Corriente", "Capacitancia"],
-    "respuesta_correcta": "Resistencia"
-  },
-  {
-    "id": 1071,
-    "materia": "Física",
-    "pregunta": "Identifica el instrumento óptico que funciona basado en el fenómeno de la refracción de la luz utilizando dos lentes convergentes:",
-    "opciones": ["Microscopio óptico", "Espejo plano", "Periscopio", "Prisma de dispersión"],
-    "respuesta_correcta": "Microscopio óptico"
-  },
-  {
-    "id": 1072,
-    "materia": "Química",
-    "pregunta": "¿Cuál es la configuración electrónica correcta para un átomo neutro de Carbono con número atómico Z = 6?",
-    "opciones": ["1s² 2s² 2p²", "1s² 2s⁴", "1s² 2s² 2p⁴", "1s² 2s² 3s²"],
-    "respuesta_correcta": "1s² 2s² 2p²"
-  },
-  {
-    "id": 1073,
-    "materia": "Química",
-    "pregunta": "Determina qué tipo de mezcla es el aire limpio que respiramos de manera cotidiana:",
-    "opciones": ["Mezcla homogénea", "Mezcla heterogénea", "Coloide", "Suspensión"],
-    "respuesta_correcta": "Mezcla homogénea"
-  },
-  {
-    "id": 1074,
-    "materia": "Química",
-    "pregunta": "En una reacción redox, la especie química que experimenta una pérdida neta de electrones aumentando su estado de oxidación se dice que:",
-    "opciones": ["Se oxida", "Se reduce", "Se neutraliza", "Se precipita"],
-    "respuesta_correcta": "Se oxida"
-  },
-  {
-    "id": 1075,
-    "materia": "Química",
-    "pregunta": "Identifica el grupo funcional característico presente en todas las moléculas de alcoholes orgánicos:",
-    "opciones": ["-OH (Hidroxilo)", "-CHO (Formilo)", "-COOH (Carboxilo)", "-O- (Éter)"],
-    "respuesta_correcta": "-OH (Hidroxilo)"
-  },
-  {
-    "id": 1076,
-    "materia": "Biología",
-    "pregunta": "¿Qué organelo vegetal exclusivo contiene la clorofila y se encarga de capturar la energía lumínica durante la fotosíntesis?",
-    "opciones": ["Cloroplasto", "Pared celular", "Vacuola central", "Leucoplasto"],
-    "respuesta_correcta": "Cloroplasto"
-  },
-  {
-    "id": 1077,
-    "materia": "Biología",
-    "pregunta": "¿Cómo se denominan las unidades estructurales básicas que componen a las proteínas?",
-    "opciones": ["Aminoácidos", "Monosacáridos", "Nucleótidos", "Ácidos grasos"],
-    "respuesta_correcta": "Aminoácidos"
-  },
-  {
-    "id": 1078,
-    "materia": "Biología",
-    "pregunta": "¿Qué tipo de división celular reduce a la mitad el número de cromosomas para generar gametos haploides encargados de la reproducción sexual?",
-    "opciones": ["Meiosis", "Mitosis", "Bipartición", "Gemación"],
-    "respuesta_correcta": "Meiosis"
-  },
-  {
-    "id": 1079,
-    "materia": "Biología",
-    "pregunta": "Identifica el reino de los seres vivos que agrupa a organismos eucariotas, heterótrofos por absorción, cuyas paredes celulares contienen quitina:",
-    "opciones": ["Reino Fungi", "Reino Plantae", "Reino Protista", "Reino Monera"],
-    "respuesta_correcta": "Reino Fungi"
-  },
-  {
-    "id": 1080,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Si el área de un cuadrado mide exactos 64 metros cuadrados, calcula la longitud de su perímetro.",
-    "opciones": ["32 metros", "16 metros", "24 metros", "64 metros"],
-    "respuesta_correcta": "32 metros"
-  },
-  {
-    "id": 1081,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Calcula la media aritmética del siguiente conjunto de calificaciones: 8, 9, 7, 10, 6.",
-    "opciones": ["8", "8.5", "9", "7.5"],
-    "respuesta_correcta": "8"
-  },
-  {
-    "id": 1082,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Determina la amplitud o rango del siguiente conjunto de datos estadísticos: 12, 5, 22, 17, 9, 31.",
-    "opciones": ["26", "31", "5", "19"],
-    "respuesta_correcta": "26"
-  },
-  {
-    "id": 1083,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Simplifica la siguiente expresión matemática con potencias: (2³ * 2²)",
-    "opciones": ["32", "16", "64", "12"],
-    "respuesta_correcta": "32"
-  },
-  {
-    "id": 1084,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Obtén la ecuación de la recta que interseca al eje y en (0, 3) y posee una pendiente m = -2.",
-    "opciones": ["y = -2x + 3", "y = 2x - 3", "y = -2x - 3", "y = 3x - 2"],
-    "respuesta_correcta": "y = -2x + 3"
-  },
-  {
-    "id": 1085,
-    "materia": "Competencia Lectora",
-    "pregunta": "En la reseña crítica de una obra científica, la sección orientada a emitir un juicio valorativo fundamentado se le considera:",
-    "opciones": ["Valoración crítica", "Resumen analítico", "Ficha técnica", "Introducción temática"],
-    "respuesta_correcta": "Valoración crítica"
-  },
-  {
-    "id": 1086,
-    "materia": "Competencia Escrita",
-    "pregunta": "Identifica la opción que presenta una palabra esdrújula escrita de manera correcta:",
-    "opciones": ["Sábado", "Cantar", "Difícil", "Reloj"],
-    "respuesta_correcta": "Sábado"
-  },
-  {
-    "id": 1087,
-    "materia": "Competencia Escrita",
-    "pregunta": "Determina la función sintáctica del elemento subrayado en: 'El director entregó los reconocimientos *a los alumnos*'.",
-    "opciones": ["Objeto indirecto", "Objeto directo", "Sujeto pasivo", "Complemento circunstancial"],
-    "respuesta_correcta": "Objeto indirecto"
-  },
-  {
-    "id": 1088,
-    "materia": "Física",
-    "pregunta": "Un cuerpo es lanzado verticalmente hacia arriba. Justo en el punto más alto de su trayectoria, el valor de su velocidad instantánea es:",
-    "opciones": ["0 m/s", "9.8 m/s", "Máxima", "Depende de la masa"],
-    "respuesta_correcta": "0 m/s"
-  },
-  {
-    "id": 1089,
-    "materia": "Física",
-    "pregunta": "El Teorema de Bernoulli, aplicado al flujo ideal de fluidos en tuberías cerradas, es una consecuencia directa del principio de:",
-    "opciones": [
-      "Conservación de la energía",
-      "Conservación de la masa",
-      "Conservación del momento lineal",
-      "Tercera ley de Newton"
-    ],
-    "respuesta_correcta": "Conservación de la energía"
-  },
-  {
-    "id": 1090,
-    "materia": "Física",
-    "pregunta": "Determina la intensidad de corriente que fluye por una bombilla eléctrica de 60 W conectada a una línea doméstica de 120 V.",
-    "opciones": ["0.5 A", "2 A", "7200 A", "1.5 A"],
-    "respuesta_correcta": "0.5 A"
-  },
-  {
-    "id": 1091,
-    "materia": "Física",
-    "pregunta": "¿Qué tipo de espejo curvo se caracteriza por divergir los haces de luz paralelos y generar siempre imágenes virtuales, derechas y de menor tamaño?",
-    "opciones": ["Espejo convexo", "Espejo cóncavo", "Espejo plano", "Espejo parabólico"],
-    "respuesta_correcta": "Espejo convexo"
-  },
-  {
-    "id": 1092,
-    "materia": "Química",
-    "pregunta": "Los isótopos de un mismo elemento químico se caracterizan por poseer el mismo número de protones pero diferente número de:",
-    "opciones": ["Neutrones", "Electrones", "Positrones", "Quarks"],
-    "respuesta_correcta": "Neutrones"
-  },
-  {
-    "id": 1093,
-    "materia": "Química",
-    "pregunta": "Identifica el método físico de separación ideal para separar dos líquidos miscibles con diferentes puntos de ebullición, como el agua y el alcohol:",
-    "opciones": ["Destilación", "Filtración", "Decantación", "Centrifugación"],
-    "respuesta_correcta": "Destilación"
-  },
-  {
-    "id": 1094,
-    "materia": "Química",
-    "pregunta": "De acuerdo con la teoría ácido-base de Brønsted-Lowry, una base se define de manera rigurosa como una especie química capaz de:",
-    "opciones": ["Aceptar un protón (H+)", "Donar un protón (H+)", "Liberar un ion hidroxilo", "Donar un par de electrones"],
-    "respuesta_correcta": "Aceptar un protón (H+)"
-  },
-  {
-    "id": 1095,
-    "materia": "Química",
-    "pregunta": "¿Cuál es el nombre del hidrocarburo saturado lineal de menor complejidad que cuenta con cuatro átomos de carbono en su estructura?",
-    "opciones": ["Butano", "Propano", "Metano", "Etano"],
-    "respuesta_correcta": "Butano"
-  },
-  {
-    "id": 1096,
-    "materia": "Biología",
-    "pregunta": "¿Qué organelo membranoso tiene como función principal la modificación, empaquetado y transporte vesicular de macromoléculas como proteínas?",
-    "opciones": ["Aparato de Golgi", "Retículo endoplásmico liso", "Lisosoma", "Peroxisoma"],
-    "respuesta_correcta": "Aparato de Golgi"
-  },
-  {
-    "id": 1097,
-    "materia": "Biología",
-    "pregunta": "Identifica los monómeros o unidades básicas encargadas de estructurar los polímeros biológicos conocidos como ácidos nucleicos (ADN y ARN):",
-    "opciones": ["Nucleótidos", "Monosacáridos", "Aminoácidos", "Triglicéridos"],
-    "respuesta_correcta": "Nucleótidos"
-  },
-  {
-    "id": 1098,
-    "materia": "Biología",
-    "pregunta": "¿Quién es considerado el padre de la genética clásica gracias a sus minuciosos experimentos de cruzas con plantas de chícharo (Pisum sativum)?",
-    "opciones": ["Gregor Mendel", "Charles Darwin", "Louis Pasteur", "Thomas Morgan"],
-    "respuesta_correcta": "Gregor Mendel"
-  },
-  {
-    "id": 1099,
-    "materia": "Biología",
-    "pregunta": "El proceso ecológico mediante el cual el nitrógeno atmosférico es transformado por bacterias del suelo en formas utilizables por las plantas es la:",
-    "opciones": ["Fijación del nitrógeno", "Desnitrificación", "Amorfiación", "Nitrificación"],
-    "respuesta_correcta": "Fijación del nitrógeno"
-  },
-  {
-    "id": 1100,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Si un ángulo en posición estándar mide exactos 90 grados, ¿cuál es el valor de su función trigonométrica tangente?",
-    "opciones": ["No está definido", "0", "1", "-1"],
-    "respuesta_correcta": "No está definido"
-  },
-  {
-    "id": 1101,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Calcula la distancia desde el punto P(2, 3) hasta la recta con ecuación 3x + 4y - 8 = 0.",
-    "opciones": ["2", "4", "5", "10"],
-    "respuesta_correcta": "2"
-  },
-  {
-    "id": 1102,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Determina las coordenadas del vértice de la parábola descrita por la ecuación cuadrática: y = x² - 4x + 7.",
-    "opciones": ["(2, 3)", "(-2, 3)", "(2, -3)", "(4, 7)"],
-    "respuesta_correcta": "(2, 3)"
-  },
-  {
-    "id": 1103,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "¿Cuál es el resultado de resolver el producto notable de binomios conjugados: (2x - 3)(2x + 3)?",
-    "opciones": ["4x² - 9", "4x² + 9", "4x² - 12x + 9", "2x² - 9"],
-    "respuesta_correcta": "4x² - 9"
-  },
-  {
-    "id": 1104,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "En una fábrica se seleccionan 5 ingenieros al azar de un grupo total de 12 para un comité. ¿Qué fórmula cuenta los arreglos posibles sin importar el orden?",
-    "opciones": ["Combinaciones", "Permutaciones", "Variaciones", "Factorial pura"],
-    "respuesta_correcta": "Combinaciones"
-  },
-  {
-    "id": 1105,
-    "materia": "Competencia Lectora",
-    "pregunta": "Cuando un autor utiliza datos estadísticos históricos y citas de investigadores para validar su hipótesis, está empleando argumentos de:",
-    "opciones": ["Autoridad y de hecho", "Afectivos o emocionales", "Experiencia personal", "Generalización apresurada"],
-    "respuesta_correcta": "Autoridad y de hecho"
-  },
-  {
-    "id": 1106,
-    "materia": "Competencia Escrita",
-    "pregunta": "Elige la opción que contenga el par de palabras que completan correctamente la oración: 'El investigador tuvo que _____ la muestra para evitar que se _____'.",
-    "opciones": ["tubo / vertiera", "tuvo / vertiera", "tubo / bertiera", "tuvo / bertiera"],
-    "respuesta_correcta": "tuvo / vertiera"
-  },
-  {
-    "id": 1107,
-    "materia": "Competencia Escrita",
-    "pregunta": "Identifica el predicado de la siguiente oración: 'Los alumnos más destacados de la escuela técnica presentarán el examen mañana'.",
-    "opciones": [
-      "presentarán el examen mañana",
-      "Los alumnos más destacados de la escuela técnica",
-      "presentarán el examen",
-      "mañana"
-    ],
-    "respuesta_correcta": "presentarán el examen mañana"
-  },
-  {
-    "id": 1108,
-    "materia": "Física",
-    "pregunta": "Calcula el trabajo mecánico realizado por una fuerza constante de 50 N que desplaza un bloque una distancia de 4 metros en su misma dirección.",
-    "opciones": ["200 Joules", "12.5 Joules", "200 Watts", "54 Joules"],
-    "respuesta_correcta": "200 Joules"
-  },
-  {
-    "id": 1109,
-    "materia": "Física",
-    "pregunta": "¿Qué ley física establece de forma cualitativa que la energía no se crea ni se destruye, únicamente se transforma de una naturaleza a otra?",
-    "opciones": [
-      "Primera Ley de la Termodinámica",
-      "Segunda Ley de la Termodinámica",
-      "Ley Cero de la Termodinámica",
-      "Ley de Joule"
-    ],
-    "respuesta_correcta": "Primera Ley de la Termodinámica"
-  },
-  {
-    "id": 1110,
-    "materia": "Física",
-    "pregunta": "Dos resistencias de 6 Ohmios cada una se conectan en un arreglo paralelo. Determina el valor de la resistencia equivalente del circuito.",
-    "opciones": ["3 Ohmios", "12 Ohmios", "1 Ohmio", "36 Ohmios"],
-    "respuesta_correcta": "3 Ohmios"
-  },
-  {
-    "id": 1111,
-    "materia": "Física",
-    "pregunta": "El fenómeno por el cual una onda cambia su dirección de propagación al rodear las esquinas de un obstáculo físico o pasar por una rendija estrecha es la:",
-    "opciones": ["Difracción", "Refracción", "Reflexión", "Interferencia"],
-    "respuesta_correcta": "Difracción"
-  },
-  {
-    "id": 1112,
-    "materia": "Química",
-    "pregunta": "¿Qué postulado mecánico cuántico establece la imposibilidad física de conocer con precisión absoluta y simultánea la posición y el momento lineal de un electrón?",
-    "opciones": [
-      "Principio de Incertidumbre de Heisenberg",
-      "Principio de Exclusión de Pauli",
-      "Regla de Hund",
-      "Principio de Aufbau"
-    ],
-    "respuesta_correcta": "Principio de Incertidumbre de Heisenberg"
-  },
-  {
-    "id": 1113,
-    "materia": "Química",
-    "pregunta": "Calcula la molaridad (M) de una disolución química que contiene 2 moles de soluto disueltos en un volumen total de 4 litros de disolución.",
-    "opciones": ["0.5 M", "2 M", "8 M", "0.25 M"],
-    "respuesta_correcta": "0.5 M"
-  },
-  {
-    "id": 1114,
-    "materia": "Química",
-    "pregunta": "¿Qué tipo de enlace químico se caracteriza por la deslocalización completa de electrones formando una gran 'nube o mar' que mantiene unidos los núcleos?",
-    "opciones": ["Enlace metálico", "Enlace iónico", "Enlace covalente polar", "Fuerza dipolo-dipolo"],
-    "respuesta_correcta": "Enlace metálico"
-  },
-  {
-    "id": 1115,
-    "materia": "Química",
-    "pregunta": "Identifica el nombre químico sistémico para el compuesto cuya fórmula molecular es NaClO, comúnmente empleado como blanqueador doméstico:",
-    "opciones": ["Hipoclorito de sodio", "Cloruro de sodio", "Clorato de sodio", "Perclorato de sodio"],
-    "respuesta_correcta": "Hipoclorito de sodio"
-  },
-  {
-    "id": 1116,
-    "materia": "Biología",
-    "pregunta": "¿Qué organelo es el responsable directo de llevar a cabo la digestión intracelular de macromoléculas y organelos viejos mediante enzimas hidrolíticas?",
-    "opciones": ["Lisosoma", "Peroxisoma", "Centrosoma", "Ribosoma"],
-    "respuesta_correcta": "Lisosoma"
-  },
-  {
-    "id": 1117,
-    "materia": "Biología",
-    "pregunta": "Identifica la base nitrogenada exclusiva del Ácido Ribonucleico (ARN) que toma el lugar de la timina presente en el ADN:",
-    "opciones": ["Uracilo", "Adenina", "Guanina", "Citosina"],
-    "respuesta_correcta": "Uracilo"
-  },
-  {
-    "id": 1118,
-    "materia": "Biología",
-    "pregunta": "¿Cómo se le denomina a la condición genética en la cual un individuo posee dos alelos diferentes para un mismo gen específico?",
-    "opciones": ["Heterocigoto", "Homocigoto dominante", "Homocigoto recesivo", "Haploide"],
-    "respuesta_correcta": "Heterocigoto"
-  },
-  {
-    "id": 1119,
-    "materia": "Biología",
-    "pregunta": "El nivel de organización ecológica que integra al conjunto de poblaciones de diferentes especies que coexisten e interactúan en un espacio geográfico es la:",
-    "opciones": ["Comunidad", "Ecosistema", "Biósfera", "Población compleja"],
-    "respuesta_correcta": "Comunidad"
-  },
-  {
-    "id": 1120,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Calcula el límite cuando x tiende a infinito de la función racional: f(x) = (2x² + 5) / (x² - 3).",
-    "opciones": ["2", "Infinito", "0", "-5/3"],
-    "respuesta_correcta": "2"
-  },
-  {
-    "id": 1121,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Encuentra la integral inmediata de la función diferencial: ∫ 3x² dx.",
-    "opciones": ["x³ + C", "3x³ + C", "6x + C", "x² + C"],
-    "respuesta_correcta": "x³ + C"
-  },
-  {
-    "id": 1122,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Identifica las coordenadas del foco de la parábola descrita por la ecuación ordinaria: x² = 8y.",
-    "opciones": ["(0, 2)", "(2, 0)", "(0, -2)", "(0, 4)"],
-    "respuesta_correcta": "(0, 2)"
-  },
-  {
-    "id": 1123,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Calcula el valor del determinante de la siguiente matriz cuadrada de orden dos: [[3, 2], [1, 4]].",
-    "opciones": ["10", "14", "11", "12"],
-    "respuesta_correcta": "10"
-  },
-  {
-    "id": 1124,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Una urna contiene 4 bolas rojas y 6 bolas azules. Si se extrae una bola al azar, ¿cuál es la probabilidad de que esta sea roja?",
-    "opciones": ["2/5", "3/5", "1/4", "4/6"],
-    "respuesta_correcta": "2/5"
-  },
-  {
-    "id": 1125,
-    "materia": "Competencia Lectora",
-    "pregunta": "Identifica la opción que rompe con la coherencia global de un texto especializado sobre física cuántica:",
-    "opciones": [
-      "La física clásica explica de manera excelente el movimiento lineal de los planetas.",
-      "El entrelazamiento cuántico desafía las nociones tradicionales de la localidad física.",
-      "Las partículas subatómicas exhiben propiedades tanto ondulatorias como corpusculares.",
-      "La función de onda describe la probabilidad matemática de localizar una partícula."
-    ],
-    "respuesta_correcta": "La física clásica explica de manera excelente el movimiento lineal de los planetas."
-  },
-  {
-    "id": 1126,
-    "materia": "Competencia Escrita",
-    "pregunta": "Selecciona la oración que utiliza una tilde diacrítica de manera totalmente correcta conforme a las normas de la RAE:",
-    "opciones": [
-      "Quiero que me dé más té esta tarde, por favor.",
-      "Quiero que me de mas te esta tarde, por favor.",
-      "Quiero que me dé mas te esta tarde, por favor.",
-      "Quiero que me de más té esta tarde, por favor."
-    ],
-    "respuesta_correcta": "Quiero que me dé más té esta tarde, por favor."
-  },
-  {
-    "id": 1127,
-    "materia": "Competencia Escrita",
-    "pregunta": "Identifica el tipo de oración subordinada subrayada en: 'El estudiante *que ganó el concurso* obtuvo una beca completa'.",
-    "opciones": ["Subordinada adjetiva", "Subordinada sustantiva", "Subordinada adverbial temporal", "Subordinada coordinada"],
-    "respuesta_correcta": "Subordinada adjetiva"
-  },
-  {
-    "id": 1128,
-    "materia": "Física",
-    "pregunta": "Determina la potencia mecánica desarrollada por una máquina industrial que realiza un trabajo de 3000 Joules en un tiempo exacto de 10 segundos.",
-    "opciones": ["300 Watts", "30000 Watts", "300 Joules", "30 Watts"],
-    "respuesta_correcta": "300 Watts"
-  },
-  {
-    "id": 1129,
-    "materia": "Física",
-    "pregunta": "Un bloque de hielo de 0.5 kg a 0°C se funde por completo manteniendo su temperatura constante. ¿Qué energía térmica absorbió en el proceso? (Calor latente de fusión = 334,000 J/kg)",
-    "opciones": ["167,000 Joules", "334,000 Joules", "668,000 Joules", "0 Joules"],
-    "respuesta_correcta": "167,000 Joules"
-  },
-  {
-    "id": 1130,
-    "materia": "Física",
-    "pregunta": "¿Qué ley de la electrostática enuncia que la fuerza entre dos cargas es directamente proporcional a su producto e inversamente proporcional al cuadrado de la distancia que las separa?",
-    "opciones": ["Ley de Coulomb", "Ley de Gauss", "Ley de Ampere", "Ley de Ohm"],
-    "respuesta_correcta": "Ley de Coulomb"
-  },
-  {
-    "id": 1131,
-    "materia": "Física",
-    "pregunta": "Identifica el fenómeno óptico ondulatorio que describe la superposición de dos o más ondas de luz en el espacio, generando regiones brillantes y oscuras:",
-    "opciones": ["Interferencia", "Difracción", "Polarización", "Dispersión"],
-    "respuesta_correcta": "Interferencia"
-  },
-  {
-    "id": 1132,
-    "materia": "Química",
-    "pregunta": "¿Cuál de los siguientes científicos descubrió el núcleo atómico cargado positivamente mediante su célebre experimento de dispersión con partículas alfa sobre láminas de oro?",
-    "opciones": ["Ernest Rutherford", "J.J. Thomson", "John Dalton", "Niels Bohr"],
-    "respuesta_correcta": "Ernest Rutherford"
-  },
-  {
-    "id": 1133,
-    "materia": "Química",
-    "pregunta": "Determina el tipo de enlace interatómico presente en la molécula de gas metano (CH₄) dadas las bajas diferencias de electronegatividad de sus elementos:",
-    "opciones": ["Enlace covalente no polar", "Enlace covalente polar", "Enlace iónico", "Enlace metálico"],
-    "respuesta_correcta": "Enlace covalente no polar"
-  },
-  {
-    "id": 1134,
-    "materia": "Química",
-    "pregunta": "¿Qué nombre reciben las sustancias químicas que aceleran la velocidad de una reacción bajando la energía de activación, sin consumirse en el proceso?",
-    "opciones": ["Catalizadores", "Reactivos limitantes", "Inhibidores", "Indicadores de pH"],
-    "respuesta_correcta": "Catalizadores"
-  },
-  {
-    "id": 1135,
-    "materia": "Química",
-    "pregunta": "Identifica el compuesto orgánico oxigenado lineal que posee un átomo de oxígeno unido covalentemente a dos radicales hidrocarbonados (R-O-R'):",
-    "opciones": ["Éter", "Éster", "Cetona", "Aldehído"],
-    "respuesta_correcta": "Éter"
-  },
-  {
-    "id": 1136,
-    "materia": "Biología",
-    "pregunta": "¿Qué tipo de transporte de membrana celular desplaza solutos en contra de su gradiente de concentración requiriendo un gasto directo de energía (ATP)?",
-    "opciones": ["Transporte activo", "Difusión simple", "Difusión facilitada", "Ósmosis pasiva"],
-    "respuesta_correcta": "Transporte activo"
-  },
-  {
-    "id": 1137,
-    "materia": "Biología",
-    "pregunta": "La vía metabólica anaerobia universal que se lleva a cabo en el citoplasma celular y degrada una molécula de glucosa en dos moléculas de piruvato es la:",
-    "opciones": ["Glucólisis", "Ciclo de Krebs", "Cadena de transporte de electrones", "Gluconeogénesis"],
-    "respuesta_correcta": "Glucólisis"
-  },
-  {
-    "id": 1138,
-    "materia": "Biología",
-    "pregunta": "De acuerdo con el dogma central de la biología molecular, el paso de información secuencial desde una plantilla de ADN hacia una de ARN se denomina:",
-    "opciones": ["Transcripción", "Traducción", "Replicación", "Mutación"],
-    "respuesta_correcta": "Transcripción"
-  },
-  {
-    "id": 1139,
-    "materia": "Biología",
-    "pregunta": "¿Qué tipo de interrelación ecológica simbiótica ocurre cuando ambas especies involucradas obtienen un beneficio mutuo obligatorio para su supervivencia?",
-    "opciones": ["Mutualismo", "Comensalismo", "Parasitismo", "Amensalismo"],
-    "respuesta_correcta": "Mutualismo"
-  },
-  {
-    "id": 1140,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Determina la derivada de la función trigonométrica: f(x) = sen(3x).",
-    "opciones": ["3cos(3x)", "cos(3x)", "-3cos(3x)", "3sen(3x)"],
-    "respuesta_correcta": "3cos(3x)"
-  },
-  {
-    "id": 1141,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Calcula el valor de la integral definida: ∫[0 a 2] (2x) dx.",
-    "opciones": ["4", "2", "8", "0"],
-    "respuesta_correcta": "4"
-  },
-  {
-    "id": 1142,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Identifica el valor de la excentricidad (e) que caracteriza de manera invariable a cualquier parábola geométrica recta:",
-    "opciones": ["e = 1", "e < 1", "e > 1", "e = 0"],
-    "respuesta_correcta": "e = 1"
-  },
-  {
-    "id": 1143,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "¿Cuál es el valor del término independiente en el desarrollo algebraico del binomio al cuadrado: (3x - 4)²?",
-    "opciones": ["16", "-16", "9", "-24"],
-    "respuesta_correcta": "16"
-  },
-  {
-    "id": 1144,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Determina la moda del siguiente conjunto de puntuaciones experimentales: 5, 8, 6, 8, 7, 9, 8, 6.",
-    "opciones": ["8", "6", "7", "7.1"],
-    "respuesta_correcta": "8"
-  },
-  {
-    "id": 1145,
-    "materia": "Competencia Lectora",
-    "pregunta": "Un texto cuyo objetivo central es divulgar descubrimientos e investigaciones mediante un lenguaje técnico pero accesible pertenece al género:",
-    "opciones": ["Científico de divulgación", "Narrativo de ficción", "Periodístico informativo", "Instructivo procedimental"],
-    "respuesta_correcta": "Científico de divulgación"
-  },
-  {
-    "id": 1146,
-    "materia": "Competencia Escrita",
-    "pregunta": "Selecciona la opción en donde se haga un uso totalmente correcto de las letras 'c', 's' y 'z':",
-    "opciones": [
-      "La escasez de recursos produjo una gran concientización.",
-      "La escaces de recursos produjo una gran concientización.",
-      "La escasez de recursos produjo una gran concientisación.",
-      "La escacez de recursos produjo una gran consientización."
-    ],
-    "respuesta_correcta": "La escasez de recursos produjo una gran concientización."
-  },
-  {
-    "id": 1147,
-    "materia": "Competencia Escrita",
-    "pregunta": "Identifica la opción que funciona como una oración bimembre completa con sujeto expreso:",
-    "opciones": [
-      "Los ingenieros diseñaron un gran software.",
-      "Llovió intensamente durante la noche.",
-      "¡Qué excelente día para estudiar!",
-      "Había muchos libros sobre la mesa técnica."
-    ],
-    "respuesta_correcta": "Los ingenieros diseñaron un gran software."
-  },
-  {
-    "id": 1148,
-    "materia": "Física",
-    "pregunta": "Un proyectil se lanza con un ángulo de 45° respecto a la horizontal. Despreciando la fricción, ¿qué tipo de trayectoria describe mecánicamente?",
-    "opciones": ["Trayectoria parabólica", "Trayectoria recta", "Trayectoria elíptica", "Trayectoria hiperbólica"],
-    "respuesta_correcta": "Trayectoria parabólica"
-  },
-  {
-    "id": 1149,
-    "materia": "Física",
-    "pregunta": "El Teorema de Torricelli es una aplicación particular del Teorema de Bernoulli que permite calcular de manera rápida la:",
-    "opciones": [
-      "Velocidad de salida de un líquido por un orificio.",
-      "Presión absoluta en el fondo de un recipiente.",
-      "Densidad relativa de un fluido en movimiento.",
-      "Fuerza de empuje sobre un bloque sumergido."
-    ],
-    "respuesta_correcta": "Velocidad de salida de un líquido por un orificio."
-  },
-  {
-    "id": 1150,
-    "materia": "Física",
-    "pregunta": "Determina la potencia disipada por una resistencia eléctrica de 4 Ohmios por la que circula una corriente constante de 3 Amperios.",
-    "opciones": ["36 Watts", "12 Watts", "48 Watts", "24 Watts"],
-    "respuesta_correcta": "36 Watts"
-  },
-  {
-    "id": 1151,
-    "materia": "Física",
-    "pregunta": "La velocidad de propagación de una onda mecánica transversal en una cuerda tensa depende de manera directa de la tensión y de la:",
-    "opciones": ["Densidad lineal de masa", "Frecuencia angular", "Amplitud máxima", "Longitud de onda"],
-    "respuesta_correcta": "Densidad lineal de masa"
-  },
-  {
-    "id": 1152,
-    "materia": "Química",
-    "pregunta": "¿Qué científico propuso la primera tabla periódica organizando los elementos en función creciente de sus masas atómicas y prediciendo elementos por descubrir?",
-    "opciones": ["Dmitri Mendeléyev", "Henry Moseley", "John Newlands", "Antoine Lavoisier"],
-    "respuesta_correcta": "Dmitri Mendeléyev"
-  },
-  {
-    "id": 1153,
-    "materia": "Química",
-    "pregunta": "De acuerdo con el principio de exclusión de Pauli, en un mismo átomo no pueden existir dos electrones que tengan:",
-    "opciones": [
-      "Los mismos cuatro números cuánticos.",
-      "La misma energía cinética basal.",
-      "El mismo espín magnético.",
-      "El mismo orbital molecular libre."
-    ],
-    "respuesta_correcta": "Los mismos cuatro números cuánticos."
-  },
-  {
-    "id": 1154,
-    "materia": "Química",
-    "pregunta": "Calcula el número de moles de soluto contenidos en 500 mL de una disolución de cloruro de sodio con concentración de 2 mol/L.",
-    "opciones": ["1 mol", "2 moles", "0.5 mol", "4 moles"],
-    "respuesta_correcta": "1 mol"
-  },
-  {
-    "id": 1155,
-    "materia": "Química",
-    "pregunta": "Identifica la estructura orgánica cíclica y conjugada cuya fórmula molecular es C₆H₆, conocida como el pilar de los compuestos aromáticos:",
-    "opciones": ["Benceno", "Ciclohexano", "Ciclohexeno", "Tolueno"],
-    "respuesta_correcta": "Benceno"
-  },
-  {
-    "id": 1156,
-    "materia": "Biología",
-    "pregunta": "¿Qué componente lipídico anfipático es el bloque estructural principal encargado de formar la bicapa de todas las membranas celulares?",
-    "opciones": ["Fosfolípidos", "Triglicéridos", "Colesterol", "Glucolípidos"],
-    "respuesta_correcta": "Fosfolípidos"
-  },
-  {
-    "id": 1157,
-    "materia": "Biología",
-    "pregunta": "Identifica los productos netos y finales que genera la ruta metabólica anaerobia conocida como fermentación alcohólica en las levaduras:",
-    "opciones": [
-      "Etanol y dióxido de carbono",
-      "Ácido láctico y agua",
-      "Ácido pirúvico y ATP",
-      "Glucosa y oxígeno"
-    ],
-    "respuesta_correcta": "Etanol y dióxido de carbono"
-  },
-  {
-    "id": 1158,
-    "materia": "Biología",
-    "pregunta": "¿Qué enzima macromolecular es la responsable directa de catalizar la síntesis de nuevas cadenas de ADN agregando nucleótidos durante la replicación?",
-    "opciones": ["ADN polimerasa", "ARN primasa", "Helicasa", "Ligasa"],
-    "respuesta_correcta": "ADN polimerasa"
-  },
-  {
-    "id": 1159,
-    "materia": "Biología",
-    "pregunta": "De acuerdo con las leyes de la termodinámica aplicadas a la ecología, ¿cuánta energía aproximada se transfiere de un nivel trófico al siguiente superior?",
-    "opciones": ["10%", "50%", "90%", "1%"],
-    "respuesta_correcta": "10%"
-  },
-  {
-    "id": 1160,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Determina las coordenadas del centro de la elipse cuya ecuación ordinaria es: (x - 2)²/16 + (y + 3)²/9 = 1.",
-    "opciones": ["(2, -3)", "(-2, 3)", "(2, 3)", "(-2, -3)"],
-    "respuesta_correcta": "(2, -3)"
-  },
-  {
-    "id": 1161,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Calcula la segunda derivada de la función matemática polinomial: f(x) = 2x³ - 5x².",
-    "opciones": ["12x - 10", "6x² - 10x", "12x", "6x - 10"],
-    "respuesta_correcta": "12x - 10"
-  },
-  {
-    "id": 1162,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Obtén el valor exacto del coseno de 60 grados utilizando las propiedades de los ángulos notables.",
-    "opciones": ["1/2", "√3/2", "√2/2", "1"],
-    "respuesta_correcta": "1/2"
-  },
-  {
-    "id": 1163,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Resuelve la siguiente operación algebraica con matrices de igual dimensión: 2 * [[1, 3], [2, 0]].",
-    "opciones": ["[[2, 6], [4, 0]]", "[[2, 3], [4, 0]]", "[[2, 6], [2, 0]]", "[[1, 6], [4, 0]]"],
-    "respuesta_corrector": "[[2, 6], [4, 0]]",
-    "respuesta_correcta": "[[2, 6], [4, 0]]"
-  },
-  {
-    "id": 1164,
-    "materia": "Pensamiento Matemático",
-    "pregunta": "Si un evento tiene una probabilidad matemática de ocurrencia de 0.75, ¿cuál es la probabilidad de que dicho evento no ocurra?",
-    "opciones": ["0.25", "0.50", "0.75", "0.00"],
-    "respuesta_correcta": "0.25"
-  },
-  {
-    "id": 1165,
-    "materia": "Competencia Lectora",
-    "pregunta": "La figura retórica consistente en exagerar desmesuradamente las cualidades de un objeto o situación dentro de un texto se denomina:",
-    "opciones": ["Hipérbole", "Metáfora", "Símil", "Aliteración"],
-    "respuesta_correcta": "Hipérbole"
-  },
-  {
-    "id": 1166,
-    "materia": "Competencia Escrita",
-    "pregunta": "Elige la opción que presente un error de concordancia gramatical entre sus elementos constituyentes:",
-    "opciones": [
-      "El grupo de ingenieros presentaron el nuevo motor.",
-      "La mayoría de los estudiantes aprobó el examen técnico.",
-      "El equipo de biólogos analizó la muestra del suelo.",
-      "Los profesores explicaron la teoría de forma detallada."
+  {"id": 1001, "materia": "Matemáticas", "pregunta": "Termino 8 de: 5, 11, 17, 23...", "opciones": ["47", "41", "53", "49"], "respuesta_correcta": "47"},
+  {"id": 1002, "materia": "Física", "pregunta": "Ley de los gases ideales (PV=nRT): V es:", "opciones": ["Volumen", "Velocidad", "Viscosidad", "Vacío"], "respuesta_correcta": "Volumen"},
+  {"id": 1003, "materia": "Química", "pregunta": "Símbolo del Oro:", "opciones": ["Au", "Ag", "Fe", "Cu"], "respuesta_correcta": "Au"},
+  {"id": 1004, "materia": "Biología", "pregunta": "Organelo de la fotosíntesis:", "opciones": ["Cloroplasto", "Núcleo", "Ribosoma", "Vacuola"], "respuesta_correcta": "Cloroplasto"},
+  {"id": 1005, "materia": "Español", "pregunta": "Es una palabra aguda:", "opciones": ["Cantar", "Árbol", "Lápiz", "Sábado"], "respuesta_correcta": "Cantar"},
+  {"id": 1006, "materia": "Matemáticas", "pregunta": "Raíz de 144:", "opciones": ["12", "14", "10", "16"], "respuesta_correcta": "12"},
+  {"id": 1007, "materia": "Física", "pregunta": "Unidad de potencia:", "opciones": ["Watt", "Joule", "Newton", "Pascal"], "respuesta_correcta": "Watt"},
+  {"id": 1008, "materia": "Química", "pregunta": "pH de un ácido:", "opciones": ["Menor a 7", "Mayor a 7", "Igual a 7", "14"], "respuesta_correcta": "Menor a 7"},
+  {"id": 1009, "materia": "Biología", "pregunta": "Célula sin núcleo:", "opciones": ["Procariota", "Eucariota", "Animal", "Vegetal"], "respuesta_correcta": "Procariota"},
+  {"id": 1010, "materia": "Matemáticas", "pregunta": "Seno de 90 grados:", "opciones": ["1", "0", "-1", "0.5"], "respuesta_correcta": "1"},
+  {"id": 1011, "materia": "Física", "pregunta": "Velocidad de la luz:", "opciones": ["300,000 km/s", "150,000 km/s", "1,000 km/s", "30,000 km/s"], "respuesta_correcta": "300,000 km/s"},
+  {"id": 1012, "materia": "Química", "pregunta": "Elemento más abundante:", "opciones": ["Hidrógeno", "Oxígeno", "Carbono", "Nitrógeno"], "respuesta_correcta": "Hidrógeno"},
+  {"id": 1013, "materia": "Biología", "pregunta": "Capa de la Tierra con vida:", "opciones": ["Biosfera", "Atmósfera", "Litosfera", "Hidrosfera"], "respuesta_correcta": "Biosfera"},
+  {"id": 1014, "materia": "Matemáticas", "pregunta": "Valor de Pi:", "opciones": ["3.1416", "2.14", "4.14", "3.00"], "respuesta_correcta": "3.1416"},
+  {"id": 1015, "materia": "Física", "pregunta": "Fuerza igual a:", "opciones": ["ma", "mv", "md", "mt"], "respuesta_correcta": "ma"},
+  {"id": 1016, "materia": "Química", "pregunta": "Enlace covalente:", "opciones": ["Comparte electrones", "Transfiere", "No existe", "Metálico"], "respuesta_correcta": "Comparte electrones"},
+  {"id": 1017, "materia": "Biología", "pregunta": "El ADN contiene:", "opciones": ["Información genética", "Proteínas", "Grasas", "Azúcares"], "respuesta_correcta": "Información genética"},
+  {"id": 1018, "materia": "Matemáticas", "pregunta": "Perímetro de cuadrado lado 5:", "opciones": ["20", "25", "10", "15"], "respuesta_correcta": "20"},
+  {"id": 1019, "materia": "Física", "pregunta": "Energía en reposo:", "opciones": ["Potencial", "Cinética", "Calórica", "Eléctrica"], "respuesta_correcta": "Potencial"},
+  {"id": 1020, "materia": "Química", "pregunta": "Masa del Protón:", "opciones": ["1 uma", "0 uma", "2 uma", "0.5 uma"], "respuesta_correcta": "1 uma"},
+  {"id": 1021, "materia": "Matemáticas", "pregunta": "2+2*2 es:", "opciones": ["6", "8", "4", "10"], "respuesta_correcta": "6"},
+  {"id": 1022, "materia": "Biología", "pregunta": "Mitosis produce:", "opciones": ["2 células", "4 células", "1 célula", "8 células"], "respuesta_correcta": "2 células"},
+  {"id": 1023, "materia": "Español", "pregunta": "Sinónimo de casa:", "opciones": ["Hogar", "Coche", "Mesa", "Calle"], "respuesta_correcta": "Hogar"},
+  {"id": 1024, "materia": "Física", "pregunta": "Gravedad:", "opciones": ["9.8 m/s2", "5.0 m/s2", "1.0 m/s2", "0.0 m/s2"], "respuesta_correcta": "9.8 m/s2"},
+  {"id": 1025, "materia": "Química", "pregunta": "Agua es:", "opciones": ["H2O", "HO2", "H2O2", "OH"], "respuesta_correcta": "H2O"},
+  {"id": 1026, "materia": "Matemáticas", "pregunta": "X en 2x=10:", "opciones": ["5", "2", "20", "1"], "respuesta_correcta": "5"},
+  {"id": 1027, "materia": "Biología", "pregunta": "Célula animal tiene:", "opciones": ["Membrana", "Pared", "Cloroplasto", "Nada"], "respuesta_correcta": "Membrana"},
+  {"id": 1028, "materia": "Física", "pregunta": "Ley de Newton:", "opciones": ["Acción-Reacción", "Gravedad", "Calor", "Luz"], "respuesta_correcta": "Acción-Reacción"},
+  {"id": 1029, "materia": "Química", "pregunta": "Tabla periódica organiza:", "opciones": ["Elementos", "Compuestos", "Mezclas", "Gases"], "respuesta_correcta": "Elementos"},
+  {"id": 1030, "materia": "Matemáticas", "pregunta": "Triángulo de 3 lados iguales:", "opciones": ["Equilátero", "Escaleno", "Isósceles", "Recto"], "respuesta_correcta": "Equilátero"},
+  {"id": 1031, "materia": "Biología", "pregunta": "Reino de hongos:", "opciones": ["Fungi", "Plantae", "Animalia", "Monera"], "respuesta_correcta": "Fungi"},
+  {"id": 1032, "materia": "Física", "pregunta": "Espejos curvos:", "opciones": ["Óptica", "Mecánica", "Termo", "Fluido"], "respuesta_correcta": "Óptica"},
+  {"id": 1033, "materia": "Química", "pregunta": "Átomo tiene:", "opciones": ["Protones", "Células", "Hojas", "Rayos"], "respuesta_correcta": "Protones"},
+  {"id": 1034, "materia": "Matemáticas", "pregunta": "5 al cuadrado:", "opciones": ["25", "10", "5", "50"], "respuesta_correcta": "25"},
+  {"id": 1035, "materia": "Biología", "pregunta": "Fotosíntesis usa:", "opciones": ["Luz", "Oscuridad", "Hielo", "Fuego"], "respuesta_correcta": "Luz"},
+  {"id": 1036, "materia": "Física", "pregunta": "Sonido es:", "opciones": ["Onda", "Partícula", "Luz", "Materia"], "respuesta_correcta": "Onda"},
+  {"id": 1037, "materia": "Química", "pregunta": "Oxígeno es:", "opciones": ["Gas", "Líquido", "Sólido", "Plasma"], "respuesta_correcta": "Gas"},
+  {"id": 1038, "materia": "Matemáticas", "pregunta": "Cero multiplicado por X:", "opciones": ["0", "X", "1", "10"], "respuesta_correcta": "0"},
+  {"id": 1039, "materia": "Biología", "pregunta": "Evolución:", "opciones": ["Darwin", "Newton", "Einstein", "Bohr"], "respuesta_correcta": "Darwin"},
+  {"id": 1040, "materia": "Física", "pregunta": "Temperatura es:", "opciones": ["Energía cinética", "Masa", "Volumen", "Fuerza"], "respuesta_correcta": "Energía cinética"},
+  {"id": 1041, "materia": "Matemáticas", "pregunta": "100 por 2:", "opciones": ["200", "100", "50", "250"], "respuesta_correcta": "200"},
+  {"id": 1042, "materia": "Química", "pregunta": "Metal líquido:", "opciones": ["Mercurio", "Oro", "Plata", "Hierro"], "respuesta_correcta": "Mercurio"},
+  {"id": 1043, "materia": "Biología", "pregunta": "Sistema circulatorio:", "opciones": ["Corazón", "Cerebro", "Hígado", "Piel"], "respuesta_correcta": "Corazón"},
+  {"id": 1044, "materia": "Física", "pregunta": "Presión es:", "opciones": ["Fuerza/Área", "Área/Fuerza", "Masa*Volumen", "Luz/Tiempo"], "respuesta_correcta": "Fuerza/Área"},
+  {"id": 1045, "materia": "Matemáticas", "pregunta": "Recta:", "opciones": ["Infinitos puntos", "Un punto", "Dos puntos", "Cero puntos"], "respuesta_correcta": "Infinitos puntos"},
+  {"id": 1046, "materia": "Química", "pregunta": "Combustión necesita:", "opciones": ["Oxígeno", "Nitrógeno", "Helio", "Argón"], "respuesta_correcta": "Oxígeno"},
+  {"id": 1047, "materia": "Biología", "pregunta": "Herencia:", "opciones": ["Genes", "Dieta", "Ejercicio", "Sueño"], "respuesta_correcta": "Genes"},
+  {"id": 1048, "materia": "Física", "pregunta": "Electrones tienen carga:", "opciones": ["Negativa", "Positiva", "Nula", "Variable"], "respuesta_correcta": "Negativa"},
+  {"id": 1049, "materia": "Matemáticas", "pregunta": "Círculo área:", "opciones": ["πr²", "2πr", "πr", "r²"], "respuesta_correcta": "πr²"},
+  {"id": 1050, "materia": "Química", "pregunta": "Ácido clorhídrico:", "opciones": ["HCl", "H2Cl", "HCl2", "OHCl"], "respuesta_correcta": "HCl"},
+  {"id": 1051, "materia": "Biología", "pregunta": "Respiración:", "opciones": ["Pulmones", "Riñones", "Estómago", "Intestino"], "respuesta_correcta": "Pulmones"},
+  {"id": 1052, "materia": "Física", "pregunta": "Tiempo:", "opciones": ["Segundo", "Metro", "Kilo", "Ampere"], "respuesta_correcta": "Segundo"},
+  {"id": 1053, "materia": "Matemáticas", "pregunta": "1000 dividido 10:", "opciones": ["100", "10", "1", "1000"], "respuesta_correcta": "100"},
+  {"id": 1054, "materia": "Química", "pregunta": "Carbono:", "opciones": ["C", "Ca", "Co", "Cl"], "respuesta_correcta": "C"},
+  {"id": 1055, "materia": "Biología", "pregunta": "Neurona:", "opciones": ["Sistema Nervioso", "Piel", "Hueso", "Sangre"], "respuesta_correcta": "Sistema Nervioso"},
+  {"id": 1056, "materia": "Física", "pregunta": "Densidad:", "opciones": ["Masa/Volumen", "Volumen/Masa", "Fuerza", "Energía"], "respuesta_correcta": "Masa/Volumen"},
+  {"id": 1057, "materia": "Matemáticas", "pregunta": "Ángulo recto:", "opciones": ["90 grados", "180 grados", "45 grados", "360 grados"], "respuesta_correcta": "90 grados"},
+  {"id": 1058, "materia": "Química", "pregunta": "Sal de mesa:", "opciones": ["NaCl", "KCl", "CaCl2", "MgCl2"], "respuesta_correcta": "NaCl"},
+  {"id": 1059, "materia": "Biología", "pregunta": "Sintesis de proteínas:", "opciones": ["Ribosomas", "Mitocondria", "Núcleo", "Lisosoma"], "respuesta_correcta": "Ribosomas"},
+  {"id": 1060, "materia": "Física", "pregunta": "Carga eléctrica:", "opciones": ["Coulomb", "Volt", "Ampere", "Joule"], "respuesta_correcta": "Coulomb"},
+  {"id": 1061, "materia": "Matemáticas", "pregunta": "X^0:", "opciones": ["1", "0", "X", "No existe"], "respuesta_correcta": "1"},
+  {"id": 1062, "materia": "Química", "pregunta": "Electronegatividad:", "opciones": ["Tendencia electrones", "Masa", "Volumen", "Temperatura"], "respuesta_correcta": "Tendencia electrones"},
+  {"id": 1063, "materia": "Biología", "pregunta": "Reino animal:", "opciones": ["Animalia", "Plantae", "Fungi", "Protista"], "respuesta_correcta": "Animalia"},
+  {"id": 1064, "materia": "Física", "pregunta": "Caída libre:", "opciones": ["Gravedad", "Fricción", "Viento", "Calor"], "respuesta_correcta": "Gravedad"},
+  {"id": 1065, "materia": "Matemáticas", "pregunta": "20% de 100:", "opciones": ["20", "10", "5", "50"], "respuesta_correcta": "20"},
+  {"id": 1066, "materia": "Química", "pregunta": "Valencia:", "opciones": ["Electrones enlace", "Peso", "Volumen", "Densidad"], "respuesta_correcta": "Electrones enlace"},
+  {"id": 1067, "materia": "Biología", "pregunta": "Sangre roja:", "opciones": ["Hemoglobina", "Hierro", "Clorofila", "Agua"], "respuesta_correcta": "Hemoglobina"},
+  {"id": 1068, "materia": "Física", "pregunta": "Espectro luz:", "opciones": ["Colores", "Sabor", "Olor", "Textura"], "respuesta_correcta": "Colores"},
+  {"id": 1069, "materia": "Matemáticas", "pregunta": "Base 10:", "opciones": ["Decimal", "Binario", "Hexa", "Octal"], "respuesta_correcta": "Decimal"},
+  {"id": 1070, "materia": "Química", "pregunta": "Subatómica:", "opciones": ["Electrón", "Célula", "Hoja", "Tierra"], "respuesta_correcta": "Electrón"},
+  {"id": 1071, "materia": "Biología", "pregunta": "Ecosistema:", "opciones": ["Interacción seres vivos", "Ciudad", "Casa", "Auto"], "respuesta_correcta": "Interacción seres vivos"},
+  {"id": 1072, "materia": "Física", "pregunta": "Trabajo:", "opciones": ["Fuerza*Distancia", "Masa*Aceleración", "Tiempo", "Velocidad"], "respuesta_correcta": "Fuerza*Distancia"},
+  {"id": 1073, "materia": "Matemáticas", "pregunta": "Factorial 3:", "opciones": ["6", "3", "9", "1"], "respuesta_correcta": "6"},
+  {"id": 1074, "materia": "Química", "pregunta": "Ión positivo:", "opciones": ["Catión", "Anión", "Neutro", "Átomo"], "respuesta_correcta": "Catión"},
+  {"id": 1075, "materia": "Biología", "pregunta": "Planta:", "opciones": ["Autótrofa", "Heterótrofa", "Carnívora", "Parásita"], "respuesta_correcta": "Autótrofa"},
+  {"id": 1076, "materia": "Física", "pregunta": "Ohm:", "opciones": ["Resistencia", "Voltaje", "Corriente", "Potencia"], "respuesta_correcta": "Resistencia"},
+  {"id": 1077, "materia": "Matemáticas", "pregunta": "Multiplicación:", "opciones": ["Suma repetida", "Resta", "División", "Potencia"], "respuesta_correcta": "Suma repetida"},
+  {"id": 1078, "materia": "Química", "pregunta": "Sólido:", "opciones": ["Forma fija", "Fluido", "Gas", "Plasma"], "respuesta_correcta": "Forma fija"},
+  {"id": 1079, "materia": "Biología", "pregunta": "Agua:", "opciones": ["Disolvente", "Sólido", "Gas", "Fuego"], "respuesta_correcta": "Disolvente"},
+  {"id": 1080, "materia": "Física", "pregunta": "Vector:", "opciones": ["Magnitud y dirección", "Número", "Color", "Letra"], "respuesta_correcta": "Magnitud y dirección"},
+  {"id": 1081, "materia": "Matemáticas", "pregunta": "Raíz de 9:", "opciones": ["3", "9", "1", "0"], "respuesta_correcta": "3"},
+  {"id": 1082, "materia": "Química", "pregunta": "Inerte:", "opciones": ["Helio", "Oxígeno", "Carbono", "Hierro"], "respuesta_correcta": "Helio"},
+  {"id": 1083, "materia": "Biología", "pregunta": "Visión:", "opciones": ["Ojo", "Oído", "Nariz", "Boca"], "respuesta_correcta": "Ojo"},
+  {"id": 1084, "materia": "Física", "pregunta": "Voltaje:", "opciones": ["Potencial eléctrico", "Masa", "Fuerza", "Tiempo"], "respuesta_correcta": "Potencial eléctrico"},
+  {"id": 1085, "materia": "Matemáticas", "pregunta": "Media:", "opciones": ["Promedio", "Moda", "Mediana", "Rango"], "respuesta_correcta": "Promedio"},
+  {"id": 1086, "materia": "Química", "pregunta": "Redox:", "opciones": ["Electrones", "Átomos", "Células", "Huesos"], "respuesta_correcta": "Electrones"},
+  {"id": 1087, "materia": "Biología", "pregunta": "Virus:", "opciones": ["No celular", "Célula", "Planta", "Hongo"], "respuesta_correcta": "No celular"},
+  {"id": 1088, "materia": "Física", "pregunta": "Fricción:", "opciones": ["Resistencia", "Velocidad", "Calor", "Luz"], "respuesta_correcta": "Resistencia"},
+  {"id": 1089, "materia": "Matemáticas", "pregunta": "Parábola:", "opciones": ["Cuadrática", "Lineal", "Cúbica", "Ninguna"], "respuesta_correcta": "Cuadrática"},
+  {"id": 1090, "materia": "Química", "pregunta": "Catalizador:", "opciones": ["Acelera", "Detiene", "Desaparece", "Mata"], "respuesta_correcta": "Acelera"},
+  {"id": 1091, "materia": "Biología", "pregunta": "Oído:", "opciones": ["Sonido", "Luz", "Sabor", "Olor"], "respuesta_correcta": "Sonido"},
+  {"id": 1092, "materia": "Física", "pregunta": "Potencia:", "opciones": ["Trabajo/Tiempo", "Fuerza", "Masa", "Área"], "respuesta_correcta": "Trabajo/Tiempo"},
+  {"id": 1093, "materia": "Matemáticas", "pregunta": "Binomio:", "opciones": ["Dos términos", "Uno", "Tres", "Cero"], "respuesta_correcta": "Dos términos"},
+  {"id": 1094, "materia": "Química", "pregunta": "Isótopo:", "opciones": ["Neutrones distintos", "Protones", "Electrones", "Masa"], "respuesta_correcta": "Neutrones distintos"},
+  {"id": 1095, "materia": "Biología", "pregunta": "Piel:", "opciones": ["Protección", "Visión", "Oído", "Gusto"], "respuesta_correcta": "Protección"},
+  {"id": 1096, "materia": "Física", "pregunta": "Ampere:", "opciones": ["Corriente", "Voltaje", "Resistencia", "Potencia"], "respuesta_correcta": "Corriente"},
+  {"id": 1097, "materia": "Matemáticas", "pregunta": "Pi:", "opciones": ["3.14", "2.14", "1.14", "4.14"], "respuesta_correcta": "3.14"},
+  {"id": 1098, "materia": "Química", "pregunta": "Capa electrónica:", "opciones": ["Orbital", "Núcleo", "Proton", "Neutrón"], "respuesta_correcta": "Orbital"},
+  {"id": 1099, "materia": "Biología", "pregunta": "Cromosoma:", "opciones": ["ADN", "Grasa", "Azúcar", "Agua"], "respuesta_correcta": "ADN"},
+  {"id": 1100, "materia": "Física", "pregunta": "Masa:", "opciones": ["Cantidad materia", "Peso", "Volumen", "Densidad"], "respuesta_correcta": "Cantidad materia"},
+  {"id": 1101, "materia": "Matemáticas", "pregunta": "Recta numérica:", "opciones": ["Infinitos números", "Cero", "Dos", "Uno"], "respuesta_correcta": "Infinitos números"},
+  {"id": 1102, "materia": "Química", "pregunta": "Elemento:", "opciones": ["Átomo único", "Mezcla", "Compuesto", "Célula"], "respuesta_correcta": "Átomo único"},
+  {"id": 1103, "materia": "Biología", "pregunta": "Glucosa:", "opciones": ["Azúcar", "Grasa", "Proteína", "Agua"], "respuesta_correcta": "Azúcar"},
+  {"id": 1104, "materia": "Física", "pregunta": "Aceleración:", "opciones": ["Cambio velocidad", "Velocidad", "Posición", "Masa"], "respuesta_correcta": "Cambio velocidad"},
+  {"id": 1105, "materia": "Matemáticas", "pregunta": "Mediana:", "opciones": ["Valor central", "Promedio", "Suma", "Resta"], "respuesta_correcta": "Valor central"},
+  {"id": 1106, "materia": "Química", "pregunta": "Molécula:", "opciones": ["Átomos unidos", "Átomo", "Célula", "Hoja"], "respuesta_correcta": "Átomos unidos"},
+  {"id": 1107, "materia": "Biología", "pregunta": "Vegetales:", "opciones": ["Clorofila", "Hemoglobina", "Luz", "Agua"], "respuesta_correcta": "Clorofila"},
+  {"id": 1108, "materia": "Física", "pregunta": "Calor:", "opciones": ["Energía térmica", "Fuerza", "Masa", "Luz"], "respuesta_correcta": "Energía térmica"},
+  {"id": 1109, "materia": "Matemáticas", "pregunta": "Angulo:", "opciones": ["Grados", "Metros", "Segundos", "Kilos"], "respuesta_correcta": "Grados"},
+  {"id": 1110, "materia": "Química", "pregunta": "Base:", "opciones": ["OH", "H", "Cl", "O"], "respuesta_correcta": "OH"},
+  {"id": 1111, "materia": "Biología", "pregunta": "Digestión:", "opciones": ["Estómago", "Ojo", "Oído", "Piel"], "respuesta_correcta": "Estómago"},
+  {"id": 1112, "materia": "Física", "pregunta": "Magnetismo:", "opciones": ["Imanes", "Calor", "Agua", "Viento"], "respuesta_correcta": "Imanes"},
+  {"id": 1113, "materia": "Matemáticas", "pregunta": "Igualdad:", "opciones": ["=", "x", "+", "-"], "respuesta_correcta": "="},
+  {"id": 1114, "materia": "Química", "pregunta": "Peso:", "opciones": ["Fuerza gravedad", "Masa", "Volumen", "Densidad"], "respuesta_correcta": "Fuerza gravedad"},
+  {"id": 1115, "materia": "Biología", "pregunta": "Célula:", "opciones": ["Unidad vida", "Átomo", "Elemento", "Compuesto"], "respuesta_correcta": "Unidad vida"},
+  {"id": 1116, "materia": "Física", "pregunta": "Luz:", "opciones": ["Onda electromagnética", "Materia", "Sonido", "Viento"], "respuesta_correcta": "Onda electromagnética"},
+  {"id": 1117, "materia": "Matemáticas", "pregunta": "Punto:", "opciones": ["Sin dimensión", "Línea", "Plano", "Cubo"], "respuesta_correcta": "Sin dimensión"},
+  {"id": 1118, "materia": "Química", "pregunta": "Substancia:", "opciones": ["Materia uniforme", "Mezcla", "Compuesto", "Elemento"], "respuesta_correcta": "Materia uniforme"},
+  {"id": 1119, "materia": "Biología", "pregunta": "Hormona:", "opciones": ["Mensajero químico", "Proteína", "Grasa", "Agua"], "respuesta_correcta": "Mensajero químico"},
+  {"id": 1120, "materia": "Física", "pregunta": "Inercia:", "opciones": ["Resistencia cambio", "Velocidad", "Fuerza", "Masa"], "respuesta_correcta": "Resistencia cambio"},
+  {"id": 1121, "materia": "Matemáticas", "pregunta": "Conjunto:", "opciones": ["Colección objetos", "Número", "Letra", "Signo"], "respuesta_correcta": "Colección objetos"},
+  {"id": 1122, "materia": "Química", "pregunta": "Fórmula:", "opciones": ["Símbolos elementos", "Dibujo", "Letra", "Número"], "respuesta_correcta": "Símbolos elementos"},
+  {"id": 1123, "materia": "Biología", "pregunta": "Genética:", "opciones": ["Herencia", "Célula", "Agua", "Comida"], "respuesta_correcta": "Herencia"},
+  {"id": 1124, "materia": "Física", "pregunta": "Energía:", "opciones": ["Capacidad trabajo", "Masa", "Volumen", "Densidad"], "respuesta_correcta": "Capacidad trabajo"},
+  {"id": 1125, "materia": "Matemáticas", "pregunta": "Resta:", "opciones": ["Menos", "Más", "Multiplica", "Divide"], "respuesta_correcta": "Menos"},
+  {"id": 1126, "materia": "Química", "pregunta": "Reactivo:", "opciones": ["Inicia reacción", "Producto", "Catalizador", "Átomo"], "respuesta_correcta": "Inicia reacción"},
+  {"id": 1127, "materia": "Biología", "pregunta": "Gusto:", "opciones": ["Lengua", "Ojo", "Oído", "Nariz"], "respuesta_correcta": "Lengua"},
+  {"id": 1128, "materia": "Física", "pregunta": "Velocidad:", "opciones": ["Distancia/Tiempo", "Tiempo/Distancia", "Masa", "Fuerza"], "respuesta_correcta": "Distancia/Tiempo"},
+  {"id": 1129, "materia": "Matemáticas", "pregunta": "Figura:", "opciones": ["Forma", "Número", "Letra", "Signo"], "respuesta_correcta": "Forma"},
+  {"id": 1130, "materia": "Química", "pregunta": "Solución:", "opciones": ["Mezcla homogénea", "Elemento", "Átomo", "Célula"], "respuesta_correcta": "Mezcla homogénea"},
+  {"id": 1131, "materia": "Biología", "pregunta": "Olfato:", "opciones": ["Nariz", "Ojo", "Oído", "Piel"], "respuesta_correcta": "Nariz"},
+  {"id": 1132, "materia": "Física", "pregunta": "Cuerpo:", "opciones": ["Objeto materia", "Átomo", "Luz", "Calor"], "respuesta_correcta": "Objeto materia"},
+  {"id": 1133, "materia": "Matemáticas", "pregunta": "Suma:", "opciones": ["Adición", "Resta", "Multiplicación", "División"], "respuesta_correcta": "Adición"},
+  {"id": 1134, "materia": "Química", "pregunta": "Átomo neutro:", "opciones": ["Igual p y e", "Más p", "Menos p", "Cero"], "respuesta_correcta": "Igual p y e"},
+  {"id": 1135, "materia": "Biología", "pregunta": "Cerebro:", "opciones": ["Control", "Estómago", "Hígado", "Piel"], "respuesta_correcta": "Control"},
+  {"id": 1136, "materia": "Física", "pregunta": "Reflexión:", "opciones": ["Rebote luz", "Absorción", "Calor", "Sonido"], "respuesta_correcta": "Rebote luz"},
+  {"id": 1137, "materia": "Matemáticas", "pregunta": "Multiplicación:", "opciones": ["*", "x", "+", "-"], "respuesta_correcta": "*"},
+  {"id": 1138, "materia": "Química", "pregunta": "Materia:", "opciones": ["Masa y volumen", "Luz", "Calor", "Tiempo"], "respuesta_correcta": "Masa y volumen"},
+  {"id": 1139, "materia": "Biología", "pregunta": "Respiración aerobia:", "opciones": ["Usa oxígeno", "No usa", "Célula", "Agua"], "respuesta_correcta": "Usa oxígeno"},
+  {"id": 1140, "materia": "Física", "pregunta": "Gravedad:", "opciones": ["Atracción masas", "Luz", "Calor", "Frío"], "respuesta_correcta": "Atracción masas"}
 ]
