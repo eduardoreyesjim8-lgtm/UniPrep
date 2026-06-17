@@ -16,7 +16,7 @@ header {
 }
 
 header h1 {
-    color: white !important; /* Asegura el color blanco en el título principal */
+    color: white !important;
     margin: 0 0 5px 0;
 }
 
@@ -45,7 +45,7 @@ nav a:hover {
 
 main {
     padding: 20px;
-    max-width: 1200px; /* Evita que el contenido se estire de más en monitores grandes */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -62,7 +62,7 @@ h1, h2 {
     justify-content: center;
     gap: 12px;
     margin: 20px 15px 30px 15px;
-    flex-wrap: wrap; /* Permite colapsar los botones ordenadamente en celulares */
+    flex-wrap: wrap;
 }
 
 .btn-filtro {
@@ -82,7 +82,6 @@ h1, h2 {
     border-color: #94a3b8;
 }
 
-/* Botón activo: Combina perfectamente con el azul de tu Navbar (#123d8b) */
 .btn-filtro.active {
     background-color: #123d8b;
     color: white;
@@ -96,29 +95,26 @@ h1, h2 {
 .consejos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px; /* Espaciado uniforme controlado por la cuadrícula */
+    gap: 20px;
     padding: 10px;
-    align-items: stretch; /* Hace que todas las tarjetas de una misma fila midan lo mismo de alto */
+    align-items: stretch;
 }
 
 .card {
     background: white;
     padding: 20px;
-    margin: 0; /* Controlado por el gap del contenedor */
+    margin: 0;
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.06);
-    
-    /* Propiedades avanzadas para soporte de etiquetas superiores y alineación interna */
     position: relative;
-    padding-top: 45px; /* Da espacio superior para que las etiquetas no se encimen con los títulos */
+    padding-top: 45px;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Obliga a la tarjeta a abarcar todo el alto disponible del renglón */
+    height: 100%;
     box-sizing: border-box;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Efecto hover al pasar el cursor sobre la tarjeta */
 .card:hover {
     transform: translateY(-3px);
     box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
@@ -152,23 +148,10 @@ h1, h2 {
     letter-spacing: 0.5px;
 }
 
-/* Colores personalizados para las etiquetas de consejos */
-.badge-general { 
-    background-color: #e2e8f0; 
-    color: #475569; 
-}
-.badge-unam { 
-    background-color: #fef3c7; 
-    color: #b45309; /* Tono Dorado Institucional */
-}    
-.badge-ipn { 
-    background-color: #fce7f3; 
-    color: #9d174d; /* Tono Guinda Institucional */
-}     
-.badge-uam { 
-    background-color: #e0f2fe; 
-    color: #0369a1; /* Tono Azul UAM */
-}    
+.badge-general { background-color: #e2e8f0; color: #475569; }
+.badge-unam { background-color: #fef3c7; color: #b45309; }    
+.badge-ipn { background-color: #fce7f3; color: #9d174d; }     
+.badge-uam { background-color: #e0f2fe; color: #0369a1; }    
 
 
 /* ==========================================================================
@@ -201,7 +184,6 @@ h1, h2 {
     line-height: 1.5;
 }
 
-/* Selector de Universidades (Botones Grandes y Elegantes) */
 .selector-universidad {
     display: flex;
     justify-content: center;
@@ -237,7 +219,6 @@ h1, h2 {
     transform: translateY(-2px);
 }
 
-/* Selector de Áreas/Divisiones (Botones de Píldora Estilizados) */
 .selector-areas {
     display: flex;
     justify-content: center;
@@ -265,7 +246,6 @@ h1, h2 {
     box-shadow: 0 4px 10px rgba(18, 61, 139, 0.15);
 }
 
-/* Ficha de Detalles Estilo Dashboard */
 .detalle-card {
     max-width: 800px;
     margin: 0 auto !important;
@@ -284,7 +264,6 @@ h1, h2 {
     font-weight: bold;
 }
 
-/* Badges Metas Superiores */
 .meta-datos-examen {
     display: flex;
     justify-content: center;
@@ -308,7 +287,6 @@ h1, h2 {
     font-weight: bold;
 }
 
-/* CUADRÍCULA VISUAL ELEGANTE PARA MATERIAS */
 .materias-visual-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -360,7 +338,6 @@ h1, h2 {
     font-size: 0.85rem;
 }
 
-/* Caja Destacada para la Lista de Carreras */
 .lista-carreras-texto {
     color: #475569;
     line-height: 1.6;
@@ -372,7 +349,6 @@ h1, h2 {
     font-size: 0.95rem;
 }
 
-/* Botón Verde Premium para Lanzar el Simulador */
 .btn-examen-primario {
     display: inline-block;
     background-color: #22c55e;
@@ -394,7 +370,143 @@ h1, h2 {
 
 
 /* ==========================================================================
-   6. ANIMACIONES (KEYFRAMES)
+   7. ESTILOS EXCLUSIVOS PARA LA PÁGINA DE INICIO (HOME)
+   ========================================================================== */
+.hero-seccion {
+    background: linear-gradient(135deg, #0a2a66 0%, #123d8b 100%);
+    color: white;
+    padding: 50px 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(10, 42, 102, 0.15);
+    margin-bottom: 30px;
+}
+
+.hero-contenido h2 {
+    color: white !important;
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.hero-contenido p {
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.btn-hero-principal {
+    display: inline-block;
+    background-color: #22c55e;
+    color: white;
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+}
+
+.btn-hero-principal:hover {
+    background-color: #16a34a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.5);
+}
+
+.inicio-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 30px 25px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #123d8b;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.feature-icono {
+    font-size: 2.5rem;
+    background-color: #f8fafc;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.feature-card:hover .feature-icono {
+    background-color: #e0f2fe;
+}
+
+.feature-card h4 {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    color: #0a2a66;
+}
+
+.feature-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.feature-link {
+    font-weight: bold;
+    color: #123d8b;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.feature-card:hover .feature-link {
+    color: #0a2a66;
+}
+
+.frase-motivacional {
+    text-align: center;
+    padding: 20px;
+    background-color: #fffbeb;
+    border-radius: 10px;
+    border: 1px dashed #f59e0b;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.frase-motivacional p {
+    margin: 0;
+    color: #b45309;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+
+/* ==========================================================================
+   8. ANIMACIONES (KEYFRAMES)
    ========================================================================== */
 @keyframes fadeIn {
     from {
